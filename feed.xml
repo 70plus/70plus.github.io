@@ -3,7 +3,7 @@
     <title>70plus</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-02T14:05:44+01:00</updated>
+    <updated>2023-01-02T14:19:05+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -116,7 +116,7 @@
         <id>https://70plus.github.io/disegnare-lalbero-16-anni-dopo.html</id>
         <media:content url="https://70plus.github.io/media/posts/6/albero.jpg" medium="image" />
 
-        <updated>2023-01-02T13:20:36+01:00</updated>
+        <updated>2023-01-02T14:19:05+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/6/albero.jpg" alt="Albero ricorsivo" />
@@ -126,7 +126,8 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.github.io/media/posts/6/albero.jpg" class="type:primaryImage" alt="Albero ricorsivo" /></p>
-                <p>Non ricordo con quale versione di <strong>Basic</strong> realizzai il disegno dell'albero per il mio primo post sul blog <strong>Elaborando</strong>. Comunque era un Basic senza ricorsività nativa.<br>Per tracciare i vari livelli di ramificazione dell'albero, quindi, creai una primitiva struttura di ricorsività ad hoc sulla chiamata a subroutine del Basic.<br><br>E se volessi ridisegnare oggi l'albero? Vediamo quali diventano le scelte:</p>
+                <p>Non ricordo con quale versione di <strong>Basic</strong> realizzai il disegno dell'albero per il mio primo post sul blog <strong>Elaborando</strong>. Comunque era un Basic senza ricorsività nativa.<br>Per tracciare i vari livelli di ramificazione dell'albero, quindi, creai una primitiva struttura di ricorsività ad hoc sulla chiamata a subroutine del Basic.</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/6/Schermata-2022-01-23-alle-18.18.32.png" alt="Vecchio post su Elaborando" width="1006" height="764" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/6/responsive/Schermata-2022-01-23-alle-18.18.32-xs.png 300w ,https://70plus.github.io/media/posts/6/responsive/Schermata-2022-01-23-alle-18.18.32-sm.png 480w ,https://70plus.github.io/media/posts/6/responsive/Schermata-2022-01-23-alle-18.18.32-md.png 768w"></figure><br><br>E se volessi ridisegnare oggi l'albero? Vediamo quali diventano le scelte:</p>
 <ul>
 <li>linguaggio --&gt; Python</li>
 <li>modulo di grafica --&gt; Turtle</li>
