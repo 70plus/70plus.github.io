@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>70plus</title>
+    <link href="https://70plus.github.io/feed.xml" rel="self" />
+    <link href="https://70plus.github.io" />
+    <updated>2023-01-01T09:41:55+01:00</updated>
+    <author>
+        <name>Pasquale</name>
+    </author>
+    <id>https://70plus.github.io</id>
+
+    <entry>
+        <title>2023, eccoti qui</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/2023-eccoti-qui.html"/>
+        <id>https://70plus.github.io/2023-eccoti-qui.html</id>
+        <media:content url="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" medium="image" />
+
+        <updated>2023-01-01T09:41:55+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" alt="Buoni propositi" />
+                    Dovrebbe essere il momento dei buoni propositi, ma non saprei da dove cominciare. Meno arrabbiature? Alimentazione più sana? Più esercizio fisico? Ecco, forse comincerei proprio da qui, dall'esercizio fisico. Sono anni che mi propongo di corricchiare durante l'inverno, per essere già rodato all'arrivo della primavera.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" class="type:primaryImage" alt="Buoni propositi" /></p>
+                <p>Dovrebbe essere il momento dei <strong>buoni propositi</strong>, ma non saprei da dove cominciare. Meno arrabbiature? Alimentazione più sana? Più esercizio fisico?</p>
+<p>Ecco, forse comincerei proprio da qui, dall'<strong>esercizio fisico</strong>. Sono anni che mi propongo di corricchiare durante l'inverno, per essere già rodato all'arrivo della primavera. Il 2023 potrebbe essere l'anno giusto per farlo.</p>
+<p>Per <strong>l'alimentazione</strong> direi che, a parte qualche moderato eccesso occasionale, sono già sulla buona strada. Devo imparare a evitare la pizza di sera, quella in pizzeria o da asporto, perché la casalinga ha un carico glicemico minore, o almeno così mi illudo che sia.</p>
+<p>Per le <strong>arrabbiature</strong> non so cosa fare, quando arrivano arrivano.</p>
+<p>E poi la <strong>pigrizia</strong>, ecco, questo è un punto importante. Devo essere più determinato e concreto, ed eliminare i <em>ciondolamenti</em>. È banale dirlo, ma così si libererà tempo per fare altre cose.</p>
+<p><em>Foto di apertura di <a href="https://pixabay.com/it/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1647323" target="_blank" rel="noopener">Gerd Altmann</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1647323" 3="" target="_blank" rel="noopener">Pixabay</a>.</em></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Instabilità</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/instabilita.html"/>
+        <id>https://70plus.github.io/instabilita.html</id>
+        <media:content url="https://70plus.github.io/media/posts/2/penguin-160539_1280.png" medium="image" />
+
+        <updated>2022-12-31T08:50:40+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/2/penguin-160539_1280.png" alt="Instabilità" />
+                    Manovrare Publii mi dà qualche problema su due aspetti: cambiare tema e sincronizzare con GitHub. Ho scelto il tema Technews. Se lascio installato il tema di default, Simple, in locale il comportamento è casuale, su Github viene sincronizzata una versione con il tema vecchio o&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/2/penguin-160539_1280.png" class="type:primaryImage" alt="Instabilità" /></p>
+                <p>Manovrare <strong>Publii</strong> mi dà qualche problema su due aspetti: cambiare tema e sincronizzare con GitHub.</p>
+<p>Ho scelto il tema <strong>Technews</strong>. Se lascio installato il tema di default, <strong>Simple</strong>, in locale il comportamento è casuale, su Github viene sincronizzata una versione con il tema vecchio o addirittura senza tema.</p>
+<p>Come se non bastasse, il nome del sito mi dà problemi nella sincronizzazione con GitHub.<br>Un <em>trick</em> suggerito da Publii è quello di chiamare il repository su GitHub con l’url <em>corta</em> del sito. Quindi, nel mio caso il repository andrebbe chiamato <strong>petro-pas.github.io</strong>, invece di <strong>70plus</strong>. Questo dovrebbe far sì che l’url effettiva del sito diventi <strong>petro-pas.github.io</strong> e non <strong>petro-pas.github.io/70plus</strong>.
+Bene, la modifica del nome nella configurazione Publii <em>non tiene</em>, pur salvandola rimane fissata a <em>70plus</em>.</p>
+<p>Un terzo aspetto non legato a Publii ma alla mia ignoranza, è che in markdown, per far aprire un link in una nuova finestra, occorre utilizzare la sintassi html (&lt;a href = … target=”_blank”…) e non quella compatta propria di markdown.</p>
+<p>Misteri dell’informatica.</p>
+<p>*La foto di apertura è di <a href="https://pixabay.com/it/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160539" target="_blank">OpenClipart-Vectors</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160539" target="_blank">Pixabay</a></p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Prima che finisca l&#x27;anno</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/prima-che-finisca-lanno.html"/>
+        <id>https://70plus.github.io/prima-che-finisca-lanno.html</id>
+        <media:content url="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" medium="image" />
+
+        <updated>2022-12-31T08:46:17+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" alt="Anno nuovo, sito nuovo" />
+                    Alla ricerca continua di un posto dove raccogliere pensieri e ricordi, sulla soglia del 2023 provo con Publii, un generatore di siti statici con interfaccia grafica. Perché un sito statico? Non mi serve un sito dinamico (niente e-commerce, interattività e cose simili) e poi con&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" class="type:primaryImage" alt="Anno nuovo, sito nuovo" /></p>
+                <p>Alla ricerca continua di un posto dove raccogliere pensieri e ricordi, sulla soglia del 2023 provo con <a href="https://getpublii.com/" target="_blank">Publii</a>, un generatore di siti statici con interfaccia grafica.</p>
+<p>Perché un sito statico?
+Non mi serve un sito dinamico (niente e-commerce, interattività e cose simili) e poi con questa architettura posso separare la generazione dei contenuti, che avviene sul mio pc, dalla pubblicazione sul web, che avviene mediante un provider esterno.</p>
+<p>In prima battuta ho provato un deploy su GitLab, ma senza successo: dopo il sync di Publii mi ritrovo su GitLab i file del mio sito, ma senza il contenuto. Inoltre la <em>pipeline</em> di pubblicazione viene <em>skippata</em>. Riproverò, per capire cosa succede.</p>
+<p>Su GiHub, invece, la pubblicazione sembra andare a buon fine, anche se su un indirizzo che non mi piace granché: petro-pas.github.io/70plus.
+Purtroppo a suo tempo l’utente <strong>petropas</strong> era già preso.</p>
+<p>La foto di apertura è di <a href="https://pixabay.com/it/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7669293" target="_blank">Gerd Altmann</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7669293" target="_blank">Pixabay</a></p>
+
+            ]]>
+        </content>
+    </entry>
+</feed>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://70plus.github.io/sitemap.xml

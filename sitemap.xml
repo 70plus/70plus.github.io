@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://70plus.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://70plus.github.io/</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/2023-eccoti-qui.html</loc>
+<lastmod>2023-01-01T09:41:55+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/3/board-1647323_1920.jpg</image:loc>
+<image:title><![CDATA[Buoni propositi]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/instabilita.html</loc>
+<lastmod>2022-12-31T08:50:40+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/2/penguin-160539_1280.png</image:loc>
+<image:title><![CDATA[Instabilità]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/prima-che-finisca-lanno.html</loc>
+<lastmod>2022-12-31T08:46:17+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg</image:loc>
+<image:title><![CDATA[Anno nuovo, sito nuovo]]></image:title>
+</image:image>
+</url>
+</urlset>
