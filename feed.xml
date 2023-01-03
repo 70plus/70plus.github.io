@@ -3,12 +3,41 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-03T15:25:29+01:00</updated>
+    <updated>2023-01-03T15:47:06+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>Il caffè</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/il-caffe.html"/>
+        <id>https://70plus.github.io/il-caffe.html</id>
+            <category term="Ricordi"/>
+
+        <updated>2023-01-03T15:44:39+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Sono un consumatore accanito di caffè. Deve essere amaro, ma se al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare, mi piace la miscela densa che rimane sul fondo. Ristretto, normale, lungo, americano? Ognuno ha il&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Sono un consumatore accanito di caffè. Deve essere <strong>amaro</strong>, ma se al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare, mi piace la miscela densa che rimane sul fondo.</p>
+<p><strong>Ristretto, normale, lungo, americano?</strong> Ognuno ha il suo momento.<br>Il primo caffè del mattino, scorrendo le notizie sul web, dev'essere ristretto (nonché rigorosamente amaro). Un'ora dopo, con la colazione, si comincia ad allungare, per finire nel lunghissimo a metà mattinata. Strettissimo a chiusura del pasto, si prosegue così allungando e accorciando per seguire il bioritmo della giornata.</p>
+<p>Perché l'effetto del caffè sulla produttività al lavoro è evidente e documentato:</p>
+<blockquote>
+<p>A mathematician is a machine for turning coffee into theorems.</p>
+</blockquote>
+<p>ebbe a dire il matematico ungherese <a href="https://it.wikipedia.org/wiki/Paul_Erd%C5%91s" target="_blank" rel="nofollow noopener noreferrer">Paul Erdős.</a><br>Un effetto simile, adeguando al ribasso la scala e cambiando settore di attività, capita anche a me. Non so se prevalga l'effetto chimico della caffeina, oppure se semplicemente i neuroni necessari al rituale della tazzina si stacchino, lasciando tutti gli altri a riordinare il tavolo da lavoro virtuale nella testa.</p>
+<p>Sta di fatto che, con la tazza fumante a sinistra del foglio, la mano destra riprende con decisione a tracciare idee che sembrano uscire dal nulla: ecco, bastava fare così.<br>Merito del caffè, probabilmente.</p>
+<p><em>Post pubblicato nel 2011 su Elaborando. Adesso prendo meno caffè, ma il piacere è rimasto intatto.</em></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>La signora Monet</title>
         <author>
@@ -17,8 +46,9 @@
         <link href="https://70plus.github.io/la-signora-monet.html"/>
         <id>https://70plus.github.io/la-signora-monet.html</id>
         <media:content url="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" medium="image" />
+            <category term="Ricordi"/>
 
-        <updated>2023-01-03T15:25:29+01:00</updated>
+        <updated>2023-01-03T15:44:58+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" alt="Monet - La promenade" />
@@ -28,7 +58,7 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" class="type:primaryImage" alt="Monet - La promenade" /></p>
-                <p>Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con un ombrellino, mentre con il figlioletto cammina in un campo.<br>Volendo pubblicare un'immagine del quadro, con grande sorpresa tutta dovuta alla mia ignoranza, scoprii che Monet ne dipinse due, abbastanza simili: <strong>la Promenade</strong> (1873, è quello riprodotto nel mio poster) e <strong>la Femme à l'ombrelle</strong> (1875).<br><br>Da qualche anno Marylin e Camille mi aspettano al mare. Se riesco a convincere mia moglie, me ne porto una a Lecco.</p>
+                <p>Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima <strong>Marilyn Monroe </strong>che stringe al petto un giornale, a sinistra <strong>la signora Monet</strong> che si protegge dai raggi di sole con un ombrellino, mentre con il figlioletto cammina in un campo.<br>Volendo pubblicare un'immagine del quadro, con grande sorpresa tutta dovuta alla mia ignoranza, scoprii che Monet dipinse due quadri abbastanza simili: <strong>la Promenade</strong> (1873, è quello riprodotto nel mio poster) e <strong>la Femme à l'ombrelle</strong> (1875).<br><br>Da qualche anno Marylin e Camille mi aspettano al mare. Se riesco a convincere mia moglie, me ne porto una a Lecco.</p>
 <p><em>Nella foto:<br>Di Claude Monet - Photographer: Alexander R. Pruss., Pubblico dominio, https://commons.wikimedia.org/w/index.php?curid=44143</em></p>
             ]]>
         </content>
@@ -40,8 +70,9 @@
         </author>
         <link href="https://70plus.github.io/lindovinello-dei-travasi.html"/>
         <id>https://70plus.github.io/lindovinello-dei-travasi.html</id>
+            <category term="Numeri"/>
 
-        <updated>2023-01-02T14:25:55+01:00</updated>
+        <updated>2023-01-03T15:45:24+01:00</updated>
             <summary>
                 <![CDATA[
                     Nel film Die Hard - Duri a morire, la coppia del poliziotto McClane (Bruce Willis) e del negoziante Zeus Carver (Samule L. Jackson) si trova a risolvere un enigma logico-matematico per disinnescare una bomba che sta per esplodere. Devono isolare&hellip;
@@ -139,8 +170,9 @@
         <link href="https://70plus.github.io/disegnare-lalbero-16-anni-dopo.html"/>
         <id>https://70plus.github.io/disegnare-lalbero-16-anni-dopo.html</id>
         <media:content url="https://70plus.github.io/media/posts/6/albero.jpg" medium="image" />
+            <category term="Numeri"/>
 
-        <updated>2023-01-02T14:25:12+01:00</updated>
+        <updated>2023-01-03T15:45:40+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/6/albero.jpg" alt="Albero ricorsivo" />
@@ -220,8 +252,9 @@
         </author>
         <link href="https://70plus.github.io/una-prima-sistemata-al-blog.html"/>
         <id>https://70plus.github.io/una-prima-sistemata-al-blog.html</id>
+            <category term="Pulizie di casa"/>
 
-        <updated>2023-01-02T09:45:43+01:00</updated>
+        <updated>2023-01-03T15:46:12+01:00</updated>
             <summary>
                 <![CDATA[
                     Ho preso una serena decisione: mi dimentico di GitLab e rimango su GitHub, ma con un profilo diverso. Mi appresto quindi a cancellare Petro-pas, praticamente inutilizzato dal tempo che fu, e ho creato 70plus. Mutatis mutandis, cioè aggiornata la configurazione&hellip;
@@ -246,8 +279,9 @@
         <link href="https://70plus.github.io/2023-eccoti-qui.html"/>
         <id>https://70plus.github.io/2023-eccoti-qui.html</id>
         <media:content url="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" medium="image" />
+            <category term="Pensieri"/>
 
-        <updated>2023-01-01T09:41:55+01:00</updated>
+        <updated>2023-01-03T15:46:31+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" alt="Buoni propositi" />
@@ -274,8 +308,9 @@
         <link href="https://70plus.github.io/instabilita.html"/>
         <id>https://70plus.github.io/instabilita.html</id>
         <media:content url="https://70plus.github.io/media/posts/2/penguin-160539_1280.png" medium="image" />
+            <category term="Pulizie di casa"/>
 
-        <updated>2022-12-31T08:50:40+01:00</updated>
+        <updated>2023-01-03T15:46:50+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/2/penguin-160539_1280.png" alt="Instabilità" />
@@ -304,8 +339,9 @@ Bene, la modifica del nome nella configurazione Publii <em>non tiene</em>, pur s
         <link href="https://70plus.github.io/prima-che-finisca-lanno.html"/>
         <id>https://70plus.github.io/prima-che-finisca-lanno.html</id>
         <media:content url="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" medium="image" />
+            <category term="Pulizie di casa"/>
 
-        <updated>2022-12-31T08:46:17+01:00</updated>
+        <updated>2023-01-03T15:47:06+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" alt="Anno nuovo, sito nuovo" />
