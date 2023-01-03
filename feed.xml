@@ -3,12 +3,39 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-03T15:47:06+01:00</updated>
+    <updated>2023-01-03T23:28:49+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>Nove volte sette - Isaac Asimov, 1958</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/nove-volte-sette-isaac-asimov-1958.html"/>
+        <id>https://70plus.github.io/nove-volte-sette-isaac-asimov-1958.html</id>
+        <media:content url="https://70plus.github.io/media/posts/10/If_195802t.jpg" medium="image" />
+            <category term="Numeri"/>
+
+        <updated>2023-01-03T23:28:49+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/10/If_195802t.jpg" alt="9 volte 7" />
+                    «Ci sono quasi arrivato, signore... Ecco il prodotto, signore. Quarantun milioni, cinquecentotrentasettemilatrecentottantadue.» Mostrò la cifra scarabocchiata in fondo all'ultimo foglio. Il generale Weider sorrise condiscendente. Premette il pulsante di moltiplicazione sulla sua calcolatrice e attese che il ronzio dei meccanismi&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/10/If_195802t.jpg" class="type:primaryImage" alt="9 volte 7" /></p>
+                <p><em>«Ci sono quasi arrivato, signore... Ecco il prodotto, signore.  Quarantun milioni, cinquecentotrentasettemilatrecentottantadue.»</em></p>
+<p>Mostrò la cifra scarabocchiata in fondo all'ultimo foglio.<br>Il generale Weider sorrise condiscendente. Premette il pulsante di  moltiplicazione sulla sua calcolatrice e attese che il ronzio dei  meccanismi tacesse. Poi guardò il quadrante della minuscola macchina e  disse con voce rauca dallo stupore:</p>
+<p class="align-center"><em>«Grande Galassia, l'ha azzeccato in  pieno.»</em></p>
+<p><em>Da: <a href="https://it.wikipedia.org/wiki/Nove_volte_sette" target="_blank" rel="nofollow noopener noreferrer">Nove volte sette</a>.</em></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Il caffè</title>
         <author>
