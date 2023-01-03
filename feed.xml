@@ -3,12 +3,36 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-02T14:25:55+01:00</updated>
+    <updated>2023-01-03T15:25:29+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>La signora Monet</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/la-signora-monet.html"/>
+        <id>https://70plus.github.io/la-signora-monet.html</id>
+        <media:content url="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" medium="image" />
+
+        <updated>2023-01-03T15:25:29+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" alt="Monet - La promenade" />
+                    Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" class="type:primaryImage" alt="Monet - La promenade" /></p>
+                <p>Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con un ombrellino, mentre con il figlioletto cammina in un campo.<br>Volendo pubblicare un'immagine del quadro, con grande sorpresa tutta dovuta alla mia ignoranza, scoprii che Monet ne dipinse due, abbastanza simili: <strong>la Promenade</strong> (1873, è quello riprodotto nel mio poster) e <strong>la Femme à l'ombrelle</strong> (1875).<br><br>Da qualche anno Marylin e Camille mi aspettano al mare. Se riesco a convincere mia moglie, me ne porto una a Lecco.</p>
+<p><em>Nella foto:<br>Di Claude Monet - Photographer: Alexander R. Pruss., Pubblico dominio, https://commons.wikimedia.org/w/index.php?curid=44143</em></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>L&#x27;indovinello dei travasi</title>
         <author>

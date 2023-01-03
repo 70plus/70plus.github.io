@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://70plus.github.io/la-signora-monet.html",
+            "url": "https://70plus.github.io/la-signora-monet.html",
+            "title": "La signora Monet",
+            "summary": "Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con&hellip;",
+            "content_html": "<p>Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con un ombrellino, mentre con il figlioletto cammina in un campo.<br>Volendo pubblicare un'immagine del quadro, con grande sorpresa tutta dovuta alla mia ignoranza, scoprii che Monet ne dipinse due, abbastanza simili: <strong>la Promenade</strong> (1873, è quello riprodotto nel mio poster) e <strong>la Femme à l'ombrelle</strong> (1875).<br><br>Da qualche anno Marylin e Camille mi aspettano al mare. Se riesco a convincere mia moglie, me ne porto una a Lecco.</p>\n<p><em>Nella foto:<br>Di Claude Monet - Photographer: Alexander R. Pruss., Pubblico dominio, https://commons.wikimedia.org/w/index.php?curid=44143</em></p>",
+            "image": "https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg",
+            "author": {
+                "name": "Pasquale"
+            },
+            "tags": [
+            ],
+            "date_published": "2023-01-03T15:22:51+01:00",
+            "date_modified": "2023-01-03T15:25:29+01:00"
+        },
+        {
             "id": "https://70plus.github.io/lindovinello-dei-travasi.html",
             "url": "https://70plus.github.io/lindovinello-dei-travasi.html",
             "title": "L&#x27;indovinello dei travasi",
