@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-03T23:28:49+01:00</updated>
+    <updated>2023-01-05T08:36:25+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -43,23 +43,26 @@
         </author>
         <link href="https://70plus.github.io/il-caffe.html"/>
         <id>https://70plus.github.io/il-caffe.html</id>
+        <media:content url="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" medium="image" />
             <category term="Ricordi"/>
 
-        <updated>2023-01-03T15:44:39+01:00</updated>
+        <updated>2023-01-05T08:36:25+01:00</updated>
             <summary>
                 <![CDATA[
-                    Sono un consumatore accanito di caffè. Deve essere amaro, ma se al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare, mi piace la miscela densa che rimane sul fondo. Ristretto, normale, lungo, americano? Ognuno ha il&hellip;
+                        <img src="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" alt="Caffè del mattino" />
+                    Sono un consumatore accanito di caffè. Deve essere amaro ma, quando al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare. Mi piace la miscela densa che rimane sul fondo. Ristretto, normale, lungo, americano? Ognuno ha il&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Sono un consumatore accanito di caffè. Deve essere <strong>amaro</strong>, ma se al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare, mi piace la miscela densa che rimane sul fondo.</p>
+                    <p><img src="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" class="type:primaryImage" alt="Caffè del mattino" /></p>
+                <p>Sono un consumatore accanito di caffè. Deve essere <strong>amaro</strong> ma, quando al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare. Mi piace la miscela densa che rimane sul fondo.</p>
 <p><strong>Ristretto, normale, lungo, americano?</strong> Ognuno ha il suo momento.<br>Il primo caffè del mattino, scorrendo le notizie sul web, dev'essere ristretto (nonché rigorosamente amaro). Un'ora dopo, con la colazione, si comincia ad allungare, per finire nel lunghissimo a metà mattinata. Strettissimo a chiusura del pasto, si prosegue così allungando e accorciando per seguire il bioritmo della giornata.</p>
 <p>Perché l'effetto del caffè sulla produttività al lavoro è evidente e documentato:</p>
 <blockquote>
-<p>A mathematician is a machine for turning coffee into theorems.</p>
+<p>A mathematician is a machine for turning coffee into theorems.<br>(<a href="https://it.wikipedia.org/wiki/Paul_Erd%C5%91s" target="_blank" rel="nofollow noopener noreferrer">Paul Erdős.</a>)</p>
 </blockquote>
-<p>ebbe a dire il matematico ungherese <a href="https://it.wikipedia.org/wiki/Paul_Erd%C5%91s" target="_blank" rel="nofollow noopener noreferrer">Paul Erdős.</a><br>Un effetto simile, adeguando al ribasso la scala e cambiando settore di attività, capita anche a me. Non so se prevalga l'effetto chimico della caffeina, oppure se semplicemente i neuroni necessari al rituale della tazzina si stacchino, lasciando tutti gli altri a riordinare il tavolo da lavoro virtuale nella testa.</p>
+<p>Un effetto simile, adeguando al ribasso la scala e cambiando settore di attività, capita anche a me. Non so se prevalga l'effetto chimico della caffeina, oppure se semplicemente i neuroni necessari al rituale della tazzina si stacchino, lasciando tutti gli altri a riordinare il tavolo da lavoro virtuale nella testa.</p>
 <p>Sta di fatto che, con la tazza fumante a sinistra del foglio, la mano destra riprende con decisione a tracciare idee che sembrano uscire dal nulla: ecco, bastava fare così.<br>Merito del caffè, probabilmente.</p>
 <p><em>Post pubblicato nel 2011 su Elaborando. Adesso prendo meno caffè, ma il piacere è rimasto intatto.</em></p>
             ]]>

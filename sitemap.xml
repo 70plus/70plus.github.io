@@ -30,7 +30,11 @@
 </url>
 <url>
 <loc>https://70plus.github.io/il-caffe.html</loc>
-<lastmod>2023-01-03T15:44:39+01:00</lastmod>
+<lastmod>2023-01-05T08:36:25+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/9/1672902875369e-2.jpg</image:loc>
+<image:title><![CDATA[Caffè del mattino]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://70plus.github.io/instabilita.html</loc>
@@ -72,6 +76,18 @@
 <image:image>
 <image:loc>https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg</image:loc>
 <image:title><![CDATA[Anno nuovo, sito nuovo]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/python-on-line.html</loc>
+<lastmod>2023-01-05T08:24:13+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/11/python-logo-master-v3-TM_e.png</image:loc>
+<image:title><![CDATA[Python on line]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/11/esempio_google_colab.png</image:loc>
+<image:title><![CDATA[Esempio di codice in Google Colab]]></image:title>
 </image:image>
 </url>
 <url>
