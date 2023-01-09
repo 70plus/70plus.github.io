@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-09T16:43:38+01:00</updated>
+    <updated>2023-01-09T16:52:10+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://70plus.github.io/le-mie-note-personali-con-obsidian.html</id>
             <category term="Cose informatiche"/>
 
-        <updated>2023-01-09T16:43:38+01:00</updated>
+        <updated>2023-01-09T16:52:10+01:00</updated>
             <summary>
                 <![CDATA[
                     Da un paio di mesi utilizzo Obsidian per gestire le mie note personali. Ci sono arrivato dopo aver utilizzato, tanti anni fa, Evernote, poi file sparsi, Stackedit e infine, in tempi più recenti, Notion. Obsidian è un'applicazione che gira su&hellip;
@@ -38,7 +38,7 @@
 <h4>L'architettura del mio ambiente di note personali con Obsidian</h4>
 <p>Utilizzo normalmente un pc con Xubuntu Linux, un MacBook e, più di rado, un pc Windows 11. Non può mancare uno smartphone per la mobilità, nel mio caso un Android 12.<br>Come premesso, per l'accesso da più dispositivi mi affido a un account gratuito di Dropbox. Questa è l'architettura che ho realizzato:</p>
 <figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/16/architettura.png" alt="Architettura multi-dispositivo, realizzata con Obsidian e Dropbox" width="630" height="313" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/16/responsive/architettura-xs.png 300w ,https://70plus.github.io/media/posts/16/responsive/architettura-sm.png 480w ,https://70plus.github.io/media/posts/16/responsive/architettura-md.png 768w"></figure>
-<p>La struttura di file e cartelle della base dati (il <strong>Vault</strong> nella terminologia Obsidian), è ospitata nella cartella Dropbox, sincronizzata tra i vari dispositivi.<br>Il piano gratuito di Dropbox consente di collegare fino a 3 dispositivi, quindi per forza di cose il pc Windows, utilizzato più di rado, è normalmente fuori gioco, come evidenziato dalla linea tratteggiata.</p>
+<p>La struttura di file e cartelle della base dati (il v<strong>ault</strong> nella terminologia Obsidian), è ospitata nella cartella Dropbox, sincronizzata tra i vari dispositivi.<br>Il piano gratuito di Dropbox consente di collegare fino a 3 dispositivi, quindi per forza di cose il pc Windows, utilizzato più di rado, è normalmente fuori gioco, come evidenziato dalla linea tratteggiata.</p>
 <p>Sullo smartphone non ho installato l'app Obsidian, perché da mobile mi limito a <em>catturare</em> un'idea, memorizzandola in un file di testo creato con l'app Dropbox. Basta salvarla con estensione .md, riporla in una cartella particolare del proprio <em>vault</em> Obsidian, per poi ritrovarsela accedendo al pc linux o al MacBook.<br>Particolare non trascurabile, la nota può essere <em>dettata</em> allo smartphone, semplificando ulteriormente il tutto.</p>
 <h4>La struttura delle note</h4>
 <p>Via via che si salvano note, diventa sempre più complicato raccapezzarsi quando si vuol riaprire una particolare nota. Sono certamente di aiuto i <strong>tag</strong> che Obsidian consente di aggiungere a una singola nota, e naturalmente il motore di ricerca interno all'applicazione.</p>
@@ -47,7 +47,7 @@
 <p>In dettaglio:</p>
 <ul>
 <li>il vault è organizzato per <strong>aree di interesse</strong> (es.: Linux, sito 70plus, math, ...);</li>
-<li>per ogni mia area di interesse creo, nel primo livello del Vault, una pagina di sommario;</li>
+<li>per ogni mia area di interesse creo, nel primo livello del vault, una pagina di sommario;</li>
 <li>nel primo livello del vault ci sono anche alcune cartelle specifiche:
 <ul>
 <li><strong>note</strong>, che contiene <strong>una cartella per ogni area di interesse</strong>, nella quale inserirò le note create via via; se un’idea è legata a più aree di interesse, starà nella cartella dell’area con cui ha più attinenza;</li>
@@ -90,7 +90,7 @@
 ├── Linux.md
 └── Sito 70plus.md</pre>
 <h4>Effetti sulla produttività</h4>
-<p>Ho passato da poco il centinaio di note e devo dire che è migliorata notevolmente la mia produttività, in varie direzioni: articoli su Inchiostro Virtuale, esperimenti su Linux, le mie ricerche matematiche; persino le mie qualità culinarie sono migliorate (però questo me lo dico da solo).<br>Il motivo: la semplicità di Obsidian è uno stimolo insospettato ad annotare cose, e la velocità nel ritrovarle libera spazio per la creatività.</p>
+<p>Ho passato da poco il centinaio di note e devo dire che è aumentata notevolmente la mia produttività, in varie direzioni: articoli su <a href="https://inchiostrovirtuale.it/author/p-petrosinoinchiostrovirtuale-it/" target="_blank" rel="noopener noreferrer">Inchiostro Virtuale</a>, esperimenti su Linux, le mie ricerche matematiche; persino le mie qualità culinarie sono migliorate (però questo me lo dico da solo).<br>Il motivo: la semplicità di Obsidian è uno stimolo insospettato ad annotare cose, e la velocità nel ritrovarle libera spazio per la creatività.</p>
             ]]>
         </content>
     </entry>
