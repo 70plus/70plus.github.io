@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-09T16:41:05+01:00</updated>
+    <updated>2023-01-09T16:43:38+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,15 +18,15 @@
         <id>https://70plus.github.io/le-mie-note-personali-con-obsidian.html</id>
             <category term="Cose informatiche"/>
 
-        <updated>2023-01-09T16:25:49+01:00</updated>
+        <updated>2023-01-09T16:43:38+01:00</updated>
             <summary>
                 <![CDATA[
-                    Da un paio di mesi utilizzo Obsidian per gestire le mie note personali. Ci sono arrivato dopo aver utilizzato, tanti anni fa, Evernote, poi file sparsi, Stackedit e infine, in tempi più recenti, Norton. Obsidian è un'applicazione che gira su&hellip;
+                    Da un paio di mesi utilizzo Obsidian per gestire le mie note personali. Ci sono arrivato dopo aver utilizzato, tanti anni fa, Evernote, poi file sparsi, Stackedit e infine, in tempi più recenti, Notion. Obsidian è un'applicazione che gira su&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Da un paio di mesi utilizzo <a href="https://obsidian.md/" target="_blank" rel="nofollow noopener noreferrer">Obsidian</a> per gestire le mie note personali.<br>Ci sono arrivato dopo aver utilizzato, tanti anni fa, <a href="https://evernote.com/intl/it" target="_blank" rel="nofollow noopener noreferrer">Evernote</a>, poi file sparsi, <a href="https://stackedit.io/" target="_blank" rel="nofollow noopener noreferrer">Stackedit</a> e infine, in tempi più recenti, <a href="https://www.notion.so/" target="_blank" rel="nofollow noopener noreferrer">Norton</a>.</p>
+                <p>Da un paio di mesi utilizzo <a href="https://obsidian.md/" target="_blank" rel="nofollow noopener noreferrer">Obsidian</a> per gestire le mie note personali.<br>Ci sono arrivato dopo aver utilizzato, tanti anni fa, <a href="https://evernote.com/intl/it" target="_blank" rel="nofollow noopener noreferrer">Evernote</a>, poi file sparsi, <a href="https://stackedit.io/" target="_blank" rel="nofollow noopener noreferrer">Stackedit</a> e infine, in tempi più recenti, <a href="https://www.notion.so/" target="_blank" rel="nofollow noopener noreferrer">Notion</a>.</p>
 <h4>Cos'è Obsidian</h4>
 <p>Obsidian è un'applicazione che <em>gira</em> su <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, <strong>iOS</strong> e <strong>Android</strong>.<br>Nel campo ricchissimo delle applicazioni di gestione delle note, Obsidian spicca per alcune caratteristiche che ritengo vantaggiose:</p>
 <ol>
