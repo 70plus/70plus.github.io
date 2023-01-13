@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-13T07:45:16+01:00</updated>
+    <updated>2023-01-13T09:00:40+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -17,8 +17,9 @@
         <link href="https://70plus.github.io/disegnare-un-cuore.html"/>
         <id>https://70plus.github.io/disegnare-un-cuore.html</id>
         <media:content url="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" medium="image" />
+            <category term="Ricordi"/>
 
-        <updated>2023-01-13T07:45:16+01:00</updated>
+        <updated>2023-01-13T09:00:40+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" alt="cuore o noce?" />
