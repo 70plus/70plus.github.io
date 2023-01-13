@@ -3,12 +3,47 @@
     <title>70plus - and still a lot to be done</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-09T16:52:10+01:00</updated>
+    <updated>2023-01-13T07:45:16+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>Disegnare un cuore</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/disegnare-un-cuore.html"/>
+        <id>https://70plus.github.io/disegnare-un-cuore.html</id>
+        <media:content url="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" medium="image" />
+
+        <updated>2023-01-13T07:45:16+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" alt="cuore o noce?" />
+                    Correva il 2006 quando pubblicai nel mio blog Elaborando, da poco creato su Libero, il post: Disegnare un cuore. A parte rifare il verso ad Art Attack, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico. Mai&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" class="type:primaryImage" alt="cuore o noce?" /></p>
+                <p>Correva il 2006 quando pubblicai nel mio blog <em><strong>Elaborando</strong></em>, da poco creato su Libero, il post: <em><strong>Disegnare un cuore</strong></em>.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/17/cuore.png" alt="Disegnare un cuore - post su Elaborando" width="499" height="431" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/17/responsive/cuore-xs.png 300w ,https://70plus.github.io/media/posts/17/responsive/cuore-sm.png 480w ,https://70plus.github.io/media/posts/17/responsive/cuore-md.png 768w"></figure>
+<p>A parte rifare il verso ad <strong>Art Attack</strong>, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico.<br>Mai avrei pensato che quel post avrebbe procurato una fetta rilevante del traffico al blog, negli anni che seguirono.<br>Dettaglio interessante, la pagina riceveva visite in modo particolare a ridosso del <strong>14 febbraio</strong>, probabilmente rispondendo all'esigenza diffusa di trovare in extremis una carineria da dedicare alla propria lei.</p>
+<h4>Io e il SEO</h4>
+<p>Non so se quel post oggi riscuota o meno un residuo successo, i contatori del blog sono saltati, per mancata manutenzione. All'epoca a portare traffico era il motore di ricerca Google, con diverse chiavi sul tema richiamato dal titolo del post: "<em>Disegnare un cuore</em>", ma erano gettonate anche: "<em>come disegnare un cuore</em>", "<em>come disegnare un cuore perfetto</em>", "<em>disegna un cuore</em>", "<em>cuori da disegnare</em>",  "<em>disegnare cuore</em>", "<em>come si disegna un cuore</em>".<br>In queste <em>query</em> il mio post rimase a lungo stabile nella prima decina di risultati. Poi sono arrivati video su youtube e proposte alternative, e il mio post è scivolato via via verso l'oblio.</p>
+<p>Nel blog c'erano altri 4-5 post che nel tempo hanno ricevuto traffico apprezzabile da Google e mi sono sempre chiesto quanto sia stato rilevante per il motore di ricerca l'aver prodotto centinaia e centinaia di post.<br>Per me lo è stato, il blog è stato una sorta di diario da riempire con veloci annotazioni al mattino presto, prima di affrontare la quotidiana Ivrea-Milano.</p>
+<h4>E oggi, come si disegnerebbe un cuore?</h4>
+<p>Qualche giorno fa un articolo del sito <a href="https://www.lealternative.net/2023/01/09/siti-belli-e-basta-quinta-parte/" target="_blank" rel="nofollow noopener noreferrer">Le Alternative</a> mi ha portato a scoprire <a href="https://www.templatemaker.nl/en/" target="_blank" rel="nofollow noopener noreferrer">Templatemaker</a>: con poco sforzo è possibile scaricare in formato pdf il template da stampare e ritagliare per ottenere scatole e buste di varie forme. E sì, ci sono anche le scatole a forma di cuore.</p>
+<p>È evidente che non c'è gara, Templatemaker batte il mio post mille a uno: si possono scegliere le dimensioni, agire sulla forma, regolare addirittura le dimensioni dei bordi da piegare e incollare per formare e tenere insieme la scatola.</p>
+<p>Quasi quasi provo a realizzarne una. Prima però devo pensare a cosa metterci dentro, senza svenarmi.</p>
+<p><em>Nell'immagine: una mia foto di un po' di anni fa.</em></p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Le mie note personali con Obsidian</title>
         <author>
@@ -442,38 +477,6 @@ Bene, la modifica del nome nella configurazione Publii <em>non tiene</em>, pur s
 <p>Un terzo aspetto non legato a Publii ma alla mia ignoranza, è che in markdown, per far aprire un link in una nuova finestra, occorre utilizzare la sintassi html (&lt;a href = … target=”_blank”…) e non quella compatta propria di markdown.</p>
 <p>Misteri dell’informatica.</p>
 <p>*La foto di apertura è di <a href="https://pixabay.com/it/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160539" target="_blank">OpenClipart-Vectors</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160539" target="_blank">Pixabay</a></p>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Prima che finisca l&#x27;anno</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.github.io/prima-che-finisca-lanno.html"/>
-        <id>https://70plus.github.io/prima-che-finisca-lanno.html</id>
-        <media:content url="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" medium="image" />
-            <category term="Cose informatiche"/>
-
-        <updated>2023-01-09T16:41:05+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" alt="Anno nuovo, sito nuovo" />
-                    Alla ricerca continua di un posto dove raccogliere pensieri e ricordi, sulla soglia del 2023 ci riprovo con un sito statico. Perché un sito statico? Non mi serve un sito dinamico (niente e-commerce, interattività e cose simili) e poi con&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg" class="type:primaryImage" alt="Anno nuovo, sito nuovo" /></p>
-                <p>Alla ricerca continua di un posto dove raccogliere pensieri e ricordi, sulla soglia del 2023 ci riprovo con un sito statico.</p>
-<p>Perché un sito statico?
-Non mi serve un sito dinamico (niente e-commerce, interattività e cose simili) e poi con questa architettura posso separare la generazione dei contenuti, che avviene sul mio pc, dalla pubblicazione sul web, che avviene mediante un provider esterno.
-La scelta dell’applicazione è caduta su <a href="https://getpublii.com/" target="_blank">Publii</a>, un generatore di siti statici con interfaccia grafica, molto simile a quella offerta da Wordpress.</p>
-<p>In prima battuta ho provato un deploy su GitLab, ma senza successo: dopo il sync di Publii mi ritrovo su GitLab i file del mio sito, ma senza il contenuto. Inoltre la <em>pipeline</em> di pubblicazione viene <em>skippata</em>. Riproverò, per capire cosa succede.</p>
-<p>Su GiHub, invece, la pubblicazione sembra andare a buon fine, anche se su un indirizzo che non mi piace granché: petro-pas.github.io/70plus.
-Purtroppo a suo tempo l’utente <strong>petropas</strong> era già preso.</p>
-<p>La foto di apertura è di <a href="https://pixabay.com/it/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7669293" target="_blank">Gerd Altmann</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7669293" target="_blank">Pixabay</a></p>
 
             ]]>
         </content>
