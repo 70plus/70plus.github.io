@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-16T22:06:58+01:00</updated>
+    <updated>2023-01-16T22:11:36+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Ricordi"/>
             <category term="Cose informatiche"/>
 
-        <updated>2023-01-16T22:06:58+01:00</updated>
+        <updated>2023-01-16T22:11:36+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
@@ -39,7 +39,7 @@
 <p>A distanza di tanti anni ho ritrovato il Prolog tra gli ambienti di sviluppo offerti dalla piattaforma <a href="https://www.tutorialspoint.com/execute_prolog_online.php" target="_blank" rel="nofollow noopener noreferrer">Tutorialspoint</a>. <em>Googlando</em> un po', ho scoperto che è tuttora utilizzato nell'ambito per cui era nato, l'intelligenza artificiale.<br>Ho provato quindi a rispolverare i ricordi, anche se riprendere è quasi come tornare ai primi passi incerti.</p>
 <h4>Le basi del Prolog</h4>
 <p>Il Prolog <strong>non è</strong> un linguaggio <strong>imperativo</strong>, né <strong>funzionale</strong> , né <strong>a oggetti</strong>.<br>Nel primo caso, infatti, la macchina dovrebbe eseguire sequenze di istruzioni che intendono risolvere un particolare compito, ma non è così. Nel secondo caso, l'elaborazione dovrebbe basarsi sul richiamo di un insieme di funzioni, ma ancora una volta non è questo il caso. Infine l'esecuzione di un programma Prolog non si basa nemmeno sulla definizione di un insieme di oggetti software e sui messaggi che questi si scambiano.</p>
-<p>Nel Prolog, invece, il programma lavora per sintesi di proposizioni logiche, e consiste di un insieme di <strong>fatti</strong> e <strong>regole</strong>, che si assume descrivano in modo compiuto l'ambito si cui si lavora. Il programma Prolog deve calcolare se una proposizione assegnata è vera o meno, sulla base di fatti e regole disponibili.</p>
+<p>Nel Prolog, invece, il programma lavora per sintesi di proposizioni logiche, e consiste di un insieme di <strong>fatti</strong> e <strong>regole</strong>, che si assume descrivano in modo compiuto l'ambito si cui si lavora. Il programma Prolog deve calcolare se una proposizione assegnata sia vera o meno, sulla base di fatti e regole disponibili.</p>
 <h4>Un esempio: figli e genitori</h4>
 <p>Ho una nipotina, Luna, gioia dei genitori Valentina e Giovanni. Al Prolog posso raccontare la cosa mediante due fatti:</p>
 <blockquote>
