@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-16T22:02:16+01:00</updated>
+    <updated>2023-01-16T22:06:58+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Ricordi"/>
             <category term="Cose informatiche"/>
 
-        <updated>2023-01-16T22:02:16+01:00</updated>
+        <updated>2023-01-16T22:06:58+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
@@ -64,6 +64,12 @@
 <li>un obiettivo principale (stampa il nome dei genitori di <em>luna</em>);</li>
 <li>un predicato <em>scrivi</em>, che stampa il valore che gli viene passato, se è una stringa non vuota, e subito dopo fallisce, mentre ha successo se il valore passato è una stringa vuota;</li>
 <li>un predicato <em>genitori</em>, che fallisce tutte le volte che trova un genitore (e ne stampa il nome), mentre ha successo quando ha esaurito la sua ricerca.</li>
+</ul>
+<p>Da notare inoltre:</p>
+<ul>
+<li><em>nl</em> (new line), per andare a capo;</li>
+<li><em>fail</em>, per forzare il fallimento di un predicato;</li>
+<li><em>scrivi(_).</em> e <em>genitori(_).</em>, che forzano il successo del predicato.</li>
 </ul>
 <p>Il fallimento di un predicato causa il <em>backtracking</em> del programma, cioè la ricerca all'indietro di altre soluzioni possibili.</p>
 <p>Evviva, il programma risponde correttamente:</p>
