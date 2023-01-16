@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-16T21:58:54+01:00</updated>
+    <updated>2023-01-16T22:02:16+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Ricordi"/>
             <category term="Cose informatiche"/>
 
-        <updated>2023-01-16T21:58:54+01:00</updated>
+        <updated>2023-01-16T22:02:16+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
@@ -33,7 +33,7 @@
                 <p>Il mio primo incontro con il <a href="https://it.wikipedia.org/wiki/Prolog" target="_blank" rel="nofollow noopener noreferrer">Prolog</a> e la <strong>programmazione logica</strong> risale ai primi anni '90 del secolo scorso, quando trovai un <strong>compilatore per il linguaggio Prolog</strong> installato sul pc assegnato a un tesista che avevo seguito in qualità di relatore esterno.<br>In quegli anni mi capitò diverse volte di essere relatore esterno di tesi di laurea presso l'Ateneo di Pisa. Il laureando di turno svolgeva il suo lavoro di ricerca presso i laboratori Olivetti di Ivrea, affidato a un interno (io, in questi casi), lavorando su un pc messo a disposizione dalla Olivetti stessa.<br>Si trattava in genere di pc utilizzati per test, che venivano appunto distratti per alcuni mesi. Una volta discussa la tesi, il laureando (ormai laureato) liberava il pc, rimuovendo file e programmi che aveva caricato sul pc.</p>
 <h4>Il Prolog, per fare cosa</h4>
 <p>Quel compilatore Prolog rimase invece installato e, complice l'avvicinarsi delle ferie con il conseguente calo del carico di lavoro, nelle settimane successive spesi diverse ore a giocare con la programmazione logica.<br>Del codice che mi divertii a mettere insieme, ricordo due programmi: un inventario dei libri che avevo in casa e un gestore di pianificazione operativa con i <a href="https://it.wikipedia.org/wiki/Diagramma_di_Gantt" target="_blank" rel="nofollow noopener noreferrer">diagrammi di Gantt</a>.</p>
-<p>A quell'epoca sui pc girava <strong>Windows 3.1</strong> e <strong>Excel</strong> era una chicca per pochi fortunati. Quindi sviluppare un programma che mi consentiva, interattivamente, di elencare i libri scritti da Tizio, o editi da Caio, o che nel titolo avessero un particolare termine, non era una cosa da poco.</p>
+<p>A quell'epoca sui pc girava <strong>Windows 3.1</strong>, mentre <strong>Excel</strong> era una chicca per pochi fortunati. Quindi sviluppare un programma che mi consentiva, interattivamente, di elencare i libri scritti da Tizio, o editi da Caio, o che nel titolo avessero un particolare termine, non era una cosa da poco.</p>
 <p>Il programma di pianificazione operativa, invece, mi accompagnò sul lavoro per qualche mese, ma non si rivelò di particolare utilità, e così dopo un po' la programmazione logica finì in cantina (dove dev'esserci ancora qualche listato, che prima o poi riporterò alla luce).</p>
 <h4>Il Prolog oggi</h4>
 <p>A distanza di tanti anni ho ritrovato il Prolog tra gli ambienti di sviluppo offerti dalla piattaforma <a href="https://www.tutorialspoint.com/execute_prolog_online.php" target="_blank" rel="nofollow noopener noreferrer">Tutorialspoint</a>. <em>Googlando</em> un po', ho scoperto che è tuttora utilizzato nell'ambito per cui era nato, l'intelligenza artificiale.<br>Ho provato quindi a rispolverare i ricordi, anche se riprendere è quasi come tornare ai primi passi incerti.</p>
