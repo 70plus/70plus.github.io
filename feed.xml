@@ -3,12 +3,70 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-16T22:11:36+01:00</updated>
+    <updated>2023-01-23T16:10:50+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>Primel: come Wordle, ma con i numeri primi</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html"/>
+        <id>https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html</id>
+        <media:content url="https://70plus.github.io/media/posts/19/primel_6gen23.png" medium="image" />
+
+        <updated>2023-01-23T16:10:50+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" alt="" />
+                    Ho cominciato il 2023 giocando con Primel, un gioco online molto simile a Wordle, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre. Come funziona? e quali strategie di gioco si&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" class="type:primaryImage" alt="" /></p>
+                <p>Ho cominciato il 2023 giocando con <a href="https://converged.yt/primel/" target="_blank" rel="nofollow noopener noreferrer">Primel</a>, un gioco online molto simile a <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="nofollow noopener noreferrer">Wordle</a>, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre.<br>Come funziona? e quali strategie di gioco si possono immaginare?</p>
+<h4>Le regole</h4>
+<p>Si hanno a disposizione sei tentativi per indovinare un numero primo di 5 cifre. Le cifre di ogni tentativo vengono colorate di <strong>verde</strong> (la cifra c'è, in questa posizione), oppure di <strong>giallo</strong> (la cifra c'è, ma non in questa posizione), di <strong>grigio</strong> (cifra assente).<br>Ogni giorno viene proposto un primo diverso, quindi si può giocare al massimo una volta al giorno (come con  Wordle).<br>Aspetto positivo: se si propone un numero non primo, il tentativo (evidentemente errato) non viene conteggiato come errore, è quindi relativamente facile <em>azzeccare</em> la risposta corretta nei sei tentativi a disposizione.</p>
+<h4>La strategia iniziale</h4>
+<p>Il primo passo è cercare di indovinare le 5 cifre del numero. Da notare che possono esserci cifre ripetute.<br>In partenza mi affido a una semplice strategia, che mi mangia due tentativi: provo i due numeri primi <strong>12347</strong> e <strong>86509</strong>, che contengono tutte e dieci le cifre decimali. L'esito di queste due prime mosse può essere:</p>
+<ul>
+<li>il numero non ha ripetizioni, e ho quindi tutte e 5 le cifre, alcune in giallo (c'è, ma non in questa posizione), altre in verde (c'è proprio in questa posizione);</li>
+<li>il numero ha una ripetizione, quindi ho le 4 cifre, di cui una sarà presente due volte;</li>
+<li>il numero ha tre cifre distinte, quindi ci sarà una cifra presente tre volte, o due presenti due volte;</li>
+<li>il numero ha due cifre distinte; come gestire questo caso lo vedrò quando mi capiterà (!)</li>
+</ul>
+<h4>Il numero non ha ripetizioni</h4>
+<p>Il primo di gennaio mi è capitato proprio questo caso.</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tenativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
+<p>È abbastanza semplice vedere come proseguire: la penultima posizione può essere occupata solo dal 2, quindi il primo da indovinare termina per <strong>509</strong>, mentre nelle prime due posizioni vanno sistemati il 4 e lo 0, ovviamente in questo ordine.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23.png" alt="primel dell' 1/1/2023, la soluzione" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-md.png 768w"></figure>
+<h4>Il numero da indovinare ha una ripetizione</h4>
+<p>Il 4 gennaio mi è capitato un caso così:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23a-2.png" alt="primel del 4 gennaio 2023: primi due tentativi" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-md.png 768w"></figure>
+<p>In questo caso conosciamo 4 delle 5 cifre, di cui una utilizzata due volte, e la posizione esatta di una sola cifra.<br>Quale cifrà potrà essere ripetuta? Il primo da cercare non sarà evidentemente divisibile per 3. Ora, la somma delle 4 cifre note è: 1 + 2 + 3 + 5 = 11 = 2 mod 3, quindi si può escludere solo l'1 (la somma delle cifre farebbe 12 = 0 mod 3). Inoltre il 5 non può occupare l'utlima posizione.</p>
+<p>Tenendo fermo il 2, occorre fare delle prove:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23b-2.png" alt="primel del 4 gennaio 2023: terzo tentativo" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-md.png 768w"></figure>
+<p>Evidentemente non è il 2 ad essere presente due volte. quindi sarà il 3 o il 5. Però ho qualche informazione in più: conosco la posizione esatta del 2, e posso escludere alcune posizioni per i numeri rimanenti. L'ultima cifra, poi, non potrà essere né 2 né 5, né 1, quindi deve essere 3.<br>Provo a vedere se la cifra presente due volte sia il 5:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23.png" alt="primel del 4 gennaio 2023" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-md.png 768w"></figure>
+<p>Esatto!</p>
+<h4>Ancora più difficile: due ripetizioni</h4>
+<p>Oggi 23 gennaio 2023, mi è capitata questa situazione:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_a.png" alt="primel del 23 gennaio 2023" width="485" height="582" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-md.png 768w"></figure>
+<p>Sono presenti solo tre cifre: 5, 6 e 9, la cui somma modulo 3 fa 2. Posso quindi escludere solo che le due cifre mancanti siano due 5 (la somma delle cifre sarebbe 30).<br>Tenendo fermo il 9, provo a verificare se le cifre da aggiungere sono il 6 e il 9:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_c-2.png" alt="primel del 23 gennaio 2023: terzo tentativo" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-md.png 768w"></figure>
+<p>Ok per il secondo 9, ma di 6 ce n'è uno solo, anche se adesso ne conosco la posizione.<br>L'ultima cifra potrebbe essere un altro 9, oppure un 5. In seconda posizione non posso mettere un 5, quindi inserisco il 9. Il quarta posizione non può andare un 9, quindi metto il 5 e, infine, in terza posizione non mi rimane che sistemare un 9:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_b.png" alt="primel del 23 gennaio 2023" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-md.png 768w"></figure>
+<h4>Non è poi così difficile, si direbbe</h4>
+<p>Nel gioco non vengono conteggiati i tentativi errati per aver inserito un numero non primo. È un aiuto notevole, grazie anche a questo finora me la sono sempre cavata con 4 tentativi, qualche volta con 3.</p>
+<p>Vedremo nel seguito.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Prolog e la programmazione logica</title>
         <author>
@@ -511,35 +569,6 @@
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://70plus.github.io/media/posts/5/screenshot_2gen23.png" alt="Screenshot del sito al 2 gennaio 2023" width="1366" height="768" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/5/responsive/screenshot_2gen23-xs.png 300w ,https://70plus.github.io/media/posts/5/responsive/screenshot_2gen23-sm.png 480w ,https://70plus.github.io/media/posts/5/responsive/screenshot_2gen23-md.png 768w"></figure><br>In alto a destra c'è l'icona del menu <em>a sandwich</em>, per ora con solo due voci: menu e bio. Seguiranno altre pagine <em>non blog</em>, per temi specifici e di rilievo. Quali? Boh.</p>
 <p> </p>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>2023, eccoti qui</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.github.io/2023-eccoti-qui.html"/>
-        <id>https://70plus.github.io/2023-eccoti-qui.html</id>
-        <media:content url="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" medium="image" />
-            <category term="Pensieri"/>
-
-        <updated>2023-01-09T16:38:58+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" alt="Buoni propositi" />
-                    Dovrebbe essere il momento dei buoni propositi, ma non saprei da dove cominciare. Meno arrabbiature? Alimentazione più sana? Più esercizio fisico? Ecco, forse comincerei proprio da qui, dall'esercizio fisico. Sono anni che mi propongo di corricchiare durante l'inverno, per essere&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/3/board-1647323_1920.jpg" class="type:primaryImage" alt="Buoni propositi" /></p>
-                <p>Dovrebbe essere il momento dei <strong>buoni propositi</strong>, ma non saprei da dove cominciare. Meno arrabbiature? Alimentazione più sana? Più esercizio fisico?</p>
-<p>Ecco, forse comincerei proprio da qui, dall'<strong>esercizio fisico</strong>. Sono anni che mi propongo di corricchiare durante l'inverno, per essere già rodato all'arrivo della primavera. Il 2023 potrebbe essere l'anno giusto per farlo.</p>
-<p>Per <strong>l'alimentazione</strong> direi che, a parte qualche moderato eccesso occasionale, sono già sulla buona strada. Devo imparare a evitare la pizza di sera, quella in pizzeria o da asporto, perché la casalinga ha un carico glicemico minore, o almeno così mi illudo che sia.</p>
-<p>Per le <strong>arrabbiature</strong> non so cosa fare, quando arrivano arrivano.</p>
-<p>E poi la <strong>pigrizia</strong>, ecco, questo è un punto importante. Devo essere più determinato e concreto, ed eliminare i <em>ciondolamenti</em>. È banale dirlo, ma così si libererà tempo per fare altre cose.</p>
-<p><em>Foto di apertura di <a href="https://pixabay.com/it/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1647323" target="_blank" rel="noopener">Gerd Altmann</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1647323" 3="" target="_blank" rel="noopener">Pixabay</a>.</em></p>
             ]]>
         </content>
     </entry>
