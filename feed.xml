@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-01-23T16:34:17+01:00</updated>
+    <updated>2023-01-27T17:12:26+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html</id>
         <media:content url="https://70plus.github.io/media/posts/19/primel_6gen23.png" medium="image" />
 
-        <updated>2023-01-23T16:34:17+01:00</updated>
+        <updated>2023-01-27T17:12:26+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" alt="" />
@@ -41,7 +41,7 @@
 </ul>
 <h4>Il numero non ha ripetizioni</h4>
 <p>Il primo di gennaio mi è capitato proprio questo caso.</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tenativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tentativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
 <p>È abbastanza semplice vedere come proseguire: la penultima posizione può essere occupata solo dal 2, quindi il primo da indovinare termina per <strong>509</strong>, mentre nelle prime due posizioni vanno sistemati il 4 e lo 0, ovviamente in questo ordine.</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23.png" alt="primel dell' 1/1/2023, la soluzione" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-md.png 768w"></figure>
 <h4>Il numero da indovinare ha una ripetizione</h4>
