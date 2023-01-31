@@ -660,7 +660,7 @@ textarea {
   display: flex;
   height: var(--navbar-height);
   overflow: hidden;
-  width: 50%;
+  width: 32%;
   z-index: 2;
 }
 @media all and (min-width: 56.25em) {
