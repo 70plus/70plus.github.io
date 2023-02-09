@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-02-09T07:39:31+01:00</updated>
+    <updated>2023-02-09T08:22:05+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Numeri"/>
             <category term="Cose informatiche"/>
 
-        <updated>2023-02-09T07:39:31+01:00</updated>
+        <updated>2023-02-09T08:22:05+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" alt="Calndario in una pagina per il 2023" />
@@ -34,13 +34,13 @@
 <figure class="align-center"><img loading="lazy"  src="https://bigthink.com/wp-content/uploads/2023/01/find-Am-Thanks.jpg" data-is-external-image="true"></figure>
 <p> Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il 23 novembre, traccio una linea verticale nella colonna che contiene <strong>Novembre</strong>, una linea orizzontale nella riga che contiene il <strong>23</strong> e al punto di incrocio trovo <strong>Thu</strong>, cioè <strong>giovedì</strong>.</p>
 <p>Può sembrare macchinoso, ma dopo un po' di allenamento diventa un modo veloce e compatto per portarsi dietro il calendario di un anno. Peccato che vada adattato di anno in anno. <br>Neanche troppo complicato, peraltro: al primo di gennaio va solo cambiata la disposizione dei mesi nel riquadro in alto. Se si tiene conto che la durata dei mesi è costante, a parte quella di febbraio che vale 28 o 29 giorni, in tutto si potranno avere 14 disposizioni diverse per i dodici mesi: 7 per gli anni non bisesistili, con gennaio che parte di lunedì, oppure di martedì, e così via fino a domenica; e 7 per i bisestili.</p>
-<p>A questo punto ci si può chiedere: quanto è complicato automatizzare la composizione del calendario per un generico anno, utilizzando un foglio di calcolo? Non molto, vediamo un modo per farlo.</p>
+<p>A questo punto ci si può chiedere quanto sia complicato automatizzare la composizione del calendario per un generico anno, utilizzando un foglio di calcolo. Non molto, vediamo un modo per farlo.</p>
 <h4>Calendario su una sola pagina con un foglio di calcolo</h4>
 <p>Partiamo dal <em>layout</em> desiderato:</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_01-2.jpg" alt="Layout del calendario su una sola pagina" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_01-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-md.jpg 768w"></figure>
 <p>I due riquadri in basso (numerazione dei giorni e giorni della settimana) sono fissi. A cambiare sono l'indicazione dell'anno desiderato e la conseguente disposizione dei mesi nel riquadro in alto a destra.<br>Il primo passaggio necessario per l'automazione del calendario è creare un modo sintetico per indirizzare ciascuna cella di questo riquadro:</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_02-2.jpg" alt="Identificare le celle che contengono i mesi" width="833" height="329" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_02-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-md.jpg 768w"></figure>
-<p>Notare l'aggiunta di una riga in cima e di una colonna a destra (con caratteri in grigio) che consentono di identificare con un <strong>indice</strong> ciascuna cella del riquadro dei mesi. Esempio: maggio avrà l'indice 11 (1 + 10), mentre marzo avrà indice 23 (3 + 20).</p>
+<p>Notare l'aggiunta di una riga in cima e di una colonna a destra (con caratteri in grigio) che consentono di identificare con un <strong>indice</strong> ciascuna cella del riquadro dei mesi. Esempio: la cella che contiene maggio avrà l'indice 11 (1 + 10), mentre quella con marzo avrà indice 23 (3 + 20).</p>
 <p>Il prossimo passo sarà quindi ricavare l'indice per ciascuno dei mesi, in base all'anno e al giorno della settimana con cui cominciano, e inserire il nome del mese nella cella corretta.</p>
 <h4>Mesi e relativi indici</h4>
 <p>Per generare gli indici relativi ai mesi viene in aiuto questa tabella:</p>
