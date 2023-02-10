@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-02-09T09:13:54+01:00</updated>
+    <updated>2023-02-10T08:30:24+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Numeri"/>
             <category term="Cose informatiche"/>
 
-        <updated>2023-02-09T09:13:54+01:00</updated>
+        <updated>2023-02-10T08:30:24+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" alt="Calndario in una pagina per il 2023" />
@@ -33,7 +33,7 @@
                 <p>Grazie a un articolo su <a href="https://bigthink.com/starts-with-a-bang/one-page-calendar/" target="_blank" rel="nofollow noopener noreferrer">Bigthink.com </a>ho scoperto una forma compatta di calendario, con tutti e dodici i mesi in un unico riquadro.</p>
 <figure class="align-center"><img loading="lazy"  src="https://bigthink.com/wp-content/uploads/2023/01/find-Am-Thanks.jpg" data-is-external-image="true"></figure>
 <p> Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il <strong>23 novembre</strong>, traccio una linea verticale nella colonna che contiene <strong>Novembre</strong>, una linea orizzontale nella riga che contiene il <strong>23</strong> e al punto di incrocio trovo <strong>Thu</strong>, cioè <strong>giovedì</strong>.</p>
-<p>Può sembrare macchinoso, ma dopo un po' di allenamento diventa un modo veloce e compatto per portarsi dietro il calendario di un anno. Peccato che vada adattato di anno in anno. <br>Neanche troppo complicato, peraltro: al primo di gennaio va solo cambiata la disposizione dei mesi nel riquadro in alto. Se si tiene conto che la durata dei mesi è costante, a parte quella di febbraio che vale 28 o 29 giorni, in tutto si potranno avere 14 disposizioni diverse per i dodici mesi: 7 per gli anni non bisesistili, con gennaio che parte di lunedì, oppure di martedì, e così via fino a domenica; e 7 per i bisestili.</p>
+<p>Può sembrare macchinoso, ma dopo un po' di allenamento diventa un modo veloce e compatto per portarsi dietro il calendario di un anno. Peccato che vada adattato di anno in anno. <br>Neanche troppo complicato, peraltro: al primo di gennaio va solo cambiata la disposizione dei mesi nel riquadro in alto. Se si tiene conto che la durata dei mesi è costante, a parte quella di febbraio che vale 28 o 29 giorni, in tutto si potranno avere 14 disposizioni diverse per i dodici mesi: 7 per gli anni non bisestili, con gennaio che parte di lunedì, oppure di martedì, e così via fino a domenica; e 7 per i bisestili.</p>
 <p>Un foglio di calcolo consente poi di verificare che in un anno possono esserci al massimo tre mesi che cominciano con lo stesso giorno della settimana. Basta calcolare la distanza in giorni di ciascun primo del mese dal primo di gennaio, utilizzando l'aritmetica modulare, con modulo 7.</p>
 <p>A questo punto ci si può chiedere quanto sia complicato automatizzare la composizione del calendario per un generico anno, utilizzando un foglio di calcolo. Non molto, vediamo un modo per farlo.</p>
 <h4>Calendario su una sola pagina con un foglio di calcolo</h4>
@@ -68,7 +68,7 @@
 </blockquote>
 <p>La funzione <em><strong>SE.ERRORE()</strong></em> serve a lasciare la cella vuota se il relativo indice non compare nella tabella, mentre <em><strong>CERCA.VERT()</strong></em> cerca la corrispondenza tra l'indice e il nome del mese.</p>
 <h4>E come sarà in 2024?</h4>
-<p>Basta inserire <em><strong>2024</strong></em> nel gruppo di celle in alto a sinstra ed ecco il 2024:</p>
+<p>Basta inserire <em><strong>2024</strong></em> nel gruppo di celle in alto a sinistra ed ecco il 2024:</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_04.jpg" alt="Calendario in una sola pagina: il 2024" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_04-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-md.jpg 768w"></figure>
 <p class="align-left">Due buone notizie: ci sarà un solo venerdì 17 (in maggio, mentre il 2023 invece ce ne offre 3, in febbraio, marzo e novembre), e Natale capiterà di mercoledì, cosa che dovrebbe favorire interessanti ponti.</p>
 <p>Chi fosse interessato al file può <a href="https://70plus.github.io/Calendario_in_un_foglio.zip" target="_blank" rel="noopener noreferrer">scaricarlo da qui</a>, per entrambi i formati LibreOffice Calc ed Excel.</p>
