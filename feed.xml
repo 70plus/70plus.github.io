@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-26T16:02:48+02:00</updated>
+    <updated>2023-03-26T16:03:24+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -16,16 +16,19 @@
         </author>
         <link href="https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
         <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+        <media:content url="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-03-26T16:02:48+02:00</updated>
+        <updated>2023-03-26T16:03:24+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" alt="" />
                     Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" class="type:primaryImage" alt="" /></p>
                 <p>Nel 1981 due ricercatori, <strong>Robert S. Boyer</strong> e <strong>J. Strother Moore</strong>, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che abbia raggiunto la <strong>maggioranza assoluta</strong>, cioè la metà dei voti più uno.</p>
 <p>Il loro <strong>Majority Voting Algorithm</strong> trova applicazioni nel campo dell'informatica, meno in quello di reali votazioni, dove non basta dichiarare chi è il vincitore, ma occorre offrire trasparenza sul dettaglio dei risultati.</p>
 <p>Ma quali vantaggi dal punto di vista informatico offre il Majority Voting Algorithm, rispetto a uno scrutinio tradizionale? Essenzialmente due, legati rispettivamente al <strong>tempo di esecuzione</strong> e alla <strong>quantità di memoria</strong> necessaria per l'esecuzione.</p>
