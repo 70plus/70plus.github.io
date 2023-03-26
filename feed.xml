@@ -3,21 +3,22 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-26T15:49:16+02:00</updated>
+    <updated>2023-03-26T15:55:15+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
     <entry>
-        <title>L&#x27;algoritmo di Majority voting di Boyer-Moore</title>
+        <title>L&#x27;algoritmo di Majority Voting di Boyer-Moore</title>
         <author>
             <name>Pasquale</name>
         </author>
         <link href="https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
         <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+            <category term="Cose informatiche"/>
 
-        <updated>2023-03-26T15:49:16+02:00</updated>
+        <updated>2023-03-26T15:55:15+02:00</updated>
             <summary>
                 <![CDATA[
                     Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
