@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-26T15:55:15+02:00</updated>
+    <updated>2023-03-26T16:02:48+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
             <category term="Cose informatiche"/>
 
-        <updated>2023-03-26T15:55:15+02:00</updated>
+        <updated>2023-03-26T16:02:48+02:00</updated>
             <summary>
                 <![CDATA[
                     Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
@@ -231,7 +231,8 @@ pila_C:
 schede nella pila_A: 38, nella pila_B: 1, nella pila_C: 0
 A è il vincitore! margine: 1
 </pre>
-<p> </p>
+<hr>
+<p><em>L'immagine di apertura è di <a href="https://pixabay.com/users/mohamed_hassan-5229782/" target="_blank" rel="nofollow noopener noreferrer">mohamed_hassan</a> from <a href="https://pixabay.com/" target="_blank" rel="nofollow noopener noreferrer">Pixabay</a>.</em></p>
             ]]>
         </content>
     </entry>
