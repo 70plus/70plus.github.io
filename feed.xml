@@ -3,12 +3,237 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-02-10T08:30:24+01:00</updated>
+    <updated>2023-03-26T15:49:16+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>L&#x27;algoritmo di Majority voting di Boyer-Moore</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
+        <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+
+        <updated>2023-03-26T15:49:16+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Nel 1981 due ricercatori, <strong>Robert S. Boyer</strong> e <strong>J. Strother Moore</strong>, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che abbia raggiunto la <strong>maggioranza assoluta</strong>, cioè la metà dei voti più uno.</p>
+<p>Il loro <strong>Majority Voting Algorithm</strong> trova applicazioni nel campo dell'informatica, meno in quello di reali votazioni, dove non basta dichiarare chi è il vincitore, ma occorre offrire trasparenza sul dettaglio dei risultati.</p>
+<p>Ma quali vantaggi dal punto di vista informatico offre il Majority Voting Algorithm, rispetto a uno scrutinio tradizionale? Essenzialmente due, legati rispettivamente al <strong>tempo di esecuzione</strong> e alla <strong>quantità di memoria</strong> necessaria per l'esecuzione.</p>
+<h4>Il tempo di esecuzione dell'algoritmo è lineare</h4>
+<p>È necessario infatti scorrere due volte la sequenza di schede, per concludere:</p>
+<ul>
+<li>al primo passo, se esiste un potenziale vincitore o no;</li>
+<li>al secondo passo per confermare il vincitore, o concludere che nessuno ha raggiunto la maggioranza assoluta.</li>
+</ul>
+<h4>La memoria necessaria non dipende dal numero di candidati, né dal numero di schede</h4>
+<p>In un algoritmo di scrutinio tradizionale, si predisporrebbe un contatore per il conteggio dei voti di ciascun candidato. Nell'algoritmo di Boyer-Moore, invece, si predispongono solo tre contatori, relativi a tre <strong><em>pile</em></strong> tra cui vengono spostate le schede durante i due passi.<br>Alla fine del secondo passo, in caso di presenza di un candidato che abbia raggiunto la maggioranza assoluta, in una delle pile si troverà un numero di schede pari al margine di quel candidato su tutti gli altri.</p>
+<h4>L'algoritmo: primo passo, il <em>pairing</em></h4>
+<p>Si indichi con <strong>p</strong><strong>ila A</strong>, <strong>pila B</strong> e <strong>pila C</strong> le tre pile utilizzate nell'esecuzione dell'algoritmo.<br>Inizialmente si predispongono le schede sulla pila A, a faccia in su.</p>
+<p>Fino a esaurimento della pila A, si operi come segue:</p>
+<ul>
+<li>si sposti sulla pila B la scheda che si trova in cima alla pila A se:
+<ul>
+<li>la pila B è vuota;</li>
+<li>oppure se in cima alla pila B c'è una scheda con la stessa preferenza della scheda che si sta spostando;</li>
+</ul>
+</li>
+<li>se, invece, la scheda in cima alla pila B ha una preferenza per un candidato diverso da quello della scheda che si sta spostando, allora tutte e due le schede vengono spostate sulla pila C.</li>
+</ul>
+<p>Alla fine del primo passo la pila A sarà vuota, la pila C conterrà una serie di coppie di schede recanti preferenze discordanti, mentre la pila B sarà vuota oppure conterrà schede con preferenza per un unico candidato X.</p>
+<p>In base a ciò, si può concludere che, a parte X, <strong>nessuno degli altri candidati può aver raggiunto la maggioranza assoluta</strong>, perché al massimo può esserci un candidato che ha ottenuto la metà dei voti. E questo accade se uno stesso candidato è presente in ciascuna delle coppie di schede che popolano la pila C.</p>
+<p>Si esce dal primo passo, il <strong><em>pairing</em></strong>, con una di queste due condizioni:</p>
+<ul>
+<li>nessun candidato ha raggiunto la maggioranza assoluta (la pila B è vuota);</li>
+<li>nella pila B ci sono schede con preferenze per un unico candidato (<strong>X</strong>), che è quindi il potenziale vincitore.</li>
+</ul>
+<h4>L'algoritmo: secondo passo, il <em>counting</em></h4>
+<p>Il secondo passo viene effettuato sostanzialmente con le stesse regole del primo, scambiando il ruolo tra le pile A e C, ma questa volta verificando chi ha ricevuto più preferenze, tra <strong>X</strong> e <strong>tutti gli altri candidati messi insieme</strong>.<br>Se ha prevalso X, allora <strong>X è il vincitore</strong>, in caso contrario non c'è nessun vincitore.</p>
+<h4>L'algoritmo in Python</h4>
+<p>Il codice Python, abbastanza elementare, si articola come segue:</p>
+<ol>
+<li>una prima sezione predispone l'insieme dei candidati e, in modo casuale, una serie di schede ciascuna indicante una preferenza; in questa sezione è possibile forzare se un candidato ha la maggioranza assoluta, e il relativo margine;</li>
+<li>nella seconda sezione, viene effettuato uno scrutinio tradizionale, per poter verificare successivamente il risultato dell'algoritmo;</li>
+<li>nella terza sezione si esegue il passo del <strong>pairing</strong>;</li>
+<li>nell'ultima sezione, eseguita solo se il pairing ha indicato un potenzale vincitore, si esegue il passo del <strong>counting</strong>.</li>
+</ol>
+<h4>Il codice Python</h4>
+<pre># Majority Voting Algorithm, Boyer-Moore 1981
+# p.p. 25mar23
+import random
+#
+candidati = ("A","B","C","D","E")
+min_preferenze, max_preferenze = 0,10
+majority = False
+margin = 2
+#
+n_candidati = len(candidati)
+schede = []
+#
+for c in candidati:
+  schede = schede + random.randint(min_preferenze,max_preferenze)*list(c)
+#
+if majority:
+  first_pref = schede.count(candidati[0])
+  x = len(schede) - 2 * first_pref + margin
+  schede += x * candidati[0]
+random.shuffle(schede)
+#
+print ("Numero di candidati: {}".format(n_candidati))
+print ("Numero di schede da scrutinare: {}".format(len(schede)))
+print ("Maggioranza assoluta: {}".format(int(len(schede)/2)+1))
+print ("Schede da scrutinare:\n{}".format(schede))
+print ("\nDistribuzione dei voti:\n=======================")
+max = -1
+for c in candidati:
+  voti = schede.count(c)
+  print ("{} --&gt; {}".format(c,voti))
+  if voti &gt; max:
+    max, winner = voti, c
+print ("Massino dei voti: {}, ottenuto da {}".format(max, winner))
+#
+print ("\nPasso di pairing\n================")
+pila_A = schede
+pila_B = []
+pila_C = []
+#
+for scheda in pila_A:
+  if len(pila_B) == 0 or scheda == pila_B[0]:
+    pila_B += list(scheda)
+  else:
+    pila_C += list(scheda) + list(pila_B[0])
+    del pila_B[0]
+pila_A = []
+#
+print ("pila_A:\n{}\npila_B:\n{}\npila_C:\n{}\n".format(pila_A,pila_B,pila_C))
+print ("schede nella pila_A: {}, nella pila_B: {}, nella pila_C: {}".format(len(pila_A),len(pila_B),len(pila_C)))
+#
+if len(pila_B) &gt; 0:
+  x = pila_B[0]
+  print ("potenziale vincitore: {}".format(x))
+else:
+  x = ""
+#
+if x == "":
+  print ("nessun candidato ha raggiunto la maggioranza assoluta")
+else:
+  print ("\n\nPasso di counting\n=================")
+  for scheda in pila_C:
+    if len(pila_B) == 0 or (scheda == x and pila_B[0] == x) or (scheda != x and pila_B[0] != x):
+      pila_B += list(scheda)
+    else:
+      pila_A += list(scheda) + list(pila_B[0])
+      del pila_B[0]
+  pila_C = []
+#
+  print ("pila_A:\n{}\npila_B:\n{}\npila_C:\n{}\n".format(pila_A,pila_B,pila_C))
+  print ("schede nella pila_A: {}, nella pila_B: {}, nella pila_C: {}".format(len(pila_A),len(pila_B),len(pila_C)))
+#
+  if pila_B[0] == x:
+    print ("{} è il vincitore! margine: {}".format(x,len(pila_B)))
+  else:
+      print ("nessun candidato ha raggiunto la maggioranza assoluta")
+</pre>
+<h4>Un caso di votazione senza vincitori con maggioranza assoluta</h4>
+<p>Ecco di seguito l'output dell'algoritmo in un caso in cui, non avendo forzato la vittoria del candidato A, effettivamente non c'è stato un vincitore:</p>
+<pre>Numero di candidati: 5
+Numero di schede da scrutinare: 29
+Maggioranza assoluta: 15
+Schede da scrutinare:
+['E', 'C', 'C', 'D', 'A', 'A', 'E', 'D', 'A', 'E', 'B', 'D', 'A', 'C', 'C', 'D', 'A', 'A', 'C', 'C', 'D', 'D', 'C', 'D', 'D', 'D', 'E', 'D', 'C']
+
+Distribuzione dei voti:
+=======================
+A --&gt; 6
+B --&gt; 1
+C --&gt; 8
+D --&gt; 10
+E --&gt; 4
+Massino dei voti: 10, ottenuto da D
+
+Passo di pairing
+================
+pila_A:
+[]
+pila_B:
+['D', 'D', 'D']
+pila_C:
+['C', 'E', 'D', 'C', 'E', 'A', 'D', 'A', 'E', 'A', 'D', 'B', 'C', 'A', 'D', 'C', 'C', 'A', 'C', 'A', 'C', 'D', 'E', 'D', 'C', 'D']
+
+schede nella pila_A: 0, nella pila_B: 3, nella pila_C: 26
+potenziale vincitore: D
+
+
+Passo di counting
+=================
+pila_A:
+['C', 'D', 'E', 'D', 'C', 'D', 'E', 'D', 'D', 'A', 'D', 'A', 'D', 'E', 'D', 'A', 'D', 'B', 'D', 'C']
+pila_B:
+['A', 'C', 'C', 'A', 'C', 'A', 'C', 'E', 'C']
+pila_C:
+[]
+
+schede nella pila_A: 20, nella pila_B: 9, nella pila_C: 0
+nessun candidato ha raggiunto la maggioranza assoluta  
+</pre>
+<p>Il <em><strong>pairing</strong></em> ha indicato <strong>D</strong> come potenziale vincitore, ma il <em><strong>counting</strong></em> mostra che <strong>D</strong> ha meno voti degli altri candidati messi insieme, perché la pila B contiene solo schede con preferenze diverse da D.</p>
+<p>Ed ecco, invece, un caso in cui si è forzata la vittoria di A con il margine di 1 voto, modificando così il codice:</p>
+<pre>majority = True
+margin = 1
+</pre>
+<p>L'<em>output</em>:</p>
+<pre>Numero di candidati: 5
+Numero di schede da scrutinare: 39
+Maggioranza assoluta: 20
+Schede da scrutinare:
+['A', 'C', 'B', 'A', 'A', 'D', 'A', 'A', 'A', 'C', 'C', 'B', 'A', 'A', 'A', 'A', 'D', 'A', 'B', 'B', 'E', 'C', 'B', 'A', 'C', 'B', 'A', 'A', 'A', 'D', 'A', 'A', 'A', 'A', 'D', 'C', 'A', 'C', 'D']
+
+Distribuzione dei voti:
+=======================
+A --&gt; 20
+B --&gt; 6
+C --&gt; 7
+D --&gt; 5
+E --&gt; 1
+Massino dei voti: 20, ottenuto da A
+
+Passo di pairing
+================
+pila_A:
+[]
+pila_B:
+['A', 'A', 'A']
+pila_C:
+['C', 'A', 'A', 'B', 'D', 'A', 'C', 'A', 'C', 'A', 'B', 'A', 'D', 'A', 'B', 'A', 'B', 'A', 'E', 'A', 'C', 'A', 'A', 'B', 'B', 'C', 'D', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'D', 'A']
+
+schede nella pila_A: 0, nella pila_B: 3, nella pila_C: 36
+potenziale vincitore: A
+
+
+Passo di counting
+=================
+pila_A:
+['C', 'A', 'B', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'B', 'A', 'D', 'A', 'B', 'A', 'B', 'A', 'E', 'A', 'C', 'A', 'B', 'A', 'B', 'A', 'C', 'A', 'D', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'D', 'A']
+pila_B:
+['A']
+pila_C:
+[]
+
+schede nella pila_A: 38, nella pila_B: 1, nella pila_C: 0
+A è il vincitore! margine: 1
+</pre>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Excel: calendario su una sola pagina</title>
         <author>
@@ -484,31 +709,6 @@
 <p>Un effetto simile, adeguando al ribasso la scala e cambiando settore di attività, capita anche a me. Non so se prevalga l'effetto chimico della caffeina, oppure se semplicemente i neuroni necessari al rituale della tazzina si stacchino, lasciando tutti gli altri a riordinare il tavolo da lavoro virtuale nella testa.</p>
 <p>Sta di fatto che, con la tazza fumante a sinistra del foglio, la mano destra riprende con decisione a tracciare idee che sembrano uscire dal nulla: ecco, bastava fare così.<br>Merito del caffè, probabilmente.</p>
 <p><em>Post pubblicato nel 2011 su Elaborando. Adesso prendo meno caffè, ma il piacere è rimasto intatto.</em></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>La signora Monet</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.github.io/la-signora-monet.html"/>
-        <id>https://70plus.github.io/la-signora-monet.html</id>
-        <media:content url="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" medium="image" />
-            <category term="Ricordi"/>
-
-        <updated>2023-01-09T16:32:55+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" alt="Monet - La promenade" />
-                    Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima Marilyn Monroe che stringe al petto un giornale, a sinistra la signora Monet che si protegge dai raggi di sole con&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg" class="type:primaryImage" alt="Monet - La promenade" /></p>
-                <p>Quando ancora abitavo a Ivrea, nel mio studio avevo due poster ai lati della scrivania: a destra una dolcissima <strong>Marilyn Monroe </strong>che stringe al petto un giornale, a sinistra <strong>la signora Monet</strong> che si protegge dai raggi di sole con un ombrellino, mentre con il figlioletto cammina in un campo.<br>Volendo pubblicare un'immagine del quadro, con grande sorpresa tutta dovuta alla mia ignoranza, scoprii che Monet dipinse due quadri abbastanza simili: <strong>la Promenade</strong> (1873, è quello riprodotto nel mio poster) e <strong>la Femme à l'ombrelle</strong> (1875).<br><br>Da qualche anno Marylin e Camille mi aspettano al mare. Se riesco a convincere mia moglie, me ne porto una a Lecco.</p>
-<p><em>Nella foto:<br>Di Claude Monet - Photographer: Alexander R. Pruss., Pubblico dominio, https://commons.wikimedia.org/w/index.php?curid=44143</em></p>
             ]]>
         </content>
     </entry>
