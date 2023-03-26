@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-26T16:03:24+02:00</updated>
+    <updated>2023-03-26T20:34:26+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -19,7 +19,7 @@
         <media:content url="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-03-26T16:03:24+02:00</updated>
+        <updated>2023-03-26T20:34:26+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" alt="" />
@@ -33,10 +33,10 @@
 <p>Il loro <strong>Majority Voting Algorithm</strong> trova applicazioni nel campo dell'informatica, meno in quello di reali votazioni, dove non basta dichiarare chi è il vincitore, ma occorre offrire trasparenza sul dettaglio dei risultati.</p>
 <p>Ma quali vantaggi dal punto di vista informatico offre il Majority Voting Algorithm, rispetto a uno scrutinio tradizionale? Essenzialmente due, legati rispettivamente al <strong>tempo di esecuzione</strong> e alla <strong>quantità di memoria</strong> necessaria per l'esecuzione.</p>
 <h4>Il tempo di esecuzione dell'algoritmo è lineare</h4>
-<p>È necessario infatti scorrere due volte la sequenza di schede, per concludere:</p>
+<p>È sufficiente infatti scorrere due volte la sequenza di schede, per:</p>
 <ul>
-<li>al primo passo, se esiste un potenziale vincitore o no;</li>
-<li>al secondo passo per confermare il vincitore, o concludere che nessuno ha raggiunto la maggioranza assoluta.</li>
+<li>verificare, al primo passo, se esiste un potenziale vincitore o no;</li>
+<li>confermare il vincitore, o concludere che nessuno ha raggiunto la maggioranza assoluta, al secondo passo.</li>
 </ul>
 <h4>La memoria necessaria non dipende dal numero di candidati, né dal numero di schede</h4>
 <p>In un algoritmo di scrutinio tradizionale, si predisporrebbe un contatore per il conteggio dei voti di ciascun candidato. Nell'algoritmo di Boyer-Moore, invece, si predispongono solo tre contatori, relativi a tre <strong><em>pile</em></strong> tra cui vengono spostate le schede durante i due passi.<br>Alla fine del secondo passo, in caso di presenza di un candidato che abbia raggiunto la maggioranza assoluta, in una delle pile si troverà un numero di schede pari al margine di quel candidato su tutti gli altri.</p>
