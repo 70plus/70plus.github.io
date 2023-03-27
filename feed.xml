@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-26T20:34:26+02:00</updated>
+    <updated>2023-03-27T07:56:00+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -19,7 +19,7 @@
         <media:content url="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-03-26T20:34:26+02:00</updated>
+        <updated>2023-03-27T07:56:00+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" alt="" />
@@ -102,7 +102,7 @@ for c in candidati:
   print ("{} --&gt; {}".format(c,voti))
   if voti &gt; max:
     max, winner = voti, c
-print ("Massino dei voti: {}, ottenuto da {}".format(max, winner))
+print ("Massimo dei voti: {}, ottenuto da {}".format(max, winner))
 #
 print ("\nPasso di pairing\n================")
 pila_A = schede
@@ -161,7 +161,7 @@ B --&gt; 1
 C --&gt; 8
 D --&gt; 10
 E --&gt; 4
-Massino dei voti: 10, ottenuto da D
+Massimo dei voti: 10, ottenuto da D
 
 Passo di pairing
 ================
@@ -207,7 +207,7 @@ B --&gt; 6
 C --&gt; 7
 D --&gt; 5
 E --&gt; 1
-Massino dei voti: 20, ottenuto da A
+Massimo dei voti: 20, ottenuto da A
 
 Passo di pairing
 ================
