@@ -14,14 +14,15 @@
             "url": "https://70plus.github.io/arriva-publii-042.html",
             "title": "Arriva Publii 0.42!",
             "summary": "Un email da Getpublii.com mi informa che è arrivata la verisone 0.42 del software con cui è costruito e gestito 70plus. Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto&hellip;",
-            "content_html": "<p>Un email da <a href=\"https://getpublii.com/blog/release-042.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Getpublii.com</a> mi informa che è arrivata la verisone 0.42 del software con cui è costruito e gestito <strong>70plus</strong>.<br>Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto nel dettaglio), quanto per il fatto che la piattaforma Publii è viva!<br>Aggiornato anche il tema che sto utilizzando, <a href=\"https://marketplace.getpublii.com/themes/square/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Square</a>, mi appresro a pubblicare questa breve nota, per vedere che tutto <em>giri</em> come atteso.</p>\n<p class=\"align-center\">verifichiamo ...</p>\n<p> </p>",
+            "content_html": "<p>Un email da <a href=\"https://getpublii.com/blog/release-042.html\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Getpublii.com</a> mi informa che è arrivata la verisone 0.42 del software con cui è costruito e gestito <strong>70plus</strong>.<br>Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto nel dettaglio), quanto per il fatto che la piattaforma Publii è viva!<br>Aggiornato anche il tema che sto utilizzando, <a href=\"https://marketplace.getpublii.com/themes/square/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Square</a>, mi appresro a pubblicare questa breve nota, per vedere che tutto <em>giri</em> come atteso.</p>\n<p class=\"align-center\">verifichiamo ...</p>\n<p>Funziona tutto!</p>\n<p>Procedura:</p>\n<ul>\n<li>ho scaricato la nuova versione</li>\n<li>fatto un backup del sito (Tools &amp; Plugins --&gt; Backups --&gt; Create backup)</li>\n<li>disinstallata la versione 0.41</li>\n<li>installata la versione 0.42</li>\n<li>verificato il buon funzionamento</li>\n<li>scaricata la versione 2.4 del tema Square</li>\n<li>spostata la nuova versione nella directory dei temi</li>\n<li>chiusa e riaperta l'applicazione Publii</li>\n<li>aggiornato il tema (Site settings --&gt; Select theme)</li>\n</ul>\n<p> </p>\n<p> </p>",
             "author": {
                 "name": "Pasquale"
             },
             "tags": [
+                   "Cose informatiche"
             ],
             "date_published": "2023-03-31T06:57:54+02:00",
-            "date_modified": "2023-03-31T06:57:54+02:00"
+            "date_modified": "2023-03-31T07:14:25+02:00"
         },
         {
             "id": "https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html",
