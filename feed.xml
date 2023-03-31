@@ -3,12 +3,34 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.github.io/feed.xml" rel="self" />
     <link href="https://70plus.github.io" />
-    <updated>2023-03-27T07:56:00+02:00</updated>
+    <updated>2023-03-31T06:57:54+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.github.io</id>
 
+    <entry>
+        <title>Arriva Publii 0.42!</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/arriva-publii-042.html"/>
+        <id>https://70plus.github.io/arriva-publii-042.html</id>
+
+        <updated>2023-03-31T06:57:54+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Un email da Getpublii.com mi informa che è arrivata la verisone 0.42 del software con cui è costruito e gestito 70plus. Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Un email da <a href="https://getpublii.com/blog/release-042.html" target="_blank" rel="nofollow noopener noreferrer">Getpublii.com</a> mi informa che è arrivata la verisone 0.42 del software con cui è costruito e gestito <strong>70plus</strong>.<br>Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto nel dettaglio), quanto per il fatto che la piattaforma Publii è viva!<br>Aggiornato anche il tema che sto utilizzando, <a href="https://marketplace.getpublii.com/themes/square/" target="_blank" rel="nofollow noopener noreferrer">Square</a>, mi appresro a pubblicare questa breve nota, per vedere che tutto <em>giri</em> come atteso.</p>
+<p class="align-center">verifichiamo ...</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>L&#x27;algoritmo di Majority Voting di Boyer-Moore</title>
         <author>
@@ -682,38 +704,6 @@ A è il vincitore! margine: 1
 <p>Mostrò la cifra scarabocchiata in fondo all'ultimo foglio.<br>Il generale Weider sorrise condiscendente. Premette il pulsante di  moltiplicazione sulla sua calcolatrice e attese che il ronzio dei  meccanismi tacesse. Poi guardò il quadrante della minuscola macchina e  disse con voce rauca dallo stupore:</p>
 <p class="align-center"><em>«Grande Galassia, l'ha azzeccato in  pieno.»</em></p>
 <p><em>Da: <a href="https://it.wikipedia.org/wiki/Nove_volte_sette" target="_blank" rel="nofollow noopener noreferrer">Nove volte sette</a>.</em></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Il caffè</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.github.io/il-caffe.html"/>
-        <id>https://70plus.github.io/il-caffe.html</id>
-        <media:content url="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" medium="image" />
-            <category term="Ricordi"/>
-
-        <updated>2023-01-09T16:29:14+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" alt="Caffè del mattino" />
-                    Sono un consumatore accanito di caffè. Deve essere amaro ma, quando al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare. Mi piace la miscela densa che rimane sul fondo. Ristretto, normale, lungo, americano? Ognuno ha il&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/9/1672902875369e-2.jpg" class="type:primaryImage" alt="Caffè del mattino" /></p>
-                <p>Sono un consumatore accanito di caffè. Deve essere <strong>amaro</strong> ma, quando al distributore automatico dimentico di annullare lo zucchero, mi limito a non mescolare. Mi piace la miscela densa che rimane sul fondo.</p>
-<p><strong>Ristretto, normale, lungo, americano?</strong> Ognuno ha il suo momento.<br>Il primo caffè del mattino, scorrendo le notizie sul web, dev'essere ristretto (nonché rigorosamente amaro). Un'ora dopo, con la colazione, si comincia ad allungare, per finire nel lunghissimo a metà mattinata. Strettissimo a chiusura del pasto, si prosegue così allungando e accorciando per seguire il bioritmo della giornata.</p>
-<p>Perché l'effetto del caffè sulla produttività al lavoro è evidente e documentato:</p>
-<blockquote>
-<p>A mathematician is a machine for turning coffee into theorems.<br>(<a href="https://it.wikipedia.org/wiki/Paul_Erd%C5%91s" target="_blank" rel="nofollow noopener noreferrer">Paul Erdős.</a>)</p>
-</blockquote>
-<p>Un effetto simile, adeguando al ribasso la scala e cambiando settore di attività, capita anche a me. Non so se prevalga l'effetto chimico della caffeina, oppure se semplicemente i neuroni necessari al rituale della tazzina si stacchino, lasciando tutti gli altri a riordinare il tavolo da lavoro virtuale nella testa.</p>
-<p>Sta di fatto che, con la tazza fumante a sinistra del foglio, la mano destra riprende con decisione a tracciare idee che sembrano uscire dal nulla: ecco, bastava fare così.<br>Merito del caffè, probabilmente.</p>
-<p><em>Post pubblicato nel 2011 su Elaborando. Adesso prendo meno caffè, ma il piacere è rimasto intatto.</em></p>
             ]]>
         </content>
     </entry>
