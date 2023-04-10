@@ -43,7 +43,7 @@ function checkWin(x) {
 	  document.getElementById(winPos[i][1]).classList.add("win");
 	  document.getElementById(winPos[i][2]).classList.add("win"); 
 	  gameEnded = true;
-          if (x = "X") {++vinte[0]}
+          if (x === "X") {++vinte[0]}
 	  else {++vinte[1]}
 	  document.getElementById("dialogo").innerHTML = conta + ">>> <b>"+ x + "</b> ha vinto!";
 	}
@@ -53,7 +53,7 @@ function checkWin(x) {
 function inizioGioco (primo){
 	playerSymbol = primo;
 	gameEnded = false;
-	conta = <b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+	conta = "<b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+" ---- "
 	document.getElementById("dialogo").innerHTML = conta + "Clicca "+ primo + " ...";
 }
 
