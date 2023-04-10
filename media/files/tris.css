@@ -13,12 +13,12 @@ td {
 
 .x {
   color: blue;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .o {
   color: red;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .win {
@@ -33,6 +33,6 @@ td {
 #reset {
   font-size: 20px;
   margin: 48px 40%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
 }
