@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+.x {
+  color: blue;
+  font-size: 60px;
+}
+
+.o {
+  color: red;
+  font-size: 60px;
+}
+
+.win {
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset {
+  font-size: 20px;
+  margin: 48px 40%;
+  padding: 10px;
+  border-radius: 10px;
+}
