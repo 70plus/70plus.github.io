@@ -26,7 +26,7 @@ for (let i = 1; i <= 9; i++) {
         else {playerSymbol = "X"}
 	
 	if (gameEnded === false)
-	   {document.getElementById("dialogo").innerHTML = conta + "Clicca "+ playerSymbol + " ...";}
+	   {document.getElementById("dialogo").innerHTML = conta + " Clicca "+ playerSymbol + " ...";}
       }
     }
   );
@@ -45,7 +45,7 @@ function checkWin(x) {
 	  gameEnded = true;
           if (x === "X") {++vinte[0]}
 	  else {++vinte[1]}
-	  document.getElementById("dialogo").innerHTML = conta + ">>> <b>"+ x + "</b> ha vinto!";
+	  document.getElementById("dialogo").innerHTML = conta + ">> <b>"+ x + "</b> ha vinto!";
 	}
   }
 }
@@ -53,8 +53,8 @@ function checkWin(x) {
 function inizioGioco (primo){
 	playerSymbol = primo;
 	gameEnded = false;
-	conta = "<b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+" ---- "
-	document.getElementById("dialogo").innerHTML = conta + "Clicca "+ primo + " ...";
+	conta = "<b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+" ---->"
+	document.getElementById("dialogo").innerHTML = conta + " Clicca "+ primo + " ...";
 }
 
 document.getElementById("reset").addEventListener(
