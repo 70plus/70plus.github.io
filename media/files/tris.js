@@ -1,10 +1,11 @@
-let winPos = [
+winPos = [
   [1, 2, 3], [4, 5, 6], 
   [7, 8, 9], [1, 4, 7], 
   [2, 5, 8], [3, 6, 9], 
   [1, 5, 9], [3, 5, 7]
 ];
 
+vinte = [0,0]
 inizioGioco("X");
 
 for (let i = 1; i <= 9; i++) {
@@ -25,7 +26,7 @@ for (let i = 1; i <= 9; i++) {
         else {playerSymbol = "X"}
 	
 	if (gameEnded === false)
-	   {document.getElementById("dialogo").innerHTML = "Clicca "+ playerSymbol + " ...";}
+	   {document.getElementById("dialogo").innerHTML = conta + "Clicca "+ playerSymbol + " ...";}
       }
     }
   );
@@ -42,7 +43,9 @@ function checkWin(x) {
 	  document.getElementById(winPos[i][1]).classList.add("win");
 	  document.getElementById(winPos[i][2]).classList.add("win"); 
 	  gameEnded = true;
-	  document.getElementById("dialogo").innerHTML = ">>> <b>"+ x + "</b> ha vinto!";
+          if (x = "X") {++vinte[0]}
+	  else {++vinte[1]}
+	  document.getElementById("dialogo").innerHTML = conta + ">>> <b>"+ x + "</b> ha vinto!";
 	}
   }
 }
@@ -50,7 +53,8 @@ function checkWin(x) {
 function inizioGioco (primo){
 	playerSymbol = primo;
 	gameEnded = false;
-	document.getElementById("dialogo").innerHTML = "Clicca "+ primo + " ...";
+	conta = <b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+	document.getElementById("dialogo").innerHTML = conta + "Clicca "+ primo + " ...";
 }
 
 document.getElementById("reset").addEventListener(
