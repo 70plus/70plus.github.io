@@ -1,11 +1,36 @@
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo-image {
+  flex-basis: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  flex-basis: calc(100% - 120px);
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #CCCCCC;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
 }
 
 td {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid black;
@@ -23,11 +48,6 @@ td {
 
 .win {
   background-color: yellow;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
 }
 
 #reset {
