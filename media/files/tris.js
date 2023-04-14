@@ -17,17 +17,17 @@ for (let i = 1; i <= 9; i++) {
         // inserisci nella cella "X" o "O", con il colore corretto
         this.innerHTML = playerSymbol;
         this.classList.add(playerSymbol.toLowerCase());
- 
-       // il giocatore di mano ha vinto?
-        checkWin(playerSymbol);        
- 
+	++nmosse
+        checkWin(playerSymbol);
+
        // tocca all'altro giocatore
         if (playerSymbol === "X") {playerSymbol = "O"}
         else {playerSymbol = "X"}
-	
-	if (gameEnded === false)
-	   {document.getElementById("dialogo").innerHTML = conta + " Clicca "+ playerSymbol + " ...";}
       }
+	if (!gameEnded)
+	   {document.getElementById("dialogo").innerHTML = conta + " Clicca "+ playerSymbol + " ..."}
+       // la partita è patta? o il giocatore di mano ha vinto?
+	if (nmosse == 9 && !gameEnded) {document.getElementById("dialogo").innerHTML = conta + ">> patta!"};
     }
   );
 }
@@ -53,6 +53,7 @@ function checkWin(x) {
 function inizioGioco (primo){
 	playerSymbol = primo;
 	gameEnded = false;
+	nmosse = 0
 	conta = "<b>X</b> - <b>O</b> "+vinte[0]+" - "+vinte[1]+" ---->"
 	document.getElementById("dialogo").innerHTML = conta + " Clicca "+ primo + " ...";
 }
