@@ -1,0 +1,18 @@
+<html>
+</head></head>
+<body>
+<script>
+// Prompt the user for input
+var userText = prompt("Enter some text:");
+
+// Create a new speech synthesis object
+var synth = window.speechSynthesis;
+
+// Create a new speech synthesis utterance
+var utterance = new SpeechSynthesisUtterance(userText);
+
+// Speak the text
+synth.speak(utterance);
+</script>
+</body>
+</html>
