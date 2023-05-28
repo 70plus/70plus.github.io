@@ -10,10 +10,7 @@ if ("speechSynthesis" in window) {
   // THUS THIS "STUPID" WAY TO ATTACH AVAILABLE VOICES
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
-      let opt = document.createElement("option");
-      opt.value = i;
-  		opt.innerHTML = v.name;
-      vlist.appendChild(opt);
+    if (v.name.includes('italian')) {itaLang = i};
     });
   };
   voices();
@@ -22,15 +19,15 @@ if ("speechSynthesis" in window) {
   // (C) SPEAK
   var speak = () => {
     let msg = new SpeechSynthesisUtterance();
-    msg.voice = speechSynthesis.getVoices()[vlist.value];
+    msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = vmsg.value;
     speechSynthesis.speak(msg);
+    console.log(itaLang);
     return false;
   };
 
   // (D) ENABLE FORM
   demo.onsubmit = speak;
-  vlist.disabled = false;
   vmsg.disabled = false;
   vgo.disabled = false;
 }
