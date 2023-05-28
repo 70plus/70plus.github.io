@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text To Speech Demo</title>
+    <style>
+    #demoB, #demoB * { padding: 10px; }
+    #demoB {
+      max-width: 400px;
+      background: #f2f2f2;
+    }
+    #demoB * {
+      font-family: arial, sans-serif;
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+    }
+    </style>
+    <script defer src="media/files/voice.js"></script>
+  </head>
+  <body>
+    <form id="demoB">
+      <!-- (A) VOICE PICKER -->
+      <label>Choose A Voice</label>
+      <select id="demoB-voice" disabled></select>
+
+      <!-- (B) SAY SOMETHING -->
+      <label>Message</label>
+      <input type="text" id="demoB-msg" disabled required>
+      <label>Go!</label>
+      <input type="submit" id="demoB-go" disabled value="Speak">
+    </form>
+  </body>
+</html>
