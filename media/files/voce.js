@@ -10,7 +10,7 @@ if ("speechSynthesis" in window) {
   // THUS THIS "STUPID" WAY TO ATTACH AVAILABLE VOICES
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
-    if (v.name.includes('italian') || v.name == 'Alice') {itaLang = i};
+    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
     });
   };
   voices();
