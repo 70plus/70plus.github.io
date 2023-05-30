@@ -11,7 +11,7 @@ if ("speechSynthesis" in window) {
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
 //    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
-    if (v.lang == 'it-IT) {itaLang = i};
+    if (v.lang == 'it-IT') {itaLang = i};
     });
   };
   voices();
