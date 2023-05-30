@@ -12,9 +12,7 @@ if ("speechSynthesis" in window) {
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
     storicoDiv.insertAdjacentHTML("afterbegin", "name = " + v.name + " lang = " + v.lang + "<br>");
-//    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
-    if (v.name.includes('talian') || v.lang == 'it-IT') {itaLang = i};
-//   if (v.lang == 'it-IT') {itaLang = i};
+    if (v.name.includes('talian') || v.lang == 'it-IT' || v.lang == 'it_IT') {itaLang = i};
     });
   };
   voices();
