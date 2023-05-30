@@ -4,12 +4,14 @@ if ("speechSynthesis" in window) {
 //      vlist = document.getElementById("demoB-voice"),
       vmsg = document.getElementById("demoB-msg"),
       vgo = document.getElementById("demoB-go");
+      const storicoDiv = document.getElementById("storico");
 
   // (B) POPULATE AVAILABLE VOICES
   // CHROME LOADS VOICES ASYNCHRONOUSLY
   // THUS THIS "STUPID" WAY TO ATTACH AVAILABLE VOICES
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
+    storicoDiv.insertAdjacentHTML("afterbegin", "name = " + v.name + " lang = " + v.lang + "<br>");
 //    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
     if (v.name.includes('talian') || v.lang == 'it-IT') {itaLang = i};
 //   if (v.lang == 'it-IT') {itaLang = i};
