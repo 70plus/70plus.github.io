@@ -1,7 +1,7 @@
 if ("speechSynthesis" in window) {
   // (A) GET HTML ELEMENTS
   let demo = document.getElementById("demoB"),
-      vlist = document.getElementById("demoB-voice"),
+//      vlist = document.getElementById("demoB-voice"),
       vmsg = document.getElementById("demoB-msg"),
       vgo = document.getElementById("demoB-go");
 
@@ -10,8 +10,9 @@ if ("speechSynthesis" in window) {
   // THUS THIS "STUPID" WAY TO ATTACH AVAILABLE VOICES
   var voices = () => {
     speechSynthesis.getVoices().forEach((v, i) => {
-//    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
-    if (v.lang == 'it-IT') {itaLang = i};
+    if (v.name.includes('italian') || v.name == 'Alice' || v.name == 'Elsa') {itaLang = i};
+//   if (v.name.includes('talian') || v.lang == 'it-IT') {itaLang = i};
+//   if (v.lang == 'it-IT') {itaLang = i};
     });
   };
   voices();
