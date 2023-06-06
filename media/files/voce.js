@@ -1,18 +1,19 @@
 if ("speechSynthesis" in window) {
   // (A) GET HTML ELEMENTS
   let demo = document.getElementById("demoB"),
-//      vlist = document.getElementById("demoB-voice"),
       vmsg = document.getElementById("demoB-msg"),
       vgo = document.getElementById("demoB-go");
       const storicoDiv = document.getElementById("storico");
 
   // (B) POPULATE AVAILABLE VOICES
-  // CHROME LOADS VOICES ASYNCHRONOUSLY
-  // THUS THIS "STUPID" WAY TO ATTACH AVAILABLE VOICES
   var voices = () => {
+    prefLang = -1;
     speechSynthesis.getVoices().forEach((v, i) => {
     storicoDiv.insertAdjacentHTML("afterbegin", "name = " + v.name + " lang = " + v.lang + "<br>");
-    if (v.name.includes('talian') || v.lang == 'it-IT' || v.lang == 'it_IT') {itaLang = i};
+    if (v.name.includes('talian') || v.lang == 'it-IT' || v.lang == 'it_IT') {
+        itaLang = i;
+        if (v.name.includes('Alice') || v.name.includes('Isabella')) {prefLang = i};
+        };
     });
   };
   voices();
@@ -20,6 +21,7 @@ if ("speechSynthesis" in window) {
 
   // (C) SPEAK
   var speak = () => {
+    if (prefLang != -1) {itaLang = prefLang};
     let msg = new SpeechSynthesisUtterance();
     msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = vmsg.value;
