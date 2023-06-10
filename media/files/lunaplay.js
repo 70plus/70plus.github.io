@@ -7,13 +7,10 @@ function parla(messaggio,stampa) {
 }
 
 const bottoneW = document.getElementById("benvenuto");
-
 bottoneW.addEventListener("click", function() {
    parla('Ciao! Facciamo conoscenza, scrivi il tuo nome.', false);
    attesaN = true;
 });
-
-
 var attesaN = false;
 var attesaG = false;
 
@@ -26,10 +23,11 @@ if (wWindow > hWindow) {
     wWindow = Math.round((hWindow * 3.8) / 7);
     divGioco.style.width = wWindow + "px";
 }
+document.getElementsByClassName("gioco-container")[0].style.width = wWindow + "px";
 rWindow = hWindow / wWindow;
 // Adatta il banner top alla dimensione dello schermo
 // se lo schermo è alto meno di 700px, l'altezza del banner top varia in proporzione tra 40 e 60px
-logoH = Math.round(40 + ((rWindow - 1.4) * 22) / 0.4);
+logoH = Math.round(40 + ((rWindow - 1.4) * 20) / 0.4);
 if (rWindow < 1.4) {
     logoH = 40;
 }
@@ -72,16 +70,6 @@ if ("speechSynthesis" in window) {
   prefLang = -1;
   voices();
   speechSynthesis.onvoiceschanged = voices;
-
-/* --------------------------
-// Event handler for voiceschanged event
-speechSynthesis.onvoiceschanged = function() {
-  // Get the updated list of available voices
-  voices();
-  if (prefLang != -1) {itaLang = prefLang};
-  storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name);
-};
-----------------------------*/
 
   // (C) SPEAK
   var speak = () => {
