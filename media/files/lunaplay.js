@@ -23,7 +23,6 @@ if (wWindow > hWindow) {
     wWindow = Math.round((hWindow * 3.8) / 7);
     divGioco.style.width = wWindow + "px";
 }
-document.getElementsByClassName("gioco-container")[0].style.width = wWindow + "px";
 rWindow = hWindow / wWindow;
 // Adatta il banner top alla dimensione dello schermo
 // se lo schermo è alto meno di 700px, l'altezza del banner top varia in proporzione tra 40 e 60px
