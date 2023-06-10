@@ -60,7 +60,8 @@ if ("speechSynthesis" in window) {
         });
       if (itaLang != -1) {
           if (prefLang != -1) {itaLang = prefLang};
-          storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name);
+          storicoDiv.insertAdjacentHTML("afterbegin", wWindow + ' | ' + hWindow);
+          storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name + '<br>');
           };
     };
   };
@@ -72,7 +73,6 @@ if ("speechSynthesis" in window) {
 
   // (C) SPEAK
   var speak = () => {
-//    if (prefLang != -1) {itaLang = prefLang};
     if (attesaN) {
        nome = vmsg.value;
        parla('Ciao ' + nome + '!',true);
