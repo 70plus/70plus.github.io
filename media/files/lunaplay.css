@@ -36,14 +36,16 @@ html * {
    margin-bottom:2px;
    background-color:#ffffff;
 }
-    .storico {
-      height: 350px;
-      background-color: #FCEDC5;
-      overflow-y: auto;
-      border-radius: 4px;
-      padding-right: 4px;
-      padding-left: 4px;
-    }
+
+.storico {
+   width: 500px;
+   height: 350px;
+   background-color: #FCEDC5;
+   overflow-y: auto;
+   border-radius: 4px;
+   padding-right: 4px;
+   padding-left: 4px;
+}
 
 .area-bottoni {
     display: flex;
