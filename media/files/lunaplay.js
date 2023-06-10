@@ -60,7 +60,6 @@ if ("speechSynthesis" in window) {
         });
       if (itaLang != -1) {
           if (prefLang != -1) {itaLang = prefLang};
-          storicoDiv.insertAdjacentHTML("afterbegin", wWindow + ' | ' + hWindow);
           storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name + '<br>');
           };
     };
