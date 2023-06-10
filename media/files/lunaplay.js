@@ -54,6 +54,7 @@ if (hWindow < 700) {
 if ("speechSynthesis" in window) {
   // (B) POPULATE AVAILABLE VOICES
   var voices = () => {
+    itaLang = -1;
     prefLang = -1;
     speechSynthesis.getVoices().forEach((v, i) => {
     if (v.name.includes('talian') || v.lang == 'it-IT' || v.lang == 'it_IT') {
@@ -61,14 +62,16 @@ if ("speechSynthesis" in window) {
         if (v.name.includes('Alice') || v.name.includes('Isabella')) {prefLang = i};
         };
     });
+  if (itaLang != -1) {
+      if (prefLang != -1) {itaLang = prefLang};
+      storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name);
+      };
   };
 
-  speechSynthesis.getVoices();
-/* --------------------------
   voices();
   speechSynthesis.onvoiceschanged = voices;
------------------------------*/
 
+/* --------------------------
 // Event handler for voiceschanged event
 speechSynthesis.onvoiceschanged = function() {
   // Get the updated list of available voices
@@ -76,6 +79,7 @@ speechSynthesis.onvoiceschanged = function() {
   if (prefLang != -1) {itaLang = prefLang};
   storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name);
 };
+----------------------------*/
 
   // (C) SPEAK
   var speak = () => {
