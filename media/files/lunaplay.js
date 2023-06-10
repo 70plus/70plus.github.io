@@ -63,8 +63,9 @@ if ("speechSynthesis" in window) {
     });
   };
 
-  voices();
+  speechSynthesis.getVoices();
 /* --------------------------
+  voices();
   speechSynthesis.onvoiceschanged = voices;
 -----------------------------*/
 
