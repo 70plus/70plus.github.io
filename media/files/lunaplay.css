@@ -1,5 +1,6 @@
 html * {
     font-family:"Calibri", sans-serif;
+    font-size: large;
 }
     #dialogo, #dialogo * { padding: 10px; }
     #dialogo {
