@@ -3,7 +3,7 @@ function parla(messaggio,stampa) {
     msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = messaggio;
     speechSynthesis.speak(msg);
-    if (stampa) {storicoDiv.insertAdjacentHTML("afterbegin", messaggio)};
+    if (stampa) {storicoDiv.insertAdjacentHTML("afterbegin", messaggio + '<br>')};
 }
 
 const bottoneW = document.getElementById("benvenuto");
@@ -61,25 +61,28 @@ if ("speechSynthesis" in window) {
         if (v.name.includes('Alice') || v.name.includes('Isabella')) {prefLang = i};
         };
     });
-
   };
-  voices();
-  speechSynthesis.onvoiceschanged = voices;
 
 /* --------------------------
+  voices();
+  speechSynthesis.onvoiceschanged = voices;
+-----------------------------*/
+
 // Event handler for voiceschanged event
 speechSynthesis.onvoiceschanged = function() {
   // Get the updated list of available voices
   voices();
+  if (prefLang != -1) {itaLang = prefLang};
+  storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name);
 };
------------------------------*/
+
   // (C) SPEAK
   var speak = () => {
-    if (prefLang != -1) {itaLang = prefLang};
+//    if (prefLang != -1) {itaLang = prefLang};
     if (attesaN) {
        nome = vmsg.value;
        parla('Ciao ' + nome + '!',true);
-       parla('Scegli a quale gioco giocare, premendo uno dei tre bottoni colorati A, B, o C',false);
+       parla('Scegli a quale gioco giocare, premendo uno dei tre bottoni colorati, A, B, o C',false);
        attesaN = false;
        attesaG = true;
     } else {
