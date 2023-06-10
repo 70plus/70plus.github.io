@@ -63,15 +63,16 @@ if ("speechSynthesis" in window) {
     });
 
   };
-//  voices();
-//  speechSynthesis.onvoiceschanged = voices;
+  voices();
+  speechSynthesis.onvoiceschanged = voices;
 
+/* --------------------------
 // Event handler for voiceschanged event
 speechSynthesis.onvoiceschanged = function() {
   // Get the updated list of available voices
   voices();
 };
-
+-----------------------------*/
   // (C) SPEAK
   var speak = () => {
     if (prefLang != -1) {itaLang = prefLang};
