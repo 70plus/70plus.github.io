@@ -11,24 +11,26 @@
             href="media/files/lunaplay.css" />
         <link rel="icon" type="image/jpg" href="media/files/logo.jpg" />
         <script defer src="media/files/lunaplay.js"></script>
+        <script defer src="media/files/favole.js"></script>
+        <script defer src="media/files/parole.js"></script>
     </head>
     <body>
         <div class="gioco-container" style="margin: auto">
             <div class="logo-container">
                 <div class="logo-image">
-                    <img
-                        id="logoI"
-                        src="media/files/logo.jpg"
-                        alt="Image"
-                        width="60"
-                        height="60" />
-                </div>
-                <div class="logo-text">
                     <a
                         href="https://70plus.github.io/"
                         style="text-decoration: none"
-                        ><h3 id="titolo" ; align="center">LunaPlay</h3></a
-                    >
+                        >
+                        <img
+                          id="logoI"
+                          src="media/files/logo.jpg"
+                          alt="Image"
+                          width="60"
+                          height="60" /></a>
+                </div>
+                <div class="logo-text">
+                    <h3 id="titolo" ; align="center">LunaPlay</h3>
                 </div>
             </div>
             <div class="spaziatura"></div>
@@ -36,9 +38,9 @@
             <div class="area-bottoni">
                 <button
                     id="benvenuto"
-                    class="bottone-rotondo"
+                    class="bottone-ovale"
                     style="color: white; background-color: green">
-                    W
+                    Chi sei?
                 </button>
                 <button
                     id="giocoA"
@@ -53,10 +55,10 @@
                     B
                 </button>
                 <button
-                    id="giocoC"
+                    id="favolaF"
                     class="bottone-rotondo"
                     style="color: black; background-color: yellow">
-                    C
+                    F
                 </button>
             </div>
             <div class="spaziatura"></div>
@@ -64,7 +66,8 @@
                 <form id="dialogo">
                     <!-- (B) SAY SOMETHING -->
                     <label>Scrivi qui:</label>
-                    <input type="text" id="dialogo-msg" disabled required />
+                    <input type="text" autocapitalize="characters" id="dialogo-msg" disabled required />
+
                     <br />
                     <input
                         type="submit"

@@ -17,11 +17,34 @@ bottoneW.addEventListener("click", function () {
     attesaN = true;
 });
 
+const bottoneA = document.getElementById("giocoA");
+bottoneA.addEventListener("click", function () {
+    parla("Scrivi una parola qui sotto, e io la leggerò!", false);
+});
+
+const bottoneB = document.getElementById("giocoB");
+var parolaV = "";
+bottoneB.addEventListener("click", function () {
+    let nParole = parola.length;
+    parolaV = parola[Math.floor(Math.random() * nParole)];
+    parla("Scrivi: " + parolaV, false);
+    attesaP = true;
+});
+
+const bottoneF = document.getElementById("favolaF");
+bottoneF.addEventListener("click", function () {
+    let nFavole = favola.length;
+    daLeggere = favola[Math.floor(Math.random() * nFavole)];
+    console.log(nFavole);
+    parla(daLeggere, false);
+});
+
 /* ------------------------------------
    PROGRAMMA
    ------------------------------------ */
 var attesaN = false;
 var attesaG = false;
+var attesaP = false;
 // rileva le dimensioni dello schermo
 hWindow = window.innerHeight;
 wWindow = window.innerWidth;
@@ -101,11 +124,19 @@ if ("speechSynthesis" in window) {
             nome = vmsg.value;
             parla("Ciao " + nome + "!", true);
             parla(
-                "Scegli a quale gioco giocare, premendo uno dei tre bottoni colorati, A, B, o C",
+                "Scegli a quale gioco giocare, premendo uno dei bottoni colorati, A, o B, oppure premi F, se vuoi ascoltare una favola",
                 false
             );
             attesaN = false;
             attesaG = true;
+        } else if (attesaP) {
+            attesaP = false;
+            parolaI = vmsg.value.replace(/^\s+|\s+$/gm,'');
+            if (parolaI == parolaV) {
+               parla("Esatto!",false);
+            } else {
+               parla("Attenzione, hai scritto" + parolaI,false);
+            }
         } else {
             parla(vmsg.value, false);
         }
