@@ -5,21 +5,22 @@ function parla(messaggio, stampa) {
     let msg = new SpeechSynthesisUtterance();
     msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = messaggio;
+    msg.rate = 0.9;
     speechSynthesis.speak(msg);
-    if (stampa) {
-        storicoDiv.insertAdjacentHTML("afterbegin", messaggio + "<br>");
+    if (stampa.length > 0) {
+        storicoDiv.insertAdjacentHTML("afterbegin", stampa + "<br>");
     }
 }
 
 const bottoneW = document.getElementById("benvenuto");
 bottoneW.addEventListener("click", function () {
-    parla("Ciao! Facciamo conoscenza, scrivi il tuo nome.", false);
+    parla("Ciaoh! Facciamo conoscenza, scrivi il tuo nome.", "");
     attesaN = true;
 });
 
 const bottoneA = document.getElementById("giocoA");
 bottoneA.addEventListener("click", function () {
-    parla("Scrivi una parola qui sotto, e io la leggerò!", false);
+    parla("Scrivi una parola qui sotto, e io la leggerò!", "");
 });
 
 const bottoneB = document.getElementById("giocoB");
@@ -27,7 +28,7 @@ var parolaV = "";
 bottoneB.addEventListener("click", function () {
     let nParole = parola.length;
     parolaV = parola[Math.floor(Math.random() * nParole)];
-    parla("Scrivi: " + parolaV, false);
+    parla("Scrivi: " + parolaV, "");
     attesaP = true;
 });
 
@@ -36,7 +37,7 @@ bottoneF.addEventListener("click", function () {
     let nFavole = favola.length;
     daLeggere = favola[Math.floor(Math.random() * nFavole)];
     console.log(nFavole);
-    parla(daLeggere, false);
+    parla(daLeggere, "");
 });
 
 /* ------------------------------------
@@ -122,23 +123,26 @@ if ("speechSynthesis" in window) {
     var speak = () => {
         if (attesaN) {
             nome = vmsg.value;
-            parla("Ciao " + nome + "!", true);
+            vmsg.value = '';
+            parla("Ciaoh " + nome + "!", "Ciao " + nome + "!");
             parla(
                 "Scegli a quale gioco giocare, premendo uno dei bottoni colorati, A, o B, oppure premi F, se vuoi ascoltare una favola",
-                false
+                ""
             );
             attesaN = false;
             attesaG = true;
         } else if (attesaP) {
             attesaP = false;
-            parolaI = vmsg.value.replace(/^\s+|\s+$/gm,'');
+            parolaI = vmsg.value.replace(/^\s+|\s+$/gm,'').toLowerCase();
+            vmsg.value = '';
             if (parolaI == parolaV) {
-               parla("Esatto!",false);
+               parla("Esatto!","");
             } else {
-               parla("Attenzione, hai scritto" + parolaI,false);
+               parla("Attenzione, hai scritto" + parolaI,"");
             }
         } else {
-            parla(vmsg.value, false);
+            parla(vmsg.value, "");
+            vmsg.value = '';
         }
         return false;
     };
