@@ -1,3 +1,6 @@
+/* ------------------------------------
+   FUNZIONI
+   ------------------------------------ */
 function parla(messaggio,stampa) {
     let msg = new SpeechSynthesisUtterance();
     msg.voice = speechSynthesis.getVoices()[itaLang];
@@ -11,13 +14,16 @@ bottoneW.addEventListener("click", function() {
    parla('Ciao! Facciamo conoscenza, scrivi il tuo nome.', false);
    attesaN = true;
 });
+
+/* ------------------------------------
+   PROGRAMMA
+   ------------------------------------ */
 var attesaN = false;
 var attesaG = false;
-
-// dimensioni dello schermo
+// rileva le dimensioni dello schermo
 hWindow = window.innerHeight;
 wWindow = window.innerWidth;
-//
+// su PC restringi a formato portrait
 if (wWindow > hWindow) {
     var divGioco = document.querySelector(".gioco-container");
     wWindow = Math.round((hWindow * 3.8) / 7);
@@ -42,14 +48,14 @@ if (hWindow < 700) {
     logoI.style.width = logoH + "px";
     logoI.style.height = logoH + "px";
 }
-  // (A) GET HTML ELEMENTS
-  let demo = document.getElementById("dialogo"),
-      vmsg = document.getElementById("dialogo-msg"),
-      vgo = document.getElementById("dialogo-go");
-      const storicoDiv = document.getElementById("storico");
+// (A) GET HTML ELEMENTS
+let demo = document.getElementById("dialogo"),
+    vmsg = document.getElementById("dialogo-msg"),
+    vgo = document.getElementById("dialogo-go");
+    const storicoDiv = document.getElementById("storico");
 
 if ("speechSynthesis" in window) {
-  // (B) POPULATE AVAILABLE VOICES
+// Recupera le voci disponibili e scegli la migliore per l'italiano
   var voices = () => {
     if (itaLang == -1) {
         speechSynthesis.getVoices().forEach((v, i) => {
@@ -70,7 +76,7 @@ if ("speechSynthesis" in window) {
   voices();
   speechSynthesis.onvoiceschanged = voices;
 
-  // (C) SPEAK
+// Quando si invia l'input
   var speak = () => {
     if (attesaN) {
        nome = vmsg.value;
