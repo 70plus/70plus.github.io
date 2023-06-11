@@ -1,18 +1,20 @@
 /* ------------------------------------
    FUNZIONI
    ------------------------------------ */
-function parla(messaggio,stampa) {
+function parla(messaggio, stampa) {
     let msg = new SpeechSynthesisUtterance();
     msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = messaggio;
     speechSynthesis.speak(msg);
-    if (stampa) {storicoDiv.insertAdjacentHTML("afterbegin", messaggio + '<br>')};
+    if (stampa) {
+        storicoDiv.insertAdjacentHTML("afterbegin", messaggio + "<br>");
+    }
 }
 
 const bottoneW = document.getElementById("benvenuto");
-bottoneW.addEventListener("click", function() {
-   parla('Ciao! Facciamo conoscenza, scrivi il tuo nome.', false);
-   attesaN = true;
+bottoneW.addEventListener("click", function () {
+    parla("Ciao! Facciamo conoscenza, scrivi il tuo nome.", false);
+    attesaN = true;
 });
 
 /* ------------------------------------
@@ -48,50 +50,70 @@ if (hWindow < 700) {
     logoI.style.width = logoH + "px";
     logoI.style.height = logoH + "px";
 }
-// (A) GET HTML ELEMENTS
+// Rileva gli ID degli elementi HTML
 let demo = document.getElementById("dialogo"),
     vmsg = document.getElementById("dialogo-msg"),
     vgo = document.getElementById("dialogo-go");
-    const storicoDiv = document.getElementById("storico");
+const storicoDiv = document.getElementById("storico");
+
+itaLang = -1;
+prefLang = -1;
 
 if ("speechSynthesis" in window) {
-// Recupera le voci disponibili e scegli la migliore per l'italiano
-  var voices = () => {
-    if (itaLang == -1) {
-        speechSynthesis.getVoices().forEach((v, i) => {
-        if (v.name.includes('talian') || v.lang == 'it-IT' || v.lang == 'it_IT') {
-            itaLang = i;
-            if (v.name.includes('Alice') || v.name.includes('Isabella')) {prefLang = i};
-            };
-        });
-      if (itaLang != -1) {
-          if (prefLang != -1) {itaLang = prefLang};
-          storicoDiv.insertAdjacentHTML("afterbegin", 'Ti parla ' + speechSynthesis.getVoices()[itaLang].name + '<br>');
-          };
+    // Recupera le voci disponibili e scegli la migliore per l'italiano
+    var voices = () => {
+        if (itaLang == -1) {
+            speechSynthesis.getVoices().forEach((v, i) => {
+                if (
+                    v.name.includes("talian") ||
+                    v.lang == "it-IT" ||
+                    v.lang == "it_IT"
+                ) {
+                    itaLang = i;
+                    if (
+                        v.name.includes("Alice") ||
+                        v.name.includes("Isabella")
+                    ) {
+                        prefLang = i;
+                    }
+                }
+            });
+            if (itaLang != -1) {
+                if (prefLang != -1) {
+                    itaLang = prefLang;
+                }
+                storicoDiv.insertAdjacentHTML(
+                    "afterbegin",
+                    "Ti parla " +
+                        speechSynthesis.getVoices()[itaLang].name +
+                        "<br>"
+                );
+            }
+        }
     };
-  };
 
-  itaLang = -1;
-  prefLang = -1;
-  voices();
-  speechSynthesis.onvoiceschanged = voices;
+    voices();
+    speechSynthesis.onvoiceschanged = voices;
 
-// Quando si invia l'input
-  var speak = () => {
-    if (attesaN) {
-       nome = vmsg.value;
-       parla('Ciao ' + nome + '!',true);
-       parla('Scegli a quale gioco giocare, premendo uno dei tre bottoni colorati, A, B, o C',false);
-       attesaN = false;
-       attesaG = true;
-    } else {
-       parla(vmsg.value,false);
-    }
-    return false;
-  };
+    // Quando si invia l'input:
+    var speak = () => {
+        if (attesaN) {
+            nome = vmsg.value;
+            parla("Ciao " + nome + "!", true);
+            parla(
+                "Scegli a quale gioco giocare, premendo uno dei tre bottoni colorati, A, B, o C",
+                false
+            );
+            attesaN = false;
+            attesaG = true;
+        } else {
+            parla(vmsg.value, false);
+        }
+        return false;
+    };
 
-  // (D) ENABLE FORM
-  demo.onsubmit = speak;
-  vmsg.disabled = false;
-  vgo.disabled = false;
+    // Abilita il form
+    demo.onsubmit = speak;
+    vmsg.disabled = false;
+    vgo.disabled = false;
 }

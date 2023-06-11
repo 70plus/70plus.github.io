@@ -1,50 +1,53 @@
 html * {
-    font-family:"Calibri", sans-serif;
+    font-family: "Calibri", sans-serif;
     font-size: large;
 }
-    #dialogo, #dialogo * { padding: 10px; }
-    #dialogo {
-      background: #f2f2f2;
-    }
-    #dialogo * {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-    }
-.spaziatura{
-    margin-bottom:2px;
-    background-color:#ffffff;
+#dialogo,
+#dialogo * {
+    padding: 10px;
+}
+#dialogo {
+    background: #f2f2f2;
+}
+#dialogo * {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+.spaziatura {
+    margin-bottom: 2px;
+    background-color: #ffffff;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center; /* center items vertically */
-  height: 60px; /* set height for container */
-  background-color: #01A7C1;
+    display: flex;
+    align-items: center; /* center items vertically */
+    height: 60px; /* set height for container */
+    background-color: #01a7c1;
 }
 
 .logo-image {
-  width: 60px; /* set width for logo */
-  height: 60px; /* set height for logo */
+    width: 60px; /* set width for logo */
+    height: 60px; /* set height for logo */
 }
 
 .logo-text {
-  flex-basis: calc(100% - 60px);
-  text-align: center;
+    flex-basis: calc(100% - 60px);
+    text-align: center;
 }
 
-.spaziatura{
-   margin-bottom:2px;
-   background-color:#ffffff;
+.spaziatura {
+    margin-bottom: 2px;
+    background-color: #ffffff;
 }
 
 .storico {
-   height: 350px;
-   background-color: #FCEDC5;
-   overflow-y: auto;
-   border-radius: 4px;
-   padding-right: 4px;
-   padding-left: 4px;
+    height: 350px;
+    background-color: #fcedc5;
+    overflow-y: auto;
+    border-radius: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 .area-bottoni {
@@ -55,10 +58,10 @@ html * {
     background-color: #ffffff;
 }
 .bottone-rotondo {
-  border-color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 16px;
-  padding: 2px;
+    border-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 2px;
 }
