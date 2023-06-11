@@ -5,7 +5,7 @@ function parla(messaggio, stampa) {
     let msg = new SpeechSynthesisUtterance();
     msg.voice = speechSynthesis.getVoices()[itaLang];
     msg.text = messaggio;
-    msg.rate = 0.9;
+    msg.rate = 0.95;
     speechSynthesis.speak(msg);
     if (stampa.length > 0) {
         storicoDiv.insertAdjacentHTML("afterbegin", stampa + "<br>");
@@ -134,9 +134,9 @@ if ("speechSynthesis" in window) {
         } else if (attesaP) {
             attesaP = false;
             parolaI = vmsg.value.replace(/^\s+|\s+$/gm,'').toLowerCase();
-            vmsg.value = '';
             if (parolaI == parolaV) {
                parla("Esatto!","");
+               vmsg.value = '';
             } else {
                parla("Attenzione, hai scritto" + parolaI,"");
             }
