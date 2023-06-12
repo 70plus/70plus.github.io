@@ -50,15 +50,15 @@ Così il prepotente leone, si portò via la preda intera.
 Morale: Meglio non fidarsi dell'alleanza con un potente... prepotente!`,
 `Una favola di Esòpo: La rana e il bue.
 
-Un giorno una rana vide in un prato un bue e, toccata dall'invidia per una così grande mole, gonfiò la sua pelle rugosa.
-Domandò poi ai suoi figli se non fosse più grossa del bue.
+Un giorno una rana vide in un prato un bue. Toccata dall'invidia per una così grande mole, gonfiò la sua pelle rugosa.
+Domandò poi ai suoi figli se era più grossa del bue.
 Quelli dissero risposero in coro: "Noooo".
 Di nuovo, con uno sforzo maggiore, tese la pelle e chiese di nuovo chi dei due fosse più grosso.
-I figlioletti risposero: "Il bueeee".
-Infine, mentre provò a gonfiarsi ancora di più, inspirò moltissima aria finché... BOOOOOM!
-Perché chi troppo vuole...
-Morale della favola: questa favola insegna che non bisogna cercare di essere ciò che non siamo.
-Non dobbiamo cercare di imitare chi è diverso da noi, solo perché invidiamo quello che è.`,
+I figlioletti risposero: "Il bue!".
+Infine, provò a gonfiarsi ancora di più, inspirò moltissima aria finché... BUM!
+Questa favola insegna che chi troppo vuole nulla stringe.
+Non bisogna cercare di essere ciò che non siamo.
+Né cercare di imitare chi è diverso da noi, solo per invidia.`,
 `Una favola di Esòpo: ll cane e il pezzo di carne.
 Un cane, mentre stava attraversando a nuoto un fiume, portando in bocca un pezzo di carne, vide nello specchio dell'acqua la sua immagine.
 Credendo che ci fosse un altro cane con un'altra preda, gliela volle strappare: ma quell'avido, deluso, non solo lasciò andare il cibo che aveva in bocca, ma neppure potè afferrare quello che desiderava.
@@ -85,8 +85,8 @@ Ma venne trattenuto e fermato dalle lunghe corna.
 I cani da caccia lo raggiunsero e lo stanarono.
 Si narra che poco prima del colpo finale pronunciò queste parole:
 "Oh, me infelice!
-Perché solo ora comprendo quanto siano state utili le cose che avevo disprezzato, e quanto danno invece mi abbiano fatto quelle che avevo lodato!"
-Morale: questa favola conferma che non bisogna disprezzare le doti che si hanno, possono sempre tornare utili.`,
+Perché solo ora comprendo quanto siano state utili le cose che avevo disprezzato, e quanto danno, invece, mi abbiano fatto quelle che avevo lodato!"
+Morale: questa favola conferma che non bisogna disprezzare le proprie doti, perché possono sempre tornare utili.`,
 `Una favola di Esòpo: La volpe e l'uva.
 Una volpe, spinta dalla fame, saltando con tutte le sue forze cercava di cogliere dell'uva su un'alta pergola.
 Ma poiché non la potè toccare, mentre se ne andava disse: "Non è ancora matura: non la voglio cogliere acerba".
