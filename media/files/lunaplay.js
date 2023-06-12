@@ -14,26 +14,32 @@ function parla(messaggio, stampa) {
 
 const bottoneW = document.getElementById("benvenuto");
 bottoneW.addEventListener("click", function () {
-    parla("Ciaoh! Facciamo conoscenza, scrivi il tuo nome.", "");
     attesaN = true;
+    attesaP = false;
+    parla("Ciaoh! Facciamo conoscenza, scrivi il tuo nome.", "");
 });
 
 const bottoneA = document.getElementById("giocoA");
 bottoneA.addEventListener("click", function () {
+    attesaN = false;
+    attesaP = false;
     parla("Scrivi una parola qui sotto, e io la leggerò!", "");
 });
 
 const bottoneB = document.getElementById("giocoB");
 var parolaV = "";
 bottoneB.addEventListener("click", function () {
+    attesaN = false;
+    attesaP = true;
     let nParole = parola.length;
     parolaV = parola[Math.floor(Math.random() * nParole)];
     parla("Scrivi: " + parolaV, "");
-    attesaP = true;
 });
 
 const bottoneF = document.getElementById("favolaF");
 bottoneF.addEventListener("click", function () {
+    attesaN = false;
+    attesaP = false;
     let nFavole = favola.length;
     daLeggere = favola[Math.floor(Math.random() * nFavole)];
     console.log(nFavole);
@@ -44,7 +50,6 @@ bottoneF.addEventListener("click", function () {
    PROGRAMMA
    ------------------------------------ */
 var attesaN = false;
-var attesaG = false;
 var attesaP = false;
 // rileva le dimensioni dello schermo
 hWindow = window.innerHeight;
@@ -130,7 +135,6 @@ if ("speechSynthesis" in window) {
                 ""
             );
             attesaN = false;
-            attesaG = true;
         } else if (attesaP) {
             attesaP = false;
             parolaI = vmsg.value.replace(/^\s+|\s+$/gm,'').toLowerCase();
@@ -138,7 +142,7 @@ if ("speechSynthesis" in window) {
                parla("Esatto!","");
                vmsg.value = '';
             } else {
-               parla("Attenzione, hai scritto" + parolaI,"");
+               parla("Attenzione, hai scritto: " + parolaI,"");
             }
         } else {
             parla(vmsg.value, "");
