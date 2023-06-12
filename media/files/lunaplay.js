@@ -41,9 +41,19 @@ bottoneF.addEventListener("click", function () {
     attesaN = false;
     attesaP = false;
     let nFavole = favola.length;
-    daLeggere = favola[Math.floor(Math.random() * nFavole)];
-    console.log(nFavole);
-    parla(daLeggere, "");
+    do {
+       favolaL = Math.floor(Math.random() * nFavole);
+    } while (favolaL == favolaP);
+    favolaP = favolaL;    
+    parla(favola[favolaL], "");
+});
+
+const stopV = document.getElementById("stopVoce");
+stopV.addEventListener("click", function () {
+    if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+       window.speechSynthesis.cancel();
+       event.preventDefault();
+    }
 });
 
 /* ------------------------------------
@@ -51,6 +61,7 @@ bottoneF.addEventListener("click", function () {
    ------------------------------------ */
 var attesaN = false;
 var attesaP = false;
+var favolaP = -1;
 // rileva le dimensioni dello schermo
 hWindow = window.innerHeight;
 wWindow = window.innerWidth;
@@ -99,9 +110,10 @@ if ("speechSynthesis" in window) {
                     v.lang == "it_IT"
                 ) {
                     itaLang = i;
+                    storicoDiv.insertAdjacentHTML("afterbegin", v.name + "<br>");
                     if (
                         v.name.includes("Alice") ||
-                        v.name.includes("Isabella")
+                        v.name.includes("Elsa")
                     ) {
                         prefLang = i;
                     }
@@ -111,6 +123,7 @@ if ("speechSynthesis" in window) {
                 if (prefLang != -1) {
                     itaLang = prefLang;
                 }
+                storicoDiv.insertAdjacentHTML("afterbegin", "<br>Voci disponibili:<br>");
                 storicoDiv.insertAdjacentHTML(
                     "afterbegin",
                     "Ti parla " +
@@ -131,7 +144,7 @@ if ("speechSynthesis" in window) {
             vmsg.value = '';
             parla("Ciaoh " + nome + "!", "Ciao " + nome + "!");
             parla(
-                "Scegli a quale gioco giocare, premendo uno dei bottoni colorati, A, o B, oppure premi F, se vuoi ascoltare una favola",
+                "Scegli a quale gioco giocare, premendo uno dei bottoni colorati, A, o B, oppure premi F, se vuoi ascoltare una breve favola",
                 ""
             );
             attesaN = false;

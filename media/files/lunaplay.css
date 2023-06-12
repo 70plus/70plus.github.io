@@ -43,11 +43,18 @@ html * {
 
 .storico {
     height: 350px;
-    background-color: #fcedc5;
+    background-color: #63D2FF;
     overflow-y: auto;
     border-radius: 4px;
     padding-right: 4px;
     padding-left: 4px;
+}
+
+.area-tasti {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
 }
 
 .area-bottoni {
@@ -57,6 +64,7 @@ html * {
     height: 70px;
     background-color: #ffffff;
 }
+
 .bottone-rotondo {
     border-color: white;
     border-radius: 50%;

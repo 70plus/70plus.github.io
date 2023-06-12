@@ -59,7 +59,7 @@ Infine, provò a gonfiarsi ancora di più, inspirò moltissima aria finché... B
 Questa favola insegna che chi troppo vuole nulla stringe.
 Non bisogna cercare di essere ciò che non siamo.
 Né cercare di imitare chi è diverso da noi, solo per invidia.`,
-`Una favola di Esòpo: ll cane e il pezzo di carne.
+`Una favola di Esòpo: il cane e il pezzo di carne.
 Un cane, mentre stava attraversando a nuoto un fiume, portando in bocca un pezzo di carne, vide nello specchio dell'acqua la sua immagine.
 Credendo che ci fosse un altro cane con un'altra preda, gliela volle strappare: ma quell'avido, deluso, non solo lasciò andare il cibo che aveva in bocca, ma neppure potè afferrare quello che desiderava.
 Morale della favola: Chi troppo vuole, nulla stringe. Meglio accontentarsi di quello che si ha, che rischiare di perderlo.`,
@@ -71,7 +71,7 @@ E l'agnello timoroso: "Ma scusa, o lupo, come posso fare quello di cui ti lament
 L'acqua scorre in giù dalle tue alle mie labbra".
 E l'altro, vinto dalla forza della verità riprese: "Sei mesi fa hai detto male di me".
 Rispose l'agnello: "Ma se non era ancora nato!"
-"Tuo padre allora disse male di me", replicò il lupo.
+"Allora è stato tuo padre a parlare male di me", replicò il lupo.
 E senza dire altro, afferrò il povero agnello e lo mangiò ingiustamente.
 Questa favola è stata scritta per quegli uomini che con falsi pretesti opprimono gli innocenti.
 Morale di questa favola: contro chi ha deciso di fare un torto non c'è un'adeguata giustificazione o difesa che tenga.`,
@@ -107,4 +107,32 @@ Un grande e feroce leone cattura un piccolo topo.
 Quest'ultimo riesce a convincere il leone a lasciarlo andare in cambio della sua amicizia fedele.
 Il leone si convince e lascia libero il topo.
 Quando il leone viene catturato da un cacciatore, il topo dimostra la sua lealtà alla promessa data: trae in salvo il leone dalle grinfie del cacciatore.
-Morale: anche i più piccoli possono essere di grande aiuto.`];
+Morale: anche i più piccoli possono essere di grande aiuto.`,
+`C'era una volta una giovane principessa chiamata Biancaneve, la cui bellezza era senza pari.
+Ma la sua matrigna, la Regina Cattiva, provava un'insopportabile invidia nei suoi confronti.
+Decisa a liberarsi di Biancaneve, la Regina Cattiva ingaggiò un cacciatore per ucciderla nella foresta.
+Tuttavia, il cacciatore non riuscì a compiere l'atroce compito e la principessa fuggì, rifugiandosi in una piccola casa abitata da sette nani.
+I nani accolsero Biancaneve e la protessero dalla malvagia regina.
+Ma la strega non si arrese: si trasformò in un'anziana venditrice e, con inganno, riuscì a far mordere alla principessa una mela avvelenata.
+Biancaneve cadde in un sonno profondo, apparentemente senza speranza.
+Tuttavia, un giorno un principe si avventurò nella foresta e scoprì la bellissima principessa addormentata.
+Colpito dalla sua bellezza, decise di darle un bacio d'amore.
+Il bacio spezzò l'incantesimo e Biancaneve si risvegliò.
+Il principe e Biancaneve si innamorarono e decisero di sposarsi, mentre la Regina Cattiva ebbe una meritata punizione per la sua cattiveria.
+Così, la storia di Biancaneve ci ricorda che la bellezza interiore, l'amore e la bontà trionfano sempre sul male e l'invidia, e che i finali felici sono possibili anche dopo le prove più difficili.`,
+`Cenerentola, una giovane e dolce ragazza, viveva una vita triste e dura con la sua matrigna cattiva e le sue due sorellastre.
+Costretta a fare tutti i lavori domestici, Cenerentola sognava una vita migliore.
+Un giorno, l'annuncio del ballo reale riempì il regno di eccitazione.
+Tutte le giovani donne furono invitate, comprese le sorellastre vanitose.
+Cenerentola desiderava partecipare, ma le sue cattive parenti lo impedirono, lasciandola sola e triste.
+All'improvviso, apparve una fata madrina che, con la sua magia, trasformò una zucca in una carrozza, topi in cavalli, un rospo in un cocchiere e gli stracci di Cenerentola in un bellissimo abito.
+Ma c'era una condizione: Cenerentola doveva tornare a casa prima della mezzanotte, quando l'incantesimo sarebbe svanito.
+Ammirata da tutti al ballo, Cenerentola attirò l'attenzione del principe, che se ne innamorò perdutamente.
+Tuttavia, quando la mezzanotte si avvicinò, Cenerentola fuggì, perdendo una delle sue scarpette di cristallo.
+Il principe, determinato a trovare la misteriosa ragazza, iniziò una ricerca.
+La scarpetta fu portata a tutte le fanciulle del regno, finché non arrivò da Cenerentola.
+La matrigna cercò di impedire a Cenerentola di provare la scarpetta, ma fallì.
+La scarpetta le calzava perfettamente.
+Il principe riconobbe Cenerentola, la portò con sé al castello e le chiese di sposarlo.
+Cenerentola divenne principessa e la sua bontà e dolcezza conquistarono il cuore di tutti.
+La favola di Cenerentola ci insegna che la gentilezza, la speranza e la bontà sono premiate e che i sogni possono diventare realtà, anche nei momenti più difficili.`];
