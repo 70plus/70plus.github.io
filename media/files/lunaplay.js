@@ -134,7 +134,7 @@ if ("speechSynthesis" in window) {
                     itaLang = i;
                     storicoDiv.insertAdjacentHTML("afterbegin", v.name + "<br>");
                     if (
-                        v.name.includes("Grandma") ||
+                        v.name.includes("Alice") ||
                         v.name.includes("Elsa")
                     ) {
                         prefLang = i;
