@@ -13,13 +13,12 @@ function parla(messaggio, stampa) {
 }
 
 function waitWhileSpeaking(prosegui) {
-  if (window.speechSynthesis.speaking) {
-    setTimeout(function() {
-      waitWhileSpeaking(prosegui);
-    }, 100); // Adjust the timeout interval as needed
-  } else {
+  var utterance = new SpeechSynthesisUtterance();
+  utterance.text = '';
+  utterance.addEventListener('end', function() {
     prosegui();
-  }
+  });
+  window.speechSynthesis.speak(utterance);
 }
 
 function setFocus() {
