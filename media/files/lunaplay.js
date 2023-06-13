@@ -23,8 +23,8 @@ function waitWhileSpeaking(prosegui) {
 
 function setFocus() {
    vmsg.focus();
-   vmsg.selectionStart = vmsg.value.length;
-   vmsg.selectionEnd = vmsg.value.length;
+   var vaiTast = new Event('input', { bubbles: true });
+   inputElement.dispatchEvent(vaiTast);
 }
 
 const bottoneW = document.getElementById("benvenuto");
