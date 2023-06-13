@@ -12,11 +12,26 @@ function parla(messaggio, stampa) {
     }
 }
 
+function waitWhileSpeaking(prosegui) {
+  if (window.speechSynthesis.speaking) {
+    setTimeout(function() {
+      waitWhileSpeaking(prosegui);
+    }, 100); // Adjust the timeout interval as needed
+  } else {
+    prosegui();
+  }
+}
+
+function setFocus() {
+   vmsg.focus();
+}
+
 const bottoneW = document.getElementById("benvenuto");
 bottoneW.addEventListener("click", function () {
     attesaN = true;
     attesaP = false;
     parla("Ciaoh! Facciamo conoscenza, scrivi il tuo nome.", "");
+    waitWhileSpeaking(setFocus);
 });
 
 const bottoneA = document.getElementById("giocoA");
@@ -24,6 +39,7 @@ bottoneA.addEventListener("click", function () {
     attesaN = false;
     attesaP = false;
     parla("Scrivi una parola qui sotto, e io la leggerò!", "");
+    waitWhileSpeaking(setFocus);
 });
 
 const bottoneB = document.getElementById("giocoB");
@@ -34,6 +50,7 @@ bottoneB.addEventListener("click", function () {
     let nParole = parola.length;
     parolaV = parola[Math.floor(Math.random() * nParole)];
     parla("Scrivi: " + parolaV, "");
+    waitWhileSpeaking(setFocus);
 });
 
 const bottoneF = document.getElementById("favolaF");
@@ -44,8 +61,9 @@ bottoneF.addEventListener("click", function () {
     do {
        favolaL = Math.floor(Math.random() * nFavole);
     } while (favolaL == favolaP);
-    favolaP = favolaL;    
-    parla(favola[favolaL], "");
+    favolaP = favolaL; 
+    parla(favola[favolaL][0], favola[favolaL][0].toUpperCase());
+    parla(favola[favolaL][1], "");
 });
 
 const stopV = document.getElementById("stopVoce");
@@ -126,7 +144,7 @@ if ("speechSynthesis" in window) {
                 storicoDiv.insertAdjacentHTML("afterbegin", "<br>Voci disponibili:<br>");
                 storicoDiv.insertAdjacentHTML(
                     "afterbegin",
-                    "Ti parla " +
+                    "<br>Ti parla " +
                         speechSynthesis.getVoices()[itaLang].name +
                         "<br>"
                 );
