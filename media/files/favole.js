@@ -1,4 +1,5 @@
-favola = [['La cicala e la formica',`
+favola = [
+['La cicala e la formica',`
 Era estate e faceva molto caldo.
 Nonostante la fatica, una formica era tutta presa a lavorare duramente, per mettere da parte provviste per l'inverno.
 Avanti e indietro, avanti e indietro.
@@ -11,6 +12,67 @@ E la formica: "Io ho lavorato duramente tutta l'estate per accumulare tutto ques
 "Ho cantato" rispose la cicala.
 E la formica: "E allora adesso balla!"
 Morale della favola: chi nulla fa, nulla ottiene.`],
+
+['Cappuccetto Rosso',`
+Cappuccetto Rosso era una bimba, chiamata così per via del cappuccio rosso che le aveva regalato la nonna.
+Un giorno, la madre le chiede di portare una cestina di cibo alla nonna malata.
+Nonostante gli avvertimenti di non allontanarsi dal sentiero, Cappuccetto Rosso decide di fare una passeggiata nel bosco.
+Durante il tragitto, incontra un lupo cattivo che le chiede dove stia andando.
+Ignara delle sue intenzioni, Cappuccetto Rosso racconta che sta andando dalla nonna, e dice anche dove abita la nonna.
+Il lupo, più veloce di lei, raggiunge per primo la casa della nonna e la ingoia intera.
+Poi, si traveste da nonna, e aspetta l'arrivo di Cappuccetto Rosso.
+Quando la bimba arriva, nota che la nonna ha orecchie troppo grandi, mani troppo grandi e una bocca minacciosa, ma non sospetta nulla.
+Solo quando il lupo ingoia anche lei, si rende conto della trappola.
+Fortunatamente, un cacciatore passa di lì e sente i rumori provenire dalla casa.
+Uccide il lupo e salva Cappuccetto Rosso e la nonna.
+La storia termina con l'avvertimento di non fidarsi degli estranei e di seguire sempre le istruzioni dei genitori.
+Cappuccetto Rosso impara una lezione preziosa sull'importanza della prudenza e dell'ascolto delle persone fidate.`],
+
+['Biancaneve e i 7 nani',`
+C'era una volta una giovane principessa chiamata Biancaneve, la cui bellezza era senza pari.
+Ma la sua matrigna, la Regina Cattiva, provava un'insopportabile invidia nei suoi confronti.
+Decisa a liberarsi di Biancaneve, la Regina Cattiva ingaggiò un cacciatore per ucciderla nella foresta.
+Tuttavia, il cacciatore non riuscì a compiere l'atroce compito e la principessa fuggì, rifugiandosi in una piccola casa abitata da sette nani.
+I nani accolsero Biancaneve e la protessero dalla malvagia regina.
+Ma la strega non si arrese: si trasformò in un'anziana venditrice e, con inganno, riuscì a far mordere alla principessa una mela avvelenata.
+Biancaneve cadde in un sonno profondo, apparentemente senza speranza.
+Tuttavia, un giorno un principe si avventurò nella foresta e scoprì la bellissima principessa addormentata.
+Colpito dalla sua bellezza, decise di darle un bacio d'amore.
+Il bacio spezzò l'incantesimo e Biancaneve si risvegliò.
+Il principe e Biancaneve si innamorarono e decisero di sposarsi, mentre la Regina Cattiva ebbe una meritata punizione per la sua cattiveria.
+Così, la storia di Biancaneve ci ricorda che la bellezza interiore, l'amore e la bontà trionfano sempre sul male e l'invidia, e che i finali felici sono possibili anche dopo le prove più difficili.`],
+
+['Cenerentola',`
+Cenerentola, una giovane e dolce ragazza, viveva una vita triste e dura con la sua matrigna cattiva e le sue due sorellastre.
+Costretta a fare tutti i lavori domestici, Cenerentola sognava una vita migliore.
+Un giorno, l'annuncio del ballo reale riempì il regno di eccitazione.
+Tutte le giovani donne furono invitate, comprese le sorellastre vanitose.
+Cenerentola desiderava partecipare, ma le sue cattive parenti lo impedirono, lasciandola sola e triste.
+All'improvviso, apparve una fata madrina che, con la sua magia, trasformò una zucca in una carrozza, topi in cavalli, un rospo in un cocchiere e gli stracci di Cenerentola in un bellissimo abito.
+Ma c'era una condizione: Cenerentola doveva tornare a casa prima della mezzanotte, quando l'incantesimo sarebbe svanito.
+Ammirata da tutti al ballo, Cenerentola attirò l'attenzione del principe, che se ne innamorò perdutamente.
+Tuttavia, quando la mezzanotte si avvicinò, Cenerentola fuggì, perdendo una delle sue scarpette di cristallo.
+Il principe, determinato a trovare la misteriosa ragazza, iniziò una ricerca.
+La scarpetta fu portata a tutte le fanciulle del regno, finché non arrivò da Cenerentola.
+La matrigna cercò di impedire a Cenerentola di provare la scarpetta, ma fallì.
+La scarpetta le calzava perfettamente.
+Il principe riconobbe Cenerentola, la portò con sé al castello e le chiese di sposarlo.
+Cenerentola divenne principessa e la sua bontà e dolcezza conquistarono il cuore di tutti.
+La favola di Cenerentola ci insegna che la gentilezza, la speranza e la bontà sono premiate e che i sogni possono diventare realtà, anche nei momenti più difficili.`],
+
+['La Sirenetta',`
+C'era una volta una giovane sirena di nome Ariel, che viveva in un regno sottomarino.
+Ariel desiderava ardentemente vivere sulla terra.
+Un giorno, salvando un principe naufragato, si innamorò di lui.
+Decisa a realizzare il suo sogno, Ariel chiese l'aiuto di una strega malvagia di nome Ursula.
+La strega acconsentì a trasformarla in una donna, ma in cambio Ariel doveva consegnarle la sua voce.
+Ariel accettò e diventò umana, ma scopri che aveva perso la sua voce.
+Nonostante ciò, il principe si innamorò di lei per la sua bellezza, ma venne ingannato da Ursula, che si presentò come Ariel usando la sua voce.
+Fortunatamente, Ariel sventò i piani di Ursula con l'aiuto delle sue amiche marine, riottenne la sua voce e tornò a essere una sirena.
+Il principe si rese conto dell'inganno, si riconciliò con Ariel e i due scoprirono di amarsi.
+Ma, nonostante il loro amore, Ariel capì che apparteneva al mare e alla sua famiglia.
+Addolorata, Ariel scelse di tornare in fondo all'oceano. Ma suo padre, re Tritone, commosso dal suo sacrificio, la trasformò in un essere umano permanente e le permise di sposare il principe.
+E così, Ariel e il principe vissero felici per sempre, con Ariel che realizzò il suo sogno di vivere sulla terra e di essere accettata e amata per chi era veramente.`],
 
 ['Il passero e la lepre',`
 Una lepre, mentre correva nel prato, fu ghermita dagli artigli di un'aquila, che voleva farne un solo boccone.
@@ -110,36 +172,5 @@ Un grande e feroce leone cattura un piccolo topo.
 Quest'ultimo riesce a convincere il leone a lasciarlo andare in cambio della sua amicizia fedele.
 Il leone si convince e lascia libero il topo.
 Quando il leone viene catturato da un cacciatore, il topo dimostra la sua lealtà alla promessa data: trae in salvo il leone dalle grinfie del cacciatore.
-Morale: anche i più piccoli possono essere di grande aiuto.`],
-
-['Biancaneve e i 7 nani',`
-C'era una volta una giovane principessa chiamata Biancaneve, la cui bellezza era senza pari.
-Ma la sua matrigna, la Regina Cattiva, provava un'insopportabile invidia nei suoi confronti.
-Decisa a liberarsi di Biancaneve, la Regina Cattiva ingaggiò un cacciatore per ucciderla nella foresta.
-Tuttavia, il cacciatore non riuscì a compiere l'atroce compito e la principessa fuggì, rifugiandosi in una piccola casa abitata da sette nani.
-I nani accolsero Biancaneve e la protessero dalla malvagia regina.
-Ma la strega non si arrese: si trasformò in un'anziana venditrice e, con inganno, riuscì a far mordere alla principessa una mela avvelenata.
-Biancaneve cadde in un sonno profondo, apparentemente senza speranza.
-Tuttavia, un giorno un principe si avventurò nella foresta e scoprì la bellissima principessa addormentata.
-Colpito dalla sua bellezza, decise di darle un bacio d'amore.
-Il bacio spezzò l'incantesimo e Biancaneve si risvegliò.
-Il principe e Biancaneve si innamorarono e decisero di sposarsi, mentre la Regina Cattiva ebbe una meritata punizione per la sua cattiveria.
-Così, la storia di Biancaneve ci ricorda che la bellezza interiore, l'amore e la bontà trionfano sempre sul male e l'invidia, e che i finali felici sono possibili anche dopo le prove più difficili.`],
-
-['Cenerentola',`
-Cenerentola, una giovane e dolce ragazza, viveva una vita triste e dura con la sua matrigna cattiva e le sue due sorellastre.
-Costretta a fare tutti i lavori domestici, Cenerentola sognava una vita migliore.
-Un giorno, l'annuncio del ballo reale riempì il regno di eccitazione.
-Tutte le giovani donne furono invitate, comprese le sorellastre vanitose.
-Cenerentola desiderava partecipare, ma le sue cattive parenti lo impedirono, lasciandola sola e triste.
-All'improvviso, apparve una fata madrina che, con la sua magia, trasformò una zucca in una carrozza, topi in cavalli, un rospo in un cocchiere e gli stracci di Cenerentola in un bellissimo abito.
-Ma c'era una condizione: Cenerentola doveva tornare a casa prima della mezzanotte, quando l'incantesimo sarebbe svanito.
-Ammirata da tutti al ballo, Cenerentola attirò l'attenzione del principe, che se ne innamorò perdutamente.
-Tuttavia, quando la mezzanotte si avvicinò, Cenerentola fuggì, perdendo una delle sue scarpette di cristallo.
-Il principe, determinato a trovare la misteriosa ragazza, iniziò una ricerca.
-La scarpetta fu portata a tutte le fanciulle del regno, finché non arrivò da Cenerentola.
-La matrigna cercò di impedire a Cenerentola di provare la scarpetta, ma fallì.
-La scarpetta le calzava perfettamente.
-Il principe riconobbe Cenerentola, la portò con sé al castello e le chiese di sposarlo.
-Cenerentola divenne principessa e la sua bontà e dolcezza conquistarono il cuore di tutti.
-La favola di Cenerentola ci insegna che la gentilezza, la speranza e la bontà sono premiate e che i sogni possono diventare realtà, anche nei momenti più difficili.`]];
+Morale: anche i più piccoli possono essere di grande aiuto.`]
+];

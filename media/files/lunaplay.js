@@ -62,10 +62,13 @@ bottoneF.addEventListener("click", function () {
     attesaN = false;
     attesaP = false;
     let nFavole = favola.length;
+    mediaL = nFavLette/nFavole;
     do {
        favolaL = Math.floor(Math.random() * nFavole);
-    } while (favolaL == favolaP);
-    favolaP = favolaL; 
+    } while (favolaL == favolaP || favLette[favolaL] > mediaL + 1);
+    favolaP = favolaL;
+    favLette[favolaL] += 1;
+    nFavLette += 1;
     parla(favola[favolaL][0], favola[favolaL][0].toUpperCase());
     parla(favola[favolaL][1], "");
 });
@@ -84,6 +87,8 @@ stopV.addEventListener("click", function () {
 var attesaN = false;
 var attesaP = false;
 var favolaP = -1;
+var favLette = new Array(favola.length).fill(0);
+var nFavLette = 0;
 // rileva le dimensioni dello schermo
 hWindow = window.innerHeight;
 wWindow = window.innerWidth;
