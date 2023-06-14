@@ -65,7 +65,7 @@ bottoneF.addEventListener("click", function () {
     mediaL = nFavLette/nFavole;
     do {
        favolaL = Math.floor(Math.random() * nFavole);
-    } while (favolaL == favolaP || favLette[favolaL] > mediaL + 1);
+    } while (favolaL == favolaP || favLette[favolaL] > mediaL + 0.5);
     favolaP = favolaL;
     favLette[favolaL] += 1;
     nFavLette += 1;
