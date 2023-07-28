@@ -1,299 +1,808 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>C M G</title>
-    <link href="https://clevermindgame.it/feed.xml" rel="self" />
-    <link href="https://clevermindgame.it" />
-    <updated>2023-06-17T08:55:22+02:00</updated>
+    <title>70plus - and still a lot to do</title>
+    <link href="https://70plus.github.io/feed.xml" rel="self" />
+    <link href="https://70plus.github.io" />
+    <updated>2023-04-03T15:28:25+02:00</updated>
     <author>
-        <name>2P &amp; MS</name>
+        <name>Pasquale</name>
     </author>
-    <id>https://clevermindgame.it</id>
+    <id>https://70plus.github.io</id>
 
     <entry>
-        <title>Chi siamo</title>
+        <title>Hamburger di melanzane</title>
         <author>
-            <name>2P &amp; MS</name>
+            <name>Pasquale</name>
         </author>
-        <link href="https://clevermindgame.it/chi-siamo.html"/>
-        <id>https://clevermindgame.it/chi-siamo.html</id>
+        <link href="https://70plus.github.io/hamburger-di-melanzane.html"/>
+        <id>https://70plus.github.io/hamburger-di-melanzane.html</id>
+        <media:content url="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" medium="image" />
+            <category term="cucina"/>
 
-        <updated>2023-06-17T08:55:22+02:00</updated>
+        <updated>2023-04-03T15:28:25+02:00</updated>
             <summary>
                 <![CDATA[
-                    Breve bio.
+                        <img src="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" alt="Hamburger di melanzane" />
+                    Le melanzane sono un ortaggio a basso indice glicemico (tra 10 e 20), e con un buon contenuto di fibre. Sono quindi suggerite per chi è affetto da diabete. La preparazione degli hamburger di melanzane prende circa 2 ore: Semplice,&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Breve bio.</p>
-<p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Help</title>
-        <author>
-            <name>2P &amp; MS</name>
-        </author>
-        <link href="https://clevermindgame.it/help.html"/>
-        <id>https://clevermindgame.it/help.html</id>
-
-        <updated>2023-06-17T08:55:16+02:00</updated>
-            <summary>
-                <![CDATA[
-                    CleverMind è un gioco rompicapo che allena il pensiero induttivo. Lo scopo del gioco è scoprire un codice segreto formato da un insieme di pezzi nascosti sulla base degli effetti che questi producono sugli impulsi inseriti, con le sue mosse, dal giocatore. Qui di seguito&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><span style="font-size: large;"><strong>CleverMind</strong> è un gioco </span><span style="font-size: large;"><i>rompicapo</i></span><span style="font-size: large;"> che allena il pensiero induttivo. Lo scopo del gioco è scoprire un codice segreto formato da un insieme di pezzi nascosti sulla base degli effetti che questi producono sugli impulsi inseriti, con le sue mosse, dal giocatore.<br></span></p>
-<p>Qui di seguito trovi una breve guida al gioco. Puoi trovare utili anche un <span style="text-decoration: underline;"><a href="https://clevermindgame.it/esempio-commentato-di-partita.html">esempio di risoluzione di una sfida</a></span> e le <a href="https://clevermindgame.it/faq.html">FAQ</a> (<em>Risposte alle domande più frequenti</em>).</p>
-<p><span style="color: #40b5cd;"><span style="font-size: large;"><strong><a name="gioco"></a>Regole del gioco:</strong></span></span><span style="color: #40b5cd;"><span style="font-size: large;"> </span></span><span style="font-size: large;">La sfida si svolge su una tavola, detta </span><span style="font-size: large;"><i>Black Box,</i></span><span style="font-size: large;"> circondata da un bordo colorato. Ogni mossa inizia e termina in una casella del bordo, definita dalla combinazione di lettera e numero (per esempio “A5”).<br>Per muovere, si seleziona una casella del bordo e si indica il valore d’entrata dell’impulso, scegliendo tra <span style="font-size: large;"><strong>+1 bianco</strong></span><span style="font-size: large;"> e </span><span style="font-size: large;"><strong>-1 bianco</strong></span><span style="font-size: large;">. L’input inserito, se non incontra nessun pezzo del codice segreto, prosegue dritto ed esce invariato dalla casella del bordo alla fine della riga o della colonna da cui è entrato.<br>Se invece lungo il tragitto passa su caselle in cui sono posizionati i pezzi del codice segreto muta direzione e valore secondo le regole d’interazione dei pezzi incontrati, che verranno descritte in seguito. </span></span></p>
-<p><span style="font-size: large;">L’abilità del giocatore consiste nel riuscire a individuare nel minor numero di mosse i pezzi del codice segreto analizzando le variazioni subite dagli input.</span></p>
-<p><span style="font-size: large;">Il feedback che il giocatore riceve a ogni mossa riporta: la casella sul bordo raggiunta a fine percorso; il colore e il valore numerico dell’input in seguito alle interazioni con i pezzi incrociati; da quante caselle è passato (</span><span style="font-size: large;"><i>Passi</i></span><span style="font-size: large;">) e quanti pezzi ha incontrato prima di uscire dalla Black Box (</span><span style="font-size: large;"><i>Rimbalzi</i></span><span style="font-size: large;">).</span></p>
-<p><span style="color: #40b5cd;"><span style="font-size: large;"><strong>Regole d’interazione:</strong></span></span><span style="color: #40b5cd;"><span style="font-size: large;"> </span></span><span style="font-size: large;">I pezzi interagiscono con l’input secondo le seguenti regole: </span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/cb0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>cerchio chiaro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Cc</strong>) l’input cambia colore (passando da bianco a nero e viceversa) e prosegue in direzione Nord lungo la verticale (↑);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/cn0.png" data-is-external-image="true"> <span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>cerchio scuro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Cs</strong>) l’input cambia colore e prosegue in direzione Sud lungo la verticale (↓);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/qb0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>quadrato chiaro</strong></span><span style="font-size: large;"> ( abbreviazione: Q<strong>c</strong>) l’input aumenta il proprio valore numerico di 1 e prosegue muovendosi in orizzontale in direzione Ovest (←);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/qn0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>quadrato scuro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Qs</strong>) l’input riduce il proprio valore numerico di 1 e prosegue muovendosi in orizzontale in direzione Est (→);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/tb0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>triangolo chiaro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Tc</strong>) il valore numerico viene moltiplicato per 2 e il movimento prosegue in diagonale in direzione Nord-Ovest (↖︎);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/tn0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>triangolo scuro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Ts</strong>) il valore numerico viene moltiplicato per -2 e il movimento prosegue in diagonale in direzione Sud-Est (↘︎);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/rb0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>rombo chiaro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Rc</strong>) il valore numerico viene moltiplicato per 3 e il movimento prosegue in diagonale in direzione Nord-Est (↗);</span></p>
-<p><img loading="lazy" style="float: left; width: 60px; height: 60px; align: left; border: 0px; margin-right: 15px;" src="media/files/rn0.png" data-is-external-image="true"><span style="font-size: large;">incontrando un </span><span style="font-size: large;"><strong>rombo scuro</strong></span><span style="font-size: large;"> ( abbreviazione: <strong>Rs</strong>) il valore numerico viene moltiplicato per -3 e il movimento prosegue in diagonale in direzione Sud-Ovest (↙). </span></p>
-<p><span style="font-size: large;">L'effetto dei pezzi sull'intensità dell'impulso segue le regole dell'aritmetica.<br>Ad esempio, se l'intensità di un impulso è -1, incontrando un triangolo scuro diventerà di (-1) × (-2) = +2. Analogamente, incontrando un rombo scuro: (-1) × (-3) = +3.</span></p>
-<p><span style="font-size: large;">All’interno della stessa mossa il pezzo agisce solo una volta, poi si disattiva e non influisce più sull’input che dovesse ripassasse dalla casella in cui si trova.<br>Nelle sfide generate automaticamente dal gioco non sono mai presenti più di due pezzi nella stessa riga o colonna.<br></span></p>
-<p><span style="color: #40b5cd;"><span style="font-size: large;"><strong>Verifica</strong></span></span><span style="color: #40b5cd;"><span style="font-size: large;">: </span></span><span style="font-size: large;">Durante il gioco è possibile verificare le proprie ipotesi sulla posizione dei pezzi che formano il codice segreto toccando una casella della Black Box e selezionando il pezzo scelto nel pop up che si apre. Se l’ipotesi è corretta il pezzo indovinato rimane visibile sulla tavola di gioco. La partita si conclude quando tutti i pezzi che compongono il codice segreto vengono svelati. In caso di sfida tra più giocatori a riconoscere lo stesso codice segreto, vince chi riesce a individuarlo in meno mosse.</span></p>
-<p><span style="color: #40b5cd;"><span style="font-size: large;"><strong>Livelli di gioco:</strong></span></span><span style="color: #40b5cd;"><span style="font-size: large;"> </span></span><span style="font-size: large;">Si può variare la difficoltà del gioco entrando in </span><span style="font-size: large;"><strong>Impostazioni</strong></span><span style="font-size: large;"> e agendo su varie opzioni:</span></p>
-<ul>
-<li><span style="font-size: large;"><strong>dimensione della tavola di gioco</strong></span><span style="font-size: large;"> (4x4, 5x5 o 6x6 caselle), che influisce anche sul numero dei pezzi nascosti che compongono il codice segreto;</span></li>
-<li><span style="font-size: large;">attivare la </span><span style="font-size: large;"><strong>modalità </strong></span><span style="font-size: large;"><strong>esperto</strong></span><span style="font-size: large;">, che influisce sul numero di pezzi nascosti e sull’algoritmo di inserimento, aumentando tendenzialmente il numero di rimbalzi e la complessità del gioco;</span></li>
-<li><span style="font-size: large;">nascondere l’indicazione del numero di “</span><span style="font-size: large;"><strong>passi</strong></span><span style="font-size: large;">” compiuti dall’input. Quante caselle, cioè, sono state attraversate durante la mossa;</span></li>
-<li><span style="font-size: large;">nascondere l’indicazione del numero di “</span><span style="font-size: large;"><strong>rimbalzi</strong></span><span style="font-size: large;">”, ovvero quanti pezzi attivi ha incontrato l’input durante la mossa. </span></li>
-</ul>
-<p><span style="color: #40b5cd;"><span style="font-size: large;"><strong><a name="studio"></a>Modalità Studio: </strong></span></span><span style="font-size: large;">Oltre a giocare contro il computer, che provvede a generare in automatico la disposizione dei pezzi, è possibile impostare direttamente il codice segreto. Per inserire un pezzo nella modalità Studio si tocca la casella in cui si desidera inserirlo e poi si sceglie il pezzo che si vuole aggiungere dal pop-up che si apre. Nella versione Studio è possibile rendere visibile il posizionamento dei pezzi sulla tavola.</span></p>
-<p><span style="font-size: large;">La modalità Studio è utile sia per impratichirsi sull’effetto combinato di più interazioni, sia per predisporre sfide da lanciare ad altri giocatori. Permette inoltre di visualizzare il codice segreto di una sfida irrisolta. Dopo aver visualizzato il codice segreto in Studio non è più possibile continuare la stessa sfida tornando nella modalità Gioco.</span></p>
-<p><span style="font-size: large;">Il modo più comodo per condividere una sfida è premere sull’icona <span style="font-size: xx-large;">📋</span>. La disposizione dei pezzi che compone il codice segreto è automaticamente memorizzata in una URL facilmente condivisibile.</span></p>
-<p><span style="font-size: large;"><span style="color: #40b5cd;"><strong>Gioco del giorno:</strong></span> ogni giorno una sfida. Premendo l’icona <span style="font-size: xx-large;">📆</span> sarà caricata, come codice segreto, la configurazione del giorno.</span></p>
-<p><span style="font-size: large;">Sono disponibili 6 giochi del giorno. Per ognuna delle dimensioni della tavola di gioco, infatti, sono disponibili un gioco del giorno per la modalità <strong>esperto</strong> e una per la modalità <strong>standard</strong>.</span></p>
-<p>E ora non resta che provare!</p>
-<p> </p>
-<div class="align-center"><form class="cmg"><button class="bottone">Gioca a CleverMindGame!</button></form></div>
-<p>Se vuoi segnalare un problema o suggerire un miglioramento, puoi <a href="https://forms.gle/GWqsZqhufE1PhwKM8" target="_blank" rel="nofollow noopener noreferrer">farlo da qui</a>.</p>
-<p>Buon divertimento!</p>
-<p>
-<script src="media/files/bottone.js"></script>
-</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Non tutti i lockdown vengono per nuocere</title>
-        <author>
-            <name>2P &amp; MS</name>
-        </author>
-        <link href="https://clevermindgame.it/non-tutti-i-lockdown-vengono-per-nuocere.html"/>
-        <id>https://clevermindgame.it/non-tutti-i-lockdown-vengono-per-nuocere.html</id>
-
-        <updated>2023-06-17T08:55:08+02:00</updated>
-            <summary>
-                <![CDATA[
-                    Breve storia del gioco.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Breve storia del gioco.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Esempio commentato di partita</title>
-        <author>
-            <name>2P &amp; MS</name>
-        </author>
-        <link href="https://clevermindgame.it/esempio-commentato-di-partita.html"/>
-        <id>https://clevermindgame.it/esempio-commentato-di-partita.html</id>
-
-        <updated>2023-06-17T08:51:16+02:00</updated>
-            <summary>
-                <![CDATA[
-                    1 |Il giocatore inizia inserendo un +1 in A2. Impulso che esce in B1 dopo 9 passi (caselle superate) e 2 rimbalzi (pezzi incrociati che ne hanno modificato la traiettoria e/o il valore). Il primo aspetto che nota nel feedback è che l’impulso esce nero,&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p><strong>1</strong> |Il giocatore inizia inserendo un +1 in A2. Impulso che esce in B1 dopo 9 passi (caselle superate) e 2 rimbalzi (pezzi incrociati che ne hanno modificato la traiettoria e/o il valore).</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_1.jpg" alt="" width="710" height="986" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_1-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_1-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_1-md.jpg 768w"></figure>
-<p>Il primo aspetto che nota nel feedback è che l’impulso esce nero, deve avere quindi incontrato un cerchio che ne ha cambiato il colore. Sa anche che ha incontrato due pezzi e che il valore numerico è passato da +1 a +2 potrebbe avere quindi incontrato un quadrato chiaro che aggiunge un +1 oppure un triangolo chiaro che raddoppia il valore. <br>Infine, conosce il punto da dove esce l’input e quanti passi fa. L’unica configurazione possibile per ottenere questo risultato è questa:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_2.jpg" alt="" width="789" height="1178" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_2-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_2-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_2-md.jpg 768w"></figure>
-<p><strong>2</strong> | L’input partito da A2 procede in orizzontale per 4 passi dove incontra il cerchio che gli cambia colore, rendendolo nero, e la direzione che diventa verticale verso il basso.<br>Dopo due passi incontra il triangolo chiaro che porta a +2 il suo valore numerico e gli imprime una direzione diagonale con uscita nella casella prevista. Facendo in totale 9 passi.<br>Proviamo a inserire i pezzi e l’analisi si conferma giusta.</p>
-<p><strong>3</strong> |Come secondo tentativo il giocatore inserisce in A5 l’impulso +1, che esce, dopo solo due passi e l’incontro con un pezzo, in C6.</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_3.jpg" alt="" width="710" height="973" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_3-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_3-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_3-md.jpg 768w"></figure>
-<p>Poiché sono solo due passi, di cui uno di uscita, l’impulso deve fare solo un passo sulla tavola, dove incontra il pezzo che lo devia.<br>E questo deve essere un triangolo scuro.</p>
-<figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_4.jpg" alt="" width="821" height="1138" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_4-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_4-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_4-md.jpg 768w"></figure>
-<p><strong>4</strong> |L’input in B1 non dà molte indicazioni in più, se non il fatto che non ci sono altri pezzi sulla colonna B1.</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_5.jpg" alt="" width="708" height="975" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_5-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_5-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_5-md.jpg 768w"></figure>
-<p><strong>6</strong>| Cosa si può dedurre dal percorso dell’impulso entrato da A3?</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_6.jpg" alt="" width="712" height="973" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_6-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_6-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_6-md.jpg 768w"></figure>
-<p>Poiché l’impulso esce da una casella d’angolo (A1) possiamo dire con certezza che l’ultimo pezzo che lo devia deve farlo muovere in diagonale verso l’alto a sinistra.<br>Deve esserci cioè un triangolo chiaro in una delle celle della diagonale che va da A1 a F6. Inoltre, possiamo dedurre che ci sia un cerchio visto che l’impulso cambia colore.<br>Infine, possiamo individuare in modo univoco il terzo pezzo incontrato.<br>Infatti, c’è solo un pezzo che conserva il segno (l’impulso resta negativo) e lo moltiplica per 3 (alla fine della mossa il valore numerico è 6).<br>I tre pezzi da inserire sono quindi un cerchio, un rombo e un triangolo chiaro.</p>
-<p>Ma dove si troveranno? Un indizio importante è dato dal numero di passi: 8.<br>L’unica configurazione che permette il rispetto di tutti questi criteri è mostrata nella figura che segue.</p>
-<figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/8/comm_7.jpg" alt="" width="1080" height="1456" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/8/responsive/comm_7-xs.jpg 300w ,https://clevermindgame.it/media/posts/8/responsive/comm_7-sm.jpg 480w ,https://clevermindgame.it/media/posts/8/responsive/comm_7-md.jpg 768w"></figure><br><br><strong>Nota</strong>: Nell’ultimo tratto, dopo aver incrociato il triangolo chiaro, l’impulso ripassa dal cerchio che è diventato inattivo avendo già deviato l’input una volta nel corso della mossa.</p>
-<hr>
-<p> </p>
-<div class="align-center"><form class="cmg">
-<p><button class="bottone">Gioca a CleverMindGame!</button></p>
-</form></div>
-<p>Se vuoi segnalare un problema o suggerire un miglioramento, puoi <a href="https://forms.gle/GWqsZqhufE1PhwKM8" target="_blank" rel="nofollow noopener noreferrer">farlo da qui</a>.</p>
-<p>Buon divertimento!</p>
-<p>
-<script src="media/files/bottone.js"></script>
-</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Imparare giocando</title>
-        <author>
-            <name>2P &amp; MS</name>
-        </author>
-        <link href="https://clevermindgame.it/imparare-giocando.html"/>
-        <id>https://clevermindgame.it/imparare-giocando.html</id>
-
-        <updated>2023-06-17T08:51:23+02:00</updated>
-            <summary>
-                <![CDATA[
-                    Ragionare come Sherlock Holmes Pensare come Sherlock Holmes significa adottare un approccio sistematico e logico alla risoluzione dei problemi, combinando pensiero induttivo e pensiero deduttivo, per risolvere casi apparentemente insolubili. La mente del personaggio creato da Sir Arthur Conan Doyle è abilissima a notare dettagli&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h3>Ragionare come Sherlock Holmes</h3>
-<p>Pensare come Sherlock Holmes significa adottare un approccio sistematico e logico alla risoluzione dei problemi, combinando pensiero induttivo e pensiero deduttivo, per risolvere casi apparentemente insolubili.<br>La mente del personaggio creato da Sir Arthur Conan Doyle è abilissima a notare dettagli apparentemente insignificanti, analizzarli e combinarli fino a ottenere un quadro d’insieme della situazione: Sherlock Holmes è in grado di vedere oltre le apparenze e di cogliere il significato nascosto di ogni elemento. <br><br>Anche se di solito si parla principalmente della sua capacità deduttiva, Sherlock Holmes combina entrambi gli approcci: la logica induttiva gli permette di formulare ipotesi dall’analisi dei singoli indizi; applicando poi la logica deduttiva giunge dai principi generali alla soluzione del caso concreto restringendo le alternative fino a risolvere il mistero. <br>È probabile che un gioco come CleverMind sarebbe piaciuto a Sherlock Holmes perché per vincere le sfide bisogna utilizzare entrambe le forme di pensiero. Si gioca a  CleverMind per divertimento, ma rappresenta anche un modo divertente ed efficace per insegnare a ragionare correttamente, imparando a trarre regole generali (il codice segreto) analizzando attentamente gli indizi ricevuti durante il gioco.</p>
-<h3>Allenare il pensiero induttivo (e deduttivo)</h3>
-<p>Il pensiero induttivo è una competenza cruciale nella nostra vita quotidiana. Ci permette di trarre conclusioni e fare previsioni basandoci su informazioni limitate o incomplete. Questa abilità è essenziale in molti ambiti, come la risoluzione di problemi, la comprensione di nuovi concetti e l'adattamento a situazioni impreviste.<br><br>In CleverMind il pensiero induttivo è fondamentale per analizzare i feedback ricevuti, individuare gli schemi e formulare ipotesi sul codice nascosto. E, a mano a mano che ci si impratichisce con il gioco, diventa sempre più facile trarre indizi utili da ogni feedback, affinando il proprio “istinto logico” in modo divertente e coinvolgente.<br>Formulare ipotesi sulla base degli indizi disponibili è parte del processo di ragionamento induttivo e il ragionamento deduttivo è indispensabile per eliminare le false piste e le opzioni impraticabili. Insomma, CleverMind stimola entrambi i tipi di logica perché il giocatore utilizza l'induzione per formulare ipotesi e deduzione per restringere le possibilità e arrivare alla soluzione corretta.<br><br>Ogni partita ti offrirà nuove sfide e la possibilità di mettere alla prova le tue abilità di ragionamento. E col tempo noterai che le tue competenze induttive stanno migliorando, rendendoti più abile nel gioco e nell’applicare il pensiero alla Sherlock Holmes nella vita reale.</p>
-<h3>Ogni indizio è importante</h3>
-<p>Consideriamo i seguenti esempi: in entrambi l’impulso (+1) parte dalla casella C7 ed esce in A3 col valore +2, dopo aver incontrato un pezzo. Come possiamo individuare il pezzo nascosto?</p>
-<table style="border-collapse: collapse; width: 100%;" border="1">
-<tbody>
-<tr>
-<td style="width: 49.9288%;"><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/7/faq_1-2.jpg" alt="" width="802" height="1107" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/7/responsive/faq_1-2-xs.jpg 300w ,https://clevermindgame.it/media/posts/7/responsive/faq_1-2-sm.jpg 480w ,https://clevermindgame.it/media/posts/7/responsive/faq_1-2-md.jpg 768w"></figure></td>
-<td style="width: 49.9288%;"><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/7/faq_3.jpg" alt="" width="868" height="1237" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/7/responsive/faq_3-xs.jpg 300w ,https://clevermindgame.it/media/posts/7/responsive/faq_3-sm.jpg 480w ,https://clevermindgame.it/media/posts/7/responsive/faq_3-md.jpg 768w"></figure></td>
-</tr>
-</tbody>
-</table>
-<p>In questo caso è il numero di passi l’indizio rivelatore del pezzo che l’impulso ha incontrato.</p>
-<table style="border-collapse: collapse; width: 100%;" border="1">
-<tbody>
-<tr>
-<td style="width: 49.9288%;"><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/7/faq_2.jpg" alt="" width="931" height="1282" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/7/responsive/faq_2-xs.jpg 300w ,https://clevermindgame.it/media/posts/7/responsive/faq_2-sm.jpg 480w ,https://clevermindgame.it/media/posts/7/responsive/faq_2-md.jpg 768w"></figure></td>
-<td style="width: 49.9288%;"><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/7/faq_4.jpg" alt="" width="928" height="1284" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/7/responsive/faq_4-xs.jpg 300w ,https://clevermindgame.it/media/posts/7/responsive/faq_4-sm.jpg 480w ,https://clevermindgame.it/media/posts/7/responsive/faq_4-md.jpg 768w"></figure></td>
-</tr>
-</tbody>
-</table>
-<p>Nel primo caso, infatti, l’impulso passa per 6 caselle, nel secondo solo da 4.</p>
-<p>Ma è l’insieme delle informazioni (passi, rimbalzi, valore e casella di uscita, oltre alle ipotesi fatte nelle mosse precedenti) a indicare l’unica disposizione possibile. A volte non bastano neppure queste informazioni e allora sarà importante essere strategici nella scelta dei successivi impulsi per ricavare le informazioni che mancano per determinare in modo univoco la combinazione che forma il codice segreto.</p>
-<hr>
-<p> </p>
-<div class="align-center"><form class="cmg"><button class="bottone">Gioca a CleverMindGame!</button></form></div>
-<p>Se vuoi segnalare un problema o suggerire un miglioramento, puoi <a href="https://forms.gle/GWqsZqhufE1PhwKM8" target="_blank" rel="nofollow noopener noreferrer">farlo da qui</a>.</p>
-<p>Buon divertimento!</p>
-<p>
-<script src="media/files/bottone.js"></script>
-</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>FAQ</title>
-        <author>
-            <name>2P &amp; MS</name>
-        </author>
-        <link href="https://clevermindgame.it/faq.html"/>
-        <id>https://clevermindgame.it/faq.html</id>
-
-        <updated>2023-06-17T08:51:31+02:00</updated>
-            <summary>
-                <![CDATA[
-                    Contenuti La modalità gioco Come si apre una sfida Cos'è la sfida del giorno Livelli di difficoltà Come è sintetizzata una mossa Condividere una sfida in modalità Gioco La modalità studio Studio vs Gioco Progettare una sfida Condividere una sfida in modalità studio Non riesco&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h3><a name="top"></a>Contenuti</h3>
-<p><a name="gioco"></a><strong>La modalità gioco</strong></p>
-<p><a href="#come_si_apre_una_sfida">Come si apre una sfida</a><br><a href="#la_sfida_del_giorno">Cos'è la sfida del giorno</a><br><a href="#livello_di_difficoltà">Livelli di difficoltà</a><br><a href="#sint_mossa">Come è sintetizzata una mossa</a><br><a href="#condividi_gioco">Condividere una sfida in modalità Gioco<br></a></p>
-<p><a name="studio"></a><strong>La modalità studio</strong></p>
-<p><a href="#stu_vs_gioco">Studio vs Gioco</a><br><a href="#progetta">Progettare una sfida</a><br><a href="#condividi">Condividere una sfida in modalità studio</a><br><a href="#scopri_codice">Non riesco a scoprire il codice</a></p>
-<p><strong>Altro</strong></p>
-<p><a href="#stats">Statistiche di gioco</a></p>
-<hr>
-<p><strong>Q &amp; A</strong></p>
-<p><a name="come_si_apre_una_sfida"></a><strong>Come si apre una sfida</strong><br>Si può giocare una sfida in uno i tre modi:</p>
-<ul>
-<li>in modalità <strong>Gioco</strong>, toccando il pulsante <strong>Nuovo</strong>;<br>verrà generata una sfida casuale, secondo il <a href="#livello_di_difficoltà">livello di difficoltà</a> scelto;</li>
-<li>in entrambe le modalità <strong>Studio</strong> e <strong>Gioco</strong>, toccando l'icona del calendario, lanciando così la <a href="#la_sfida_del_giorno">sfida del giorno</a>;</li>
-<li>aprendo in un browser l'url di una sfida condivisa ricevuta da un amico.</li>
-</ul>
-<p><a href="#top">^Top</a></p>
-<p><a name="la_sfida_del_giorno"></a><strong>La sfida del giorno<br></strong></p>
-<p>Ogni giorno l'app genera automaticamente delle sfide del giorno, accessibili toccando l'icona del calendario. Viene infatti generata una sfida specifica per quel giorno, per ciascuna combinazione di dimensione della tavola (4x4, 5x5, 6x6) e livello (standard, esperto).<br>Queste sfide vengono generate identiche su ogni dispositivo, e costituiscono quindi un modo efficace per mettersi in competizione con i propri amici.</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="livello_di_difficoltà"></a><strong>Livello di difficoltà</strong></p>
-<p>ClverMindGame consente di adattare il livello di difficoltà del gioco al grado di esperienza raggiunto.<br>Le impostazioni che hanno un effetto sul livello di difficoltà sono:</p>
-<ul>
-<li>la dimensione della tavola di gioco (<strong>4x4</strong>, <strong>5x5</strong>, <strong>6x6</strong>);</li>
-<li>la predisposizione <strong>standard</strong> / <strong>esperto</strong>;</li>
-<li>il grado di informazione ricevuto nel feedback, oltre a quelle base di: <strong>casella di partenza</strong>, <strong>casella di arrivo</strong>, <strong>intensità dell'impulso in uscita</strong>;<br>è possibile scegliere infatti di conoscere anche una combinazione tra:<br>
-<ul>
-<li>passi e rimbalzi;</li>
-<li>solo passi;</li>
-<li>solo rimbalzi;</li>
-<li>né passi, né rimbalzi.</li>
+                    <p><img src="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" class="type:primaryImage" alt="Hamburger di melanzane" /></p>
+                <div>
+<p data-heading="Suggerimenti:"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">Le <a href="https://www.humanitas.it/enciclopedia/alimenti/verdure-ortaggi-e-tuberi/melanzana/" target="_blank" rel="nofollow noopener noreferrer">melanzane</a> sono un ortaggio a <a href="https://www.humanitas-care.it/news/indice-glicemico-degli-alimenti-come-tenere-sotto-controllo-il-diabete-con-la-dieta/" target="_blank" rel="nofollow noopener noreferrer">basso indice glicemico</a> (tra 10 e 20), e con un buon contenuto di fibre. Sono quindi suggerite per chi è affetto da diabete.</span></p>
+</div>
+<div>
+<div class="heading-collapse-indicator collapse-indicator collapse-icon"> </div>
+<h3 data-heading="Tempo necessario:">Tempo necessario</h3>
+</div>
+<div>
+<p>La preparazione degli hamburger di melanzane prende <strong>circa 2 ore</strong>:</p>
+</div>
+<div>
+<ul class="has-list-bullet">
+<li data-line="0">3-5 minuti per il taglio a pezzetti;</li>
+<li data-line="1">20 minuti a bagno in acqua salata;</li>
+<li data-line="2">30 minuti in padella;
+<ul class="has-list-bullet">
+<li data-line="3">in parallelo sbriciolare il pane, grattugiare il grana padano, pre-riscaldare il forno;</li>
 </ul>
 </li>
+<li data-line="4">3-5 minuti per formare gli hamburger con l'aiuto di un coppapasta;</li>
+<li data-line="5">20 minuti in forno.</li>
 </ul>
-<p><a href="#top">^Top</a></p>
-<p><a name="sint_mossa"></a><strong>Come è sintetizzata una mossa</strong></p>
-<p>Il pannello disposto dopo la tavola di gioco riporta una sintesi delle mosse effettuate durante la sfida.<br>Ci sono tre tipi di traccia, ciascuna con dei campi intervallati dal separatore "|":</p>
+</div>
+<div>
+<div class="heading-collapse-indicator collapse-indicator collapse-icon"> </div>
+<h3 data-heading="Livello di difficoltà:">Livello di difficoltà</h3>
+</div>
+<div>
+<p>Semplice, anche se la preparazione è lunga, a causa del tempo necessario a <em>togliere l'amaro</em> dalle melanzane e a passarle in padella<em>.</em><br>Utilizzare una padella ampia, per stendere bene i cubetti di melanzana.<br>È possibile dividere in due la preparazione: prima l'impasto, da tenere per qualche ora in frigo, poi, poco prima del pasto, la cottura in forno.</p>
+</div>
+<div>
+<div class="heading-collapse-indicator collapse-indicator collapse-icon"> </div>
+<h3 data-heading="Ingredienti per due persone:">Ingredienti per due persone</h3>
+</div>
+<div>
+<ul class="has-list-bullet">
+<li data-line="0">500 gr di melanzane viola;</li>
+<li data-line="1">50 gr di pane raffermo;</li>
+<li data-line="2">80 gr di grana padano (o parmigiano) grattugiato;</li>
+<li data-line="3">pan grattato, olio EVO, sale.</li>
+</ul>
+</div>
+<div>
+<div class="heading-collapse-indicator collapse-indicator collapse-icon"> </div>
+<h3 data-heading="Procedimento:">Procedimento</h3>
+</div>
+<div>
+<ul class="has-list-bullet">
+<li data-line="0">lavare bene le melanzane (la buccia va mangiata);</li>
+<li data-line="1">tagliare via il peduncolo;</li>
+<li data-line="2">tagliare la melanzana a tocchetti cubici di circa 1 cm di lato;
+<ul class="has-list-bullet">
+<li data-line="3">tagliare prima a fette alte circa 1 cm;</li>
+<li data-line="4">poi ogni fetta a strisce larghe circa 1 cm;</li>
+<li data-line="5">infine le strisce a tocchetti;</li>
+</ul>
+</li>
+<li data-line="6">immergere i tocchetti in una ciotola, con acqua e una manciata di sale, per 25 minuti; questo passaggio serve ad eliminare il gusto di amaro dalle melanzane;</li>
+<li data-line="7">in una padella larga mettere uno spicchio d'aglio a rosolare in due cucchiai d'olio;</li>
+<li data-line="8">aggiungere i tocchetti, accuratamente strizzati e lasciar andare per 30 minuti a fuoco medio;
+<ul class="has-list-bullet">
+<li data-line="9">nel frattempo, sbriciolare nella ciotola (risciacquata e asciugata) il pane raffermo, in pezzetti di poco più piccoli rispetto ai tocchetti;</li>
+<li data-line="10">grattugiare nella ciotola il grana padano, e mescolare bene;</li>
+<li data-line="11">pre-riscaldare il forno a 185°, non ventilato;</li>
+</ul>
+</li>
+<li data-line="12">una volta appassite le melanzane, aggiungere nella ciotola due cucchiai d'olio e versare i tocchetti, mescolando bene per amalgamare melanzane e pane;</li>
+<li data-line="13">preparare la teglia da forno con un doppio strato di carta forno (si pulirà poi con un semplice risciacquo);</li>
+<li data-line="14">con l'aiuto di un coppapasta da 8-10 cm di diametro, preparare gli hamburger:
+<ul class="has-list-bullet">
+<li data-line="15">appoggiare il coppapasta sulla carta forno e spargere un po' di pan grattato sul fondo;</li>
+<li data-line="17">riempire il coppapasta con il composto di pane e melanzane, schiacciando bene, per un'altezza di 3-4 cm; farli un po' più alti eviterà che si secchino all'interno;</li>
+<li data-line="18">spargere ancora un po' di pan grattato e sfilare il coppapasta;</li>
+</ul>
+</li>
+<li data-line="19">cuocere con forno caldo a 185°, non ventilato, per 20 minuti;</li>
+<li data-line="20">lasciar raffreddare un po' prima di consumarli.</li>
+</ul>
+</div>
+<div>
+<h3 data-heading="Giudizio:">Giudizio</h3>
+</div>
+<div>
+<p>Buoni, comodi per una cena gustosa, accompagnati da un po' di verdura. Bisogna trovare il tempo per prepararli.</p>
+<p>L'immagine è di <a href="https://pixabay.com/users/creozavr-2567670/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511"></a><a href="https://pixabay.com/users/creozavr-2567670/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511" target="_blank" rel="nofollow noopener noreferrer">Dmitry Abramov</a> da <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511" target="_blank" rel="nofollow noopener noreferrer">Pixabay</a><a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511"></a> </p>
+<hr>
+<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.github.io/la-cucina-vista-da-me.html">La cucina vista da me</a>.</p>
+</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Arriva Publii 0.42!</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/arriva-publii-042.html"/>
+        <id>https://70plus.github.io/arriva-publii-042.html</id>
+            <category term="Cose informatiche"/>
+
+        <updated>2023-03-31T08:32:52+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Un email da Getpublii.com mi informa che è arrivata la versione 0.42 del software con cui è costruito e gestito 70plus. Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Un email da <a href="https://getpublii.com/blog/release-042.html" target="_blank" rel="nofollow noopener noreferrer">Getpublii.com</a> mi informa che è arrivata la versione 0.42 del software con cui è costruito e gestito <strong>70plus</strong>.<br>Una buona notizia, non tanto e non solo per le novità introdotte (e che peraltro non ho ancora visto nel dettaglio), quanto per il fatto che la piattaforma Publii è viva!<br>Aggiornato anche il tema che sto utilizzando, <a href="https://marketplace.getpublii.com/themes/square/" target="_blank" rel="nofollow noopener noreferrer">Square</a>, mi appresto a pubblicare questa breve nota, per vedere che tutto <em>giri</em> come atteso.</p>
+<p class="align-center">verifichiamo ...</p>
+<p>Funziona tutto!</p>
+<p>Procedura:</p>
+<ul>
+<li>ho scaricato la nuova versione</li>
+<li>fatto un backup del sito (<em>Tools &amp; Plugins --&gt; Backups --&gt; Create backup</em>)</li>
+<li>disinstallata la versione 0.41</li>
+<li>installata la versione 0.42</li>
+<li>verificato il buon funzionamento</li>
+<li>scaricata la versione 2.4 del tema Square</li>
+<li>spostata la nuova versione del tema nella directory dei temi</li>
+<li>chiusa e riaperta l'applicazione Publii</li>
+<li>aggiornato il tema (<em>Site settings --&gt; Select theme</em>)</li>
+</ul>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>L&#x27;algoritmo di Majority Voting di Boyer-Moore</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
+        <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+        <media:content url="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
+            <category term="Cose informatiche"/>
+
+        <updated>2023-03-27T07:56:00+02:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" alt="" />
+                    Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" class="type:primaryImage" alt="" /></p>
+                <p>Nel 1981 due ricercatori, <strong>Robert S. Boyer</strong> e <strong>J. Strother Moore</strong>, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che abbia raggiunto la <strong>maggioranza assoluta</strong>, cioè la metà dei voti più uno.</p>
+<p>Il loro <strong>Majority Voting Algorithm</strong> trova applicazioni nel campo dell'informatica, meno in quello di reali votazioni, dove non basta dichiarare chi è il vincitore, ma occorre offrire trasparenza sul dettaglio dei risultati.</p>
+<p>Ma quali vantaggi dal punto di vista informatico offre il Majority Voting Algorithm, rispetto a uno scrutinio tradizionale? Essenzialmente due, legati rispettivamente al <strong>tempo di esecuzione</strong> e alla <strong>quantità di memoria</strong> necessaria per l'esecuzione.</p>
+<h4>Il tempo di esecuzione dell'algoritmo è lineare</h4>
+<p>È sufficiente infatti scorrere due volte la sequenza di schede, per:</p>
+<ul>
+<li>verificare, al primo passo, se esiste un potenziale vincitore o no;</li>
+<li>confermare il vincitore, o concludere che nessuno ha raggiunto la maggioranza assoluta, al secondo passo.</li>
+</ul>
+<h4>La memoria necessaria non dipende dal numero di candidati, né dal numero di schede</h4>
+<p>In un algoritmo di scrutinio tradizionale, si predisporrebbe un contatore per il conteggio dei voti di ciascun candidato. Nell'algoritmo di Boyer-Moore, invece, si predispongono solo tre contatori, relativi a tre <strong><em>pile</em></strong> tra cui vengono spostate le schede durante i due passi.<br>Alla fine del secondo passo, in caso di presenza di un candidato che abbia raggiunto la maggioranza assoluta, in una delle pile si troverà un numero di schede pari al margine di quel candidato su tutti gli altri.</p>
+<h4>L'algoritmo: primo passo, il <em>pairing</em></h4>
+<p>Si indichi con <strong>p</strong><strong>ila A</strong>, <strong>pila B</strong> e <strong>pila C</strong> le tre pile utilizzate nell'esecuzione dell'algoritmo.<br>Inizialmente si predispongono le schede sulla pila A, a faccia in su.</p>
+<p>Fino a esaurimento della pila A, si operi come segue:</p>
+<ul>
+<li>si sposti sulla pila B la scheda che si trova in cima alla pila A se:
+<ul>
+<li>la pila B è vuota;</li>
+<li>oppure se in cima alla pila B c'è una scheda con la stessa preferenza della scheda che si sta spostando;</li>
+</ul>
+</li>
+<li>se, invece, la scheda in cima alla pila B ha una preferenza per un candidato diverso da quello della scheda che si sta spostando, allora tutte e due le schede vengono spostate sulla pila C.</li>
+</ul>
+<p>Alla fine del primo passo la pila A sarà vuota, la pila C conterrà una serie di coppie di schede recanti preferenze discordanti, mentre la pila B sarà vuota oppure conterrà schede con preferenza per un unico candidato X.</p>
+<p>In base a ciò, si può concludere che, a parte X, <strong>nessuno degli altri candidati può aver raggiunto la maggioranza assoluta</strong>, perché al massimo può esserci un candidato che ha ottenuto la metà dei voti. E questo accade se uno stesso candidato è presente in ciascuna delle coppie di schede che popolano la pila C.</p>
+<p>Si esce dal primo passo, il <strong><em>pairing</em></strong>, con una di queste due condizioni:</p>
+<ul>
+<li>nessun candidato ha raggiunto la maggioranza assoluta (la pila B è vuota);</li>
+<li>nella pila B ci sono schede con preferenze per un unico candidato (<strong>X</strong>), che è quindi il potenziale vincitore.</li>
+</ul>
+<h4>L'algoritmo: secondo passo, il <em>counting</em></h4>
+<p>Il secondo passo viene effettuato sostanzialmente con le stesse regole del primo, scambiando il ruolo tra le pile A e C, ma questa volta verificando chi ha ricevuto più preferenze, tra <strong>X</strong> e <strong>tutti gli altri candidati messi insieme</strong>.<br>Se ha prevalso X, allora <strong>X è il vincitore</strong>, in caso contrario non c'è nessun vincitore.</p>
+<h4>L'algoritmo in Python</h4>
+<p>Il codice Python, abbastanza elementare, si articola come segue:</p>
 <ol>
-<li>l'invio di un impulso:<br><center><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/6/img_006-2.jpg" alt="" width="292" height="23" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/6/responsive/img_006-2-xs.jpg 300w ,https://clevermindgame.it/media/posts/6/responsive/img_006-2-sm.jpg 480w ,https://clevermindgame.it/media/posts/6/responsive/img_006-2-md.jpg 768w"></figure></center><br>in questo caso la traccia riporta il numero della mossa, intensità e cella di ingresso dell'impulso, intensità e cella di uscita dell'impulso, numero di passi e di rimbalzi del percorso dell'impulso;<br>nota: nelle impostazioni è possibile configurare se visualizzare o meno sia i passi che i rimbalzi, consentendo così di adattare la difficoltà del gioco alle proprie esigenze;</li>
-<li>l'ipotesi corretta sul contenuto di una cella:<br><center><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/6/img_007.jpg" alt="" width="336" height="41" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/6/responsive/img_007-xs.jpg 300w ,https://clevermindgame.it/media/posts/6/responsive/img_007-sm.jpg 480w ,https://clevermindgame.it/media/posts/6/responsive/img_007-md.jpg 768w"></figure></center><br>l'esempio riporta un'ipotesi corretta:
+<li>una prima sezione predispone l'insieme dei candidati e, in modo casuale, una serie di schede ciascuna indicante una preferenza; in questa sezione è possibile forzare se un candidato ha la maggioranza assoluta, e il relativo margine;</li>
+<li>nella seconda sezione, viene effettuato uno scrutinio tradizionale, per poter verificare successivamente il risultato dell'algoritmo;</li>
+<li>nella terza sezione si esegue il passo del <strong>pairing</strong>;</li>
+<li>nell'ultima sezione, eseguita solo se il pairing ha indicato un potenzale vincitore, si esegue il passo del <strong>counting</strong>.</li>
+</ol>
+<h4>Il codice Python</h4>
+<pre># Majority Voting Algorithm, Boyer-Moore 1981
+# p.p. 25mar23
+import random
+#
+candidati = ("A","B","C","D","E")
+min_preferenze, max_preferenze = 0,10
+majority = False
+margin = 2
+#
+n_candidati = len(candidati)
+schede = []
+#
+for c in candidati:
+  schede = schede + random.randint(min_preferenze,max_preferenze)*list(c)
+#
+if majority:
+  first_pref = schede.count(candidati[0])
+  x = len(schede) - 2 * first_pref + margin
+  schede += x * candidati[0]
+random.shuffle(schede)
+#
+print ("Numero di candidati: {}".format(n_candidati))
+print ("Numero di schede da scrutinare: {}".format(len(schede)))
+print ("Maggioranza assoluta: {}".format(int(len(schede)/2)+1))
+print ("Schede da scrutinare:\n{}".format(schede))
+print ("\nDistribuzione dei voti:\n=======================")
+max = -1
+for c in candidati:
+  voti = schede.count(c)
+  print ("{} --&gt; {}".format(c,voti))
+  if voti &gt; max:
+    max, winner = voti, c
+print ("Massimo dei voti: {}, ottenuto da {}".format(max, winner))
+#
+print ("\nPasso di pairing\n================")
+pila_A = schede
+pila_B = []
+pila_C = []
+#
+for scheda in pila_A:
+  if len(pila_B) == 0 or scheda == pila_B[0]:
+    pila_B += list(scheda)
+  else:
+    pila_C += list(scheda) + list(pila_B[0])
+    del pila_B[0]
+pila_A = []
+#
+print ("pila_A:\n{}\npila_B:\n{}\npila_C:\n{}\n".format(pila_A,pila_B,pila_C))
+print ("schede nella pila_A: {}, nella pila_B: {}, nella pila_C: {}".format(len(pila_A),len(pila_B),len(pila_C)))
+#
+if len(pila_B) &gt; 0:
+  x = pila_B[0]
+  print ("potenziale vincitore: {}".format(x))
+else:
+  x = ""
+#
+if x == "":
+  print ("nessun candidato ha raggiunto la maggioranza assoluta")
+else:
+  print ("\n\nPasso di counting\n=================")
+  for scheda in pila_C:
+    if len(pila_B) == 0 or (scheda == x and pila_B[0] == x) or (scheda != x and pila_B[0] != x):
+      pila_B += list(scheda)
+    else:
+      pila_A += list(scheda) + list(pila_B[0])
+      del pila_B[0]
+  pila_C = []
+#
+  print ("pila_A:\n{}\npila_B:\n{}\npila_C:\n{}\n".format(pila_A,pila_B,pila_C))
+  print ("schede nella pila_A: {}, nella pila_B: {}, nella pila_C: {}".format(len(pila_A),len(pila_B),len(pila_C)))
+#
+  if pila_B[0] == x:
+    print ("{} è il vincitore! margine: {}".format(x,len(pila_B)))
+  else:
+      print ("nessun candidato ha raggiunto la maggioranza assoluta")
+</pre>
+<h4>Un caso di votazione senza vincitori con maggioranza assoluta</h4>
+<p>Ecco di seguito l'output dell'algoritmo in un caso in cui, non avendo forzato la vittoria del candidato A, effettivamente non c'è stato un vincitore:</p>
+<pre>Numero di candidati: 5
+Numero di schede da scrutinare: 29
+Maggioranza assoluta: 15
+Schede da scrutinare:
+['E', 'C', 'C', 'D', 'A', 'A', 'E', 'D', 'A', 'E', 'B', 'D', 'A', 'C', 'C', 'D', 'A', 'A', 'C', 'C', 'D', 'D', 'C', 'D', 'D', 'D', 'E', 'D', 'C']
+
+Distribuzione dei voti:
+=======================
+A --&gt; 6
+B --&gt; 1
+C --&gt; 8
+D --&gt; 10
+E --&gt; 4
+Massimo dei voti: 10, ottenuto da D
+
+Passo di pairing
+================
+pila_A:
+[]
+pila_B:
+['D', 'D', 'D']
+pila_C:
+['C', 'E', 'D', 'C', 'E', 'A', 'D', 'A', 'E', 'A', 'D', 'B', 'C', 'A', 'D', 'C', 'C', 'A', 'C', 'A', 'C', 'D', 'E', 'D', 'C', 'D']
+
+schede nella pila_A: 0, nella pila_B: 3, nella pila_C: 26
+potenziale vincitore: D
+
+
+Passo di counting
+=================
+pila_A:
+['C', 'D', 'E', 'D', 'C', 'D', 'E', 'D', 'D', 'A', 'D', 'A', 'D', 'E', 'D', 'A', 'D', 'B', 'D', 'C']
+pila_B:
+['A', 'C', 'C', 'A', 'C', 'A', 'C', 'E', 'C']
+pila_C:
+[]
+
+schede nella pila_A: 20, nella pila_B: 9, nella pila_C: 0
+nessun candidato ha raggiunto la maggioranza assoluta  
+</pre>
+<p>Il <em><strong>pairing</strong></em> ha indicato <strong>D</strong> come potenziale vincitore, ma il <em><strong>counting</strong></em> mostra che <strong>D</strong> ha meno voti degli altri candidati messi insieme, perché la pila B contiene solo schede con preferenze diverse da D.</p>
+<p>Ed ecco, invece, un caso in cui si è forzata la vittoria di A con il margine di 1 voto, modificando così il codice:</p>
+<pre>majority = True
+margin = 1
+</pre>
+<p>L'<em>output</em>:</p>
+<pre>Numero di candidati: 5
+Numero di schede da scrutinare: 39
+Maggioranza assoluta: 20
+Schede da scrutinare:
+['A', 'C', 'B', 'A', 'A', 'D', 'A', 'A', 'A', 'C', 'C', 'B', 'A', 'A', 'A', 'A', 'D', 'A', 'B', 'B', 'E', 'C', 'B', 'A', 'C', 'B', 'A', 'A', 'A', 'D', 'A', 'A', 'A', 'A', 'D', 'C', 'A', 'C', 'D']
+
+Distribuzione dei voti:
+=======================
+A --&gt; 20
+B --&gt; 6
+C --&gt; 7
+D --&gt; 5
+E --&gt; 1
+Massimo dei voti: 20, ottenuto da A
+
+Passo di pairing
+================
+pila_A:
+[]
+pila_B:
+['A', 'A', 'A']
+pila_C:
+['C', 'A', 'A', 'B', 'D', 'A', 'C', 'A', 'C', 'A', 'B', 'A', 'D', 'A', 'B', 'A', 'B', 'A', 'E', 'A', 'C', 'A', 'A', 'B', 'B', 'C', 'D', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'D', 'A']
+
+schede nella pila_A: 0, nella pila_B: 3, nella pila_C: 36
+potenziale vincitore: A
+
+
+Passo di counting
+=================
+pila_A:
+['C', 'A', 'B', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'B', 'A', 'D', 'A', 'B', 'A', 'B', 'A', 'E', 'A', 'C', 'A', 'B', 'A', 'B', 'A', 'C', 'A', 'D', 'A', 'D', 'A', 'C', 'A', 'C', 'A', 'D', 'A']
+pila_B:
+['A']
+pila_C:
+[]
+
+schede nella pila_A: 38, nella pila_B: 1, nella pila_C: 0
+A è il vincitore! margine: 1
+</pre>
+<hr>
+<p><em>L'immagine di apertura è di <a href="https://pixabay.com/users/mohamed_hassan-5229782/" target="_blank" rel="nofollow noopener noreferrer">mohamed_hassan</a> from <a href="https://pixabay.com/" target="_blank" rel="nofollow noopener noreferrer">Pixabay</a>.</em></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Excel: calendario su una sola pagina</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/excel-calendario-su-una-sola-pagina.html"/>
+        <id>https://70plus.github.io/excel-calendario-su-una-sola-pagina.html</id>
+        <media:content url="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" medium="image" />
+            <category term="Numeri"/>
+            <category term="Cose informatiche"/>
+
+        <updated>2023-02-10T08:30:24+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" alt="Calndario in una pagina per il 2023" />
+                    Grazie a un articolo su Bigthink.com ho scoperto una forma compatta di calendario, con tutti e dodici i mesi in un unico riquadro. Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il 23 novembre, traccio una&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" class="type:primaryImage" alt="Calndario in una pagina per il 2023" /></p>
+                <p>Grazie a un articolo su <a href="https://bigthink.com/starts-with-a-bang/one-page-calendar/" target="_blank" rel="nofollow noopener noreferrer">Bigthink.com </a>ho scoperto una forma compatta di calendario, con tutti e dodici i mesi in un unico riquadro.</p>
+<figure class="align-center"><img loading="lazy"  src="https://bigthink.com/wp-content/uploads/2023/01/find-Am-Thanks.jpg" data-is-external-image="true"></figure>
+<p> Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il <strong>23 novembre</strong>, traccio una linea verticale nella colonna che contiene <strong>Novembre</strong>, una linea orizzontale nella riga che contiene il <strong>23</strong> e al punto di incrocio trovo <strong>Thu</strong>, cioè <strong>giovedì</strong>.</p>
+<p>Può sembrare macchinoso, ma dopo un po' di allenamento diventa un modo veloce e compatto per portarsi dietro il calendario di un anno. Peccato che vada adattato di anno in anno. <br>Neanche troppo complicato, peraltro: al primo di gennaio va solo cambiata la disposizione dei mesi nel riquadro in alto. Se si tiene conto che la durata dei mesi è costante, a parte quella di febbraio che vale 28 o 29 giorni, in tutto si potranno avere 14 disposizioni diverse per i dodici mesi: 7 per gli anni non bisestili, con gennaio che parte di lunedì, oppure di martedì, e così via fino a domenica; e 7 per i bisestili.</p>
+<p>Un foglio di calcolo consente poi di verificare che in un anno possono esserci al massimo tre mesi che cominciano con lo stesso giorno della settimana. Basta calcolare la distanza in giorni di ciascun primo del mese dal primo di gennaio, utilizzando l'aritmetica modulare, con modulo 7.</p>
+<p>A questo punto ci si può chiedere quanto sia complicato automatizzare la composizione del calendario per un generico anno, utilizzando un foglio di calcolo. Non molto, vediamo un modo per farlo.</p>
+<h4>Calendario su una sola pagina con un foglio di calcolo</h4>
+<p>Partiamo dal <em>layout</em> desiderato:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_01-2.jpg" alt="Layout del calendario su una sola pagina" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_01-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-md.jpg 768w"></figure>
+<p>I due riquadri in basso (numerazione dei giorni e giorni della settimana) sono fissi. A cambiare sono l'indicazione dell'anno desiderato e la conseguente disposizione dei mesi nel riquadro in alto a destra.<br>Il primo passaggio necessario per l'automazione del calendario è creare un modo sintetico per indirizzare ciascuna cella di questo riquadro:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_02-2.jpg" alt="Identificare le celle che contengono i mesi" width="833" height="329" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_02-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-md.jpg 768w"></figure>
+<p>Notare l'aggiunta di una riga in cima e di una colonna a destra (con caratteri in grigio) che consentono di identificare con un <strong>indice</strong> ciascuna cella del riquadro dei mesi. Esempio: la cella che contiene maggio avrà l'indice 11 (1 + 10), mentre quella con marzo avrà indice 23 (3 + 20).</p>
+<p>Il prossimo passo sarà quindi ricavare l'indice per ciascuno dei mesi, in base all'anno e al giorno della settimana con cui cominciano, e inserire il nome del mese nella cella corretta.</p>
+<h4>Mesi e relativi indici</h4>
+<p>Per generare gli indici relativi ai mesi viene in aiuto questa tabella:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_03.jpg" alt="Calcolo dell'indice di ciascun mese" width="259" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_03-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_03-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_03-md.jpg 768w"></figure>
+<p>La seconda e terza colonna sono fisse, ed elencano nome e numerazione per ciascuno dei 12 mesi dell'anno.<br>La terza colonna riporta il giorno della settimana con cui comincia ciascuno dei mesi, valore che coincide con l'indice di riga della tabella dei mesi. La formula per determinarlo è abbastanza semplice: vediamo quella per gennaio, cella <strong>T3</strong>:</p>
+<blockquote>
+<p>=GIORNO.SETTIMANA(DATA($B$4;S3;1);2)</p>
+</blockquote>
+<p>Viene cioè prima calcolata la data del primo giorno del mese, con: <em><strong>DATA($B$4;S3;1)</strong></em>, la cui sintassi è <em><strong>DATA(anno;mese;giorno)</strong></em>, poi si determina il relativo giorno della settimana, tra 1 e 7, con: <em><strong>GIORNO.SETTIMANA(data;2)</strong></em>. Il parametro <em><strong>2</strong></em> serve a scegliere il particolare schema che attribuisce i valori d 1 a 7 alla sequenza lunedì, ..., domenica.</p>
+<p>Generare l'indice di colonna è un processo un po' più creativo: questo indice vale infatti 10, 20 o 30 a seconda di quanti mesi sono stati già trovati con il medesimo indice di riga. Si fa (cella <strong>U3</strong>) con la formula:</p>
+<blockquote>
+<p>=CONTA.SE(T$2:$T3;T3)</p>
+</blockquote>
+<p>Vale a dire contando quanti valori uguali a quello della cella <em><strong>T3</strong></em> sono stati già inseriti nelle celle della stessa colonna: se ne è stato già inserito uno, ad esempio, il valore restituito sarà 2.</p>
+<p>A questo punto, cella <em><strong>Q3</strong></em>, c'è il calcolo finale dell'indice:</p>
+<blockquote>
+<p>=10*U3+T3</p>
+</blockquote>
+<p>Il valore è stato inserito nella colonna <em><strong>Q</strong></em>, per poter formare la corrispondenza tra indice e nome del mese nelle prime due colonne della tabella (<em><strong>Q2:R14</strong></em>).</p>
+<h4>Finalmente la disposizione dei mesi</h4>
+<p>Una semplice formula di ricerca verticale consente di inserire correttamente i mesi nel relativo riquadro. Nella cella <em><strong>H4</strong></em>, ad esempio, si inserisce la formula:</p>
+<blockquote>
+<p>=SE.ERRORE(CERCA.VERT(H$2+$P4;$Q$2:$R$14;2;0);"")</p>
+</blockquote>
+<p>La funzione <em><strong>SE.ERRORE()</strong></em> serve a lasciare la cella vuota se il relativo indice non compare nella tabella, mentre <em><strong>CERCA.VERT()</strong></em> cerca la corrispondenza tra l'indice e il nome del mese.</p>
+<h4>E come sarà in 2024?</h4>
+<p>Basta inserire <em><strong>2024</strong></em> nel gruppo di celle in alto a sinistra ed ecco il 2024:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_04.jpg" alt="Calendario in una sola pagina: il 2024" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_04-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-md.jpg 768w"></figure>
+<p class="align-left">Due buone notizie: ci sarà un solo venerdì 17 (in maggio, mentre il 2023 invece ce ne offre 3, in febbraio, marzo e novembre), e Natale capiterà di mercoledì, cosa che dovrebbe favorire interessanti ponti.</p>
+<p>Chi fosse interessato al file può <a href="https://70plus.github.io/Calendario_in_un_foglio.zip" target="_blank" rel="noopener noreferrer">scaricarlo da qui</a>, per entrambi i formati LibreOffice Calc ed Excel.</p>
+<p><em>La foto di apertura è di <a href="https://pixabay.com/it/users/webandi-1460261/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Andreas Lischka</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Pixabay</a>.</em></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Pasta e fagioli</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/pasta-e-fagioli.html"/>
+        <id>https://70plus.github.io/pasta-e-fagioli.html</id>
+            <category term="cucina"/>
+
+        <updated>2023-02-01T08:59:20+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Già 2000 anni fa i Romani gustavano una minestra di fagioli, a volte arricchita con le sagne, pasta ottenuta da un impasto di acqua e farina (la pasta secca era di là da venire). Era un piatto popolare, di origine&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Già 2000 anni fa i Romani gustavano una minestra di fagioli, a volte arricchita con le <strong><em>sagne</em></strong>, pasta ottenuta da un impasto di acqua e farina (la pasta secca era di là da venire). Era un piatto popolare, di origine ciociara, molto gradito a <strong>Cicerone</strong>.<br>Oggi la pasta e fagioli è un piatto presente nelle cucine tradizionali di diverse regioni, prevalentemente con i <strong>fagioli cannellini</strong>, che hanno soppiantato il fagiolo dell'epoca romana, e che danno particolare cremosità al piatto.</p>
+<h4>I fagioli</h4>
+<p>La mia versione si rifà alla tradizione napoletana. Ho però eliminato cotiche e grassi in generale, arricchendo il sapore solo con <strong>sedano e pomodorini</strong>. Oltre ai fagioli cannellini (sicuramente i più indicati), mi piace gustare anche i <strong>fagioli rossi</strong> o i <strong>borlotti</strong>.</p>
+<h4>La pasta</h4>
+<p>Per la pasta mi attengo al classico della <strong>pasta mista</strong> della tradizione napoletana. Ne produce di ottima il <a href="https://www.pasta-garofalo.com/it/prodotto/n-82-pasta-mista/" target="_blank" rel="nofollow noopener noreferrer">pastificio Garofalo</a>.<br>Parto da questa, ma arricchisco con rimasugli di altri tipi di pasta (spaghetti, fusilli), badando solo al tempo di cottura suggerito, che non si discosti dai 9-10 minuti della pasta mista di Garofalo, e sminuzzandola opportunamente.<br>Non esagerare comunque con la quantità, 80-85 grammi a persona vanno bene, anche per un appetito robusto.</p>
+<h4>Altri suggerimenti</h4>
+<p>Non salare la cottura dei fagioli, perché già la conservazione in scatola aggiunge sale. <br>Se si ha poco tempo per preparare il pranzo, si possono anticipare al mattino tutti i passaggi della preparazione, fino alla cottura della pasta esclusa.</p>
+<h4>Difficoltà</h4>
+<p>Pasta e fagioli è un piatto ragionevolmente semplice da preparare e si sporca una sola pentola.<br>La preparazione mi prende 33 - 38 minuti:</p>
 <ul>
-<li>nel percorso da <strong>F7</strong> ad <strong>A6</strong> sono stati percorsi 6 passi, con un'intensità dell'impulso che è passata da +1 a +2, incontrando un solo pezzo; questo è possibile solo se nella cella <strong>F6</strong> c'è un <strong>Quadrato chiaro</strong> (<strong>Qc</strong>);</li>
-<li>l'ipotesi si rivela corretta e <strong>non viene contabilizzata come mossa</strong>;</li>
+<li>20 - 25 minuti per terminare la cottura dei fagioli</li>
+<li>10 - 12 minuti per cuocere la pasta</li>
+<li>2-4 minuti in pentola a fuoco spento, prima di impiattare</li>
+</ul>
+<h4>Ingredienti (per una persona adulta e di buon appetito)</h4>
+<p>80 gr di pasta, preferibilmente mista<br>1 confezione di fagioli lessati in scatola da 125 gr (sgocciolati)<br>4 pomodorini, tipo ciliegino o datterino (opzionale)<br>un pezzo di sedano<br>sale<br>2 cucchiai (moderati) di olio EVO</p>
+<h4>Procedimento</h4>
+<p>Versare l'olio nella pentola e avviare a fuoco medio-alto. Aggiungere il sedano, lavato  e tagliato a pezzetti per il lungo, e i pomodorini tagliati in 4 spicchi.<br>Schiacciare leggermente i pomodorini con la forchetta, per far fuoriuscire il sugo.</p>
+<p>Dopo un paio di minuti versare i fagioli, aggiungere un bicchiere d'acqua e regolare il fuoco in modo che ci sia appena il bollore.<br>Trascorsi 15 -20 minuti, schiacciare buona parte dei fagioli con la forchetta, aggiungere un po' d'acqua (1/4 di bicchiere) e girare per qualche minuto.</p>
+<p>Siamo arrivati alla pasta, da aggiungere eventualmente con un po' d'acqua, facendo in modo che la pasta sia appena sommersa. Un pizzico di sale e regolare il fuoco in modo che ci sia giusto un accenno di bollore.<br>Girare ogni tanto, in modo da evitare che la pasta si attacchi al fondo della pentola e, se tende ad asciugarsi troppo, aggiungere pochissima acqua per volta. Il risultato finale non deve essere assolutamente brodoso, ma risultare cremoso una volta spento e riposato per qualche minuto.</p>
+<p>Trascorso il tempo di cottura della pasta, spegnere e girare ancora un paio di volte per assicurarsi che niente rimanga attaccato al fondo. Lasciar riposare per qualche minuto e poi impiattare.</p>
+<h4>Giudizio</h4>
+<p>Molto buono!</p>
+<hr>
+<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.github.io/la-cucina-vista-da-me.html">La cucina vista da me</a>.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Linguine al sugo di rana pescatrice</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/linguine-al-sugo-di-rana-pescatrice.html"/>
+        <id>https://70plus.github.io/linguine-al-sugo-di-rana-pescatrice.html</id>
+            <category term="cucina"/>
+
+        <updated>2023-04-03T09:10:37+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Luna, la mia nipotina cinquenne, ha un rapporto già ben delineato con il cibo. Ama la pasta condita con sugo, con pesto ligure o, meglio, con una combinazione di sugo e pesto. Preferisce evitare le verdure ma gradisce molto la&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Luna, la mia nipotina cinquenne, ha un rapporto già ben delineato con il cibo.<br>Ama la pasta condita con sugo, con pesto ligure o, meglio, con una combinazione di sugo e pesto. Preferisce evitare le verdure ma gradisce molto la carne. Il suo iniziale entusiasmo per il pesce si è invece ridotto notevolmente già da un po'.<br>Come riuscire a farglielo mangiare? Per adesso funziona ricorrere a cotolette di filetto di pesce, come ad esempio sogliola oppure rombo chiodato. Ma gradisce anche della pasta condita con un sugo di pesce preparato con una ricetta semplice e veloce.</p>
+<h4>La rana pescatrice e gli altri</h4>
+<p>La rana pescatrice è il pesce che dà il miglior sapore a questo sugo. Con un costo un po' più basso sono comunque valide alternative il gattuccio, la gallinella, il branzino.<br>Questi ultimi due, la gallinella e il branzino, son da spinare con molta accuratezza.</p>
+<h4>Difficoltà</h4>
+<p>Per preparare il sugo servono 20-25 minuti, mentre lessare la pasta richiede dai 10 ai 15 minuti. Poiché non so fare due cose insieme, l'intera preparazione mi prende in genere una mezz'oretta o poco più.<br>La preparazione è molto semplice e porta a sporcare un tegame (per preparare il sugo) e una pentola (per lessare la pasta).</p>
+<h4>Ingredienti (per una persona adulta e di buon appetito)</h4>
+<p>80 gr di rana pescatrice<br>90 gr di pasta lunga (linguine, spaghetti, vermicelli) ma, se Luna lo chiede, vanno bene anche fusilli o penne rigate<br>90 gr di passata di pomodoro<br>2 cucchiai di olio EVO<br>1 spicchio d'aglio<br>sale<br>un pizzico di peperoncino (opzionale)</p>
+<p>Una possibile variante è sostituire la passata di pomodoro con una dozzina di pomodorini ciliegino o datterino. Se il piatto è destinato anche a bimbi piccoli, la passata è preferibile per l'assenza di <em>cose strane</em> (i residui di buccia dei pomodorini).</p>
+<h4>Procedimento</h4>
+<p>In un tegame versare due cucchiai di olio EVO e uno spicchio d'aglio. In genere taglio lo spicchio in due per il lato lungo, per poter eliminare il germoglio all'interno.<br>Quando l'aglio è imbiondito, aggiungere la passata di pomodoro, un pizzico di sale fino, poi coprire e cuocere per 5 minuti a fuoco basso.<br>Ora aggiungere il pesce, sciacquato e tagliato a bocconcini, e un fondo di bicchiere d'acqua, lasciando cuocere per 7-8 minuti con bollore appena accennato.</p>
+<p>Scoprire la padella e sminuzzare i bocconcini in pezzettini piccoli. Questo passaggio serviva inizialmente per evitare che Luna si bloccasse per la presenza visibile dei pezzi di pesce, ma poi si è visto che il sugo viene effettivamente meglio così.<br>Lasciar asciugare per 7-8 minuti e il sugo è fatto!</p>
+<p>Da parte, calare nell'acqua bollente la pasta, aggiungere un po' di sale e lasciarla lessare per il tempo necessario. A fine cottura, scolare la pasta e versarla nella padella del sugo.<br>Amalgamare, aggiungere se si desidera un pizzico di peperoncino e impiattare.</p>
+<h4>Giudizio</h4>
+<p>Decisamente buono.</p>
+<hr>
+<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.github.io/la-cucina-vista-da-me.html">La cucina vista da me</a>.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Primel: come Wordle, ma con i numeri primi</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html"/>
+        <id>https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html</id>
+        <media:content url="https://70plus.github.io/media/posts/19/primel_6gen23.png" medium="image" />
+
+        <updated>2023-01-27T17:12:26+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" alt="" />
+                    Ho cominciato il 2023 giocando con Primel, un gioco online molto simile a Wordle, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre. Come funziona? e quali strategie di gioco si&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" class="type:primaryImage" alt="" /></p>
+                <p>Ho cominciato il 2023 giocando con <a href="https://converged.yt/primel/" target="_blank" rel="nofollow noopener noreferrer">Primel</a>, un gioco online molto simile a <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="nofollow noopener noreferrer">Wordle</a>, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre.<br>Come funziona? e quali strategie di gioco si possono immaginare?</p>
+<h4>Le regole</h4>
+<p>Si hanno a disposizione sei tentativi per indovinare un numero primo di 5 cifre. Le cifre di ogni tentativo vengono colorate di <strong>verde</strong> (la cifra c'è, in questa posizione), oppure di <strong>giallo</strong> (la cifra c'è, ma non in questa posizione), di <strong>grigio</strong> (cifra assente).<br>Ogni giorno viene proposto un primo diverso, quindi si può giocare al massimo una volta al giorno (come con  Wordle).<br>Aspetto positivo: se si propone un numero non primo, il tentativo (evidentemente errato) non viene conteggiato come errore, è quindi relativamente facile <em>azzeccare</em> la risposta corretta nei sei tentativi a disposizione.</p>
+<h4>La strategia iniziale</h4>
+<p>Il primo passo è cercare di indovinare le 5 cifre del numero. Da notare che possono esserci cifre ripetute.<br>In partenza mi affido a una semplice strategia, che mi mangia due tentativi: provo i due numeri primi <strong>12347</strong> e <strong>86509</strong>, che contengono tutte e dieci le cifre decimali. L'esito di queste due prime mosse può essere:</p>
+<ul>
+<li>il numero non ha ripetizioni, e ho quindi tutte e 5 le cifre, alcune in giallo (c'è, ma non in questa posizione), altre in verde (c'è proprio in questa posizione);</li>
+<li>il numero ha una ripetizione, quindi ho le 4 cifre, di cui una sarà presente due volte;</li>
+<li>il numero ha tre cifre distinte, quindi ci sarà una cifra presente tre volte, o due presenti due volte;</li>
+<li>il numero ha due cifre distinte; come gestire questo caso lo vedrò quando mi capiterà (!)</li>
+</ul>
+<h4>Il numero non ha ripetizioni</h4>
+<p>Il primo di gennaio mi è capitato proprio questo caso.</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tentativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
+<p>È abbastanza semplice vedere come proseguire: la penultima posizione può essere occupata solo dal 2, quindi il primo da indovinare termina per <strong>509</strong>, mentre nelle prime due posizioni vanno sistemati il 4 e lo 0, ovviamente in questo ordine.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23.png" alt="primel dell' 1/1/2023, la soluzione" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-md.png 768w"></figure>
+<h4>Il numero da indovinare ha una ripetizione</h4>
+<p>Il 4 gennaio mi è capitato un caso così:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23a-2.png" alt="primel del 4 gennaio 2023: primi due tentativi" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-md.png 768w"></figure>
+<p>In questo caso conosciamo 4 delle 5 cifre, di cui una utilizzata due volte, e la posizione esatta di una sola cifra.<br>Quale cifrà potrà essere ripetuta? Il primo da cercare non sarà evidentemente divisibile per 3. Ora, la somma delle 4 cifre note è: 1 + 2 + 3 + 5 = 11 = 2 mod 3, quindi si può escludere solo l'1 (la somma delle cifre farebbe 12 = 0 mod 3). Inoltre il 5 non può occupare l'ultima posizione.</p>
+<p>Tenendo fermo il 2, occorre fare delle prove:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23b-2.png" alt="primel del 4 gennaio 2023: terzo tentativo" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-md.png 768w"></figure>
+<p>Evidentemente non è il 2 ad essere presente due volte. quindi sarà il 3 o il 5. Però ho qualche informazione in più: conosco la posizione esatta del 2, e posso escludere alcune posizioni per i numeri rimanenti. L'ultima cifra, poi, non potrà essere né 2 né 5, né 1, quindi deve essere 3.<br>Provo a vedere se la cifra presente due volte sia il 5:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23.png" alt="primel del 4 gennaio 2023" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-md.png 768w"></figure>
+<p>Esatto!</p>
+<h4>Ancora più difficile: due ripetizioni</h4>
+<p>Oggi 23 gennaio 2023, mi è capitata questa situazione:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_a.png" alt="primel del 23 gennaio 2023" width="485" height="582" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-md.png 768w"></figure>
+<p>Sono presenti solo tre cifre: 5, 6 e 9, la cui somma modulo 3 fa 2. Posso quindi escludere solo che le due cifre mancanti siano due 5 (la somma delle cifre sarebbe 30).<br>Tenendo fermo il 9, provo a verificare se le cifre da aggiungere sono il 6 e il 9:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_c-2.png" alt="primel del 23 gennaio 2023: terzo tentativo" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-md.png 768w"></figure>
+<p>Ok per il secondo 9, ma di 6 ce n'è uno solo, anche se adesso ne conosco la posizione.<br>L'ultima cifra da trovare potrebbe essere quindi un altro 9, oppure un 5. In seconda posizione non posso mettere un 5, quindi inserisco il 9. Il quarta posizione non può andare un 9, quindi metto il 5 e, infine, in terza posizione non mi rimane che sistemare un 9:</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_b.png" alt="primel del 23 gennaio 2023" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-md.png 768w"></figure>
+<h4>Non è poi così difficile, si direbbe</h4>
+<p>Nel gioco non vengono conteggiati i tentativi errati per aver inserito un numero non primo. È un aiuto notevole, grazie anche a questo finora me la sono sempre cavata con 4 tentativi, qualche volta con 3.</p>
+<p>Vedremo nel seguito.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Prolog e la programmazione logica</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/prolog-e-la-programmazione-logica.html"/>
+        <id>https://70plus.github.io/prolog-e-la-programmazione-logica.html</id>
+        <media:content url="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" medium="image" />
+            <category term="Ricordi"/>
+            <category term="Cose informatiche"/>
+
+        <updated>2023-01-16T22:11:36+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
+                    Il mio primo incontro con il Prolog e la programmazione logica risale ai primi anni '90 del secolo scorso, quando trovai un compilatore per il linguaggio Prolog installato sul pc assegnato a un tesista che avevo seguito in qualità di&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" class="type:primaryImage" alt="" /></p>
+                <p>Il mio primo incontro con il <a href="https://it.wikipedia.org/wiki/Prolog" target="_blank" rel="nofollow noopener noreferrer">Prolog</a> e la <strong>programmazione logica</strong> risale ai primi anni '90 del secolo scorso, quando trovai un <strong>compilatore per il linguaggio Prolog</strong> installato sul pc assegnato a un tesista che avevo seguito in qualità di relatore esterno.<br>In quegli anni mi capitò diverse volte di essere relatore esterno di tesi di laurea presso l'Ateneo di Pisa. Il laureando di turno svolgeva il suo lavoro di ricerca presso i laboratori Olivetti di Ivrea, affidato a un interno (io, in questi casi), lavorando su un pc messo a disposizione dalla Olivetti stessa.<br>Si trattava in genere di pc utilizzati per test, che venivano appunto distratti per alcuni mesi. Una volta discussa la tesi, il laureando (ormai laureato) liberava il pc, rimuovendo file e programmi che aveva caricato sul pc.</p>
+<h4>Il Prolog, per fare cosa</h4>
+<p>Quel compilatore Prolog rimase invece installato e, complice l'avvicinarsi delle ferie con il conseguente calo del carico di lavoro, nelle settimane successive spesi diverse ore a giocare con la programmazione logica.<br>Del codice che mi divertii a mettere insieme, ricordo due programmi: un inventario dei libri che avevo in casa e un gestore di pianificazione operativa con i <a href="https://it.wikipedia.org/wiki/Diagramma_di_Gantt" target="_blank" rel="nofollow noopener noreferrer">diagrammi di Gantt</a>.</p>
+<p>A quell'epoca sui pc girava <strong>Windows 3.1</strong>, mentre <strong>Excel</strong> era una chicca per pochi fortunati. Quindi sviluppare un programma che mi consentiva, interattivamente, di elencare i libri scritti da Tizio, o editi da Caio, o che nel titolo avessero un particolare termine, non era una cosa da poco.</p>
+<p>Il programma di pianificazione operativa, invece, mi accompagnò sul lavoro per qualche mese, ma non si rivelò di particolare utilità, e così dopo un po' la programmazione logica finì in cantina (dove dev'esserci ancora qualche listato, che prima o poi riporterò alla luce).</p>
+<h4>Il Prolog oggi</h4>
+<p>A distanza di tanti anni ho ritrovato il Prolog tra gli ambienti di sviluppo offerti dalla piattaforma <a href="https://www.tutorialspoint.com/execute_prolog_online.php" target="_blank" rel="nofollow noopener noreferrer">Tutorialspoint</a>. <em>Googlando</em> un po', ho scoperto che è tuttora utilizzato nell'ambito per cui era nato, l'intelligenza artificiale.<br>Ho provato quindi a rispolverare i ricordi, anche se riprendere è quasi come tornare ai primi passi incerti.</p>
+<h4>Le basi del Prolog</h4>
+<p>Il Prolog <strong>non è</strong> un linguaggio <strong>imperativo</strong>, né <strong>funzionale</strong> , né <strong>a oggetti</strong>.<br>Nel primo caso, infatti, la macchina dovrebbe eseguire sequenze di istruzioni che intendono risolvere un particolare compito, ma non è così. Nel secondo caso, l'elaborazione dovrebbe basarsi sul richiamo di un insieme di funzioni, ma ancora una volta non è questo il caso. Infine l'esecuzione di un programma Prolog non si basa nemmeno sulla definizione di un insieme di oggetti software e sui messaggi che questi si scambiano.</p>
+<p>Nel Prolog, invece, il programma lavora per sintesi di proposizioni logiche, e consiste di un insieme di <strong>fatti</strong> e <strong>regole</strong>, che si assume descrivano in modo compiuto l'ambito si cui si lavora. Il programma Prolog deve calcolare se una proposizione assegnata sia vera o meno, sulla base di fatti e regole disponibili.</p>
+<h4>Un esempio: figli e genitori</h4>
+<p>Ho una nipotina, Luna, gioia dei genitori Valentina e Giovanni. Al Prolog posso raccontare la cosa mediante due fatti:</p>
+<blockquote>
+<p>genitore(luna, valentina).<br>genitore(luna,giovanni).</p>
+</blockquote>
+<p>Ho implicitamente definito una relazione <em>genitore(X,Y)</em>, in cui <em>Y</em> è genitore di <em>X</em>. Da notare il punto finale che chiude l'affermazione del fatto, e l'utilizzo della minuscola iniziale per le stringhe e della maiuscola inziale per le variabili.</p>
+<p>Potrei ora avere l'obiettivo di elencare i genitori di <em>luna</em>. Se scrivessi:</p>
+<blockquote>
+<p>genitori(luna) :- genitore(luna, X), write(X).</p>
+</blockquote>
+<p>il programma troverebbe solo il primo genitore, <em>valentina</em>, e soddisfatto di aver concluso positivamente il suo obiettivo, si arresterebbe. Da notare qui il simbolo <em>"</em><em>:-"</em> e il connettivo<em> ","</em>. La frase si legge:</p>
+<blockquote>
+<p>genitore di luna <strong>è vero</strong> se un genitore di luna è X <strong>e</strong> stampo X.</p>
+</blockquote>
+<p>Come fare per ottenere la stampa del nome di tutti e due i genitori? Basta far <strong>fallire</strong> questa concatenazione, costringendo il programma a cercare un ulteriore genitore. Il programma si complica un po':</p>
+<blockquote>
+<p>:- initialization(main).<br>genitore(luna, valentina).<br>genitore(luna,giovanni).<br>scrivi(X) :- X \== "", write(X), nl.<br>scrivi(_).<br>genitori(X) :- genitore(X,Y), scrivi(Y), fail.<br>genitori(_).<br>main :- genitori(luna).</p>
+</blockquote>
+<p>Ho strutturato il programma in:</p>
+<ul>
+<li>la riga introduttiva, che definisce qual'è l'obiettivo del programma (<em>main</em>);</li>
+<li>un obiettivo principale (stampa il nome dei genitori di <em>luna</em>);</li>
+<li>un predicato <em>scrivi</em>, che stampa il valore che gli viene passato, se è una stringa non vuota, e subito dopo fallisce, mentre ha successo se il valore passato è una stringa vuota;</li>
+<li>un predicato <em>genitori</em>, che fallisce tutte le volte che trova un genitore (e ne stampa il nome), mentre ha successo quando ha esaurito la sua ricerca.</li>
+</ul>
+<p>Da notare inoltre:</p>
+<ul>
+<li><em>nl</em> (new line), per andare a capo;</li>
+<li><em>fail</em>, per forzare il fallimento di un predicato;</li>
+<li><em>scrivi(_).</em> e <em>genitori(_).</em>, che forzano il successo del predicato.</li>
+</ul>
+<p>Il fallimento di un predicato causa il <em>backtracking</em> del programma, cioè la ricerca all'indietro di altre soluzioni possibili.</p>
+<p>Evviva, il programma risponde correttamente:</p>
+<blockquote>
+<p>valentina<br>giovanni</p>
+</blockquote>
+<h4>Un albero genealogico più ricco</h4>
+<p>Si può arricchire la base dei fatti disponibili e aggiungere una regola che definisca cos'è un <em>nonno</em> e cos'è un <em>bisnonno</em>:</p>
+<blockquote>
+<p>:- initialization(main).<br><br>  genitore(luna,valentina).<br>  genitore(luna,giovanni).<br>  genitore(valentina,orsella).<br>  genitore(valentina,pasquale).<br>  genitore(giovanni,teresa).<br>  genitore(giovanni,mauro).<br>  genitore(orsella,sisina).<br>  genitore(orsella,ciccio).<br><br>  genitori(X) :- genitore(X,Y), scrivi(Y), fail.<br>  genitori(_).<br>  nonni(X) :- genitore(X,Y), genitore(Y, Z), scrivi(Z), fail.<br>  nonni(_).<br>  bisnonni(X) :- genitore(X,Y), genitore(Y, Z), genitore(Z,W), scrivi(W), fail.<br>  bisnonni(_).<br>  <br>  scrivi(X) :- X \== "", write(X), nl, fail.<br>  scrivi(_).<br>  <br>  main :- write('I genitori di Luna sono:'), nl, genitori(luna), nl, <br>        write('I nonni di Luna sono:'), nl, nonni(luna), nl, <br>        write('I bisnonni di Luna sono:'), nl, bisnonni(luna).</p>
+</blockquote>
+<p>La lettura delle nuove regole è abbastanza semplice:</p>
+<ul>
+<li>se <em>X</em> ha come genitore <em>Y</em> e <em>Y</em> ha come genitore <em>Z</em>, allora <em>X </em>ha come nonno <em>Z;</em></li>
+<li>se <em>X</em> ha come genitore <em>Y,</em> <em>Y</em> ha come genitore <em>Z</em> e <em>Z</em> ha come genitore <em>W</em>,  allora <em>X </em>ha come bisnonno <em>W</em>.</li>
+</ul>
+<p>Il programma, correttamente, elenca quanto richiesto:</p>
+<blockquote>
+<p>I genitori di Luna sono:<br>valentina<br>giovanni<br><br>I nonni di Luna sono:<br>orsella<br>pasquale<br>teresa<br>mauro<br><br>I bisnonni di Luna sono:<br>sisina<br>ciccio</p>
+</blockquote>
+<h4>E figli e fratelli?</h4>
+<p>Si potrebbe arricchire ancora la base dati, aggiungendo qualche regola:</p>
+<blockquote>
+<p>figlio(X,Y) :- genitore(Y,X).<br>cioè: X ha come figlia/o Y se Y ha come genitore X;</p>
+<p>fratello(X,Y) :- genitore(X,Z), genitore(Y,Z).<br>cioè: X e Y sono fratelli (o sorelle) se hanno un genitore in comune.</p>
+</blockquote>
+<p>ma direi che con le esplorazioni familiari mi fermo un passo prima.<br>Però, adesso che ho la soluzione (il Prolog), devo trovare un problema.</p>
+<p>Foto di apertura di <a href="https://pixabay.com/it/users/maciej326-1771256/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905155" target="_blank" rel="noopener">Monika Grafik</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905155" target="_blank" rel="noopener">Pixabay</a>.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Disegnare un cuore</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/disegnare-un-cuore.html"/>
+        <id>https://70plus.github.io/disegnare-un-cuore.html</id>
+        <media:content url="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" medium="image" />
+            <category term="Ricordi"/>
+
+        <updated>2023-01-13T09:00:40+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" alt="cuore o noce?" />
+                    Correva il 2006 quando pubblicai nel mio blog Elaborando, da poco creato su Libero, il post: Disegnare un cuore. A parte rifare il verso ad Art Attack, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico. Mai&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" class="type:primaryImage" alt="cuore o noce?" /></p>
+                <p>Correva il 2006 quando pubblicai nel mio blog <em><strong>Elaborando</strong></em>, da poco creato su Libero, il post: <em><strong>Disegnare un cuore</strong></em>.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/17/cuore.png" alt="Disegnare un cuore - post su Elaborando" width="499" height="431" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/17/responsive/cuore-xs.png 300w ,https://70plus.github.io/media/posts/17/responsive/cuore-sm.png 480w ,https://70plus.github.io/media/posts/17/responsive/cuore-md.png 768w"></figure>
+<p>A parte rifare il verso ad <strong>Art Attack</strong>, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico.<br>Mai avrei pensato che quel post avrebbe procurato una fetta rilevante del traffico al blog, negli anni che seguirono.<br>Dettaglio interessante, la pagina riceveva visite in modo particolare a ridosso del <strong>14 febbraio</strong>, probabilmente rispondendo all'esigenza diffusa di trovare in extremis una carineria da dedicare alla propria lei.</p>
+<h4>Io e il SEO</h4>
+<p>Non so se quel post oggi riscuota o meno un residuo successo, i contatori del blog sono saltati, per mancata manutenzione. All'epoca a portare traffico era il motore di ricerca Google, con diverse chiavi sul tema richiamato dal titolo del post: "<em>Disegnare un cuore</em>", ma erano gettonate anche: "<em>come disegnare un cuore</em>", "<em>come disegnare un cuore perfetto</em>", "<em>disegna un cuore</em>", "<em>cuori da disegnare</em>",  "<em>disegnare cuore</em>", "<em>come si disegna un cuore</em>".<br>In queste <em>query</em> il mio post rimase a lungo stabile nella prima decina di risultati. Poi sono arrivati video su youtube e proposte alternative, e il mio post è scivolato via via verso l'oblio.</p>
+<p>Nel blog c'erano altri 4-5 post che nel tempo hanno ricevuto traffico apprezzabile da Google e mi sono sempre chiesto quanto sia stato rilevante per il motore di ricerca l'aver prodotto centinaia e centinaia di post.<br>Per me lo è stato, il blog è stato una sorta di diario da riempire con veloci annotazioni al mattino presto, prima di affrontare la quotidiana Ivrea-Milano.</p>
+<h4>E oggi, come si disegnerebbe un cuore?</h4>
+<p>Qualche giorno fa un articolo del sito <a href="https://www.lealternative.net/2023/01/09/siti-belli-e-basta-quinta-parte/" target="_blank" rel="nofollow noopener noreferrer">Le Alternative</a> mi ha portato a scoprire <a href="https://www.templatemaker.nl/en/" target="_blank" rel="nofollow noopener noreferrer">Templatemaker</a>: con poco sforzo è possibile scaricare in formato pdf il template da stampare e ritagliare per ottenere scatole e buste di varie forme. E sì, ci sono anche le scatole a forma di cuore.</p>
+<p>È evidente che non c'è gara, Templatemaker batte il mio post mille a uno: si possono scegliere le dimensioni, agire sulla forma, regolare addirittura le dimensioni dei bordi da piegare e incollare per formare e tenere insieme la scatola.</p>
+<p>Quasi quasi provo a realizzarne una. Prima però devo pensare a cosa metterci dentro, senza svenarmi.</p>
+<p><em>Nell'immagine: una mia foto di un po' di anni fa.</em></p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Le mie note personali con Obsidian</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.github.io/le-mie-note-personali-con-obsidian.html"/>
+        <id>https://70plus.github.io/le-mie-note-personali-con-obsidian.html</id>
+            <category term="Cose informatiche"/>
+
+        <updated>2023-01-09T16:52:10+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Da un paio di mesi utilizzo Obsidian per gestire le mie note personali. Ci sono arrivato dopo aver utilizzato, tanti anni fa, Evernote, poi file sparsi, Stackedit e infine, in tempi più recenti, Notion. Obsidian è un'applicazione che gira su&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Da un paio di mesi utilizzo <a href="https://obsidian.md/" target="_blank" rel="nofollow noopener noreferrer">Obsidian</a> per gestire le mie note personali.<br>Ci sono arrivato dopo aver utilizzato, tanti anni fa, <a href="https://evernote.com/intl/it" target="_blank" rel="nofollow noopener noreferrer">Evernote</a>, poi file sparsi, <a href="https://stackedit.io/" target="_blank" rel="nofollow noopener noreferrer">Stackedit</a> e infine, in tempi più recenti, <a href="https://www.notion.so/" target="_blank" rel="nofollow noopener noreferrer">Notion</a>.</p>
+<h4>Cos'è Obsidian</h4>
+<p>Obsidian è un'applicazione che <em>gira</em> su <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, <strong>iOS</strong> e <strong>Android</strong>.<br>Nel campo ricchissimo delle applicazioni di gestione delle note, Obsidian spicca per alcune caratteristiche che ritengo vantaggiose:</p>
+<ol>
+<li>le note utilizzano il linguaggio <strong>Markdown</strong>, e sono memorizzate nel file system della propria macchina come file testo (con estensione .md); in ogni momento, quindi, è possibile accedere con un semplice editor a ogni singola nota, anche al di fuori dall'applicazione; <em>le note sono mie e me le gestisco io</em>;</li>
+<li>il Markdown di Obsidian consente di inserire diagrammi, grazie al linguaggio <strong>Mermaid</strong>, e frammenti di codice di programmazione (Python, C, html, ...), evidenziandone la sintassi; i due diagrammi che seguono sono stati realizzati, in Obsidian, con Mermaid;</li>
+<li>intorno a Obsidian si è formata una community di sviluppatori di <strong>estensioni</strong>, che rendono l'applicazione estremamente potente e configurabile sulle proprie esigenze;</li>
+<li>anche se, nella versione free, Obsidian non consente di accedere alla propria base di note da più di un dispositivo, è abbastanza semplice aggirare l'ostacolo utilizzando l'applicazione <strong>Dropbox</strong>.</li>
+</ol>
+<h4>L'architettura del mio ambiente di note personali con Obsidian</h4>
+<p>Utilizzo normalmente un pc con Xubuntu Linux, un MacBook e, più di rado, un pc Windows 11. Non può mancare uno smartphone per la mobilità, nel mio caso un Android 12.<br>Come premesso, per l'accesso da più dispositivi mi affido a un account gratuito di Dropbox. Questa è l'architettura che ho realizzato:</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/16/architettura.png" alt="Architettura multi-dispositivo, realizzata con Obsidian e Dropbox" width="630" height="313" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/16/responsive/architettura-xs.png 300w ,https://70plus.github.io/media/posts/16/responsive/architettura-sm.png 480w ,https://70plus.github.io/media/posts/16/responsive/architettura-md.png 768w"></figure>
+<p>La struttura di file e cartelle della base dati (il v<strong>ault</strong> nella terminologia Obsidian), è ospitata nella cartella Dropbox, sincronizzata tra i vari dispositivi.<br>Il piano gratuito di Dropbox consente di collegare fino a 3 dispositivi, quindi per forza di cose il pc Windows, utilizzato più di rado, è normalmente fuori gioco, come evidenziato dalla linea tratteggiata.</p>
+<p>Sullo smartphone non ho installato l'app Obsidian, perché da mobile mi limito a <em>catturare</em> un'idea, memorizzandola in un file di testo creato con l'app Dropbox. Basta salvarla con estensione .md, riporla in una cartella particolare del proprio <em>vault</em> Obsidian, per poi ritrovarsela accedendo al pc linux o al MacBook.<br>Particolare non trascurabile, la nota può essere <em>dettata</em> allo smartphone, semplificando ulteriormente il tutto.</p>
+<h4>La struttura delle note</h4>
+<p>Via via che si salvano note, diventa sempre più complicato raccapezzarsi quando si vuol riaprire una particolare nota. Sono certamente di aiuto i <strong>tag</strong> che Obsidian consente di aggiungere a una singola nota, e naturalmente il motore di ricerca interno all'applicazione.</p>
+<p>È però utile organizzare le annotazioni secondo una struttura semplice, basata su poche regole, ma funzionali.<br>Ho organizzato le mie note secondo la struttura che si vede nel diagramma qui sotto.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/16/struttura.png" alt="Struttura organizzativa delle note nel mio vault Obsidian" width="509" height="345" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/16/responsive/struttura-xs.png 300w ,https://70plus.github.io/media/posts/16/responsive/struttura-sm.png 480w ,https://70plus.github.io/media/posts/16/responsive/struttura-md.png 768w"></figure>
+<p>In dettaglio:</p>
+<ul>
+<li>il vault è organizzato per <strong>aree di interesse</strong> (es.: Linux, sito 70plus, math, ...);</li>
+<li>per ogni mia area di interesse creo, nel primo livello del vault, una pagina di sommario;</li>
+<li>nel primo livello del vault ci sono anche alcune cartelle specifiche:
+<ul>
+<li><strong>note</strong>, che contiene <strong>una cartella per ogni area di interesse</strong>, nella quale inserirò le note create via via; se un’idea è legata a più aree di interesse, starà nella cartella dell’area con cui ha più attinenza;</li>
+<li>nella cartella note c'è un'ulteriore cartella contenente delle <strong>tabelle Kanban,</strong> una per ogni area di interesse; l’installazione di un plug-in su Obsidian consente infatti di creare questo tipo di tabella nella versione più semplice possibile, sufficiente comunque allo scopo;</li>
 </ul>
 </li>
-<li>l'ipotesi errata sul contenuto di una cella:<br><center><figure class="post__image"><img loading="lazy"  src="https://clevermindgame.it/media/posts/6/img_008.jpg" alt="" width="258" height="21" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/6/responsive/img_008-xs.jpg 300w ,https://clevermindgame.it/media/posts/6/responsive/img_008-sm.jpg 480w ,https://clevermindgame.it/media/posts/6/responsive/img_008-md.jpg 768w"></figure></center>l'esempio riporta l'esito di una ipotesi errata:<br>nella cella <strong>E3</strong> non c'è un <strong>Cerchio scuro</strong> (<strong>Cs</strong>), l'ipotesi <strong>viene contabilizzata come mossa</strong>.</li>
-</ol>
-<p><a href="#top">^Top</a></p>
-<p><a name="condividi_gioco"></a><strong>Condividere una sfida in modalità Gioco</strong></p>
-<p>Utilizzando il pulsante <span style="font-size: x-large;">📋</span> si copia l'attuale configurazione di pezzi sotto forma di una url, che si può incollare in un messaggio email, WhatsApp o altro, da condividere con un amico.<br>Aprendo in un browser l'url ricevuta, si aprirà CleverMind in modalità gioco, con la configurazione inviata.<br>In modalità Gioco, la condivisione genera sempre una sfida, cioè una disposizione con i pezzi nascosti. Se si desidera inviare una configurazione con i pezzi visibili, occorre condividere dalla modalità Studio.</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="stu_vs_gioco"></a><strong>Studio vs. gioco</strong></p>
-<p>La modalità Studio è utile sia per impratichirsi sul movimento dei pezzi, in particolare nell’effetto combinato di più pezzi, sia per preparare delle sfide da condividere con altri giocatori. <br>Si passa dalla modalità Gioco a Studio, e viceversa, nella sezione Impostazioni <span style="font-size: x-large;">⚙</span> .</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="progetta"></a><strong>Progettare una sfida</strong></p>
-<p>Per progettare una Sfida, nella modalità <strong>Studio</strong> si preme sul bottone <strong>Modifica</strong>.</p>
-<p>È ora possibile aggiungere pezzi cliccando sulla casella in cui si desidera posizionarli e selezionando il pezzo da inserire. Nel caso si cambi idea si può rimuovere il pezzo utilizzando l’apposito strumento.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://clevermindgame.it/media/posts/6/strumenti-_modifica-2.jpg" alt="" width="357" height="196" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://clevermindgame.it/media/posts/6/responsive/strumenti-_modifica-2-xs.jpg 300w ,https://clevermindgame.it/media/posts/6/responsive/strumenti-_modifica-2-sm.jpg 480w ,https://clevermindgame.it/media/posts/6/responsive/strumenti-_modifica-2-md.jpg 768w"></figure>
-<p>Dopo aver inserito i pezzi si può verificare come agiscono sugli impulsi, in modo analogo a come funziona nella modalità Gioco.</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="condividi"></a><strong>Condividere una sfida in modalità Studio</strong></p>
-<p>Utilizzando il pulsante <span style="font-size: x-large;">📋</span> si copia l'attuale configurazione di pezzi sotto forma di una url, che si può incollare in un messaggio email, WhatsApp o altro, da condividere con un amico.<br>Se si memorizza la tavola con i pezzi mostrati, verrà inviata con le stesse caratteristiche ai giocatori, per cui, se si vuole lanciare una sfida, è bene ricordarsi di nascondere i pezzi prima di generare la URL di condivisione.</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="scopri_codice"></a><strong>Non riesco a scoprire il codice</strong></p>
-<p>La modalità Studio può essere utilizzata anche per scoprire un codice segreto che non si riesce a risolvere. Se dalla modalità Gioco si passa a Studio si potranno vedere i pezzi che compongono il codice segreto, ma non sarà possibile tornare in modalità gioco e proseguire la partita. Diciamo che in questo caso non si è riusciti a vincere la sfida, ma analizzando la disposizione dei pezzi in Studio si sarà sicuramente appreso qualcosa di utile per le nuove sfide.</p>
-<p><a href="#top">^Top</a></p>
-<p><a name="stats"></a><strong>Statistiche di gioco</strong></p>
-<p>In diversi pannelli informativi è presente un bottone <strong>Statistiche</strong>, che consente di accedere alle statistiche di gioco.<br>Il relativo pannello riporta:</p>
+<li>Sempre sul primo livello del vault, ho poi le cartelle:<br>
 <ul>
-<li>il numero di sfide concluse, con il dettaglio della dimensione della tavola con cui sono state giocate, e il numero di sfide concluse con meno di 15 mosse;</li>
-<li>il numero minimo e il numero massimo di mosse registrato in una sfida;</li>
-<li>il totale dei pezzi trovati nelle sfide portate a termine;</li>
-<li>una misura dell' <strong>efficacia</strong> delle mosse effettuate in tutte le sfide concluse, misurata come valore percentuale (100% indica un ugual numero di mosse effettuate e pezzi trovati).</li>
+<li><strong>dropnotes</strong>, che contiene le note inserite da smartphone, successivamente editate e spostate nella cartella di note di appartenenza;</li>
+<li><strong>immagini</strong>, cartella con le immagini esterne inserite nelle varie note;</li>
+<li><strong>modelli</strong>, con i template creati per impostare note di formato ripetitivo (esempio: report di riunioni, recensioni di film o libri; io mi sono approntato un template per inserire data e sommario in una nota, e uno per le ricette di cucina che sto imparando a realizzare in modo più o meno passabile).</li>
 </ul>
-<p>Il bottone <strong>Azzera</strong> consente di azzerare le statistiche memorizzate e farle ripartire da zero.</p>
-<p><a href="#top">^Top</a></p>
+</li>
+</ul>
+<h4>Struttura delle note: vista ad albero</h4>
+<p>Una vista semplificata della struttura realizzata, eliminando le <em>foglie</em> dell'albero e riducendo le aree di interesse:</p>
+<pre>.
+├── dropnotes
+│   └── ...
+├── Immagini
+│   └── ...
+├── modelli
+│   ├── data.md
+│   └── modello di una ricetta.md
+├── Note
+│   ├── Kanban
+│   │   ├── Bacheca di Cucina.md
+│   │   ├── Bacheca Linux.md
+│   │   └── Bacheca sito 70plus.md
+│   ├── 70plus
+│       └── ...
+│   ├── Cucina
+│       └── ...
+│   ├── da_fare
+│       └── ...
+│   └── Linux
+│       └── ...
+├── Cucina.md
+├── Da fare.md
+├── Linux.md
+└── Sito 70plus.md</pre>
+<h4>Effetti sulla produttività</h4>
+<p>Ho passato da poco il centinaio di note e devo dire che è aumentata notevolmente la mia produttività, in varie direzioni: articoli su <a href="https://inchiostrovirtuale.it/author/p-petrosinoinchiostrovirtuale-it/" target="_blank" rel="noopener noreferrer">Inchiostro Virtuale</a>, esperimenti su Linux, le mie ricerche matematiche; persino le mie qualità culinarie sono migliorate (però questo me lo dico da solo).<br>Il motivo: la semplicità di Obsidian è uno stimolo insospettato ad annotare cose, e la velocità nel ritrovarle libera spazio per la creatività.</p>
             ]]>
         </content>
     </entry>

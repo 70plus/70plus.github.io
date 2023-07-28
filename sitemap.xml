@@ -1,116 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://clevermindgame.it/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://70plus.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://clevermindgame.it/</loc>
+<loc>https://70plus.github.io/</loc>
 </url>
 <url>
-<loc>https://clevermindgame.it/beta.html</loc>
-</url>
-<url>
-<loc>https://clevermindgame.it/chi-siamo.html</loc>
-<lastmod>2023-06-17T08:55:22+02:00</lastmod>
-</url>
-<url>
-<loc>https://clevermindgame.it/cookie-e-privacy-policy.html</loc>
-<lastmod>2023-06-17T08:52:21+02:00</lastmod>
-</url>
-<url>
-<loc>https://clevermindgame.it/esempio-commentato-di-partita.html</loc>
-<lastmod>2023-06-17T08:51:16+02:00</lastmod>
+<loc>https://70plus.github.io/2023-eccoti-qui.html</loc>
+<lastmod>2023-01-09T16:38:58+01:00</lastmod>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_1.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_2.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_3.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_4.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_5.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_6.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/8/comm_7.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/3/board-1647323_1920.jpg</image:loc>
+<image:title><![CDATA[Buoni propositi]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://clevermindgame.it/faq.html</loc>
-<lastmod>2023-06-17T08:51:31+02:00</lastmod>
+<loc>https://70plus.github.io/ambienti-online-per-python.html</loc>
+<lastmod>2023-01-09T16:27:12+01:00</lastmod>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/6/img_006-2.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/15/esempio_google_colab.png</image:loc>
+<image:title><![CDATA[Esempio di Google Colab]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/arriva-publii-042.html</loc>
+<lastmod>2023-03-31T08:32:52+02:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/cookies-e-privacy-policy.html</loc>
+<lastmod>2023-01-09T16:27:35+01:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/disegnare-lalbero-16-anni-dopo.html</loc>
+<lastmod>2023-01-09T16:36:24+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/6/albero.jpg</image:loc>
+<image:title><![CDATA[Albero ricorsivo]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/6/img_007.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/6/Schermata-2022-01-23-alle-18.18.32.png</image:loc>
+<image:title><![CDATA[Vecchio post su Elaborando]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/6/img_008.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/6/albero_3.jpg</image:loc>
+<image:title><![CDATA[Albero ricorsivo su 3 livelli]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/disegnare-un-cuore.html</loc>
+<lastmod>2023-01-13T09:00:40+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/17/noce_cuore-2.jpg</image:loc>
+<image:title><![CDATA[cuore o noce?]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/6/strumenti-_modifica-2.jpg</image:loc>
+<image:loc>https://70plus.github.io/media/posts/17/cuore.png</image:loc>
+<image:title><![CDATA[Disegnare un cuore - post su Elaborando]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/excel-calendario-su-una-sola-pagina.html</loc>
+<lastmod>2023-02-10T08:30:24+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg</image:loc>
+<image:title><![CDATA[Calndario in una pagina per il 2023]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/23/calendario_01-2.jpg</image:loc>
+<image:title><![CDATA[Layout del calendario su una sola pagina]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/23/calendario_02-2.jpg</image:loc>
+<image:title><![CDATA[Identificare le celle che contengono i mesi]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/23/calendario_03.jpg</image:loc>
+<image:title><![CDATA[Calcolo dell'indice di ciascun mese]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/23/calendario_04.jpg</image:loc>
+<image:title><![CDATA[Calendario in una sola pagina: il 2024]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/google66ff6695ecc34799.html</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/hamburger-di-melanzane.html</loc>
+<lastmod>2023-04-03T15:28:25+02:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png</image:loc>
+<image:title><![CDATA[Hamburger di melanzane]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/il-caffe.html</loc>
+<lastmod>2023-01-09T16:29:14+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/9/1672902875369e-2.jpg</image:loc>
+<image:title><![CDATA[Caffè del mattino]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/instabilita.html</loc>
+<lastmod>2023-01-09T16:40:19+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/2/penguin-160539_1280.png</image:loc>
+<image:title><![CDATA[Instabilità]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/la-cucina-vista-da-me.html</loc>
+<lastmod>2023-02-01T08:55:01+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/20/tomatoes-5365186_1920.jpg</image:loc>
+<image:title><![CDATA[la cucina vista da me]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/20/template_obsidian_ricetta.png</image:loc>
+<image:title><![CDATA[Template Obsidian di una ricetta]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/la-signora-monet.html</loc>
+<lastmod>2023-01-09T16:32:55+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/8/Monet_Umbrella.jpeg</image:loc>
+<image:title><![CDATA[Monet - La promenade]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</loc>
+<lastmod>2023-03-27T07:56:00+02:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://clevermindgame.it/gioca.html</loc>
-</url>
-<url>
-<loc>https://clevermindgame.it/googlec3ee6cc173c25151.html</loc>
-</url>
-<url>
-<loc>https://clevermindgame.it/help.html</loc>
-<lastmod>2023-06-17T08:55:16+02:00</lastmod>
-</url>
-<url>
-<loc>https://clevermindgame.it/imparare-giocando.html</loc>
-<lastmod>2023-06-17T08:51:23+02:00</lastmod>
+<loc>https://70plus.github.io/le-mie-note-personali-con-obsidian.html</loc>
+<lastmod>2023-01-09T16:52:10+01:00</lastmod>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/7/faq_1-2.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/16/architettura.png</image:loc>
+<image:title><![CDATA[Architettura multi-dispositivo, realizzata con Obsidian e Dropbox]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/7/faq_3.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/7/faq_2.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-<image:image>
-<image:loc>https://clevermindgame.it/media/posts/7/faq_4.jpg</image:loc>
-<image:title><![CDATA[]]></image:title>
+<image:loc>https://70plus.github.io/media/posts/16/struttura.png</image:loc>
+<image:title><![CDATA[Struttura organizzativa delle note nel mio vault Obsidian]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://clevermindgame.it/non-tutti-i-lockdown-vengono-per-nuocere.html</loc>
-<lastmod>2023-06-17T08:55:08+02:00</lastmod>
+<loc>https://70plus.github.io/lindovinello-dei-travasi.html</loc>
+<lastmod>2023-03-26T15:50:56+02:00</lastmod>
 </url>
 <url>
-<loc>https://clevermindgame.it/sigiochi.html</loc>
-<lastmod>2023-06-08T07:17:44+02:00</lastmod>
+<loc>https://70plus.github.io/linguine-al-sugo-di-rana-pescatrice.html</loc>
+<lastmod>2023-04-03T09:10:37+02:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/lunaplay.html</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/nove-volte-sette-isaac-asimov-1958.html</loc>
+<lastmod>2023-01-09T16:28:12+01:00</lastmod>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/2/img_001-2.jpg</image:loc>
+<image:loc>https://70plus.github.io/media/posts/10/If_195802t.jpg</image:loc>
+<image:title><![CDATA[9 volte 7]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/page/2/</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/page/3/</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/page/4/</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/page/5/</loc>
+</url>
+<url>
+<loc>https://70plus.github.io/pasta-e-fagioli.html</loc>
+<lastmod>2023-02-01T08:59:20+01:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/prima-che-finisca-lanno.html</loc>
+<lastmod>2023-01-09T16:41:05+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/1/sylvester-7669293_1920-2.jpg</image:loc>
+<image:title><![CDATA[Anno nuovo, sito nuovo]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html</loc>
+<lastmod>2023-01-27T17:12:26+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_6gen23.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://clevermindgame.it/media/posts/2/img_006-2.jpg</image:loc>
+<image:loc>https://70plus.github.io/media/posts/19/primel_1gen23a-2.png</image:loc>
+<image:title><![CDATA[primel del 23 gennaio: primi due tentativi]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_1gen23.png</image:loc>
+<image:title><![CDATA[primel dell' 1/1/2023, la soluzione]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_4gen23a-2.png</image:loc>
+<image:title><![CDATA[primel del 4 gennaio 2023: primi due tentativi]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_4gen23b-2.png</image:loc>
+<image:title><![CDATA[primel del 4 gennaio 2023: terzo tentativo]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_4gen23.png</image:loc>
+<image:title><![CDATA[primel del 4 gennaio 2023]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_23gen23_a.png</image:loc>
+<image:title><![CDATA[primel del 23 gennaio 2023]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_23gen23_c-2.png</image:loc>
+<image:title><![CDATA[primel del 23 gennaio 2023: terzo tentativo]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/19/primel_23gen23_b.png</image:loc>
+<image:title><![CDATA[primel del 23 gennaio 2023]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/prolog-e-la-programmazione-logica.html</loc>
+<lastmod>2023-01-16T22:11:36+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/su-di-me.html</loc>
+<lastmod>2023-01-02T08:26:02+01:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/un-test-js.html</loc>
+<lastmod>2023-04-13T21:13:14+02:00</lastmod>
+</url>
+<url>
+<loc>https://70plus.github.io/una-prima-sistemata-al-blog.html</loc>
+<lastmod>2023-01-09T16:38:13+01:00</lastmod>
+<image:image>
+<image:loc>https://70plus.github.io/media/posts/5/screenshot_2gen23.png</image:loc>
+<image:title><![CDATA[Screenshot del sito al 2 gennaio 2023]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://70plus.github.io/voce.html</loc>
 </url>
 </urlset>

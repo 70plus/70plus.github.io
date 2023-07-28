@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it-IT">
+
+<head>
+	<title>Gioco del Tris</title>
+	<link rel="stylesheet" type="text/css" href="tris.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="logo-container">
+  <div class="logo-image">
+    <img src="logo.jpg" alt="Image" width="120" height="120">
+  </div>
+  <div class="logo-text">
+    <h1 align="center">Tris</h1>
+    <h3 align="right"><em>by 70plus&nbsp;&nbsp;&nbsp;</em></h3>
+  </div>
+</div>
+
+	<div class="container">
+		<p>Gioco del tris per due persone: <b>X</b> e <b>O</b>.<br />
+			Si gioca cliccando a turno sulla cella scelta.<br />
+			Per terminare la partita in corso e iniziarne un'altra, cliccare su <b>Reset</b>.<br />
+			Nella nuova partita comincia chi ha perso la partita precedente.
+		</p>
+		<p id="dialogo"></p>
+
+		<table>
+			<tr>
+				<td id="1"></td>
+				<td id="2"></td>
+				<td id="3"></td>
+			</tr>
+			<tr>
+				<td id="4"></td>
+				<td id="5"></td>
+				<td id="6"></td>
+			</tr>
+			<tr>
+				<td id="7"></td>
+				<td id="8"></td>
+				<td id="9"></td>
+			</tr>
+		</table>
+		<button id="reset">Reset</button>
+	</div>
+	<script src="tris.js"></script>
+
+	<!-- Put this at the end of the <body> tag -->
+	<script src="https://swetrix.org/swetrix.js" defer></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			swetrix.init('WoH0No9arSTq')
+			swetrix.trackViews()
+		})
+	</script>
+	<noscript>
+		<img src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq" alt="" referrerpolicy="no-referrer-when-downgrade" />
+	</noscript>
+</body>
+</html>
