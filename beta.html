@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <title>Gioca - C M G</title>
+        <link rel="stylesheet" type="text/css" href="media/files/gstyles.css" />
+        <link rel="icon" type="image/jpg" href="media/files/logo.jpg">
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+    </head>
+    <body>
+        <div class="gioco-container" style="margin: auto">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Image"
+                        width="60"
+                        height="60" />
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;" 
+                        ><h3 id="titolo" ; align="center">CleverMindGame</h3></a
+                    >
+                </div>
+            </div>
+            <div class="spaziatura3"></div>
+            <table id="scacchiera">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="spaziatura3"></div>
+            <div class="area-bottoni">
+                <button
+                    title="Modifica le impostazioni"
+                    id="impostazioni"
+                    class="rotella">
+                    &#9881;
+                </button>
+                <button
+                    title="Copia la disposizione di gioco"
+                    id="copia"
+                    class="clip">
+                    📋
+                </button>
+                <button title="apri la sfida del giorno" id="god" class="game">
+                    📆
+                </button>
+                <button id="mostra" class="bottone2">Nascondi</button>
+                <button id="run" class="bottone1">Nuovo</button>
+            </div>
+            <div id="modo" class="modo">
+                <em>modalità: <b>studio</b></em>
+            </div>
+            <div id="storico" class="storico"></div>
+
+            <dialog id="imageDialog">
+                <span id="imageTxt">Modifica il codice inserendo o rimuovendo pezzi:</span><br><br>
+                <img style="width:18%; max-width: 68px;" src="media/files/rimuovi.png" id="image0" />
+                <img src="media/files/cb0.png" id="image1" class="pezzi">
+                <img src="media/files/cn0.png" id="image2" class="pezzi">
+                <img src="media/files/tb0.png" id="image3" class="pezzi">
+                <img src="media/files/tn0.png" id="image4" class="pezzi"><br>
+                <img src="media/files/rb0.png" id="image5" class="pezzi">
+                <img src="media/files/rn0.png" id="image6" class="pezzi">
+                <img src="media/files/qb0.png" id="image7" class="pezzi">
+                <img src="media/files/qn0.png" id="image8" class="pezzi">
+                <img style="width:18%; max-width: 68px;" src="media/files/cancella.png" id="image9" />
+            </dialog>
+
+            <dialog id="bordoDialog">
+                <span id="bordoTxt">Inserisci un impulso:</span><br><br>
+                <img style="width:32%; max-width: 100px;" src="media/files/p1b.png" id="image10" />
+                <img style="width:32%; max-width: 100px;" src="media/files/m1b.png" id="image12" />
+                <img style="width:32%; max-width: 100px;" src="media/files/cancella.png" id="image14" />
+            </dialog>
+
+            <dialog id="infoGioco" title="Informazione di gioco">
+                <p id="infoTesto"></p>
+                <button style="float:left;" id="vaiStats">Statistiche</button>
+                <button style="float:right;" id="okB">Ok</button>
+            </dialog>
+
+            <dialog id="infoStats" title="Statistiche di gioco">
+                <div style="width: 100%;text-align: center"><b>Statistiche di gioco</b></div>
+                <p id="infoStatsText"></p>
+                <button style="float:left;" id="azzInfoStats">Azzera</button>
+                <button style="float:right;" id="okInfoStats">Ok</button>
+            </dialog>
+
+            <dialog id="myDialog">
+                <form>
+                    <h4>Modalità:</h4>
+                    <label for="studio">studio</label>
+                    <input
+                        type="radio"
+                        id="studio"
+                        name="modalita"
+                        value="studio" />
+                    <label for="gioco">gioco</label>
+                    <input
+                        type="radio"
+                        id="gioco"
+                        name="modalita"
+                        value="gioco" />
+                    <h4>Dimensioni della tavola di gioco:</h4>
+                    <label for="4x4">4x4</label>
+                    <input type="radio" id="4x4" name="dimensioni" value="6" />
+                    <label for="5x5">5x5</label>
+                    <input type="radio" id="5x5" name="dimensioni" value="7" />
+                    <label for="6x6">6x6</label>
+                    <input type="radio" id="6x6" name="dimensioni" value="8" />
+                    <h4>Modalità esperto attiva:</h4>
+                    <label for="espertoNo">no</label>
+                    <input
+                        type="radio"
+                        id="espertoNo"
+                        name="esperto"
+                        value="0" />
+                    <label for="espertoSi">si</label>
+                    <input
+                        type="radio"
+                        id="espertoSi"
+                        name="esperto"
+                        value="1" />
+                    <br />
+                    <h4>Nel feedback, mostra:</h4>
+                    <label for="passirimb">passi e rimbalzi</label>
+                    <input
+                        type="radio"
+                        id="passirimb"
+                        name="livello"
+                        value="passirimb" />
+                    <br />
+                    <label for="passi">solo passi</label>
+                    <input
+                        type="radio"
+                        id="passi"
+                        name="livello"
+                        value="passi" />
+                    <label for="rimb">solo rimbalzi</label>
+                    <input type="radio" id="rimb" name="livello" value="rimb" />
+                    <br />
+                    <label for="nulla">né passi né rimbalzi</label>
+                    <input
+                        type="radio"
+                        id="nulla"
+                        name="livello"
+                        value="nulla" />
+                    <br />
+                    <h4>Tema:</h4>
+                    <label for="tema1"
+                        ><span style="color: #1977a7; background-color: #1977a7"
+                            >tema</span
+                        ></label
+                    >
+                    <input type="radio" id="tema1" name="tema" value="0" />
+                    <label for="tema2"
+                        ><span style="color: #d62628; background-color: #d62628"
+                            >tema</span
+                        ></label
+                    >
+                    <input type="radio" id="tema2" name="tema" value="1" />
+                    <label for="tema3"
+                        ><span style="color: #3daf1e; background-color: #3daf1e"
+                            >tema</span
+                        ></label
+                    >
+                    <input type="radio" id="tema3" name="tema" value="2" />
+                    <br /><br />
+                    <button type="button" style="float:left;" id="cancelButton">Cancel</button>
+                    <button type="submit" style="float:right;" id="okButton">OK</button>
+                </form>
+            </dialog>
+        </div>
+        <script src="media/files/bscript.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("XXLm1df5zK1g");
+                swetrix.trackViews();
+            });
+        </script>
+
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=XXLm1df5zK1g"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+    </body>
+</html>
