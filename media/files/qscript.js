@@ -86,7 +86,7 @@ const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 const divTop = storicoDiv.offsetTop;
 const remainingHeight = hWindow - (divTop - scrollTop) - 2;
 storicoDiv.style.height = `${remainingHeight}px`;
-storicoDiv.style.fontSize = Math.round(wWindow * 30 / 13 / 50) + "px";
+// storicoDiv.style.fontSize = Math.round(wWindow * 30 / 13 / 50) + "px";
 
 // Quanti sono i test?
 let nTests = listaTest.length;
