@@ -6,6 +6,7 @@ let sp2 = `&nbsp;&nbsp;`;
 let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
 let test, nomeTest, nDomande;
+const storicoDiv = document.getElementById("storicoDiv");
 
 /* ------------------------------------
    FUNZIONI
@@ -80,6 +81,12 @@ if (hWindow < 700) {
     logoI.style.width = logoH + "px";
     logoI.style.height = logoH + "px";
 }
+// Dimensiona l'area dello storico
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+const divTop = storicoDiv.offsetTop;
+const remainingHeight = hWindow - (divTop - scrollTop) - 2;
+storicoDiv.style.height = `${remainingHeight}px`;
+storicoDiv.style.fontSize = Math.round(wWindow / 50) + "px";
 
 // Quanti sono i test?
 let nTests = listaTest.length;
