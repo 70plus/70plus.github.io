@@ -7,6 +7,9 @@ let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
 let test, nomeTest, nDomande;
 const storicoDiv = document.getElementById("storicoDiv");
+const infoG = document.querySelector("#infoGioco");
+const infoT = document.querySelector("#infoTesto");
+const closeButton = document.querySelector("#okB");
 
 /* ------------------------------------
    FUNZIONI
@@ -49,6 +52,26 @@ function usaRispEsatte(domanda) {
   }
   return
 }
+
+// bottone "copia"
+document.getElementById("copia").addEventListener("click", function () {
+    let testoCopiato = document.getElementById("storicoDiv").innerHTML.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
+    navigator.clipboard.writeText(testoCopiato).then(
+        () => {
+            /* clipboard successfully set */
+        },
+        () => {
+            /* clipboard write failed */
+        }
+    );
+    infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
+    infoG.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    infoG.close();
+});
+
 /* ------------------------------------
    MAIN
    ------------------------------------ */
