@@ -5,26 +5,24 @@
 let sp2 = `&nbsp;&nbsp;`;
 let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
-let test, nomeTest, nDomande;
+let test, idxTest, nomeTest, nDomande, idxDomanda;
+let testRunning = false;
+let keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
+let keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
+let keyVai_3 = `Il test è terminato, per continuare scegli un altro test`
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
 const closeButton = document.querySelector("#okB");
+const vaiButton = document.querySelector("#Vai");
+const formDomande = document.getElementById("formDomande");
+const formQ = document.getElementById("formQ");
+const cancelButton = document.querySelector("#cancelButton");
+const okButton = document.querySelector("#okButton");
 
 /* ------------------------------------
    FUNZIONI
    ------------------------------------ */
-
-function usaDomande(test,i) {
-  let domanda = test[i+2];
-  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp4 + `Domanda ` + (i + 1) + `:&nbsp;` + domanda[idTestoDom] + `<br>`);
-  usaRisposte(domanda);
-  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp4 + `Risposte esatte:<br>`);
-  usaRispEsatte(domanda);
-  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + domanda[idSpiega] + `<br>`);
-  return;
-}
-
 function usaRisposte(domanda) {
   let listaRisp = domanda[idListaRisp];
   let nRisposte = listaRisp.length;
@@ -39,24 +37,20 @@ function usaRisposte(domanda) {
       }
     }
   }
-  for (i = 0; i < nRisposte; i++) {
-    storicoDiv.insertAdjacentHTML("beforeend", sp6 + `- ` + listaRisp[i] + `<br>`);
-  }
+  rispEsatte.sort((a,b) => a-b);
   return
 }
-
-function usaRispEsatte(domanda) {
-  let rispEsatte = domanda[idListaRispEsatte];
-  for (let i = 0; i < rispEsatte.length; i++) {
-    storicoDiv.insertAdjacentHTML("beforeend", sp6 + domanda[idListaRisp][rispEsatte[i]] + `<br>`);
-  }
-  return
-}
-
-// bottone "copia"
-document.getElementById("copia").addEventListener("click", function () {
-    let testoCopiato = document.getElementById("storicoDiv").innerHTML.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
-    navigator.clipboard.writeText(testoCopiato).then(
+// scelta dell'azione da eseguire
+const scegliAzione = document.getElementById("scegliAzione");
+scegliAzione.addEventListener("change", function() {
+  switch(scegliAzione.selectedIndex) {
+    case 1:
+      let testoCopiato = document.getElementById("storicoDiv").innerHTML;
+      testoCopiato = testoCopiato.replaceAll(keyVai_1, ``);
+      testoCopiato = testoCopiato.replaceAll(keyVai_2, ``);
+      testoCopiato = testoCopiato.replaceAll(keyVai_3, ``);
+      testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
+      navigator.clipboard.writeText(testoCopiato).then(
         () => {
             /* clipboard successfully set */
         },
@@ -66,10 +60,81 @@ document.getElementById("copia").addEventListener("click", function () {
     );
     infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
     infoG.showModal();
+    break;
+  }
 });
-
+// bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", () => {
     infoG.close();
+    scegliAzione.selectedIndex = 0;
+});
+// bottone ok di chiusura del form delle domande
+okButton.addEventListener("click", () => {
+  const checkboxes = formQ.querySelectorAll('input[type="checkbox"]:checked');
+  const values = [];
+
+  checkboxes.forEach((checkbox) => {
+    values.push(parseInt(checkbox.value));
+  });
+  formDomande.close();
+
+  let rispEsatte = test[idxDomanda+2][idListaRispEsatte];
+// verifica se la/le risposte sono esatte
+  storicoDiv.insertAdjacentHTML("beforeend", `Hai risposto:<br>`);
+  for (let i = 0; i < values.length; i++) {
+    storicoDiv.insertAdjacentHTML("beforeend", sp2 + test[idxDomanda+2][idListaRisp][values[i]] + `<br>`);
+  }
+  const isEqual = values.length === rispEsatte.length && values.every((value, index) => value === rispEsatte[index]);
+  if (isEqual) {
+    storicoDiv.insertAdjacentHTML("beforeend", `La tua risposta è esatta!<br>`);
+  } else {
+    storicoDiv.insertAdjacentHTML("beforeend", `La risposta esatta è:<br>`);
+    for (let i = 0; i < rispEsatte.length; i++) {
+      storicoDiv.insertAdjacentHTML("beforeend", sp2 + test[idxDomanda+2][idListaRisp][rispEsatte[i]] + `<br>`);
+    }   
+  }
+  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + test[idxDomanda+2][idSpiega] + `<br><br>`);
+  if (++idxDomanda + 2 < test.length){
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai_2);
+  } else {
+    idxDomanda = 0;
+    testRunning = false;
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai_3);
+  }
+  storicoDiv.scrollTop = storicoDiv.scrollHeight;
+});
+// bottone annulla di chiusura del form delle domande
+cancelButton.addEventListener("click", () => {
+    formDomande.close();
+});
+// Bottone Vai!
+vaiButton.addEventListener("click", function () {
+  if (testRunning) {
+    usaRisposte(test[idxDomanda+2]);
+// svuota  
+    formQ.innerHTML = '';
+// aggiungi le opzioni della domanda corrente
+    document.getElementById("testQ").innerHTML = '<b>' + test[idxDomanda+2][idTestoDom] + '</b>';
+    storicoDiv.insertAdjacentHTML("beforeend", `Domanda n.ro ` + (idxDomanda+1) + `: ` + test[idxDomanda+2][idTestoDom] + '<br><br>');
+    let listaOpt = test[idxDomanda+2][idListaRisp];
+      for (let i = 0; i < listaOpt.length; i++) {
+        const div = document.createElement("div");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "checkbox" + i;
+        checkbox.id = "checkbox" + i;
+        checkbox.value = i;
+
+        const label = document.createElement("label");
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(test[idxDomanda+2][idListaRisp][i]));
+
+        div.appendChild(label);
+        formQ.appendChild(div);
+      }
+// mostra il form
+  formDomande.showModal();
+  }
 });
 
 /* ------------------------------------
@@ -125,23 +190,23 @@ listaSelTest.forEach(option => {
   optionElement.text = option;
   scegliTest.add(optionElement);
 });
+// scelta del test da eseguire
 scegliTest.addEventListener("change", function() {
   let testSelezionato = this.value;
   idxTest = scegliTest.selectedIndex - 1;
 // stampa i dettagli del test selezionato
   if (idxTest >= 0) {
-    storicoDiv.innerHTML = "";
-    storicoDiv.insertAdjacentHTML("beforeend", `Hai selezionato `+testSelezionato+`<br>`);
     test = listaTest[idxTest];
     nomeTest = test[idNomeTest];
     descrTest = test[idDescrTest];
     nDomande = test.length - 2;
-    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `Nome del test corrente: ` + nomeTest);
-    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `Descrizione del test: ` + descrTest + `<br>`);
-    storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br>`);
-    for (let i = 0; i < nDomande; i++) {
-    usaDomande(test,i);
-    }
+    storicoDiv.innerHTML = "";
+    storicoDiv.insertAdjacentHTML("beforeend", `Test: `+ nomeTest +`<br>`);
+    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `Descrizione del test:<br>` + descrTest + `<br>`);
+    storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br><br>`);
+    idxDomanda = 0;
+    testRunning = true;
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai_1);
   }
 });
 storicoDiv.insertAdjacentHTML("beforeend", `Scegli un test<br>`);
