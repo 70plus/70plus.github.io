@@ -15,6 +15,16 @@ listaTest = listaTest.concat([
              `Non si può aggiornare, occorre installarlo di nuovo`
             ], [1],
              `Se correttamente configurato, il browser si aggiorna automaticamente alla versione più recente compatibile con il dispositivo`
+        ],
+        [`Esempi di browser`,
+            [`Microsoft Edge`,
+             `Chrome`,
+             `Word`,
+             `Excel`,
+             `Google`,
+             `Facebook`
+            ], [0,1],
+             `Word è un programma di editing di testi, mentre Facebook è un servizio di Social Network`
         ]
     ],
     [`Il pacchetto Office`,

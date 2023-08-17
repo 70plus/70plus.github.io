@@ -7,10 +7,12 @@ let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
 let test, idxTest, nomeTest, nDomande, idxDomanda;
 let testRunning = false;
-const keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
-const keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
-const keyVai_3 = `Il test è terminato, per continuare scegli un altro test`;
-const keyVai_4 = `Hai copiato il contenuto dell'area informativa!<br>`;
+const keyVai = [`Scegli un test<br>`,
+      `Tocca "Vai" per cominciare<br><br>`,
+      `Tocca "Vai" per la prossima domanda<br><br>`,
+      `Il test è terminato, per continuare scegli un altro test<br>`,
+      `Hai copiato il contenuto dell'area informativa!<br>`,
+      `Devi prima scegliere un test!<br>`];
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
@@ -46,15 +48,13 @@ function usaRisposte(domanda) {
 // scelta dell'azione da eseguire
 scegliAzione.addEventListener("change", function() {
   let i = scegliAzione.selectedIndex;
-  scegliAzione.selectedIndex = 0;
 
   switch(i) {
     case 1:
       let testoCopiato = document.getElementById("storicoDiv").innerHTML;
-      testoCopiato = testoCopiato.replaceAll(keyVai_1, ``);
-      testoCopiato = testoCopiato.replaceAll(keyVai_2, ``);
-      testoCopiato = testoCopiato.replaceAll(keyVai_3, ``);
-      testoCopiato = testoCopiato.replaceAll(keyVai_4, ``);
+      for (i = 0; i < keyVai.length;i++) {
+        testoCopiato = testoCopiato.replaceAll(keyVai[i], ``);
+      }
       testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
       navigator.clipboard.writeText(testoCopiato).then(
         () => {
@@ -64,11 +64,13 @@ scegliAzione.addEventListener("change", function() {
             /* clipboard write failed */
         }
     );
-//    infoT.innerHTML = keyVai_4;
+//    infoT.innerHTML = keyVai[4];
 //    infoG.showModal();
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai_4);
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai[4]);
+    storicoDiv.scrollTop = storicoDiv.scrollHeight;
     break;
   }
+  scegliAzione.selectedIndex = 0;
 });
 // bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", (e) => {
@@ -102,11 +104,11 @@ okButton.addEventListener("click", () => {
   }
   storicoDiv.insertAdjacentHTML("beforeend", `<br>` + test[idxDomanda+2][idSpiega] + `<br><br>`);
   if (++idxDomanda + 2 < test.length){
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai_2);
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai[2]);
   } else {
     idxDomanda = 0;
     testRunning = false;
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai_3);
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai[3]);
   }
   storicoDiv.scrollTop = storicoDiv.scrollHeight;
 });
@@ -141,6 +143,9 @@ vaiButton.addEventListener("click", function () {
       }
 // mostra il form
   formDomande.showModal();
+  } else {
+        storicoDiv.insertAdjacentHTML("beforeend", keyVai[5]);
+        storicoDiv.scrollTop = storicoDiv.scrollHeight;
   }
 });
 
@@ -212,7 +217,7 @@ scegliTest.addEventListener("change", function() {
     storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br><br>`);
     idxDomanda = 0;
     testRunning = true;
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai_1);
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai[1]);
   }
 });
-storicoDiv.insertAdjacentHTML("beforeend", `Scegli un test<br>`);
+storicoDiv.insertAdjacentHTML("beforeend", keyVai[0]);
