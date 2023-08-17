@@ -62,15 +62,16 @@ scegliAzione.addEventListener("change", function() {
             /* clipboard write failed */
         }
     );
-    infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
-    infoG.showModal();
+    infoT.innerHTML = "Hai copiato il contenuto dell'area informativa!";
+//    infoG.showModal();
+    storicoDiv.insertAdjacentHTML("beforeend", "Hai copiato il contenuto dell'area informativa!<br>");
     break;
   }
 });
 // bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", () => {
     infoG.close();
-    scegliAzione.classList.remove("show");
+//    scegliAzione.classList.remove("show");
 });
 // bottone ok di chiusura del form delle domande
 okButton.addEventListener("click", () => {
