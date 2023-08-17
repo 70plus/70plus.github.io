@@ -9,7 +9,7 @@ let test, idxTest, nomeTest, nDomande, idxDomanda;
 let testRunning = false;
 const keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
 const keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
-const keyVai_3 = `Il test è terminato, per continuare scegli un altro test`
+const keyVai_3 = `Il test è terminato, per continuare scegli un altro test`;
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
@@ -46,7 +46,7 @@ function usaRisposte(domanda) {
 scegliAzione.addEventListener("change", function() {
   let i = scegliAzione.selectedIndex;
   scegliAzione.selectedIndex = 0;
-  scegliAzione.classList.remove("show");
+//  scegliAzione.classList.remove("show");
 
   switch(i) {
     case 1:
@@ -71,7 +71,7 @@ scegliAzione.addEventListener("change", function() {
 // bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", () => {
     infoG.close();
-    scegliAzione.selectedIndex = 0;
+//    scegliAzione.selectedIndex = 0;
 });
 // bottone ok di chiusura del form delle domande
 okButton.addEventListener("click", () => {
