@@ -46,7 +46,6 @@ function usaRisposte(domanda) {
 scegliAzione.addEventListener("change", function() {
   let i = scegliAzione.selectedIndex;
   scegliAzione.selectedIndex = 0;
-  scegliAzione.classList.remove("show");
 
   switch(i) {
     case 1:
@@ -71,7 +70,7 @@ scegliAzione.addEventListener("change", function() {
 // bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", () => {
     infoG.close();
-//    scegliAzione.selectedIndex = 0;
+    scegliAzione.classList.remove("show");
 });
 // bottone ok di chiusura del form delle domande
 okButton.addEventListener("click", () => {
