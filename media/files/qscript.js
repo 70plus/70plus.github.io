@@ -63,13 +63,14 @@ scegliAzione.addEventListener("change", function() {
         }
     );
     infoT.innerHTML = "Hai copiato il contenuto dell'area informativa!";
-//    infoG.showModal();
-    storicoDiv.insertAdjacentHTML("beforeend", "Hai copiato il contenuto dell'area informativa!<br>");
+    infoG.showModal();
+//    storicoDiv.insertAdjacentHTML("beforeend", "Hai copiato il contenuto dell'area informativa!<br>");
     break;
   }
 });
 // bottone ok di chiusura del box di dialogo
-closeButton.addEventListener("click", () => {
+closeButton.addEventListener("click", (e) => {
+    e.stopPropagation();
     infoG.close();
 //    scegliAzione.classList.remove("show");
 });
