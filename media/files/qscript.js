@@ -46,7 +46,7 @@ function usaRisposte(domanda) {
 scegliAzione.addEventListener("change", function() {
   let i = scegliAzione.selectedIndex;
   scegliAzione.selectedIndex = 0;
-//  scegliAzione.classList.remove("show");
+  scegliAzione.classList.remove("show");
 
   switch(i) {
     case 1:
