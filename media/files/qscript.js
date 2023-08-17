@@ -44,7 +44,11 @@ function usaRisposte(domanda) {
 }
 // scelta dell'azione da eseguire
 scegliAzione.addEventListener("change", function() {
-  switch(scegliAzione.selectedIndex) {
+  let i = scegliAzione.selectedIndex;
+  scegliAzione.selectedIndex = 0;
+  scegliAzione.classList.remove("show");
+
+  switch(i) {
     case 1:
       let testoCopiato = document.getElementById("storicoDiv").innerHTML;
       testoCopiato = testoCopiato.replaceAll(keyVai_1, ``);
@@ -61,8 +65,6 @@ scegliAzione.addEventListener("change", function() {
     );
     infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
     infoG.showModal();
-    scegliAzione.selectedIndex = 0;
-    scegliAzione.classList.remove("show");
     break;
   }
 });
