@@ -10,6 +10,7 @@ let testRunning = false;
 const keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
 const keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
 const keyVai_3 = `Il test è terminato, per continuare scegli un altro test`;
+const keyVai_4 = `Hai copiato il contenuto dell'area informativa!<br>`;
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
@@ -53,6 +54,7 @@ scegliAzione.addEventListener("change", function() {
       testoCopiato = testoCopiato.replaceAll(keyVai_1, ``);
       testoCopiato = testoCopiato.replaceAll(keyVai_2, ``);
       testoCopiato = testoCopiato.replaceAll(keyVai_3, ``);
+      testoCopiato = testoCopiato.replaceAll(keyVai_4, ``);
       testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
       navigator.clipboard.writeText(testoCopiato).then(
         () => {
@@ -62,17 +64,16 @@ scegliAzione.addEventListener("change", function() {
             /* clipboard write failed */
         }
     );
-    infoT.innerHTML = "Hai copiato il contenuto dell'area informativa!";
-    infoG.showModal();
-//    storicoDiv.insertAdjacentHTML("beforeend", "Hai copiato il contenuto dell'area informativa!<br>");
+//    infoT.innerHTML = keyVai_4;
+//    infoG.showModal();
+    storicoDiv.insertAdjacentHTML("beforeend", keyVai_4);
     break;
   }
 });
 // bottone ok di chiusura del box di dialogo
 closeButton.addEventListener("click", (e) => {
-    e.stopPropagation();
+//    e.stopPropagation();
     infoG.close();
-//    scegliAzione.classList.remove("show");
 });
 // bottone ok di chiusura del form delle domande
 okButton.addEventListener("click", () => {
