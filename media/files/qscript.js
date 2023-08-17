@@ -56,14 +56,9 @@ scegliAzione.addEventListener("change", function() {
         testoCopiato = testoCopiato.replaceAll(keyVai[i], ``);
       }
       testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
-      navigator.clipboard.writeText(testoCopiato).then(
-        () => {
-            /* clipboard successfully set */
-        },
-        () => {
-            /* clipboard write failed */
-        }
-    );
+      navigator.clipboard.writeText(testoCopiato)
+      .then(() => {alert("successfully copied");})
+      .catch(() => {alert("something went wrong");});
 //    infoT.innerHTML = keyVai[4];
 //    infoG.showModal();
     storicoDiv.insertAdjacentHTML("beforeend", keyVai[4]);
