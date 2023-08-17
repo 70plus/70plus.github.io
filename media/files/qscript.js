@@ -20,6 +20,7 @@ const formQ = document.getElementById("formQ");
 const cancelButton = document.querySelector("#cancelButton");
 const okButton = document.querySelector("#okButton");
 const scegliAzione = document.getElementById("scegliAzione");
+const scegliTest = document.getElementById("scegliTest");
 
 /* ------------------------------------
    FUNZIONI
@@ -61,6 +62,7 @@ scegliAzione.addEventListener("change", function() {
     infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
     infoG.showModal();
     scegliAzione.selectedIndex = 0;
+    scegliAzione.classList.remove("show");
     break;
   }
 });
@@ -185,7 +187,6 @@ for (let i = 0; i < nTests; i++) {
   test = listaTest[i];
   listaSelTest.push(test[idNomeTest]);
 }
-const scegliTest = document.getElementById("scegliTest");
 listaSelTest.forEach(option => {
   const optionElement = document.createElement('option');
   optionElement.text = option;
