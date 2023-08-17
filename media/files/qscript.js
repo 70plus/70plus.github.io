@@ -7,9 +7,9 @@ let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
 let test, idxTest, nomeTest, nDomande, idxDomanda;
 let testRunning = false;
-let keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
-let keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
-let keyVai_3 = `Il test è terminato, per continuare scegli un altro test`
+const keyVai_1 = `Tocca "Vai" per cominciare<br><br>`
+const keyVai_2 = `Tocca "Vai" per la prossima domanda<br><br>`;
+const keyVai_3 = `Il test è terminato, per continuare scegli un altro test`
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
@@ -19,6 +19,7 @@ const formDomande = document.getElementById("formDomande");
 const formQ = document.getElementById("formQ");
 const cancelButton = document.querySelector("#cancelButton");
 const okButton = document.querySelector("#okButton");
+const scegliAzione = document.getElementById("scegliAzione");
 
 /* ------------------------------------
    FUNZIONI
@@ -41,7 +42,6 @@ function usaRisposte(domanda) {
   return
 }
 // scelta dell'azione da eseguire
-const scegliAzione = document.getElementById("scegliAzione");
 scegliAzione.addEventListener("change", function() {
   switch(scegliAzione.selectedIndex) {
     case 1:
@@ -60,6 +60,7 @@ scegliAzione.addEventListener("change", function() {
     );
     infoT.innerHTML = "<b>Hai copiato il contenuto dell'area informativa!</b>";
     infoG.showModal();
+    scegliAzione.selectedIndex = 0;
     break;
   }
 });
