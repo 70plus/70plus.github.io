@@ -25,7 +25,7 @@ listaTest = listaTest.concat([
              `Chrome`,
              `PhotoShop`
             ], [0,1],
-            `Chrome è un browser, mentre PhotoShop è un programma per l'elaborazione di imamgini!`
+            `Chrome è un browser, mentre PhotoShop è un programma per l'elaborazione di immagini`
         ],
         [`Quando aggiornare il proprio programma Office`,
             [`Mai`,
