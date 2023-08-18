@@ -45,10 +45,15 @@
                 <div class="spaziatura"></div>
                 <select class="dropdown" id="scegliAzione">
                    <option value="Scegli un'azione">Scegli un'azione</option>
-                   <option value="Copia area info">Copia area info</option>
                    <option value="Statistiche">Statistiche</option>
                    <option value="Azzera le statistiche">Azzera le statistiche</option>
                 </select></div>
+                <button
+                    title="Copia il contenuto dell'area info"
+                    id="copia"
+                    class="clip">
+                    📋
+                </button>
                 <button
                     id="Vai"
                     class="bottone-ovale"
@@ -70,22 +75,18 @@
               <div id="testQ"><b>Domanda...</b></div>
               <br> 
               <form id="formQ">
-              <div class="checkbox">
                 <input
                     type="checkbox"
                     id="risposta1"
                     name="risposta1"
                     value="risposta1" />
                 <label class="checkbox-label" for="risposta1">risposta 1 ...</label>
-              </div>
-              <div class="checkbox">
                 <input
                     type="checkbox"
                     id="risposta2"
                     name="risposta2"
                     value="risposta2" />
                 <label class="checkbox-label" for="risposta2">risposta 2 ...</label>
-               </div>
              </form><br>
              <button type="button" style="float:left;" id="cancelButton">Annulla</button>
              <button type="submit" style="float:right;" id="okButton">OK</button>

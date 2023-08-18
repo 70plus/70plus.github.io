@@ -5,14 +5,15 @@
 let sp2 = `&nbsp;&nbsp;`;
 let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
-let test, idxTest, nomeTest, nDomande, idxDomanda;
+let test, idxTest, nomeTest, nDomande, idxDomanda, flag;
 let testRunning = false;
 const keyVai = [`Scegli un test<br>`,
       `Tocca "Vai" per cominciare<br><br>`,
       `Tocca "Vai" per la prossima domanda<br><br>`,
       `Il test è terminato, per continuare scegli un altro test<br>`,
-      `Hai copiato il contenuto dell'area informativa!<br>`,
-      `Devi prima scegliere un test!<br>`];
+      `Hai copiato il contenuto dell'area informativa<br>`,
+      `Devi prima scegliere un test!<br>`,
+      `La copia non è riuscita<br>`];
 const storicoDiv = document.getElementById("storicoDiv");
 const infoG = document.querySelector("#infoGioco");
 const infoT = document.querySelector("#infoTesto");
@@ -45,31 +46,34 @@ function usaRisposte(domanda) {
   rispEsatte.sort((a,b) => a-b);
   return
 }
+// bottone "copia"
+document.getElementById("copia").addEventListener("click", function () {
+  let testoCopiato = document.getElementById("storicoDiv").innerHTML;
+    for (i = 0; i < keyVai.length;i++) {
+      testoCopiato = testoCopiato.replaceAll(keyVai[i], ``);
+    }
+    testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
+    navigator.clipboard.writeText(testoCopiato)
+    .then(() => {})
+    .catch(() => {});
+    infoT.innerHTML = keyVai[4];
+    infoG.showModal();
+//    storicoDiv.insertAdjacentHTML("beforeend", keyVai[4]);
+//    storicoDiv.scrollTop = storicoDiv.scrollHeight;
+});
+
 // scelta dell'azione da eseguire
 scegliAzione.addEventListener("change", function() {
   let i = scegliAzione.selectedIndex;
 
   switch(i) {
     case 1:
-      let testoCopiato = document.getElementById("storicoDiv").innerHTML;
-      for (i = 0; i < keyVai.length;i++) {
-        testoCopiato = testoCopiato.replaceAll(keyVai[i], ``);
-      }
-      testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
-      navigator.clipboard.writeText(testoCopiato)
-      .then(() => {alert("successfully copied");})
-      .catch(() => {alert("something went wrong");});
-//    infoT.innerHTML = keyVai[4];
-//    infoG.showModal();
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai[4]);
-    storicoDiv.scrollTop = storicoDiv.scrollHeight;
     break;
   }
   scegliAzione.selectedIndex = 0;
 });
 // bottone ok di chiusura del box di dialogo
-closeButton.addEventListener("click", (e) => {
-//    e.stopPropagation();
+closeButton.addEventListener("click", () => {
     infoG.close();
 });
 // bottone ok di chiusura del form delle domande
