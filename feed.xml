@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>70plus - and still a lot to do</title>
-    <link href="https://70plus.github.io/feed.xml" rel="self" />
-    <link href="https://70plus.github.io" />
+    <link href="https://70plus.it/feed.xml" rel="self" />
+    <link href="https://70plus.it" />
     <updated>2023-04-03T15:28:25+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
-    <id>https://70plus.github.io</id>
+    <id>https://70plus.it</id>
 
     <entry>
         <title>Hamburger di melanzane</title>
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/hamburger-di-melanzane.html"/>
-        <id>https://70plus.github.io/hamburger-di-melanzane.html</id>
-        <media:content url="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" medium="image" />
+        <link href="https://70plus.it/hamburger-di-melanzane.html"/>
+        <id>https://70plus.it/hamburger-di-melanzane.html</id>
+        <media:content url="https://70plus.it/media/posts/26/eggplant-2924511_1280.png" medium="image" />
             <category term="cucina"/>
 
         <updated>2023-04-03T15:28:25+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" alt="Hamburger di melanzane" />
+                        <img src="https://70plus.it/media/posts/26/eggplant-2924511_1280.png" alt="Hamburger di melanzane" />
                     Le melanzane sono un ortaggio a basso indice glicemico (tra 10 e 20), e con un buon contenuto di fibre. Sono quindi suggerite per chi è affetto da diabete. La preparazione degli hamburger di melanzane prende circa 2 ore: Semplice,&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/26/eggplant-2924511_1280.png" class="type:primaryImage" alt="Hamburger di melanzane" /></p>
+                    <p><img src="https://70plus.it/media/posts/26/eggplant-2924511_1280.png" class="type:primaryImage" alt="Hamburger di melanzane" /></p>
                 <div>
 <p data-heading="Suggerimenti:"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">Le <a href="https://www.humanitas.it/enciclopedia/alimenti/verdure-ortaggi-e-tuberi/melanzana/" target="_blank" rel="nofollow noopener noreferrer">melanzane</a> sono un ortaggio a <a href="https://www.humanitas-care.it/news/indice-glicemico-degli-alimenti-come-tenere-sotto-controllo-il-diabete-con-la-dieta/" target="_blank" rel="nofollow noopener noreferrer">basso indice glicemico</a> (tra 10 e 20), e con un buon contenuto di fibre. Sono quindi suggerite per chi è affetto da diabete.</span></p>
 </div>
@@ -125,8 +125,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/arriva-publii-042.html"/>
-        <id>https://70plus.github.io/arriva-publii-042.html</id>
+        <link href="https://70plus.it/arriva-publii-042.html"/>
+        <id>https://70plus.it/arriva-publii-042.html</id>
             <category term="Cose informatiche"/>
 
         <updated>2023-03-31T08:32:52+02:00</updated>
@@ -162,21 +162,21 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
-        <id>https://70plus.github.io/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
-        <media:content url="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
+        <link href="https://70plus.it/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
+        <id>https://70plus.it/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+        <media:content url="https://70plus.it/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
         <updated>2023-03-27T07:56:00+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" alt="" />
+                        <img src="https://70plus.it/media/posts/24/democrats-3594094_1920.jpg" alt="" />
                     Nel 1981 due ricercatori, Robert S. Boyer e J. Strother Moore, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/24/democrats-3594094_1920.jpg" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://70plus.it/media/posts/24/democrats-3594094_1920.jpg" class="type:primaryImage" alt="" /></p>
                 <p>Nel 1981 due ricercatori, <strong>Robert S. Boyer</strong> e <strong>J. Strother Moore</strong>, crearono un algoritmo che consente di determinare im modo estremamante efficiente se, in una votazione con un numero di candidati non noto a priori, ce ne sia uno che abbia raggiunto la <strong>maggioranza assoluta</strong>, cioè la metà dei voti più uno.</p>
 <p>Il loro <strong>Majority Voting Algorithm</strong> trova applicazioni nel campo dell'informatica, meno in quello di reali votazioni, dove non basta dichiarare chi è il vincitore, ma occorre offrire trasparenza sul dettaglio dei risultati.</p>
 <p>Ma quali vantaggi dal punto di vista informatico offre il Majority Voting Algorithm, rispetto a uno scrutinio tradizionale? Essenzialmente due, legati rispettivamente al <strong>tempo di esecuzione</strong> e alla <strong>quantità di memoria</strong> necessaria per l'esecuzione.</p>
@@ -392,22 +392,22 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/excel-calendario-su-una-sola-pagina.html"/>
-        <id>https://70plus.github.io/excel-calendario-su-una-sola-pagina.html</id>
-        <media:content url="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" medium="image" />
+        <link href="https://70plus.it/excel-calendario-su-una-sola-pagina.html"/>
+        <id>https://70plus.it/excel-calendario-su-una-sola-pagina.html</id>
+        <media:content url="https://70plus.it/media/posts/23/calendar-1990453_1920.jpg" medium="image" />
             <category term="Numeri"/>
             <category term="Cose informatiche"/>
 
         <updated>2023-02-10T08:30:24+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" alt="Calndario in una pagina per il 2023" />
+                        <img src="https://70plus.it/media/posts/23/calendar-1990453_1920.jpg" alt="Calndario in una pagina per il 2023" />
                     Grazie a un articolo su Bigthink.com ho scoperto una forma compatta di calendario, con tutti e dodici i mesi in un unico riquadro. Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il 23 novembre, traccio una&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/23/calendar-1990453_1920.jpg" class="type:primaryImage" alt="Calndario in una pagina per il 2023" /></p>
+                    <p><img src="https://70plus.it/media/posts/23/calendar-1990453_1920.jpg" class="type:primaryImage" alt="Calndario in una pagina per il 2023" /></p>
                 <p>Grazie a un articolo su <a href="https://bigthink.com/starts-with-a-bang/one-page-calendar/" target="_blank" rel="nofollow noopener noreferrer">Bigthink.com </a>ho scoperto una forma compatta di calendario, con tutti e dodici i mesi in un unico riquadro.</p>
 <figure class="align-center"><img loading="lazy"  src="https://bigthink.com/wp-content/uploads/2023/01/find-Am-Thanks.jpg" data-is-external-image="true"></figure>
 <p> Il funzionamento è abbastanza semplice: se voglio sapere che giorno della settimana è il <strong>23 novembre</strong>, traccio una linea verticale nella colonna che contiene <strong>Novembre</strong>, una linea orizzontale nella riga che contiene il <strong>23</strong> e al punto di incrocio trovo <strong>Thu</strong>, cioè <strong>giovedì</strong>.</p>
@@ -416,14 +416,14 @@ A è il vincitore! margine: 1
 <p>A questo punto ci si può chiedere quanto sia complicato automatizzare la composizione del calendario per un generico anno, utilizzando un foglio di calcolo. Non molto, vediamo un modo per farlo.</p>
 <h4>Calendario su una sola pagina con un foglio di calcolo</h4>
 <p>Partiamo dal <em>layout</em> desiderato:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_01-2.jpg" alt="Layout del calendario su una sola pagina" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_01-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_01-2-md.jpg 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/23/calendario_01-2.jpg" alt="Layout del calendario su una sola pagina" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/23/responsive/calendario_01-2-xs.jpg 300w ,https://70plus.it/media/posts/23/responsive/calendario_01-2-sm.jpg 480w ,https://70plus.it/media/posts/23/responsive/calendario_01-2-md.jpg 768w"></figure>
 <p>I due riquadri in basso (numerazione dei giorni e giorni della settimana) sono fissi. A cambiare sono l'indicazione dell'anno desiderato e la conseguente disposizione dei mesi nel riquadro in alto a destra.<br>Il primo passaggio necessario per l'automazione del calendario è creare un modo sintetico per indirizzare ciascuna cella di questo riquadro:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_02-2.jpg" alt="Identificare le celle che contengono i mesi" width="833" height="329" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_02-2-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_02-2-md.jpg 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/23/calendario_02-2.jpg" alt="Identificare le celle che contengono i mesi" width="833" height="329" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/23/responsive/calendario_02-2-xs.jpg 300w ,https://70plus.it/media/posts/23/responsive/calendario_02-2-sm.jpg 480w ,https://70plus.it/media/posts/23/responsive/calendario_02-2-md.jpg 768w"></figure>
 <p>Notare l'aggiunta di una riga in cima e di una colonna a destra (con caratteri in grigio) che consentono di identificare con un <strong>indice</strong> ciascuna cella del riquadro dei mesi. Esempio: la cella che contiene maggio avrà l'indice 11 (1 + 10), mentre quella con marzo avrà indice 23 (3 + 20).</p>
 <p>Il prossimo passo sarà quindi ricavare l'indice per ciascuno dei mesi, in base all'anno e al giorno della settimana con cui cominciano, e inserire il nome del mese nella cella corretta.</p>
 <h4>Mesi e relativi indici</h4>
 <p>Per generare gli indici relativi ai mesi viene in aiuto questa tabella:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_03.jpg" alt="Calcolo dell'indice di ciascun mese" width="259" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_03-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_03-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_03-md.jpg 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/23/calendario_03.jpg" alt="Calcolo dell'indice di ciascun mese" width="259" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/23/responsive/calendario_03-xs.jpg 300w ,https://70plus.it/media/posts/23/responsive/calendario_03-sm.jpg 480w ,https://70plus.it/media/posts/23/responsive/calendario_03-md.jpg 768w"></figure>
 <p>La seconda e terza colonna sono fisse, ed elencano nome e numerazione per ciascuno dei 12 mesi dell'anno.<br>La terza colonna riporta il giorno della settimana con cui comincia ciascuno dei mesi, valore che coincide con l'indice di riga della tabella dei mesi. La formula per determinarlo è abbastanza semplice: vediamo quella per gennaio, cella <strong>T3</strong>:</p>
 <blockquote>
 <p>=GIORNO.SETTIMANA(DATA($B$4;S3;1);2)</p>
@@ -447,9 +447,9 @@ A è il vincitore! margine: 1
 <p>La funzione <em><strong>SE.ERRORE()</strong></em> serve a lasciare la cella vuota se il relativo indice non compare nella tabella, mentre <em><strong>CERCA.VERT()</strong></em> cerca la corrispondenza tra l'indice e il nome del mese.</p>
 <h4>E come sarà in 2024?</h4>
 <p>Basta inserire <em><strong>2024</strong></em> nel gruppo di celle in alto a sinistra ed ecco il 2024:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/23/calendario_04.jpg" alt="Calendario in una sola pagina: il 2024" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/23/responsive/calendario_04-xs.jpg 300w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-sm.jpg 480w ,https://70plus.github.io/media/posts/23/responsive/calendario_04-md.jpg 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/23/calendario_04.jpg" alt="Calendario in una sola pagina: il 2024" width="768" height="305" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/23/responsive/calendario_04-xs.jpg 300w ,https://70plus.it/media/posts/23/responsive/calendario_04-sm.jpg 480w ,https://70plus.it/media/posts/23/responsive/calendario_04-md.jpg 768w"></figure>
 <p class="align-left">Due buone notizie: ci sarà un solo venerdì 17 (in maggio, mentre il 2023 invece ce ne offre 3, in febbraio, marzo e novembre), e Natale capiterà di mercoledì, cosa che dovrebbe favorire interessanti ponti.</p>
-<p>Chi fosse interessato al file può <a href="https://70plus.github.io/Calendario_in_un_foglio.zip" target="_blank" rel="noopener noreferrer">scaricarlo da qui</a>, per entrambi i formati LibreOffice Calc ed Excel.</p>
+<p>Chi fosse interessato al file può <a href="https://70plus.it/Calendario_in_un_foglio.zip" target="_blank" rel="noopener noreferrer">scaricarlo da qui</a>, per entrambi i formati LibreOffice Calc ed Excel.</p>
 <p><em>La foto di apertura è di <a href="https://pixabay.com/it/users/webandi-1460261/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Andreas Lischka</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Pixabay</a>.</em></p>
             ]]>
         </content>
@@ -459,8 +459,8 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/pasta-e-fagioli.html"/>
-        <id>https://70plus.github.io/pasta-e-fagioli.html</id>
+        <link href="https://70plus.it/pasta-e-fagioli.html"/>
+        <id>https://70plus.it/pasta-e-fagioli.html</id>
             <category term="cucina"/>
 
         <updated>2023-02-01T08:59:20+01:00</updated>
@@ -504,8 +504,8 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/linguine-al-sugo-di-rana-pescatrice.html"/>
-        <id>https://70plus.github.io/linguine-al-sugo-di-rana-pescatrice.html</id>
+        <link href="https://70plus.it/linguine-al-sugo-di-rana-pescatrice.html"/>
+        <id>https://70plus.it/linguine-al-sugo-di-rana-pescatrice.html</id>
             <category term="cucina"/>
 
         <updated>2023-04-03T09:10:37+02:00</updated>
@@ -540,20 +540,20 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html"/>
-        <id>https://70plus.github.io/primel-come-wordle-ma-con-i-numeri-primi.html</id>
-        <media:content url="https://70plus.github.io/media/posts/19/primel_6gen23.png" medium="image" />
+        <link href="https://70plus.it/primel-come-wordle-ma-con-i-numeri-primi.html"/>
+        <id>https://70plus.it/primel-come-wordle-ma-con-i-numeri-primi.html</id>
+        <media:content url="https://70plus.it/media/posts/19/primel_6gen23.png" medium="image" />
 
         <updated>2023-01-27T17:12:26+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" alt="" />
+                        <img src="https://70plus.it/media/posts/19/primel_6gen23.png" alt="" />
                     Ho cominciato il 2023 giocando con Primel, un gioco online molto simile a Wordle, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre. Come funziona? e quali strategie di gioco si&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/19/primel_6gen23.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://70plus.it/media/posts/19/primel_6gen23.png" class="type:primaryImage" alt="" /></p>
                 <p>Ho cominciato il 2023 giocando con <a href="https://converged.yt/primel/" target="_blank" rel="nofollow noopener noreferrer">Primel</a>, un gioco online molto simile a <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="nofollow noopener noreferrer">Wordle</a>, dove però si deve indovinare non una parola del dizionario inglese ma un numero primo di 5 cifre.<br>Come funziona? e quali strategie di gioco si possono immaginare?</p>
 <h4>Le regole</h4>
 <p>Si hanno a disposizione sei tentativi per indovinare un numero primo di 5 cifre. Le cifre di ogni tentativo vengono colorate di <strong>verde</strong> (la cifra c'è, in questa posizione), oppure di <strong>giallo</strong> (la cifra c'è, ma non in questa posizione), di <strong>grigio</strong> (cifra assente).<br>Ogni giorno viene proposto un primo diverso, quindi si può giocare al massimo una volta al giorno (come con  Wordle).<br>Aspetto positivo: se si propone un numero non primo, il tentativo (evidentemente errato) non viene conteggiato come errore, è quindi relativamente facile <em>azzeccare</em> la risposta corretta nei sei tentativi a disposizione.</p>
@@ -567,25 +567,25 @@ A è il vincitore! margine: 1
 </ul>
 <h4>Il numero non ha ripetizioni</h4>
 <p>Il primo di gennaio mi è capitato proprio questo caso.</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tentativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_1gen23a-2.png" alt="primel del 23 gennaio: primi due tentativi" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_1gen23a-2-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_1gen23a-2-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_1gen23a-2-md.png 768w"></figure>
 <p>È abbastanza semplice vedere come proseguire: la penultima posizione può essere occupata solo dal 2, quindi il primo da indovinare termina per <strong>509</strong>, mentre nelle prime due posizioni vanno sistemati il 4 e lo 0, ovviamente in questo ordine.</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_1gen23.png" alt="primel dell' 1/1/2023, la soluzione" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_1gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_1gen23-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_1gen23.png" alt="primel dell' 1/1/2023, la soluzione" width="505" height="592" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_1gen23-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_1gen23-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_1gen23-md.png 768w"></figure>
 <h4>Il numero da indovinare ha una ripetizione</h4>
 <p>Il 4 gennaio mi è capitato un caso così:</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23a-2.png" alt="primel del 4 gennaio 2023: primi due tentativi" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23a-2-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_4gen23a-2.png" alt="primel del 4 gennaio 2023: primi due tentativi" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_4gen23a-2-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_4gen23a-2-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_4gen23a-2-md.png 768w"></figure>
 <p>In questo caso conosciamo 4 delle 5 cifre, di cui una utilizzata due volte, e la posizione esatta di una sola cifra.<br>Quale cifrà potrà essere ripetuta? Il primo da cercare non sarà evidentemente divisibile per 3. Ora, la somma delle 4 cifre note è: 1 + 2 + 3 + 5 = 11 = 2 mod 3, quindi si può escludere solo l'1 (la somma delle cifre farebbe 12 = 0 mod 3). Inoltre il 5 non può occupare l'ultima posizione.</p>
 <p>Tenendo fermo il 2, occorre fare delle prove:</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23b-2.png" alt="primel del 4 gennaio 2023: terzo tentativo" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23b-2-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_4gen23b-2.png" alt="primel del 4 gennaio 2023: terzo tentativo" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_4gen23b-2-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_4gen23b-2-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_4gen23b-2-md.png 768w"></figure>
 <p>Evidentemente non è il 2 ad essere presente due volte. quindi sarà il 3 o il 5. Però ho qualche informazione in più: conosco la posizione esatta del 2, e posso escludere alcune posizioni per i numeri rimanenti. L'ultima cifra, poi, non potrà essere né 2 né 5, né 1, quindi deve essere 3.<br>Provo a vedere se la cifra presente due volte sia il 5:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_4gen23.png" alt="primel del 4 gennaio 2023" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_4gen23-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_4gen23-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_4gen23.png" alt="primel del 4 gennaio 2023" width="481" height="579" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_4gen23-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_4gen23-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_4gen23-md.png 768w"></figure>
 <p>Esatto!</p>
 <h4>Ancora più difficile: due ripetizioni</h4>
 <p>Oggi 23 gennaio 2023, mi è capitata questa situazione:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_a.png" alt="primel del 23 gennaio 2023" width="485" height="582" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_a-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_23gen23_a.png" alt="primel del 23 gennaio 2023" width="485" height="582" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_23gen23_a-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_a-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_a-md.png 768w"></figure>
 <p>Sono presenti solo tre cifre: 5, 6 e 9, la cui somma modulo 3 fa 2. Posso quindi escludere solo che le due cifre mancanti siano due 5 (la somma delle cifre sarebbe 30).<br>Tenendo fermo il 9, provo a verificare se le cifre da aggiungere sono il 6 e il 9:</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_c-2.png" alt="primel del 23 gennaio 2023: terzo tentativo" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_c-2-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_23gen23_c-2.png" alt="primel del 23 gennaio 2023: terzo tentativo" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_23gen23_c-2-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_c-2-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_c-2-md.png 768w"></figure>
 <p>Ok per il secondo 9, ma di 6 ce n'è uno solo, anche se adesso ne conosco la posizione.<br>L'ultima cifra da trovare potrebbe essere quindi un altro 9, oppure un 5. In seconda posizione non posso mettere un 5, quindi inserisco il 9. Il quarta posizione non può andare un 9, quindi metto il 5 e, infine, in terza posizione non mi rimane che sistemare un 9:</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/19/primel_23gen23_b.png" alt="primel del 23 gennaio 2023" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-xs.png 300w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-sm.png 480w ,https://70plus.github.io/media/posts/19/responsive/primel_23gen23_b-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/19/primel_23gen23_b.png" alt="primel del 23 gennaio 2023" width="472" height="584" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/19/responsive/primel_23gen23_b-xs.png 300w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_b-sm.png 480w ,https://70plus.it/media/posts/19/responsive/primel_23gen23_b-md.png 768w"></figure>
 <h4>Non è poi così difficile, si direbbe</h4>
 <p>Nel gioco non vengono conteggiati i tentativi errati per aver inserito un numero non primo. È un aiuto notevole, grazie anche a questo finora me la sono sempre cavata con 4 tentativi, qualche volta con 3.</p>
 <p>Vedremo nel seguito.</p>
@@ -598,22 +598,22 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/prolog-e-la-programmazione-logica.html"/>
-        <id>https://70plus.github.io/prolog-e-la-programmazione-logica.html</id>
-        <media:content url="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" medium="image" />
+        <link href="https://70plus.it/prolog-e-la-programmazione-logica.html"/>
+        <id>https://70plus.it/prolog-e-la-programmazione-logica.html</id>
+        <media:content url="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" medium="image" />
             <category term="Ricordi"/>
             <category term="Cose informatiche"/>
 
         <updated>2023-01-16T22:11:36+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
+                        <img src="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
                     Il mio primo incontro con il Prolog e la programmazione logica risale ai primi anni '90 del secolo scorso, quando trovai un compilatore per il linguaggio Prolog installato sul pc assegnato a un tesista che avevo seguito in qualità di&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/18/alien-g2dd5ccc42_1920.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" class="type:primaryImage" alt="" /></p>
                 <p>Il mio primo incontro con il <a href="https://it.wikipedia.org/wiki/Prolog" target="_blank" rel="nofollow noopener noreferrer">Prolog</a> e la <strong>programmazione logica</strong> risale ai primi anni '90 del secolo scorso, quando trovai un <strong>compilatore per il linguaggio Prolog</strong> installato sul pc assegnato a un tesista che avevo seguito in qualità di relatore esterno.<br>In quegli anni mi capitò diverse volte di essere relatore esterno di tesi di laurea presso l'Ateneo di Pisa. Il laureando di turno svolgeva il suo lavoro di ricerca presso i laboratori Olivetti di Ivrea, affidato a un interno (io, in questi casi), lavorando su un pc messo a disposizione dalla Olivetti stessa.<br>Si trattava in genere di pc utilizzati per test, che venivano appunto distratti per alcuni mesi. Una volta discussa la tesi, il laureando (ormai laureato) liberava il pc, rimuovendo file e programmi che aveva caricato sul pc.</p>
 <h4>Il Prolog, per fare cosa</h4>
 <p>Quel compilatore Prolog rimase invece installato e, complice l'avvicinarsi delle ferie con il conseguente calo del carico di lavoro, nelle settimane successive spesi diverse ore a giocare con la programmazione logica.<br>Del codice che mi divertii a mettere insieme, ricordo due programmi: un inventario dei libri che avevo in casa e un gestore di pianificazione operativa con i <a href="https://it.wikipedia.org/wiki/Diagramma_di_Gantt" target="_blank" rel="nofollow noopener noreferrer">diagrammi di Gantt</a>.</p>
@@ -690,23 +690,23 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/disegnare-un-cuore.html"/>
-        <id>https://70plus.github.io/disegnare-un-cuore.html</id>
-        <media:content url="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" medium="image" />
+        <link href="https://70plus.it/disegnare-un-cuore.html"/>
+        <id>https://70plus.it/disegnare-un-cuore.html</id>
+        <media:content url="https://70plus.it/media/posts/17/noce_cuore-2.jpg" medium="image" />
             <category term="Ricordi"/>
 
         <updated>2023-01-13T09:00:40+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" alt="cuore o noce?" />
+                        <img src="https://70plus.it/media/posts/17/noce_cuore-2.jpg" alt="cuore o noce?" />
                     Correva il 2006 quando pubblicai nel mio blog Elaborando, da poco creato su Libero, il post: Disegnare un cuore. A parte rifare il verso ad Art Attack, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico. Mai&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.github.io/media/posts/17/noce_cuore-2.jpg" class="type:primaryImage" alt="cuore o noce?" /></p>
+                    <p><img src="https://70plus.it/media/posts/17/noce_cuore-2.jpg" class="type:primaryImage" alt="cuore o noce?" /></p>
                 <p>Correva il 2006 quando pubblicai nel mio blog <em><strong>Elaborando</strong></em>, da poco creato su Libero, il post: <em><strong>Disegnare un cuore</strong></em>.</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/17/cuore.png" alt="Disegnare un cuore - post su Elaborando" width="499" height="431" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/17/responsive/cuore-xs.png 300w ,https://70plus.github.io/media/posts/17/responsive/cuore-sm.png 480w ,https://70plus.github.io/media/posts/17/responsive/cuore-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/17/cuore.png" alt="Disegnare un cuore - post su Elaborando" width="499" height="431" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/17/responsive/cuore-xs.png 300w ,https://70plus.it/media/posts/17/responsive/cuore-sm.png 480w ,https://70plus.it/media/posts/17/responsive/cuore-md.png 768w"></figure>
 <p>A parte rifare il verso ad <strong>Art Attack</strong>, mitico programma televisivo per i ragazzi, il post riportava un semplice espediente grafico.<br>Mai avrei pensato che quel post avrebbe procurato una fetta rilevante del traffico al blog, negli anni che seguirono.<br>Dettaglio interessante, la pagina riceveva visite in modo particolare a ridosso del <strong>14 febbraio</strong>, probabilmente rispondendo all'esigenza diffusa di trovare in extremis una carineria da dedicare alla propria lei.</p>
 <h4>Io e il SEO</h4>
 <p>Non so se quel post oggi riscuota o meno un residuo successo, i contatori del blog sono saltati, per mancata manutenzione. All'epoca a portare traffico era il motore di ricerca Google, con diverse chiavi sul tema richiamato dal titolo del post: "<em>Disegnare un cuore</em>", ma erano gettonate anche: "<em>come disegnare un cuore</em>", "<em>come disegnare un cuore perfetto</em>", "<em>disegna un cuore</em>", "<em>cuori da disegnare</em>",  "<em>disegnare cuore</em>", "<em>come si disegna un cuore</em>".<br>In queste <em>query</em> il mio post rimase a lungo stabile nella prima decina di risultati. Poi sono arrivati video su youtube e proposte alternative, e il mio post è scivolato via via verso l'oblio.</p>
@@ -726,8 +726,8 @@ A è il vincitore! margine: 1
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.github.io/le-mie-note-personali-con-obsidian.html"/>
-        <id>https://70plus.github.io/le-mie-note-personali-con-obsidian.html</id>
+        <link href="https://70plus.it/le-mie-note-personali-con-obsidian.html"/>
+        <id>https://70plus.it/le-mie-note-personali-con-obsidian.html</id>
             <category term="Cose informatiche"/>
 
         <updated>2023-01-09T16:52:10+01:00</updated>
@@ -749,13 +749,13 @@ A è il vincitore! margine: 1
 </ol>
 <h4>L'architettura del mio ambiente di note personali con Obsidian</h4>
 <p>Utilizzo normalmente un pc con Xubuntu Linux, un MacBook e, più di rado, un pc Windows 11. Non può mancare uno smartphone per la mobilità, nel mio caso un Android 12.<br>Come premesso, per l'accesso da più dispositivi mi affido a un account gratuito di Dropbox. Questa è l'architettura che ho realizzato:</p>
-<figure class="post__image"><img loading="lazy"  src="https://70plus.github.io/media/posts/16/architettura.png" alt="Architettura multi-dispositivo, realizzata con Obsidian e Dropbox" width="630" height="313" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/16/responsive/architettura-xs.png 300w ,https://70plus.github.io/media/posts/16/responsive/architettura-sm.png 480w ,https://70plus.github.io/media/posts/16/responsive/architettura-md.png 768w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/16/architettura.png" alt="Architettura multi-dispositivo, realizzata con Obsidian e Dropbox" width="630" height="313" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/16/responsive/architettura-xs.png 300w ,https://70plus.it/media/posts/16/responsive/architettura-sm.png 480w ,https://70plus.it/media/posts/16/responsive/architettura-md.png 768w"></figure>
 <p>La struttura di file e cartelle della base dati (il v<strong>ault</strong> nella terminologia Obsidian), è ospitata nella cartella Dropbox, sincronizzata tra i vari dispositivi.<br>Il piano gratuito di Dropbox consente di collegare fino a 3 dispositivi, quindi per forza di cose il pc Windows, utilizzato più di rado, è normalmente fuori gioco, come evidenziato dalla linea tratteggiata.</p>
 <p>Sullo smartphone non ho installato l'app Obsidian, perché da mobile mi limito a <em>catturare</em> un'idea, memorizzandola in un file di testo creato con l'app Dropbox. Basta salvarla con estensione .md, riporla in una cartella particolare del proprio <em>vault</em> Obsidian, per poi ritrovarsela accedendo al pc linux o al MacBook.<br>Particolare non trascurabile, la nota può essere <em>dettata</em> allo smartphone, semplificando ulteriormente il tutto.</p>
 <h4>La struttura delle note</h4>
 <p>Via via che si salvano note, diventa sempre più complicato raccapezzarsi quando si vuol riaprire una particolare nota. Sono certamente di aiuto i <strong>tag</strong> che Obsidian consente di aggiungere a una singola nota, e naturalmente il motore di ricerca interno all'applicazione.</p>
 <p>È però utile organizzare le annotazioni secondo una struttura semplice, basata su poche regole, ma funzionali.<br>Ho organizzato le mie note secondo la struttura che si vede nel diagramma qui sotto.</p>
-<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.github.io/media/posts/16/struttura.png" alt="Struttura organizzativa delle note nel mio vault Obsidian" width="509" height="345" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.github.io/media/posts/16/responsive/struttura-xs.png 300w ,https://70plus.github.io/media/posts/16/responsive/struttura-sm.png 480w ,https://70plus.github.io/media/posts/16/responsive/struttura-md.png 768w"></figure>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/16/struttura.png" alt="Struttura organizzativa delle note nel mio vault Obsidian" width="509" height="345" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/16/responsive/struttura-xs.png 300w ,https://70plus.it/media/posts/16/responsive/struttura-sm.png 480w ,https://70plus.it/media/posts/16/responsive/struttura-md.png 768w"></figure>
 <p>In dettaglio:</p>
 <ul>
 <li>il vault è organizzato per <strong>aree di interesse</strong> (es.: Linux, sito 70plus, math, ...);</li>
