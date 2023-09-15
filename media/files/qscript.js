@@ -52,6 +52,8 @@ document.getElementById("copia").addEventListener("click", function () {
     for (i = 0; i < keyVai.length;i++) {
       testoCopiato = testoCopiato.replaceAll(keyVai[i], ``);
     }
+    testoCopiato = testoCopiato.replaceAll(`<b>`, `**`);
+    testoCopiato = testoCopiato.replaceAll(`</b>`, `**`);
     testoCopiato = testoCopiato.replace(/<br\s*[\/]?>/gi, "\n").replace(/&nbsp;/g, " ");
     navigator.clipboard.writeText(testoCopiato)
     .then(() => {})
@@ -123,7 +125,7 @@ vaiButton.addEventListener("click", function () {
     formQ.innerHTML = '';
 // aggiungi le opzioni della domanda corrente
     document.getElementById("testQ").innerHTML = '<b>' + test[idxDomanda+2][idTestoDom] + '</b>';
-    storicoDiv.insertAdjacentHTML("beforeend", `Domanda n.ro ` + (idxDomanda+1) + `: ` + test[idxDomanda+2][idTestoDom] + '<br><br>');
+    storicoDiv.insertAdjacentHTML("beforeend", `<b>Domanda n.ro ` + (idxDomanda+1) + `: ` + test[idxDomanda+2][idTestoDom] + '</b><br><br>');
     let listaOpt = test[idxDomanda+2][idListaRisp];
       for (let i = 0; i < listaOpt.length; i++) {
         const div = document.createElement("div");
@@ -211,8 +213,8 @@ scegliTest.addEventListener("change", function() {
     descrTest = test[idDescrTest];
     nDomande = test.length - 2;
     storicoDiv.innerHTML = "";
-    storicoDiv.insertAdjacentHTML("beforeend", `Test: `+ nomeTest +`<br>`);
-    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `Descrizione del test:<br>` + descrTest + `<br>`);
+    storicoDiv.insertAdjacentHTML("beforeend", `<b>Test: `+ nomeTest +`</b><br>`);
+    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `<b>Descrizione del test:</b><br>` + descrTest + `<br>`);
     storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br><br>`);
     idxDomanda = 0;
     testRunning = true;
