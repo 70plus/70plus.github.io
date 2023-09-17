@@ -9,7 +9,7 @@ let test, idxTest, nomeTest, nDomande, idxDomanda, flag;
 let testRunning = false;
 let optionElement;
 let nRispEsatte, strRisp;
-const keyVai = [`Scegli un test<br>`,
+const keyVai = [`Scegli dal menu un test da eseguire<br>`,
       `<b>Tocca "Vai" per cominciare</b><br><br>`,
       `<b>Tocca "Vai" per la prossima domanda</b><br><br>`,
       `<b>Il test è terminato, per continuare scegli un altro test</b><br>`,
