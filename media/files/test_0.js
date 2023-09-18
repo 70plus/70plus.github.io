@@ -1,6 +1,6 @@
 listaTest = listaTest.concat([
     ['test_0', `I termini dell'informatica`,
-        `Chrome, Google, browser, sistema operativo, sicurezza, download, sappiamo destreggiarci tra questi termini?<br>Quella che segue è una panoramica sui temi oggetto del corso di informatica.<br>Nota: ciascuna domanda può prevedere una o più opzioni di risposta.`,
+        `Chrome, Google, browser, sistema operativo, sicurezza, download, sappiamo destreggiarci tra i termini dell'Informatica?<br>Nota: ciascuna domanda può prevedere una o più risposte corrette.`,
         [`Quale applicazione (o programma) si utilizza per accedere a Internet?`,
             [`Browser`,
              `Google`,

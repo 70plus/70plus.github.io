@@ -23,7 +23,7 @@ html * {
     display: flex;
     align-items: center; /* center items vertically */
     height: 60px; /* set height for container */
-    background-color: #01a7c1;
+    background-color: #3daf1e;
 }
 
 .logo-image {
@@ -34,6 +34,7 @@ html * {
 .logo-text {
     flex-basis: calc(100% - 60px);
     text-align: center;
+    color: white;
 }
 
 .spaziatura {
@@ -43,11 +44,16 @@ html * {
 
 .storico {
     height: 350px;
-    background-color: #63D2FF;
+    background-color: #f1fcee;
     overflow-y: auto;
     border-radius: 4px;
     padding-right: 4px;
     padding-left: 4px;
+}
+
+.storico b {
+  font-weight: bold;
+  font-size: inherit;
 }
 
 .area-tasti {
@@ -72,6 +78,7 @@ html * {
     height: 50px;
     font-size: 16px;
     padding: 2px;
+    background-color: #eeeeee;
 }
 .bottone-ovale {
     border-color: white;
@@ -80,6 +87,7 @@ html * {
     height: 50px;
     font-size: 16px;
     padding: 2px;
+    background-color: #eeeeee;
 }
 .dropdown {
     backgroundcolor: #f9f9f9;
