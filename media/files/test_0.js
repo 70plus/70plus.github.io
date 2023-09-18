@@ -14,10 +14,9 @@ listaTest = listaTest.concat([
             [`Windows 11`,
              `Android`,
              `iOS`,
-             `Linux`,
              `Instagram`,
              `Tik Tok`
-            ], [0,1,2,3],
+            ], [0,1,2],
             `Il sistema operativo è il cuore del dispositivo che utilizziamo, pc o smartphone che sia.<br>I più diffusi sistemi operativi presenti sul mercato sono: Windows 10 e 11 su pc, Android e iOS sugli smartphone.<br>Nota: le applicazioni che utilizziamo sono specifiche del sistema operativo del dispositivo, e si scaricano dai relativi Store.`
         ],
         [`Con quali applicazioni si accede alla posta elettronica?`,
@@ -52,6 +51,14 @@ listaTest = listaTest.concat([
              `Con strumenti paranormali`
             ], [0,1],
             `Esistono essenzialmente due metodi per il trasferimento di dati e immagini tra pc e smartphone:<br>- diretto, via cavetto, Bluetooth e simili;<br>- appoggiandosi a un'applicazione come l'email o Whatsapp sul pc.<br>Si può, ad esempio, inviare a se stessi un Whatsapp con l'immagine, e poi scaricarla sul pc accedendo al proprio Whatsapp con un browser.`
+        ],
+        [`Cosa si può fare con uno strumento di Intelligenza Artificiale (AI)?`,
+            [`Scrivere la sintesi di un testo`,
+             `Comporre un testo con lo stile di un particolare scrittore`,
+             `Comporre un'immagine ispirata a una frase`,
+             `Scrivere il codice di una pagina web`
+            ], [0,1,2,3],
+            `Gli strumenti di Intelligenza artificiale, come ChatGPT, utilizzano algoritmi di apprendimento e di elaborazione per risolevere problemi, generare testi e immagini, simulando capacità ordinariamente riferite agli esseri umani. Nel corso vedremo qualche semplice e divertente applicazione.`
         ]
     ]
 ]);

@@ -9,6 +9,7 @@ let test, idxTest, nomeTest, nDomande, idxDomanda, flag;
 let testRunning = false;
 let optionElement;
 let nRispEsatte, strRisp;
+let wt,wa;
 const keyVai = [`Scegli dal menu un test da eseguire<br>`,
       `<b>Tocca "Vai" per cominciare</b><br><br>`,
       `<b>Tocca "Vai" per la prossima domanda</b><br><br>`,
@@ -186,7 +187,7 @@ const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 const divTop = storicoDiv.offsetTop;
 const remainingHeight = hWindow - (divTop - scrollTop) - 2;
 storicoDiv.style.height = `${remainingHeight}px`;
-// storicoDiv.style.fontSize = Math.round(wWindow * 30 / 13 / 50) + "px";
+storicoDiv.style.fontSize = `90%`;
 
 // Quanti sono i test?
 let nTests = listaTest.length;
@@ -202,6 +203,18 @@ listaSelTest.forEach(option => {
   optionElement.text = option;
   scegliTest.add(optionElement);
 });
+// preparazione del dropdown menu per la selezione dell'azione da eseguire sulle statistiche
+listaSelAzione = [`Scegli un'azione`, `Mostra le statistiche`, `Azzera le statistiche`];
+listaSelAzione.forEach(option => {
+  optionElement = document.createElement('option');
+  optionElement.text = option;
+  scegliAzione.add(optionElement);
+});
+// adatta la larghezza dei due select
+wt = scegliTest.offsetWidth;
+wa = scegliAzione.offsetWidth;
+scegliTest.style.width = Math.max(wt,wa) + "px";
+scegliAzione.style.width = Math.max(wt,wa) + "px";
 // scelta del test da eseguire
 scegliTest.addEventListener("change", function() {
   let testSelezionato = this.value;
@@ -222,13 +235,6 @@ scegliTest.addEventListener("change", function() {
     nRispEsatte = 0;
     storicoDiv.insertAdjacentHTML("beforeend", keyVai[1]);
   }
-});
-// preparazione del dropdown menu per la selezione dell'azione da eseguire sulle statistiche
-listaSelAzione = [`Scegli un'azione`, `Mostra le statistiche`, `Azzera le statistiche`];
-listaSelAzione.forEach(option => {
-  optionElement = document.createElement('option');
-  optionElement.text = option;
-  scegliAzione.add(optionElement);
 });
 // azione da eseguire sulle statistiche
 scegliAzione.addEventListener("change", function() {
