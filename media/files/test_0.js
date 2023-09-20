@@ -58,7 +58,7 @@ listaTest = listaTest.concat([
              `Comporre un'immagine ispirata a una frase`,
              `Scrivere il codice di una pagina web`
             ], [0,1,2,3],
-            `Gli strumenti di Intelligenza artificiale, come ChatGPT, utilizzano algoritmi di apprendimento e di elaborazione per risolevere problemi, generare testi e immagini, simulando capacità ordinariamente riferite agli esseri umani. Nel corso vedremo qualche semplice e divertente applicazione.`
+            `Gli strumenti di Intelligenza artificiale, come ChatGPT, utilizzano algoritmi di apprendimento e di elaborazione per risolvere problemi, generare testi e immagini, simulando capacità ordinariamente riferite agli esseri umani. Nel corso vedremo qualche semplice e divertente applicazione.`
         ]
     ]
 ]);

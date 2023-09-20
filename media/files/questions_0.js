@@ -1,7 +1,7 @@
 /*
+domN = [testoDom,[risp1,risp2,...,rispP],[indiceRisp1,...indiceRispQ],spiega];
+test1 = [idTest1, nomeTest1, descrTest, dom1,dom2,...,domM];
 listaTest = [test1,test2,...,testN];
-test1 = [idTest1, nomeTest1, descrTest, [dom1,dom2,...,domM]];
-dom1 = [testoDom,[risp1,risp2,...,rispP],[indiceRisp1,...indiceRispQ],[spiega]];
 */
 let idTest = 0;
 let idNomeTest = idTest + 1;
