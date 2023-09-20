@@ -63,8 +63,6 @@ document.getElementById("copia").addEventListener("click", function () {
     .catch(() => {});
     infoT.innerHTML = keyVai[4];
     infoG.showModal();
-//    storicoDiv.insertAdjacentHTML("beforeend", keyVai[4]);
-//    storicoDiv.scrollTop = storicoDiv.scrollHeight;
 });
 
 // bottone ok di chiusura del box di dialogo
@@ -101,7 +99,6 @@ okButton.addEventListener("click", () => {
   if (++idxDomanda < test.length){
     storicoDiv.insertAdjacentHTML("beforeend", keyVai[2]);
   } else {
-    idxDomanda = idDomande;
     testRunning = false;
     strRisp = ` domande su `;
     if (nRispEsatte == 1) {strRisp = ` domanda su `;}
@@ -147,6 +144,55 @@ vaiButton.addEventListener("click", function () {
   } else {
         storicoDiv.insertAdjacentHTML("beforeend", keyVai[5]);
         storicoDiv.scrollTop = storicoDiv.scrollHeight;
+  }
+});
+// scelta del test da eseguire
+scegliTest.addEventListener("change", function() {
+  let testSelezionato = this.value;
+  idxTest = scegliTest.selectedIndex - 1;
+  scegliTest.selectedIndex = 0;
+// stampa i dettagli del test selezionato
+  if (idxTest >= 0) {
+    test = listaTest[idxTest];
+    nomeTest = test[idNomeTest];
+    descrTest = test[idDescrTest];
+    nDomande = test.length - idDomande;
+    storicoDiv.innerHTML = "";
+    storicoDiv.insertAdjacentHTML("beforeend", `<b>Test: `+ nomeTest +`</b><br>`);
+     storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `<b>Descrizione del test:</b><br>` + descrTest + `<br>`);
+    if (nDomande > 0) {
+      storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br><br>`);
+      idxDomanda = idDomande;
+      testRunning = true;
+      nRispEsatte = 0;
+      storicoDiv.insertAdjacentHTML("beforeend", keyVai[1]);
+    } else {
+      storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);}
+  }
+});
+// azione da eseguire sulle statistiche
+scegliAzione.addEventListener("change", function() {
+  let azioneSelezionata = this.value;
+  scegliAzione.selectedIndex = 0;
+  if (azioneSelezionata == `Mostra le statistiche`) {
+    storicoDiv.innerHTML = "<b>Ecco i tuoi migliori risultati nei test:</b><br><br>";
+    for (let i = 0; i < nTests; i++) {
+    storicoDiv.insertAdjacentHTML("beforeend", listaTest[i][idNomeTest] + `<br>`);
+      if (!localStorage.getItem(listaTest[i][idTest])) {
+        storicoDiv.insertAdjacentHTML("beforeend", sp2 + `non hai ancora eseguito il test` + `<br>`);
+      } else {
+        nRispEsatte = localStorage.getItem(listaTest[i][idTest]);
+        strRisp = ` risposte esatte su `;
+        if (nRispEsatte == 1) {strRisp = ` risposta esatta su `;}
+        storicoDiv.insertAdjacentHTML("beforeend", sp2 + nRispEsatte + strRisp + (listaTest[i].length - idDomande) + `<br>`);
+      }
+    }
+  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);
+  }
+  if (azioneSelezionata == `Azzera le statistiche`) {
+    localStorage.clear();
+    storicoDiv.innerHTML = "Hai cancellato le tue statistiche<br>";
+    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);
   }
 });
 
@@ -215,51 +261,5 @@ wt = scegliTest.offsetWidth;
 wa = scegliAzione.offsetWidth;
 scegliTest.style.width = Math.max(wt,wa) + "px";
 scegliAzione.style.width = Math.max(wt,wa) + "px";
-// scelta del test da eseguire
-scegliTest.addEventListener("change", function() {
-  let testSelezionato = this.value;
-  idxTest = scegliTest.selectedIndex - 1;
-  scegliTest.selectedIndex = 0;
-// stampa i dettagli del test selezionato
-  if (idxTest >= 0) {
-    test = listaTest[idxTest];
-    nomeTest = test[idNomeTest];
-    descrTest = test[idDescrTest];
-    nDomande = test.length - idDomande;
-    storicoDiv.innerHTML = "";
-    storicoDiv.insertAdjacentHTML("beforeend", `<b>Test: `+ nomeTest +`</b><br>`);
-    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + sp2 + `<b>Descrizione del test:</b><br>` + descrTest + `<br>`);
-    storicoDiv.insertAdjacentHTML("beforeend", sp2 + `Numero di domande: ` + nDomande + `<br><br>`);
-    idxDomanda = idDomande;
-    testRunning = true;
-    nRispEsatte = 0;
-    storicoDiv.insertAdjacentHTML("beforeend", keyVai[1]);
-  }
-});
-// azione da eseguire sulle statistiche
-scegliAzione.addEventListener("change", function() {
-  let azioneSelezionata = this.value;
-  scegliAzione.selectedIndex = 0;
-  if (azioneSelezionata == `Mostra le statistiche`) {
-    storicoDiv.innerHTML = "<b>Ecco i tuoi migliori risultati nei test:</b><br><br>";
-    for (let i = 0; i < nTests; i++) {
-    storicoDiv.insertAdjacentHTML("beforeend", listaTest[i][idNomeTest] + `<br>`);
-      if (!localStorage.getItem(listaTest[i][idTest])) {
-        storicoDiv.insertAdjacentHTML("beforeend", sp2 + `non hai ancora eseguito il test` + `<br>`);
-      } else {
-        nRispEsatte = localStorage.getItem(listaTest[i][idTest]);
-        strRisp = ` risposte esatte su `;
-        if (nRispEsatte == 1) {strRisp = ` risposta esatta su `;}
-        storicoDiv.insertAdjacentHTML("beforeend", sp2 + nRispEsatte + strRisp + (listaTest[i].length - idDomande) + `<br>`);
-      }
-    }
-  storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);
-  }
-  if (azioneSelezionata == `Azzera le statistiche`) {
-    localStorage.clear();
-    storicoDiv.innerHTML = "Hai cancellato le tue statistiche<br>";
-    storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);
-  }
-});
-
+//
 storicoDiv.insertAdjacentHTML("beforeend", keyVai[0]);
