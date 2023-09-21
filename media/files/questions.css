@@ -23,7 +23,7 @@ html * {
     display: flex;
     align-items: center; /* center items vertically */
     height: 60px; /* set height for container */
-    background-color: #3daf1e;
+    background-color: #6a994e;
 }
 
 .logo-image {
@@ -44,7 +44,7 @@ html * {
 
 .storico {
     height: 350px;
-    background-color: #f1fcee;
+    background-color: #f2e8cf;
     overflow-y: auto;
     border-radius: 4px;
     padding-right: 4px;
@@ -78,25 +78,25 @@ html * {
     height: 50px;
     font-size: 16px;
     padding: 2px;
-    background-color: #eeeeee;
+    background-color: #a7c957;
 }
 .bottone-ovale {
     border-color: white;
     border-radius: 20%;
     width: 50px;
     height: 50px;
-    font-size: 16px;
+    font-size: 18px;
     padding: 2px;
-    background-color: #eeeeee;
+    background-color: #a7c957;
 }
 .dropdown {
-    backgroundcolor: #f9f9f9;
+    background-color: #a7c957;
     color: black;
     padding: 4px;
     border: none;
     cursor: pointer;
 }
 .dropdown option {
-    background-color: #f1f1f1;
+    background-color: #a7c957;
     color: black;
 }
