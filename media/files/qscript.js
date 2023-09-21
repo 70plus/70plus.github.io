@@ -5,6 +5,7 @@
 let sp2 = `&nbsp;&nbsp;`;
 let sp4 = sp2 + sp2;
 let sp6 = sp4 + sp2;
+let riduz = `90%`;
 let test, idxTest, nomeTest, nDomande, idxDomanda, flag;
 let testRunning = false;
 let optionElement;
@@ -233,8 +234,11 @@ const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 const divTop = storicoDiv.offsetTop;
 const remainingHeight = hWindow - (divTop - scrollTop) - 2;
 storicoDiv.style.height = `${remainingHeight}px`;
-if (hWindow < 700) {storicoDiv.style.fontSize = `90%`;}
-
+if (hWindow < 700) {
+  storicoDiv.style.fontSize = riduz;
+  scegliTest.style.fontSize = riduz;
+  scegliAzione.style.fontSize = riduz;
+}
 // Quanti sono i test?
 let nTests = listaTest.length;
 // predisponi dropdown menu per la scelta del test
