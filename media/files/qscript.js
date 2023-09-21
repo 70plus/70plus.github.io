@@ -238,6 +238,7 @@ if (hWindow < 700) {
   storicoDiv.style.fontSize = riduz;
   scegliTest.style.fontSize = riduz;
   scegliAzione.style.fontSize = riduz;
+  storicoDiv.insertAdjacentHTML("beforeend", riduz);
 }
 // Quanti sono i test?
 let nTests = listaTest.length;
