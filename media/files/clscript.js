@@ -1,21 +1,11 @@
 const spot = document.getElementById('spot');
 const firstSpotHTML = spot.innerHTML;
 let counter = document.getElementById('counter');
-let clickCount = 1;
+let clickCount = 0;
 let maxCount = 11;
 let maxWait = 3000;
 let timer;
 let startTime = Date.now();
-
-// Calculate the minimum dimension of the screen (width or height)
-const minDimension = Math.min(window.innerWidth, window.innerHeight);
-
-// Adjust spot size and counter font size
-const spotDiameter = Math.floor(minDimension / 4);
-spot.style.width = spotDiameter + 'px';
-spot.style.height = spotDiameter + 'px';
-const fontSize = Math.floor(minDimension / 25);
-spot.style.fontSize = fontSize + 'px';
 
 function getRandomPosition() {
     const screenWidth = window.innerWidth - 200;
@@ -24,11 +14,6 @@ function getRandomPosition() {
     const randomY = Math.floor(Math.random() * screenHeight);
     return { x: randomX, y: randomY };
 }
-
-// Set the initial random position for the spot
-const initialPosition = getRandomPosition();
-spot.style.left = initialPosition.x + 'px';
-spot.style.top = initialPosition.y + 'px';
 
 function moveSpot() {
     if (clickCount === maxCount) {
@@ -50,7 +35,7 @@ function updateCounter() {
     if (clickCount === maxCount) {
         clearInterval(timer);
         const elapsedTime = Math.floor((Date.now() - startTime) / 100) / 10; // Calculate elapsed time in seconds
-        spot.textContent = `Tempo: ${elapsedTime} secondi`;
+        spot.innerHTML = `Tempo:<br>${elapsedTime} sec.<br>Vai!`;
         spot.onclick = function() {
             restartGame();
         };
@@ -61,6 +46,7 @@ function restartGame() {
     clickCount = 1;
     spot.innerHTML = firstSpotHTML;
     counter = document.getElementById('counter');
+    counter.textContent = clickCount;
     startTime = Date.now();
     spot.onclick = function() {
         if (clickCount < maxCount) {
@@ -71,12 +57,23 @@ function restartGame() {
     moveSpot();
 }
 
+// Calculate the minimum dimension of the screen (width or height)
+const minDimension = Math.min(window.innerWidth, window.innerHeight);
+
+// Adjust spot size and counter font size
+const spotDiameter = Math.floor(minDimension / 4);
+spot.style.width = spotDiameter + 'px';
+spot.style.height = spotDiameter + 'px';
+const fontSize = Math.floor(minDimension / 25);
+spot.style.fontSize = fontSize + 'px';
+
+// Set the initial center position for the spot
+spot.style.left = ((window.innerWidth - 200) / 2) + 'px';
+spot.style.top = ((window.innerHeight - 200) / 2) + 'px';
+
 spot.onclick = function() {
     if (clickCount < maxCount) {
         updateCounter();
         moveSpot();
     }
 };
-
-// Start the initial timer
-timer = setInterval(moveSpot, maxWait);
