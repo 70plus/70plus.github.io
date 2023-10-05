@@ -15,7 +15,7 @@ const spotDiameter = Math.floor(minDimension / 4);
 spot.style.width = spotDiameter + 'px';
 spot.style.height = spotDiameter + 'px';
 const fontSize = Math.floor(minDimension / 25);
-counter.style.fontSize = fontSize + 'px';
+spot.style.fontSize = fontSize + 'px';
 
 function getRandomPosition() {
     const screenWidth = window.innerWidth - 200;
