@@ -4,8 +4,7 @@ let counter = document.getElementById('counter');
 let clickCount = 0;
 let maxCount = 11;
 let maxWait = 3000;
-let timer;
-let startTime = Date.now();
+let timer, startTime;
 
 function getRandomPosition() {
     const screenWidth = window.innerWidth - 200;
@@ -49,6 +48,9 @@ function restartGame() {
     counter.textContent = clickCount;
     startTime = Date.now();
     spot.onclick = function() {
+        if (clickCount == 0) {
+            startTime = Date.now();
+        }
         if (clickCount < maxCount) {
             updateCounter();
             moveSpot();
@@ -72,8 +74,11 @@ spot.style.left = ((window.innerWidth - 200) / 2) + 'px';
 spot.style.top = ((window.innerHeight - 200) / 2) + 'px';
 
 spot.onclick = function() {
+    if (clickCount == 0) {
+        startTime = Date.now();
+    }
     if (clickCount < maxCount) {
         updateCounter();
         moveSpot();
     }
-};
+}
