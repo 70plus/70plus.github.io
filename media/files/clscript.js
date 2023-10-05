@@ -7,6 +7,16 @@ let maxWait = 3000;
 let timer;
 let startTime = Date.now();
 
+// Calculate the minimum dimension of the screen (width or height)
+const minDimension = Math.min(window.innerWidth, window.innerHeight);
+
+// Adjust spot size and counter font size
+const spotDiameter = Math.floor(minDimension / 4);
+spot.style.width = spotDiameter + 'px';
+spot.style.height = spotDiameter + 'px';
+const fontSize = Math.floor(minDimension / 25);
+counter.style.fontSize = fontSize + 'px';
+
 function getRandomPosition() {
     const screenWidth = window.innerWidth - 200;
     const screenHeight = window.innerHeight - 200;
