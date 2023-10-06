@@ -8,6 +8,24 @@ body, html {
     background-repeat: no-repeat;
 }
 
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.logo-container img {
+    width: 60px; /* Set a specific width for your logo */
+    height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Apply a box shadow for elevation effect */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.logo-container img:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8); /* Change box shadow on hover for more elevation */
+}
+
 .spot {
     width: 200px;
     height: 200px;
