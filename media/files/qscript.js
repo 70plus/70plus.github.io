@@ -11,7 +11,7 @@ let testRunning = false;
 let optionElement;
 let nRispEsatte, strRisp;
 let wt,wa;
-const keyVai = [`Scegli dal menu un test da eseguire<br>`,
+const keyVai = [`Metti alla prova le tue competenze informatiche!<br><br>Scegli dal menu un test da eseguire<br>`,
       `<b>Tocca "Vai" per cominciare</b><br><br>`,
       `<b>Tocca "Vai" per la prossima domanda</b><br><br>`,
       `<b>Il test è terminato, per continuare scegli un altro test</b><br>`,
