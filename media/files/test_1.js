@@ -8,7 +8,7 @@ listaTest = listaTest.concat([
              `Windows`,
              `Word`
             ], [0,1],
-            `L'<b>hardware</b> è il componente fisico del dispositivo, ciò che si può toccare (e si può rompere!)<br><b>PC, laptop, desktop</b> sono termini che indicano un calcolatore per uso personale, genericamente indicato con pc.<br>Lo <b>smartphone</b> è un telefono "smart", che può compiere funzioni molto più complessse della semplice telefonata. <br><b>Android e Windows</b> sono invece sistemi operativi e <b>Word</b> un'applicazione.`
+            `L'<b>hardware</b> è il componente fisico del dispositivo, ciò che si può toccare (e si può rompere!)<br><b>PC, laptop, desktop</b> sono termini che indicano un calcolatore per uso personale, genericamente indicato con <b>pc</b>.<br>Lo <b>smartphone</b> è un telefono "smart", che può compiere funzioni molto più complesse della semplice telefonata. <br><b>Android e Windows</b> sono invece sistemi operativi e <b>Word</b> un'applicazione.`
         ],
         [`Quale tra questi termini indica un ingresso (o input) per il dispositivo?`,
             [`tastiera`,
