@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2023-10-15T11:31:53+02:00</updated>
+    <updated>2023-10-18T13:15:01+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://70plus.it/javascript.html</id>
             <category term="Cose informatiche"/>
 
-        <updated>2023-10-15T11:31:53+02:00</updated>
+        <updated>2023-10-18T13:15:01+02:00</updated>
             <summary>
                 <![CDATA[
                     Lo scorso aprile, qualche giorno prima di Pasqua, ho cominciato ad avvicinarmi a Javascript. Lo stimolo a farlo è venuto dal mio amico Marco S., ideatore del gioco di logica CleverMindGame, di cui avevamo realizzato una versione Windows durante il&hellip;
@@ -29,7 +29,7 @@
                 <p>Lo scorso aprile, qualche giorno prima di Pasqua, ho cominciato ad avvicinarmi a Javascript. Lo stimolo a farlo è venuto dal mio amico Marco S., ideatore del gioco di logica <a href="https://clevermindgame.it/" target="_blank" rel="nofollow noopener noreferrer">CleverMindGame</a>, di cui avevamo realizzato una versione Windows durante il LockDown Covid.</p>
 <p>L'idea era quella di realizzarne una versione che fosse disponibile da browser, senza necessità di download e fruibile sia da dispositivi mobili che da pc o mac.<br>La strada da seguire era ovviamente quella di realizzare un sito responsivo, utilizzando codice html, css e javascript.</p>
 <p>Piccolo dettaglio, avevo esperienza di programmazione in diversi linguaggi, come Ruby e Python, una discreta conoscenza di html e css, ma nessuna esperienza con javascript. E il progetto non si presentava proprio semplice.</p>
-<p>Serviva una sorta di prova di fattibilità. La cosa più semplice era prendere un esempio semplice già bello e fatto e giocarci modificandolo ed estendendolo.<br>Così sono partito da <a href="https://www.makeuseof.com/tic-tac-toe-game-javascript-html-css-create/" target="_blank" rel="nofollow noopener noreferrer">Create a Two-Player Tic-Tac-Toe Game Using JavaScript, HTML, and CSS</a>, gioco da noi meglio conosciuto come <strong>Tris</strong>.<br>Rudimentale quanto basta, è venuta fuori la mia <a href="https://70plus.it/tris.html" target="_blank" rel="nofollow noopener noreferrer">versione web del Tris</a>.</p>
+<p>Serviva una sorta di prova di fattibilità. La cosa più semplice era prendere un esempio semplice già bello e fatto e giocarci modificandolo ed estendendolo.<br>Così sono partito da <a href="https://www.makeuseof.com/tic-tac-toe-game-javascript-html-css-create/" target="_blank" rel="nofollow noopener noreferrer">Create a Two-Player Tic-Tac-Toe Game Using JavaScript, HTML, and CSS</a>, gioco da noi meglio conosciuto come <strong>Tris</strong>.<br>Rudimentale quanto basta, è venuta fuori la mia <a href="https://70plus.it/tris1.html" target="_blank" rel="nofollow noopener noreferrer">versione web del Tris</a>.</p>
 <p>Grazie a <strong>ChatGPT</strong>, pezzo dopo pezzo, in poco più di due mesi è nato così <a href="https://clevermindgame.it/" target="_blank" rel="nofollow noopener noreferrer">CleverMindGame</a>, gioco di logica che trovo molto divertente, accessibile grauitamente e in totale privacy.</p>
 <p>Dopo questa prima esperienza, sempre con l'aiuto di ChatGPT, sono nate altre semplici realizzazioni in html / css / javascript:</p>
 <ul>
