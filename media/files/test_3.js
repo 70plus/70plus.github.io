@@ -16,7 +16,7 @@ listaTest = listaTest.concat([
              `Una versione di Windows con minore compatibilità software`,
              `Gira su un hardware particolare`
             ], [0],
-            `<b>Windows 11 Home S</b> è una configurazione del sistema operativo che aumenta il livello di sicurezza del pc, impedendo di installare applicazioni da fonti diverse dallo <b>store ufficiale</b>.<br>Si può facilmente passare alla configurazione standard, ma non si può tornare indietro.<br>Un utente inesperto può tenere la configurazione <b>S</b>, fino a che non gli sia assolutamente necessario installare un'applicazione non presente nello store ufficiale.`
+            `<b>Windows 11 Home S</b> è una configurazione del sistema operativo che aumenta il livello di sicurezza del pc, impedendo l'installazione di applicazioni da fonti diverse dallo <b>store ufficiale</b>.<br>Si può facilmente passare alla configurazione standard, ma non si può tornare indietro.<br>Un utente inesperto può tenere la configurazione <b>S</b>, fino a che non gli sia assolutamente necessario installare un'applicazione non presente nello store ufficiale.`
         ],
         [`Quali caratteristiche devo verificare prima dell'acquisto?`,
             [`CPU e memoria`,
