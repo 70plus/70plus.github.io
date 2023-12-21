@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2023-12-21T22:24:22+01:00</updated>
+    <updated>2023-12-21T22:29:30+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -19,18 +19,18 @@
         <media:content url="https://70plus.it/media/posts/30/zorinos17.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-12-21T22:24:22+01:00</updated>
+        <updated>2023-12-21T22:29:30+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/30/zorinos17.jpg" alt="" />
-                    Sto provando Zorin OS 17, distribuzione Linux fresca di giornata, visto che è disponibile da ieri sera, 20 dicembre. Premessa: il pc che utilizzo, un Asus E210 con processore Celeron N4020, 4 GB di memoria, 64 GB di disco, è&hellip;
+                    Sto provando Zorin OS 17, distribuzione Linux fresca di giornata, disponibile da ieri sera, 20 dicembre. Premessa: il pc che utilizzo, un Asus E210 con processore Celeron N4020, 4 GB di memoria, 64 GB di disco, è piuttosto scarso. Acquistato&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/30/zorinos17.jpg" class="type:primaryImage" alt="" /></p>
-                <p>Sto provando Zorin OS 17, distribuzione Linux fresca di giornata, visto che <a href="https://blog.zorin.com/2023/12/20/zorin-os-17-has-arrived/" target="_blank" rel="nofollow noopener noreferrer">è disponibile da ieri sera, 20 dicembre</a>.</p>
-<p>Premessa: il pc che utilizzo, un Asus E210 con processore Celeron N4020, 4 GB di memoria, 64 GB di disco, è piuttosto scarso.<br>Acqusitato un anno e mezzo fa, alla modicissima cifra di 199 €, gli ho solo installato un secondo disco interno M.2 (quindi veloce) da 500 GB, da cui ho ricavato una partizione per Linux e una per i dati.</p>
+                <p>Sto provando Zorin OS 17, distribuzione Linux fresca di giornata,  <a href="https://blog.zorin.com/2023/12/20/zorin-os-17-has-arrived/" target="_blank" rel="nofollow noopener noreferrer">disponibile da ieri sera, 20 dicembre</a>.</p>
+<p>Premessa: il pc che utilizzo, un Asus E210 con processore Celeron N4020, 4 GB di memoria, 64 GB di disco, è piuttosto scarso.<br>Acquistato un anno e mezzo fa, alla modicissima cifra di 199 €, gli ho solo installato un secondo disco interno M.2 (quindi veloce) da 500 GB, da cui ho ricavato una partizione per Linux e una per i dati.</p>
 <p>Se con Windows 11 (il sistema operativo nativo) il pc ansima, con Linux Xubuntu 22.04 volava. Non un momento di flessione anche con l'utilizzo contemporaneo di due browser, un foglio di calcolo LibreOffice, il gestore di appunti Obsidian e un GIMP per editare qualche immagine. E un gestore di file e un terminale, che non possono mai mancare.</p>
 <p>Mentre aspettavo la 24.04, il nuovo rilascio con supporto lungo (5 anni) che uscirà il prossimo aprile, mi sono fatto tentare dalla 23.04 e poi dalla 23.10.<br>Tutto bene, tranne per il bluetooth, che progressivamente, a ogni cambio di rilascio, è andato sempre peggio, e per un errore di sistema comparso nel passaggio alla 23.10, e che non ho avuto la competenza e la voglia di indagare.</p>
 <p>Zorin OS mi era piaciuto già all'uscita della versione 16, qualche anno fa, e quindi eccomi qui a provare la 17.<br>Non è ancora la versione <strong>Lite</strong>, cioè quella con desktop XFCE, la cui data di uscita non è nota, ma è la versione <strong>Core</strong>, con desktop Gnome, più bello ma che consuma più risorse.</p>
