@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2023-12-22T05:11:45+01:00</updated>
+    <updated>2023-12-22T05:17:17+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -19,7 +19,7 @@
         <media:content url="https://70plus.it/media/posts/30/zorinos17.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-12-22T05:11:45+01:00</updated>
+        <updated>2023-12-22T05:17:17+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/30/zorinos17.jpg" alt="" />
@@ -37,7 +37,7 @@
 <p>Temevo per questo che il mio Asus E210 potesse non essere abbastanza potente per Gnome ma, alla prova dei fatti, mi pare che le cose vadano bene, o quasi.<br>Ho visto che il mouse si incanta in alcuni momenti, ma pe ril resto mi pare che il tutto regga. Per tranquillità ho comunque disabilitato gli effetti grafici del tema.</p>
 <p>Rispetto alla configurazione di default, ho aggiunto un'area di zswap da 2 GB, quindi uno swap in memoria, come avevo suu Xubuntu. Non ho misurato il miglioramento, ma la sensazione è di maggiore fluidità.</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/30/zorin_terminal.jpg" alt="Utilizzo di memoria con più applicazioni aperte" width="902" height="374" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/30/responsive/zorin_terminal-xs.jpg 300w ,https://70plus.it/media/posts/30/responsive/zorin_terminal-sm.jpg 480w ,https://70plus.it/media/posts/30/responsive/zorin_terminal-md.jpg 768w"></figure>
-<p>E questo con aperte: Brave, Edge, Publii (dove sto scrivendo questa nota), Gimp (per l'edit di queste due schermate), LibreOffice Calc, un terminale e un gestore di file.</p>
+<p>E questo con aperte: Brave, Edge, Publii (dove sto scrivendo questa nota), Gimp (per l'edit di queste due schermate), Obsidian, LibreOffice Calc, un terminale e un gestore di file.</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/30/zorin_running.jpg" alt="Le applicazioni in esecuzione" width="559" height="64" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/30/responsive/zorin_running-xs.jpg 300w ,https://70plus.it/media/posts/30/responsive/zorin_running-sm.jpg 480w ,https://70plus.it/media/posts/30/responsive/zorin_running-md.jpg 768w"></figure>
 <p>Per il resto, Zorin OS 17 è di gran lunga meno spartano di Xubuntu, anzi si presenta molto gradevole. Specialmente nel tema che ho scelto tra i quattro disponibli, che richiama il Chromebook.</p>
 <p>Ad aprile con l'uscita di Xubuntu 24.04, oppure quando uscirà Zorin OS 17 Lite, tirerò le somme e deciderò se cambiare tornando a XFCE, o se rimanere con Gnome (e Zorin OS).</p>
