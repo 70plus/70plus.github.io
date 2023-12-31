@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2023-12-31T14:25:24+01:00</updated>
+    <updated>2023-12-31T14:30:06+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -19,7 +19,7 @@
         <media:content url="https://70plus.it/media/posts/31/zorinos17.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
-        <updated>2023-12-31T14:25:24+01:00</updated>
+        <updated>2023-12-31T14:30:06+01:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/31/zorinos17.jpg" alt="Zorin OS 17 screenshot visita guidata" />
@@ -30,7 +30,7 @@
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/31/zorinos17.jpg" class="type:primaryImage" alt="Zorin OS 17 screenshot visita guidata" /></p>
                 <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi qualche dubbio iniziale sulle prestazioni, ma devo dire che sono state in gran parte dissipate da questi primi giorni di utilizzo.</p>
-<p>Per valutare in modo più obiettivo quando il carico di applicazioni comincia a mettere in crisi l'E210, ho rispolverato un paio di script scritti qualche tempo fa, per misurare l'occupazione della memoria e delle aree di swap con un <strong>Xubuntu</strong>, la distribuzione Linux con desktop XFCE che ho utilizzato appena prima di Zorin OS 17.</p>
+<p>Per valutare in modo più obiettivo quando il carico di applicazioni comincia a mettere in crisi l'E210, ho rispolverato un paio di script preparati qualche tempo fa, per misurare l'occupazione della memoria e delle aree di swap con un <strong>Xubuntu (</strong>la distribuzione Linux con desktop XFCE che ho utilizzato appena prima di Zorin OS 17).</p>
 <h3>Le aree di Swap</h3>
 <p>Zorin OS 17 configura all'installazione un'area di swap su disco pari alla dimensione di memoria ram disponibile.<br>In questa area finiscono le pagine di memoria fisica non utilizzate di recente, quando l'esecuzione delle applicazioni richiede la disponibilità di altra memoria.</p>
 <p>È come se la memoria fisica venisse estesa a 4 + 4 = 8 GB. Naturalmente, per poter essere utilizzate, le pagine spostate nell'area swap devono essere riportate nella memoria ram, eventualmente spostando altre pagine nello swap.<br>È intuibile che, sotto carico, si può generare un <em>antirivieni</em> di pagine tra RAM e swap, con un forte impatto sulle prestazioni della macchina.</p>
