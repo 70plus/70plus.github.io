@@ -3,12 +3,150 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2023-12-22T05:17:17+01:00</updated>
+    <updated>2023-12-31T09:15:03+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.it</id>
 
+    <entry>
+        <title>Quanta memoria utilizza il mio Linux?</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.it/zorin-os-17-prove-di-carico.html"/>
+        <id>https://70plus.it/zorin-os-17-prove-di-carico.html</id>
+
+        <updated>2023-12-31T09:15:03+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Ho di recente installato Zorin OS 17, la distribuzione Linux dei fratelli Zorin. La versione rilasciata lo scorso 20 dicembre ha un desktop Gnome, mentre arriverà solo nei prossimi mesi quella con XFCE, più leggera e quindi più adatta al&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>La versione rilasciata lo scorso 20 dicembre ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi qualche dubbio iniziale sulle prestazioni, ma devo dire che sono state in gran parte dissipate da questi primi giorni di utilizzo.</p>
+<p>Per valutare in modo più obiettivo quando il carico di applicazioni comincia a mettere in crisi l'E210, ho rispolverato un paio di script scritti qualche tempo fa, per misurare l'occupazione della memoria e delle aree di swap con un <strong>Xubuntu</strong>, la distribuzione Linux con desktop XFCE che ho utilizzato appena prima di Zorin OS 17.</p>
+<h3>Le aree di Swap</h3>
+<p>Zorin OS 17 configura all'installazione un'area di swap su disco pari alla dimensione di memoria ram disponibile.<br>In questa area finiscono le pagine di memoria fisica non utilizzate di recente, quando l'esecuzione delle applicazioni richiede la disponibilità di altra memoria.</p>
+<p>È come se la memoria fisica venisse estesa a 4 + 4 = 8 GB. Naturalmente, per poter essere utilizzate, le pagine spostate nell'area swap devono essere riportate nella memoria ram, eventualmente spostando altre pagine nello swap.<br>È intuibile che, sotto carico, si può generare un <em>antirivieni</em> di pagine tra RAM e swap, con un forte impatto sulle prestazioni della macchina.</p>
+<p>Un parziale sollievo viene dalla creazione dello <strong>zswap</strong>, un'ulteriore area di swap ricavata nella memoria ram. La dimensione consigliata per l'area di zswap è di circa la metà della dimensione della memoria ram, quindi nel mio caso 2 GB.<br>Può sembrare un <em>non sense</em> spostare pagine all'interno della memoria. Ma c'è un beneficio, che viene sia dal ridotto numero di operazioni su disco, più lente della scrittura in ram, sia dalla compressione con cui le pagine vengono memorizzate nell'area di zswap.<br>Utilizzando una compressione spinta (lz4 / z3fold) si può arrivare a un rapporto di almeno 2.5.<br>Questo vuol dire che, quando i 2 GB dello zswap sono completamente occupati, il loro reale ingombro è minore di 2 GB / 2.5 = 0.8 GB.</p>
+<h3>La raccolta dei dati di misura</h3>
+<p>Per raccogliere i dati di occupazione della memoria e degli swap mi avvalgo di qualche comando shell e due script bash creati ad hoc, che riversano i dati raccolti in file di tipo csv.</p>
+<p>I comandi:</p>
+<ul>
+<li><strong>free</strong> (restituisce l'occupazione della memoria ram e quella totale degli swap)</li>
+<li><strong>swapon</strong> (resttituisce l'occupazione dei singoli swap)</li>
+<li><strong>sudo cat /sys/kernel/debug/zswap/stored_pages </strong>(restutisce il numero di pagine memorizzate nello zswap)</li>
+<li><strong>sudo cat /sys/kernel/debug/zswap/pool_total_size </strong>(restituisce l'occupazione dello zswap, dato già fornito da <em>swapon</em>)</li>
+</ul>
+<p>Le due ultime misure, conoscendo la dimensione di una pagina (4096 bytes) consentono di risalire al rapporto di compressione effettivo dello zswap al momento della misura.</p>
+<h3>Gli script</h3>
+<p>Il primo script (newstats.sh) deve essere lanciato in due istanze, in due diverse finestre di terminale:</p>
+<ul>
+<li><strong>newstats.sh -a -h</strong><br>questo comando stampa nel file csv una prima riga di intestazione e poi rileva ogni 5 secondi l'occupazione di memoria e del totale degli swap, dello swap su disco e dello zswap;<br>per fermarlo basta digitare <strong>Control C</strong> nel terminale;</li>
+<li><strong>newstats.sh</strong><br>qui viene fatta una sola misura, preceduta dalla richiesta di un input da tastiera, il cui valore verrà poi inserito nel record dati del file csv;<br>viene lanciato prima di ogni passo della lista di carico, inserendo da tastiera la descrizione del passo da effettuare.</li>
+</ul>
+<pre class="language-bash"><code>#!/bin/bash
+#
+# lancio dello script:
+# ./stats.sh -a -h	: stampa header, una misura ogni 5 sec, interruzione via ^c
+# ./stats.sh -a		: una misura ogni 5 sec, interruzione via ^c
+# ./stats.sh -h		: stampa header, una sola misura
+# ./stats.sh	 	: una sola misura 
+#
+if [ "$1" == "-a" ] || [ "$2" == "-a" ]
+	then auto="yes"
+	else auto="no"
+	fi
+if [ "$1" == "-h" ] || [ "$2" == "-h" ]
+	then hdr="yes"
+	else hdr="no"
+	fi
+if [ "$auto" == "yes" ]
+	then
+		commento="auto"
+		echo interrompi l\'esecuzione con ^C
+	else read -p "inserisci il commento: " commento
+	fi
+if [ "$hdr" == "yes" ]
+	then printf "Time\tMem used\tBuffCache\tSwap used\tSwap_file\tZSwap\tcomment\tevent\n" |
+        	tee -a log_swap.csv
+	fi
+#
+while :
+do
+	used=$(free | awk 'BEGIN {FS=" "; OFS="\t"}
+		{if ($1 == "Mem:") print $3 "-" $5}
+		{if ($1 == "Swap:") print "-" $3}
+		')
+	MemUsed=$(echo $used | cut -f1 -d-)
+	Buffcache=$(echo $used | cut -f2 -d-)
+	SwapUsed=$(echo $used | cut -f3 -d-)
+#
+	swaps=$(swapon -s | awk 'BEGIN {FS=" "; OFS="\t"}
+		{if ($1 == "/swapfile") print $4}
+		{if ($1 == "/dev/zram0") print "-" $4}
+		')
+	Swapfile=$(echo $swaps | cut -f1 -d-)
+	Swapzram=$(echo $swaps | cut -f2 -d-)
+	if [ "$auto" == "yes" ]
+		then
+			event=""
+		else
+			event=$MemUsed
+		fi
+#
+	printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "$(date +"%T")" "$MemUsed" "$Buffcache" "$SwapUsed" "$Swapfile" "$Swapzram" "$commento" "$event" |
+        	tee -a log_swap.csv
+	if [ "$auto" != "yes" ]
+	then
+		break
+	else
+		sleep 5
+	fi
+done</code></pre>
+<p>Il secondo script, molto più semplice, rileva due valori relativi allo zswap: numero di pagine memorizzate e occupazione totale.</p>
+<pre class="language-bash"><code>#!/bin/bash
+#
+pages=$(sudo cat /sys/kernel/debug/zswap/stored_pages)
+poolsize=$(sudo cat /sys/kernel/debug/zswap/pool_total_size)
+compress=$(echo "scale=3; $pages * 4096 /$poolsize;" | bc)
+printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee -a compressione.csv</code></pre>
+<h3>Un esempio di dati raccolti</h3>
+<p>I dati raccolti dai due script vengono memorizzati in due file distinti, di tipo csv, con il carattere TAB utilizzato come separatore.</p>
+<p>Questo è un esempio di record nel file log_swap.csv:</p>
+<pre>Time	Mem used	BuffCache	Swap used	Swap_file	ZSwap	comment	event
+08:26:41	1079752	169428 	0	0 	0	auto	
+08:26:46	1107060	169396 	0	0 	0	auto	
+...	
+08:27:32	1118884	179176 	0	0 	0	auto	
+08:27:37	1117616	171208 	0	0 	0	auto	
+08:27:37	1117740	171192 	0	0 	0	lancio esplora risorse e apro la lista di carico con gedit	1117740
+08:27:42	1130852	182832 	0	0 	0	auto	
+08:27:47	1148336	182088 	0	0 	0	auto	
+</pre>
+<p>L'ultimo campo del record, <strong>event</strong>, viene inserito in presenza di un commento, e riporta il valora del primo campo, <strong>Mem used</strong>. Questo consente di avere una visione chiara sul grafico dei dati del momento in cui è stato inserito il commento, come si vede dai <em>tic rossi</em> nell'esempio:</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
+<figure class="gallery__item"><a href="https://70plus.it/media/posts/31/gallery/log_swap.png" data-size="1145x436"><img loading="lazy" src="https://70plus.it/media/posts/31/gallery/log_swap-thumbnail.png" alt="" width="768" height="292"></a></figure>
+</div></div>
+<p><em>Il grafico verrà analizzato nel post successivo.</em></p>
+<p>L'output del secondo script è più semplice. Ecco un estratto dal file <strong>compressione.csv:</strong></p>
+<pre> 
+    21:09:35	3466	2674688	5.307
+    </pre>
+<p>Qui ha vinto la pigrizia, non c'è nessuna intestazione, ma la struttura del record è molto semplice: <strong>ora - numero di pagine - occupazione - compressione</strong>.</p>
+<h3>La campagna di misura</h3>
+<p>Con gli script a disposizione non resta che effettuare la campagna di misure:</p>
+<ul>
+<li>preparare una lista di applicazioni da lanciare una dopo l'altra;</li>
+<li>a sistema appena avviato, eseguire i passi della lista;</li>
+<li>raccolti i dati, analizzarli con un foglio di calcolo (<strong>LibreOffice Calc</strong> oppure <strong>Excel</strong>).</li>
+</ul>
+<p>Il seguito al prossimo post!</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Proviamo Zorin OS 17</title>
         <author>
@@ -658,98 +796,6 @@ A è il vincitore! margine: 1
 <p>Nel gioco non vengono conteggiati i tentativi errati per aver inserito un numero non primo. È un aiuto notevole, grazie anche a questo finora me la sono sempre cavata con 4 tentativi, qualche volta con 3.</p>
 <p>Vedremo nel seguito.</p>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Prolog e la programmazione logica</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.it/prolog-e-la-programmazione-logica.html"/>
-        <id>https://70plus.it/prolog-e-la-programmazione-logica.html</id>
-        <media:content url="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" medium="image" />
-            <category term="Ricordi"/>
-            <category term="Cose informatiche"/>
-
-        <updated>2023-01-16T22:11:36+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" alt="" />
-                    Il mio primo incontro con il Prolog e la programmazione logica risale ai primi anni '90 del secolo scorso, quando trovai un compilatore per il linguaggio Prolog installato sul pc assegnato a un tesista che avevo seguito in qualità di&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://70plus.it/media/posts/18/alien-g2dd5ccc42_1920.png" class="type:primaryImage" alt="" /></p>
-                <p>Il mio primo incontro con il <a href="https://it.wikipedia.org/wiki/Prolog" target="_blank" rel="nofollow noopener noreferrer">Prolog</a> e la <strong>programmazione logica</strong> risale ai primi anni '90 del secolo scorso, quando trovai un <strong>compilatore per il linguaggio Prolog</strong> installato sul pc assegnato a un tesista che avevo seguito in qualità di relatore esterno.<br>In quegli anni mi capitò diverse volte di essere relatore esterno di tesi di laurea presso l'Ateneo di Pisa. Il laureando di turno svolgeva il suo lavoro di ricerca presso i laboratori Olivetti di Ivrea, affidato a un interno (io, in questi casi), lavorando su un pc messo a disposizione dalla Olivetti stessa.<br>Si trattava in genere di pc utilizzati per test, che venivano appunto distratti per alcuni mesi. Una volta discussa la tesi, il laureando (ormai laureato) liberava il pc, rimuovendo file e programmi che aveva caricato sul pc.</p>
-<h4>Il Prolog, per fare cosa</h4>
-<p>Quel compilatore Prolog rimase invece installato e, complice l'avvicinarsi delle ferie con il conseguente calo del carico di lavoro, nelle settimane successive spesi diverse ore a giocare con la programmazione logica.<br>Del codice che mi divertii a mettere insieme, ricordo due programmi: un inventario dei libri che avevo in casa e un gestore di pianificazione operativa con i <a href="https://it.wikipedia.org/wiki/Diagramma_di_Gantt" target="_blank" rel="nofollow noopener noreferrer">diagrammi di Gantt</a>.</p>
-<p>A quell'epoca sui pc girava <strong>Windows 3.1</strong>, mentre <strong>Excel</strong> era una chicca per pochi fortunati. Quindi sviluppare un programma che mi consentiva, interattivamente, di elencare i libri scritti da Tizio, o editi da Caio, o che nel titolo avessero un particolare termine, non era una cosa da poco.</p>
-<p>Il programma di pianificazione operativa, invece, mi accompagnò sul lavoro per qualche mese, ma non si rivelò di particolare utilità, e così dopo un po' la programmazione logica finì in cantina (dove dev'esserci ancora qualche listato, che prima o poi riporterò alla luce).</p>
-<h4>Il Prolog oggi</h4>
-<p>A distanza di tanti anni ho ritrovato il Prolog tra gli ambienti di sviluppo offerti dalla piattaforma <a href="https://www.tutorialspoint.com/execute_prolog_online.php" target="_blank" rel="nofollow noopener noreferrer">Tutorialspoint</a>. <em>Googlando</em> un po', ho scoperto che è tuttora utilizzato nell'ambito per cui era nato, l'intelligenza artificiale.<br>Ho provato quindi a rispolverare i ricordi, anche se riprendere è quasi come tornare ai primi passi incerti.</p>
-<h4>Le basi del Prolog</h4>
-<p>Il Prolog <strong>non è</strong> un linguaggio <strong>imperativo</strong>, né <strong>funzionale</strong> , né <strong>a oggetti</strong>.<br>Nel primo caso, infatti, la macchina dovrebbe eseguire sequenze di istruzioni che intendono risolvere un particolare compito, ma non è così. Nel secondo caso, l'elaborazione dovrebbe basarsi sul richiamo di un insieme di funzioni, ma ancora una volta non è questo il caso. Infine l'esecuzione di un programma Prolog non si basa nemmeno sulla definizione di un insieme di oggetti software e sui messaggi che questi si scambiano.</p>
-<p>Nel Prolog, invece, il programma lavora per sintesi di proposizioni logiche, e consiste di un insieme di <strong>fatti</strong> e <strong>regole</strong>, che si assume descrivano in modo compiuto l'ambito si cui si lavora. Il programma Prolog deve calcolare se una proposizione assegnata sia vera o meno, sulla base di fatti e regole disponibili.</p>
-<h4>Un esempio: figli e genitori</h4>
-<p>Ho una nipotina, Luna, gioia dei genitori Valentina e Giovanni. Al Prolog posso raccontare la cosa mediante due fatti:</p>
-<blockquote>
-<p>genitore(luna, valentina).<br>genitore(luna,giovanni).</p>
-</blockquote>
-<p>Ho implicitamente definito una relazione <em>genitore(X,Y)</em>, in cui <em>Y</em> è genitore di <em>X</em>. Da notare il punto finale che chiude l'affermazione del fatto, e l'utilizzo della minuscola iniziale per le stringhe e della maiuscola inziale per le variabili.</p>
-<p>Potrei ora avere l'obiettivo di elencare i genitori di <em>luna</em>. Se scrivessi:</p>
-<blockquote>
-<p>genitori(luna) :- genitore(luna, X), write(X).</p>
-</blockquote>
-<p>il programma troverebbe solo il primo genitore, <em>valentina</em>, e soddisfatto di aver concluso positivamente il suo obiettivo, si arresterebbe. Da notare qui il simbolo <em>"</em><em>:-"</em> e il connettivo<em> ","</em>. La frase si legge:</p>
-<blockquote>
-<p>genitore di luna <strong>è vero</strong> se un genitore di luna è X <strong>e</strong> stampo X.</p>
-</blockquote>
-<p>Come fare per ottenere la stampa del nome di tutti e due i genitori? Basta far <strong>fallire</strong> questa concatenazione, costringendo il programma a cercare un ulteriore genitore. Il programma si complica un po':</p>
-<blockquote>
-<p>:- initialization(main).<br>genitore(luna, valentina).<br>genitore(luna,giovanni).<br>scrivi(X) :- X \== "", write(X), nl.<br>scrivi(_).<br>genitori(X) :- genitore(X,Y), scrivi(Y), fail.<br>genitori(_).<br>main :- genitori(luna).</p>
-</blockquote>
-<p>Ho strutturato il programma in:</p>
-<ul>
-<li>la riga introduttiva, che definisce qual'è l'obiettivo del programma (<em>main</em>);</li>
-<li>un obiettivo principale (stampa il nome dei genitori di <em>luna</em>);</li>
-<li>un predicato <em>scrivi</em>, che stampa il valore che gli viene passato, se è una stringa non vuota, e subito dopo fallisce, mentre ha successo se il valore passato è una stringa vuota;</li>
-<li>un predicato <em>genitori</em>, che fallisce tutte le volte che trova un genitore (e ne stampa il nome), mentre ha successo quando ha esaurito la sua ricerca.</li>
-</ul>
-<p>Da notare inoltre:</p>
-<ul>
-<li><em>nl</em> (new line), per andare a capo;</li>
-<li><em>fail</em>, per forzare il fallimento di un predicato;</li>
-<li><em>scrivi(_).</em> e <em>genitori(_).</em>, che forzano il successo del predicato.</li>
-</ul>
-<p>Il fallimento di un predicato causa il <em>backtracking</em> del programma, cioè la ricerca all'indietro di altre soluzioni possibili.</p>
-<p>Evviva, il programma risponde correttamente:</p>
-<blockquote>
-<p>valentina<br>giovanni</p>
-</blockquote>
-<h4>Un albero genealogico più ricco</h4>
-<p>Si può arricchire la base dei fatti disponibili e aggiungere una regola che definisca cos'è un <em>nonno</em> e cos'è un <em>bisnonno</em>:</p>
-<blockquote>
-<p>:- initialization(main).<br><br>  genitore(luna,valentina).<br>  genitore(luna,giovanni).<br>  genitore(valentina,orsella).<br>  genitore(valentina,pasquale).<br>  genitore(giovanni,teresa).<br>  genitore(giovanni,mauro).<br>  genitore(orsella,sisina).<br>  genitore(orsella,ciccio).<br><br>  genitori(X) :- genitore(X,Y), scrivi(Y), fail.<br>  genitori(_).<br>  nonni(X) :- genitore(X,Y), genitore(Y, Z), scrivi(Z), fail.<br>  nonni(_).<br>  bisnonni(X) :- genitore(X,Y), genitore(Y, Z), genitore(Z,W), scrivi(W), fail.<br>  bisnonni(_).<br>  <br>  scrivi(X) :- X \== "", write(X), nl, fail.<br>  scrivi(_).<br>  <br>  main :- write('I genitori di Luna sono:'), nl, genitori(luna), nl, <br>        write('I nonni di Luna sono:'), nl, nonni(luna), nl, <br>        write('I bisnonni di Luna sono:'), nl, bisnonni(luna).</p>
-</blockquote>
-<p>La lettura delle nuove regole è abbastanza semplice:</p>
-<ul>
-<li>se <em>X</em> ha come genitore <em>Y</em> e <em>Y</em> ha come genitore <em>Z</em>, allora <em>X </em>ha come nonno <em>Z;</em></li>
-<li>se <em>X</em> ha come genitore <em>Y,</em> <em>Y</em> ha come genitore <em>Z</em> e <em>Z</em> ha come genitore <em>W</em>,  allora <em>X </em>ha come bisnonno <em>W</em>.</li>
-</ul>
-<p>Il programma, correttamente, elenca quanto richiesto:</p>
-<blockquote>
-<p>I genitori di Luna sono:<br>valentina<br>giovanni<br><br>I nonni di Luna sono:<br>orsella<br>pasquale<br>teresa<br>mauro<br><br>I bisnonni di Luna sono:<br>sisina<br>ciccio</p>
-</blockquote>
-<h4>E figli e fratelli?</h4>
-<p>Si potrebbe arricchire ancora la base dati, aggiungendo qualche regola:</p>
-<blockquote>
-<p>figlio(X,Y) :- genitore(Y,X).<br>cioè: X ha come figlia/o Y se Y ha come genitore X;</p>
-<p>fratello(X,Y) :- genitore(X,Z), genitore(Y,Z).<br>cioè: X e Y sono fratelli (o sorelle) se hanno un genitore in comune.</p>
-</blockquote>
-<p>ma direi che con le esplorazioni familiari mi fermo un passo prima.<br>Però, adesso che ho la soluzione (il Prolog), devo trovare un problema.</p>
-<p>Foto di apertura di <a href="https://pixabay.com/it/users/maciej326-1771256/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905155" target="_blank" rel="noopener">Monika Grafik</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905155" target="_blank" rel="noopener">Pixabay</a>.</p>
             ]]>
         </content>
     </entry>
