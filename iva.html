@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>IVA! - 70plus</title>
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+function calculate() {
+  var fatt = document.getElementById("inputF").value;
+  var r = document.getElementById("inputR").value;
+  var inps = document.getElementById("inputI").value;
+  var iva = document.getElementById("inputT").value;
+  var reddImp = (fatt * r) / 100;
+  var versINPS = (reddImp * inps) / 100;
+  var tassaIVA = (reddImp * iva) / 100;
+  var netto = fatt - versINPS - tassaIVA;
+  document.getElementById("resultR").innerHTML = "<b>" + Math.round(reddImp)+ " €</b>, reddito imponibile";
+  document.getElementById("resultC").innerHTML = "<b>" + Math.round(versINPS) + " €</b>, contributi INPS";
+  document.getElementById("resultI").innerHTML = "<b>" + Math.round(tassaIVA) + " €</b>, imposta sostitutiva";
+  document.getElementById("resultN").innerHTML = "<b>" + Math.round(netto) + " €</b>, entrata netta";
+}
+</script>
+<style>
+html {
+    font-family:"Calibri", sans-serif;
+    font-size: 120%;
+}
+input[type=number], button {
+  width: 5em;
+  font-size: 100%;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* center items vertically */
+  height: 60px; /* set height for container */
+  background-color: #01A7C1;
+}
+
+.logo-image {
+  width: 60px; /* set width for logo */
+  height: 60px; /* set height for logo */
+}
+
+.logo-text {
+  flex-basis: calc(100% - 60px);
+  text-align: center;
+}
+</style>
+</head>
+    <body>
+        <div class="gioco-container" style="margin: auto">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <a href="https://70plus.it">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Logo image"
+                        width="60"
+                        height="60" />
+                    </a>
+                </div>
+                <div class="logo-text">
+                        <h3 id="titolo" ; align="center">Calcolo IVA partite forfettarie</h3>
+                </div>
+            </div>
+<H3>Inserisci l'importo del fatturato mensile</H3>
+<em style="text-align:center">se necessario, modifica gli altri parametri</em><br></br>
+<input type="number" id="inputF" value="1000"> €, fatturato mensile<br><br>
+<input type="number" id="inputR" value="78"> %, coefficiente di redditività<br><br>
+<input type="number" lang="it" id="inputI" value="26.23"> %, coefficiente INPS<br><br>
+<input type="number" id="inputT" value="5"> %, tassazione IVA<br><br>
+<button onclick="calculate()">Calcola!</button><br>
+<p id="resultR"></p>
+<p id="resultC"></p>
+<p id="resultI"></p>
+<p id="resultN"></p>
+<!-- Put this at the end of the <body> tag -->
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('WoH0No9arSTq')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+</body>
+</html>
+
