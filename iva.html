@@ -28,6 +28,11 @@ html {
     font-family:"Calibri", sans-serif;
     font-size: 120%;
 }
+
+p {
+    line-height: 0.5;
+}
+
 input[type=number], button {
   width: 5em;
   font-size: 100%;
@@ -70,12 +75,14 @@ input[type=number], button {
                 </div>
             </div>
 <H3>Inserisci l'importo del fatturato mensile</H3>
+<p>
 <em style="text-align:center">se necessario, modifica gli altri parametri</em><br></br>
 <input type="number" id="inputF" value="1000"> €, fatturato mensile<br><br>
 <input type="number" id="inputR" value="78"> %, coefficiente di redditività<br><br>
 <input type="number" lang="it" id="inputI" value="26.23"> %, coefficiente INPS<br><br>
 <input type="number" id="inputT" value="5"> %, tassazione IVA<br><br>
 <button onclick="calculate()">Calcola!</button><br>
+</p>
 <p id="resultR"></p>
 <p id="resultC"></p>
 <p id="resultI"></p>
