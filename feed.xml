@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-20T09:06:44+01:00</updated>
+    <updated>2024-03-20T09:15:57+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -18,6 +18,7 @@
         <id>https://70plus.it/infiniti-anelli-dal-nastro-di-moebius.html</id>
         <media:content url="https://70plus.it/media/posts/34/mobius_01a.jpeg" medium="image" />
             <category term="Numeri"/>
+            <category term="Carta"/>
 
         <updated>2024-03-18T09:07:09+01:00</updated>
             <summary>
@@ -56,17 +57,17 @@
 <p>In questo caso si hanno effettivamente due pezzi, della stessa forma dell'originale, della stessa lunghezza ma di altezza metà (per via del taglio) e intrecciati tra di loro.<br>La faccenda può essere iterata, tagliando a metà ciascuna delle due metà, moltiplicando in modo esponenziale il numero di anelli. Non è però così semplice andare oltre un secondo taglio, a causa dell'altezza del nastro che si dimezza via via, e del groviglio di strisce di carta generato.</p>
 <h3>Taglio del nastro di Möbius a un terzo dell'altezza</h3>
 <p>Cosa accade se si taglia il nastro di Möbius non a metà altezza ma più sotto, mettiamo a un terzo dell'altezza?</p>
-<p>Partiamo dal punto del taglio e facciamo scorrere il dito lungo la parte esterna inferiore del taglio.<br>Arrivati al punto di incollaggio, il dito si trasferisce dopo una mezza torsione nella parte interna superiore, anch'essa alta un terzo. Dopo un po' ripassamo all'altezza del taglio, ma siamo nel terzo superiore del nastro.<br>Continuando ancora, si ripassa dal punto di incollaggio, dove si torna alla parte esterna inferiore e quindi si raggiunge nuovamente il punto esatto da cui è partito il taglio.</p>
+<p>Partiamo dal punto del taglio e facciamo scorrere il dito lungo la parte esterna inferiore del taglio.<br>Arrivati al punto di incollaggio, il dito si trasferisce dopo una mezza torsione nella parte interna superiore, anch'essa alta un terzo. Dopo un po' ripassiamo all'altezza del taglio, ma siamo nel terzo superiore del nastro.<br>Continuando ancora, si ripassa dal punto di incollaggio, dove si torna alla parte esterna inferiore e quindi si raggiunge nuovamente il punto esatto da cui è partito il taglio.</p>
 <p>Non dovrebbe essere difficile riconoscere che si è prodotto anche in questo caso un anello (due mezze torsioni e due facce), ma di altezza pari a un terzo dell'altezza originale.<br>Il resto della carta è la porzione centrale del nastro, che non ha subìto alterazioni, ed è quindi ancora un nastro di Möbius, ma di altezza un terzo.</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/34/mobius_04.jpeg" alt="" width="300" height="400" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/34/responsive/mobius_04-xs.jpeg 300w ,https://70plus.it/media/posts/34/responsive/mobius_04-sm.jpeg 480w ,https://70plus.it/media/posts/34/responsive/mobius_04-md.jpeg 768w"></figure>
 <p>Il taglio ad un'altezza diversa da metà porta quindi a <strong>due oggetti, un nastro e un anello</strong>.<br>Ulteriori tagli a un terzo di altezza avranno quindi questi effetti:</p>
 <ul>
-<li>dal nastro di Möbius inziale si ottiene ancora un nastro (lunghezza come l'originale, altezza un terzo) e un anello (lunghezza doppia dell'originale, altezza un terzo)</li>
+<li>dal nastro di Möbius iniziale si ottiene ancora un nastro (lungo come l'originale, altezza un terzo) e un anello (lunghezza doppia dell'originale, altezza un terzo)</li>
 <li>dall'anello si ottengono invece due anelli della stessa lunghezza e altezza metà, come visto prima.</li>
 </ul>
 <h3>Qualche consiglio pratico</h3>
-<p>Per costruire i miei nastri di Möbius, sono partito dividendo due fogli A4 in due parti uguali da 10.5 cm per quasi 15 cm. Ho poi incollato le 4 strisce arrivando quindi a un nastro lungo quasi 60 cm e alto 10.5 cm.<br>Questo consente di effettuare almeno due giri di taglio, anche con altezza pari a un terzo. Dopo di che il garbuglio che si genera rendo praticamente impossibile riconsocere correttamente gli anelli.</p>
-<p>Prima di applicare la mezza torsione e incollare, ho marcato una faccia della striscia di carta con dei tratti a matita a intervalli regolari.<br>Questo consentirà poi di rendere più semplice riconoscere, almeno dopo il primo taglio, la natura di <strong>nastro</strong> o <strong>anello</strong>.</p>
+<p>Per costruire i miei nastri di Möbius, sono partito dividendo due fogli A4 in due parti uguali da 10.5 cm per quasi 15 cm. Ho poi incollato le 4 strisce arrivando quindi a un nastro lungo quasi 60 cm e alto 10.5 cm.<br>Questo consente di effettuare almeno due giri di taglio, anche con altezza pari a un terzo. Dopo di che il garbuglio che si genera rende praticamente impossibile riconoscere correttamente gli anelli.</p>
+<p>Prima di incollare il nastro di partenza ho marcato una faccia della striscia di carta con dei tratti a matita a intervalli regolari.<br>Questo consentirà poi di rendere più semplice riconoscere, almeno dopo il primo taglio, la natura di <strong>nastro</strong> o <strong>anello</strong>.</p>
             ]]>
         </content>
     </entry>
