@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-20T09:27:55+01:00</updated>
+    <updated>2024-03-20T09:43:40+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -50,7 +50,7 @@
 <li>preparate un Nastro di Möbius;</li>
 <li>tagliate il nastro, nel senso della lunghezza, a metà della larghezza.</li>
 </ul>
-<p>Viene fuori un <strong>anello</strong>.<br>Per convincersene basta posizionare il dito indice su un punto del nastro posto sulla parte esterna della metà sotto il taglio, e farlo scorrere. Arrivati al punto di incollaggio, il dito passa alla parte interna della metà sopra il taglio. Proseguendo ancora, tornati al punto di incollaggio, si ritorna al punto di partenza, dopo aver attraversato <strong>due mezze torsioni</strong>.<br>Il dito ha toccato senza discontinuità tutta la carta (quindi è <strong>un pezzo unico</strong>), ma non ha toccato le superfici interna inferiore ed esterna superiore, che quindi sono la seconda faccia dell'anello. L'anello ha una lunghezza pari al doppio della lunghezza del nastro iniziale.</p>
+<p>Viene fuori un <strong>anello</strong>.<br>Per convincersene basta posizionare il dito indice su un punto del nastro posto sulla parte esterna della metà sotto il taglio, e farlo scorrere. Arrivati al punto di incollaggio, il dito passa alla parte interna della metà sopra il taglio. Proseguendo ancora, tornati al punto di incollaggio, ci si ritrova al punto di partenza, dopo aver attraversato <strong>due mezze torsioni</strong>.<br>Il dito ha toccato senza discontinuità tutta la carta (quindi è <strong>un pezzo unico</strong>), ma non ha toccato le superfici interna inferiore ed esterna superiore, che quindi sono la seconda faccia dell'anello. L'anello ha una lunghezza pari al doppio della lunghezza del nastro iniziale.</p>
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/34/mobius_03.jpeg" alt="" width="400" height="300" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/34/responsive/mobius_03-xs.jpeg 300w ,https://70plus.it/media/posts/34/responsive/mobius_03-sm.jpeg 480w ,https://70plus.it/media/posts/34/responsive/mobius_03-md.jpeg 768w"></figure>
 <h3>E se taglio in due un anello?</h3>
 <p>In questo caso si hanno effettivamente due pezzi, della stessa forma dell'originale, della stessa lunghezza ma di altezza metà (per via del taglio) e intrecciati tra di loro.<br>La faccenda può essere iterata, tagliando a metà ciascuna delle due metà, moltiplicando in modo esponenziale il numero di anelli. Non è però così semplice andare oltre un secondo taglio, a causa dell'altezza del nastro che si dimezza via via, e del groviglio di strisce di carta generato.</p>
