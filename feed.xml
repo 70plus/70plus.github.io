@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-20T09:25:54+01:00</updated>
+    <updated>2024-03-20T09:27:55+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -42,7 +42,6 @@
 <h3>A cosa serve il Nastro di Möbius</h3>
 <p>Il simbolo universale del riciclo è un nastro di Möbius:</p>
 <figure class="post__image align-center"><a href="https://it.wikipedia.org/wiki/Simbolo_di_riciclaggio" target="_blank" rel="nofollow noopener noreferrer"><img loading="lazy"  src="https://70plus.it/media/posts/34/mobius_02-3.png" alt="" width="400" height="387" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/34/responsive/mobius_02-3-xs.png 300w ,https://70plus.it/media/posts/34/responsive/mobius_02-3-sm.png 480w ,https://70plus.it/media/posts/34/responsive/mobius_02-3-md.png 768w"></figure></a></p>
-<p> </p>
 <p>È quindi probabile imbattercisi nel retro di una confezione alimentare.<br>Il nastro di Möbius trova anche degli utilizzi pratici, nei casi in cui si vuole aumentare la superficie utile di un nastro (es.: una cinghia di trasmissione, distribuendo l'usura sulle due facce). Lo dice Wikipedia, sarà certamente vero.<br>Quello che non dice Wikipedia, è che potete usarlo anche per far uscire di senno il prossimo.</p>
 <h3>Come impazzire con il Nastro di Möbius</h3>
 <p>Tagliare un nastro di Möbius per il senso della lunghezza regala risultati sorprendenti, a seconda della posizione del taglio.</p>
@@ -62,7 +61,7 @@
 <figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/34/mobius_04.jpeg" alt="" width="300" height="400" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/34/responsive/mobius_04-xs.jpeg 300w ,https://70plus.it/media/posts/34/responsive/mobius_04-sm.jpeg 480w ,https://70plus.it/media/posts/34/responsive/mobius_04-md.jpeg 768w"></figure>
 <p>Il taglio a un'altezza diversa da metà porta quindi a <strong>due oggetti, un nastro e un anello</strong>.<br>Ulteriori tagli a un terzo di altezza avranno quindi questi effetti:</p>
 <ul>
-<li>dal nastro di Möbius iniziale si ottiene ancora un nastro (lungo come l'originale, altezza un terzo) e un anello (lunghezza doppia dell'originale, altezza un terzo)</li>
+<li>dal nastro di Möbius iniziale si ottiene ancora un nastro (lungo come l'originale, altezza un terzo) e un anello (lunghezza doppia dell'originale, altezza un terzo);</li>
 <li>dall'anello si ottengono invece due anelli della stessa lunghezza e altezza metà, come visto prima.</li>
 </ul>
 <h3>Qualche consiglio pratico</h3>
