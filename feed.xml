@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-24T08:50:24+01:00</updated>
+    <updated>2024-03-24T09:03:05+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -16,20 +16,20 @@
         </author>
         <link href="https://70plus.it/la-settimana-lunare.html"/>
         <id>https://70plus.it/la-settimana-lunare.html</id>
-        <media:content url="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" medium="image" />
+        <media:content url="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" medium="image" />
             <category term="Produttività"/>
             <category term="Cose informatiche"/>
 
         <updated>2024-03-24T08:37:25+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" alt="" />
+                        <img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" alt="" />
                     A fine dicembre 2023 ho installato sul mio Asus E210 (pc di fascia bassa) l'ultima versione di Zorin OS, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1. Sono decisamente soddisfatto delle&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" class="type:primaryImage" alt="" /></p>
                 <p>A fine dicembre 2023 ho installato sul mio <strong>Asus E210</strong> (pc di fascia bassa) l'ultima versione di <strong>Zorin OS</strong>, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer"></a></p>
 <p>La descrizione di cosa produco e come è qui di seguito. L'analisi dei numeri seguirà nel post successivo.</p>
 <h3>Cosa produco</h3>
@@ -208,7 +208,7 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/31/zorinos17.jpg" class="type:primaryImage" alt="Zorin OS 17 screenshot visita guidata" /></p>
-                <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi qualche dubbio iniziale sulle prestazioni, ma devo dire che sono state in gran parte dissipati da questi primi giorni di utilizzo.</p>
+                <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi alcuni dubbi iniziali sulle prestazioni, in gran parte dissipati da questi primi giorni di utilizzo.</p>
 <p>Per valutare in modo più obiettivo quando il carico di applicazioni comincia a mettere in crisi l'E210, ho rispolverato un paio di script preparati qualche tempo fa, per misurare l'occupazione della memoria e delle aree di swap con un <strong>Xubuntu (</strong>la distribuzione Linux con desktop XFCE che ho utilizzato appena prima di Zorin OS 17).</p>
 <h3>Le aree di Swap</h3>
 <p>Zorin OS 17 configura all'installazione un'area di swap su disco pari alla dimensione di memoria ram disponibile.<br>In questa area finiscono le pagine di memoria fisica non utilizzate di recente, quando l'esecuzione delle applicazioni richiede la disponibilità di altra memoria.</p>
