@@ -3,12 +3,90 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-20T15:02:26+01:00</updated>
+    <updated>2024-03-24T08:50:24+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
     <id>https://70plus.it</id>
 
+    <entry>
+        <title>La settimana Lunare</title>
+        <author>
+            <name>Pasquale</name>
+        </author>
+        <link href="https://70plus.it/la-settimana-lunare.html"/>
+        <id>https://70plus.it/la-settimana-lunare.html</id>
+        <media:content url="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" medium="image" />
+            <category term="Produttività"/>
+            <category term="Cose informatiche"/>
+
+        <updated>2024-03-24T08:37:25+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" alt="" />
+                    A fine dicembre 2023 ho installato sul mio Asus E210 (pc di fascia bassa) l'ultima versione di Zorin OS, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1. Sono decisamente soddisfatto delle&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://70plus.it/media/posts/36/settimana_lunare_1.jpg" class="type:primaryImage" alt="" /></p>
+                <p>A fine dicembre 2023 ho installato sul mio <strong>Asus E210</strong> (pc di fascia bassa) l'ultima versione di <strong>Zorin OS</strong>, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer"></a></p>
+<p>La descrizione di cosa produco e come è qui di seguito. L'analisi dei numeri seguirà nel post successivo.</p>
+<h3>Cosa produco</h3>
+<p>Preparo settimanalmente un mini-giornalino per la mia nipotina Luna di 6 anni e la sua cuginetta Cecilia di 7: due fogli A4, stampati fronte-retro, piegati in due e fascicolati in modo da avere 8 facciate.<br>L'impaginazione della <strong>Settimana Lunare</strong> al momento è di due tipi. Il primo:</p>
+<ul>
+<li>due <strong>unisci i puntini</strong> da 1 a 20;</li>
+<li>due <strong>cerca la parola</strong> in una foresta di lettere;</li>
+<li>un racconto breve con un disegno da colorare (paginone centrale);</li>
+<li>due <strong>labirinti</strong> da attraversare.</li>
+</ul>
+<p>Nel secondo tipo di impaginazione, una filastrocca da leggere sostituisce un <em>unisci i puntini</em>, e il racconto breve è sostituito da due esercizi di <strong>coding unplugged</strong>, tema sul quale sto in realtà sperimentando.</p>
+<p>Il materiale è prevalentemente preso da Internet, lecitamente, visto che il fine non è commerciale e la stampa si limita a due copie.</p>
+<figure class="post__image align-center"><img loading="lazy"  src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-08-43-03.png" alt="" width="600" height="337" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/36/responsive/Schermata-del-2024-03-24-08-43-03-xs.png 300w ,https://70plus.it/media/posts/36/responsive/Schermata-del-2024-03-24-08-43-03-sm.png 480w ,https://70plus.it/media/posts/36/responsive/Schermata-del-2024-03-24-08-43-03-md.png 768w"></figure>
+<h3>Il flusso di lavoro</h3>
+<p>La preparazione di un numero del giornalino segue questa scaletta:</p>
+<ul>
+<li>avvio il pc;</li>
+<li>apro il <strong>file manager</strong>, raggiungo la directory con i file in formato odt, duplico il file con il numero del giornalino da cui voglio partire e lo rinomino correttamente;</li>
+<li>apro in edit il file con <strong>LibreOffice Writer</strong>;</li>
+<li>modifico l'intestazione (numero, data);</li>
+<li>inserisco nuovi giochi in sostituzione dei precedenti:
+<ul>
+<li>apro un file <strong>LibreOffice Impress</strong>, per creare i due giochini della foresta di lettere, e i due coding unplugged (se previsti);</li>
+<li>apro il <strong>Browser Brave</strong> (che ha già 13 tab aperti), per scaricare due labirinti dal sito  <a href="https://www.mazegenerator.net/" target="_blank" rel="nofollow noopener noreferrer">Mazegenerator.net</a>;</li>
+<li>sempre da internet (Pinterest oppure siti per l'infanzia) scarico un paio di <em>unisci i puntini</em> e, quando previste, una breve favoletta o una filastrocca;</li>
+<li>attualmente utilizzo caratteri maiuscoli per il racconto e la filastrocca (le minuscole arrivano l'anno prossimo); la conversione in maiuscola la effettuo con <strong>LibreOffice Calc</strong>, inserendo il racconto in una cella e applicando la formula <strong>=MAIUSC(...)</strong>;</li>
+</ul>
+</li>
+<li>i file dei labirinti, scaricati in svg, vengono prima modificati con l'<strong>editor di testo</strong> per aumentarne le dimensioni, poi modificati con <strong>GIMP</strong> per inserire all'interno del percorso qualche gadget da recuperare, ad esempio un tesoro oppure una mela, e infine incollati nel documento odt;</li>
+<li>l'icona del gadget la recupero come <strong>carattere Unicode</strong> dal sito <a href="https://symbl.cc/it/" target="_blank" rel="nofollow noopener noreferrer">Symbl.cc</a>;</li>
+<li>finita l'impaginazione, da <strong>Writer</strong> salvo in formato <strong>pdf</strong>;</li>
+<li>apro il file pdf con il browser <strong>Edge</strong> di Microsoft, secondo me più completo per questa funzione, e:<br>
+<ul>
+<li>verifico il risultato;</li>
+<li>torno a Writer per un paio di inevitabili correzioni;</li>
+<li>stampo una copia;</li>
+<li>se necessario riciclo su Writer per ulteriori piccole modifiche;</li>
+<li>stampa finale.</li>
+</ul>
+</li>
+</ul>
+<h3>Il carico</h3>
+<p>A questo punto sul pc sono in esecuzione, distribuiti su 3 o 4 spazi di lavoro:</p>
+<ol>
+<li>Brave ed Edge;</li>
+<li>LibreOffice Writer, Impress e Calc;</li>
+<li>un paio di istanze di file manager;</li>
+<li>un text editor con due finestre aperte;</li>
+<li>Gimp con 3 immagini in editing (2 labirinti e un gadget).</li>
+</ol>
+<p>Per raccogliere i dati di utilizzo di memoria e swap, inoltre, sono in esecuzione anche un paio di finestre di terminale per i due script di raccolta dati.<br>Solo a stampa completata chiudo le app che non servono più.</p>
+<p>In quest condizioni l'usabilità del pc rimane ottima, senza che si percepiscano rallentamenti.</p>
+<p>Utilizzare lo stesso pc in esecuzione con Windows 11, l'os nativo, sarebbe impensabile, visto che già aprire Edge e un tool di LibreOffice porta a rallentamenti sensibili.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Infiniti anelli dal nastro di Möbius</title>
         <author>
@@ -130,11 +208,11 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/31/zorinos17.jpg" class="type:primaryImage" alt="Zorin OS 17 screenshot visita guidata" /></p>
-                <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi qualche dubbio iniziale sulle prestazioni, ma devo dire che sono state in gran parte dissipate da questi primi giorni di utilizzo.</p>
+                <p>Ho di recente installato <a href="https://zorin.com/os/" target="_blank" rel="nofollow noopener noreferrer">Zorin OS 17</a>, la distribuzione Linux dei <a href="https://itsfoss.com/zorin-os-interview/" target="_blank" rel="nofollow noopener noreferrer">fratelli Zorin</a>.<br>Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop <strong>Gnome</strong>, mentre arriverà solo nei prossimi mesi quella con <strong>XFCE</strong>, più leggera e quindi più adatta al mio Asus E210 che ha solo 4 GB di ram. Avevo quindi qualche dubbio iniziale sulle prestazioni, ma devo dire che sono state in gran parte dissipati da questi primi giorni di utilizzo.</p>
 <p>Per valutare in modo più obiettivo quando il carico di applicazioni comincia a mettere in crisi l'E210, ho rispolverato un paio di script preparati qualche tempo fa, per misurare l'occupazione della memoria e delle aree di swap con un <strong>Xubuntu (</strong>la distribuzione Linux con desktop XFCE che ho utilizzato appena prima di Zorin OS 17).</p>
 <h3>Le aree di Swap</h3>
 <p>Zorin OS 17 configura all'installazione un'area di swap su disco pari alla dimensione di memoria ram disponibile.<br>In questa area finiscono le pagine di memoria fisica non utilizzate di recente, quando l'esecuzione delle applicazioni richiede la disponibilità di altra memoria.</p>
-<p>È come se la memoria fisica venisse estesa a 4 + 4 = 8 GB. Naturalmente, per poter essere utilizzate, le pagine spostate nell'area swap devono essere riportate nella memoria ram, eventualmente spostando altre pagine nello swap.<br>È intuibile che, sotto carico, si può generare un <em>antirivieni</em> di pagine tra RAM e swap, con un forte impatto sulle prestazioni della macchina.</p>
+<p>È come se la memoria fisica venisse estesa a 4 + 4 = 8 GB. Naturalmente, per poter essere utilizzate, le pagine spostate nell'area swap devono essere riportate nella memoria ram, eventualmente spostando altre pagine nello swap.<br>È intuibile che, sotto carico, si può generare un <em>andirivieni</em> di pagine tra RAM e swap, con un impatto sensibile sulle prestazioni della macchina.</p>
 <p>Un parziale sollievo viene dalla creazione dello <strong>zswap</strong>, un'ulteriore area di swap ricavata nella memoria ram. La dimensione consigliata per l'area di zswap è di circa la metà della dimensione della memoria ram, quindi nel mio caso 2 GB.<br>Può sembrare un <em>non sense</em> spostare pagine all'interno della memoria. Ma c'è un beneficio, che viene sia dal ridotto numero di operazioni su disco, più lente della scrittura in ram, sia dalla compressione con cui le pagine vengono memorizzate nell'area di zswap.<br>Utilizzando una compressione spinta (lz4 / z3fold) si può arrivare a un rapporto di almeno 2.5.<br>Questo vuol dire che, quando i 2 GB dello zswap sono completamente occupati, il loro reale ingombro è minore di 2 GB / 2.5 = 0.8 GB.</p>
 <h3>La raccolta dei dati di misura</h3>
 <p>Per raccogliere i dati di occupazione della memoria e degli swap mi avvalgo di qualche comando shell e due script bash creati ad hoc, che riversano i dati raccolti in file di tipo csv.</p>
@@ -762,51 +840,6 @@ A è il vincitore! margine: 1
 <p class="align-left">Due buone notizie: ci sarà un solo venerdì 17 (in maggio, mentre il 2023 invece ce ne offre 3, in febbraio, marzo e novembre), e Natale capiterà di mercoledì, cosa che dovrebbe favorire interessanti ponti.</p>
 <p>Chi fosse interessato al file può <a href="https://70plus.it/Calendario_in_un_foglio.zip" target="_blank" rel="noopener noreferrer">scaricarlo da qui</a>, per entrambi i formati LibreOffice Calc ed Excel.</p>
 <p><em>La foto di apertura è di <a href="https://pixabay.com/it/users/webandi-1460261/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Andreas Lischka</a> da <a href="https://pixabay.com/it//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1990453">Pixabay</a>.</em></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Pasta e fagioli</title>
-        <author>
-            <name>Pasquale</name>
-        </author>
-        <link href="https://70plus.it/pasta-e-fagioli.html"/>
-        <id>https://70plus.it/pasta-e-fagioli.html</id>
-            <category term="cucina"/>
-
-        <updated>2023-02-01T07:44:19+01:00</updated>
-            <summary>
-                <![CDATA[
-                    Già 2000 anni fa i Romani gustavano una minestra di fagioli, a volte arricchita con le sagne, pasta ottenuta da un impasto di acqua e farina (la pasta secca era di là da venire). Era un piatto popolare, di origine&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Già 2000 anni fa i Romani gustavano una minestra di fagioli, a volte arricchita con le <strong><em>sagne</em></strong>, pasta ottenuta da un impasto di acqua e farina (la pasta secca era di là da venire). Era un piatto popolare, di origine ciociara, molto gradito a <strong>Cicerone</strong>.<br>Oggi la pasta e fagioli è un piatto presente nelle cucine tradizionali di diverse regioni, prevalentemente con i <strong>fagioli cannellini</strong>, che hanno soppiantato il fagiolo dell'epoca romana, e che danno particolare cremosità al piatto.</p>
-<h4>I fagioli</h4>
-<p>La mia versione si rifà alla tradizione napoletana. Ho però eliminato cotiche e grassi in generale, arricchendo il sapore solo con <strong>sedano e pomodorini</strong>. Oltre ai fagioli cannellini (sicuramente i più indicati), mi piace gustare anche i <strong>fagioli rossi</strong> o i <strong>borlotti</strong>.</p>
-<h4>La pasta</h4>
-<p>Per la pasta mi attengo al classico della <strong>pasta mista</strong> della tradizione napoletana. Ne produce di ottima il <a href="https://www.pasta-garofalo.com/it/prodotto/n-82-pasta-mista/" target="_blank" rel="nofollow noopener noreferrer">pastificio Garofalo</a>.<br>Parto da questa, ma arricchisco con rimasugli di altri tipi di pasta (spaghetti, fusilli), badando solo al tempo di cottura suggerito, che non si discosti dai 9-10 minuti della pasta mista di Garofalo, e sminuzzandola opportunamente.<br>Non esagerare comunque con la quantità, 80-85 grammi a persona vanno bene, anche per un appetito robusto.</p>
-<h4>Altri suggerimenti</h4>
-<p>Non salare la cottura dei fagioli, perché già la conservazione in scatola aggiunge sale. <br>Se si ha poco tempo per preparare il pranzo, si possono anticipare al mattino tutti i passaggi della preparazione, fino alla cottura della pasta esclusa.</p>
-<h4>Difficoltà</h4>
-<p>Pasta e fagioli è un piatto ragionevolmente semplice da preparare e si sporca una sola pentola.<br>La preparazione mi prende 33 - 38 minuti:</p>
-<ul>
-<li>20 - 25 minuti per terminare la cottura dei fagioli</li>
-<li>10 - 12 minuti per cuocere la pasta</li>
-<li>2-4 minuti in pentola a fuoco spento, prima di impiattare</li>
-</ul>
-<h4>Ingredienti (per una persona adulta e di buon appetito)</h4>
-<p>80 gr di pasta, preferibilmente mista<br>1 confezione di fagioli lessati in scatola da 125 gr (sgocciolati)<br>4 pomodorini, tipo ciliegino o datterino (opzionale)<br>un pezzo di sedano<br>sale<br>2 cucchiai (moderati) di olio EVO</p>
-<h4>Procedimento</h4>
-<p>Versare l'olio nella pentola e avviare a fuoco medio-alto. Aggiungere il sedano, lavato  e tagliato a pezzetti per il lungo, e i pomodorini tagliati in 4 spicchi.<br>Schiacciare leggermente i pomodorini con la forchetta, per far fuoriuscire il sugo.</p>
-<p>Dopo un paio di minuti versare i fagioli, aggiungere un bicchiere d'acqua e regolare il fuoco in modo che ci sia appena il bollore.<br>Trascorsi 15 -20 minuti, schiacciare buona parte dei fagioli con la forchetta, aggiungere un po' d'acqua (1/4 di bicchiere) e girare per qualche minuto.</p>
-<p>Siamo arrivati alla pasta, da aggiungere eventualmente con un po' d'acqua, facendo in modo che la pasta sia appena sommersa. Un pizzico di sale e regolare il fuoco in modo che ci sia giusto un accenno di bollore.<br>Girare ogni tanto, in modo da evitare che la pasta si attacchi al fondo della pentola e, se tende ad asciugarsi troppo, aggiungere pochissima acqua per volta. Il risultato finale non deve essere assolutamente brodoso, ma risultare cremoso una volta spento e riposato per qualche minuto.</p>
-<p>Trascorso il tempo di cottura della pasta, spegnere e girare ancora un paio di volte per assicurarsi che niente rimanga attaccato al fondo. Lasciar riposare per qualche minuto e poi impiattare.</p>
-<h4>Giudizio</h4>
-<p>Molto buono!</p>
-<hr>
-<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.github.io/la-cucina-vista-da-me.html">La cucina vista da me</a>.</p>
             ]]>
         </content>
     </entry>
