@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-03-24T09:03:05+01:00</updated>
+    <updated>2024-03-24T10:11:31+01:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -24,13 +24,13 @@
             <summary>
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" alt="" />
-                    A fine dicembre 2023 ho installato sul mio Asus E210 (pc di fascia bassa) l'ultima versione di Zorin OS, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1. Sono decisamente soddisfatto delle&hellip;
+                    A fine dicembre 2023 ho installato l'ultima versione di Zorin OS, la 7, sul mio Asus E210 (pc di fascia bassa con Celeron N4020, 4 GB di memoria). Con gli aggiornamenti di questi primi tre mesi, la versione è stata&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" class="type:primaryImage" alt="" /></p>
-                <p>A fine dicembre 2023 ho installato sul mio <strong>Asus E210</strong> (pc di fascia bassa) l'ultima versione di <strong>Zorin OS</strong>, la 7. Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer"></a></p>
+                <p>A fine dicembre 2023 ho installato l'ultima versione di <strong>Zorin OS</strong>, la 7, sul mio <strong>Asus E210</strong> (pc di fascia bassa con Celeron N4020, 4 GB di memoria). Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer"></a></p>
 <p>La descrizione di cosa produco e come è qui di seguito. L'analisi dei numeri seguirà nel post successivo.</p>
 <h3>Cosa produco</h3>
 <p>Preparo settimanalmente un mini-giornalino per la mia nipotina Luna di 6 anni e la sua cuginetta Cecilia di 7: due fogli A4, stampati fronte-retro, piegati in due e fascicolati in modo da avere 8 facciate.<br>L'impaginazione della <strong>Settimana Lunare</strong> al momento è di due tipi. Il primo:</p>
