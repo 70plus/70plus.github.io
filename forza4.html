@@ -30,9 +30,29 @@
                 </div>
             </div>
             <div class="spaziatura"></div>
-            <button id="roll-button">Tira il dado!</button>
+            <div class="area-bottoni">
+                <button class="vai">Gioca</button>
+                <button id="roll-button">Tira il dado!</button>
+                <button class="info"><em>i</em></button>
+            </div>
+            <div class="spaziatura"></div>            
             <div style="margin: auto" id="dice-icon"></div>
          </div>
-
+         <div class="spaziatura-big"></div>            
+ 
+        <!-- Put this at the end of the <body> tag -->
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("WoH0No9arSTq");
+                swetrix.trackViews();
+            });
+        </script>
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
       </body>
 </html>

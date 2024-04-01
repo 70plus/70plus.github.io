@@ -31,6 +31,11 @@ html * {
     background-color: #ffffff;
 }
 
+.spaziatura-big {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
 .gioco-container {
     text-align:center;
     align-items: center;
@@ -53,6 +58,30 @@ html * {
     text-align: center;
 }
 
+.area-bottoni {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    background-color: #ffffff;
+}
+
+.vai {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+}
 .rolling {
   animation: dice-roll 1s linear infinite;
 }
