@@ -3,6 +3,10 @@ html * {
     font-size: large;
 }
 
+table td {
+  font-size: 150%;
+}
+
 #roll-button {
   background-color: #4CAF50;
   color: white;
@@ -66,7 +70,7 @@ html * {
     background-color: #ffffff;
 }
 
-.vai {
+#vai, #okB {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -75,13 +79,19 @@ html * {
   cursor: pointer;
 }
 
-.info {
+#info {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 50%;
 }
+
+
+#vai:hover, #okB:hover, #info:hover {
+  background-color: #3e8e41;
+}
+
 .rolling {
   animation: dice-roll 1s linear infinite;
 }
@@ -97,3 +107,4 @@ html * {
     transform: scale(1) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
+
