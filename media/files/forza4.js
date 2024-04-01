@@ -17,7 +17,7 @@ const table = document.createElement('table');
 // table.style.width = '80%';
 table.style.border = '5px solid black';
 table.style.borderCollapse = 'collapse';
-table.style.margin = '0 auto'; // Add this line to center the table
+table.style.margin = '0 auto';
 
 for (let i = 0; i < size; i++) {
   const row = document.createElement('tr');
@@ -25,8 +25,8 @@ for (let i = 0; i < size; i++) {
     const cell = document.createElement('td');
     cell.textContent = 'text';
     cell.style.textAlign = 'center';
-    cell.style.width = '50px';
-    cell.style.height = '50px';
+    cell.style.width = '40px';
+    cell.style.height = '40px';
     cell.style.border = '2px solid black';
     row.appendChild(cell);
   }
