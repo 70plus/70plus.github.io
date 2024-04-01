@@ -14,6 +14,8 @@ window.onload = function() {
   });
 
 const table = document.createElement('table');
+const tablePosition = table.getBoundingClientRect();
+const cellDim = (window.innerHeight - tablePosition - '10px') / size;
 // table.style.width = '80%';
 table.style.border = '5px solid black';
 table.style.borderCollapse = 'collapse';
