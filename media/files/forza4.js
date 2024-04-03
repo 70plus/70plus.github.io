@@ -2,7 +2,7 @@ window.onload = function() {
 //-----------------------------------------------------------
 // definizioni
   const size = 6;
-  const rollButton = document.getElementById('roll-button');
+  let rollingDice = false;
   const diceIcon = document.getElementById('dice-icon');
   const hWindow = window.innerHeight;
   const wWindow = window.innerWidth;
@@ -12,6 +12,10 @@ window.onload = function() {
   const infoText = document.querySelector("#infoTesto");
   const closeButton = document.querySelector("#okB");
   let randomNumber;
+  let tableCont = new Array(size * size);
+  let row = new Array(size);
+  let col = new Array(size);
+  let refRow = new Array(size);
 //-----------------------------------------------------------
 // box di informazioni sul gioco
 infoButton.addEventListener("click", function() {
@@ -29,14 +33,18 @@ closeButton.addEventListener("click", () => {
 })
 //-----------------------------------------------------------
 // evento "tira il dado"
-  rollButton.addEventListener('click', () => {
-    diceIcon.classList.add('rolling');
-    diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
-    setTimeout(() => {
-      diceIcon.classList.remove('rolling');
-      randomNumber = Math.floor(Math.random() * 6) + 1;
-      diceIcon.style.backgroundImage = `url('media/files/dado-${randomNumber}.png')`;
-    }, 1000);
+  diceIcon.addEventListener('click', () => {
+    if (rollingDice == false) {
+      rollingDice = true;
+      diceIcon.classList.add('rolling');
+      diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
+      setTimeout(() => {
+        diceIcon.classList.remove('rolling');
+        randomNumber = Math.floor(Math.random() * 6) + 1;
+        diceIcon.style.backgroundImage = `url('media/files/dado-${randomNumber}.png')`;
+        rollingDice = false;
+      }, 1000);
+    }
   });
 //-----------------------------------------------------------
 // inserimento della tabella di gioco
@@ -66,15 +74,35 @@ for (let i = 0; i < size; i++) {
 
 document.body.appendChild(table); 
 //-----------------------------------------------------------
+// funzione di generazione della tabella
+function tableGen() {
+    for (let i = 0; i < size; i++) {
+    row[i] = i;
+    col[i] = i;
+    refRow[i] = i;
+    }
+    for (i = row.length - 1; i > 0; i--) {
+    	let k = Math.floor(Math.random() * (i + 1));
+    	[row[i], row[k]] = [row[k], row[i]];
+    	k = Math.floor(Math.random() * (i + 1));
+    	[col[i], col[k]] = [col[k], col[i]];
+    }
+    for (i = 0; i < size; i++) {
+        ii = row[i];
+        for (let j = 0; j < size; j++) {
+            tableCont[i + j * size] = (refRow[col[j]] + ii) % size + 1;  
+        }
+    }
+}
+//-----------------------------------------------------------
 // funzione di riempimento della tabella
 vaiButton.addEventListener("click", function() {
+   tableGen();
    for (let i = 0; i < size; i++) {
      for (let j = 0; j < size; j++) {
-        document.getElementById(`${i}-${j}`).innerText = Math.floor(Math.random() * 6) + 1;
+        document.getElementById(`${i}-${j}`).innerText = tableCont[i + j * size];
      }
    }
 })
 //-----------------------------------------------------------
-
 }
-

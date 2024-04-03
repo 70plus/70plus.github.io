@@ -7,19 +7,6 @@ table td {
   font-size: 150%;
 }
 
-#roll-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#roll-button:hover {
-  background-color: #3e8e41;
-}
-
 #dice-icon {
   width: 100px;
   height: 100px;
@@ -64,7 +51,7 @@ table td {
 
 .area-bottoni {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     background-color: #ffffff;
@@ -91,6 +78,29 @@ table td {
 #vai:hover, #okB:hover, #info:hover {
   background-color: #3e8e41;
 }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .box-left {
+        width: 250px;
+        height: 50px;
+        margin: 2px;
+        background-color: #ffafcc;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .box-right {
+        width: 250px;
+        height: 50px;
+        margin: 5px;
+        background-color: #fb8500;
+        text-align: center;
+        line-height: 50px;
+    }
 
 .rolling {
   animation: dice-roll 1s linear infinite;
