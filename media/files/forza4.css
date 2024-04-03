@@ -8,8 +8,8 @@ table td {
 }
 
 #dice-icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-image: url('dado.png');
   background-size: cover;
   background-position: center;
