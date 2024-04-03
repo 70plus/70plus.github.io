@@ -8,20 +8,15 @@ table td {
 }
 
 #dice-icon {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   background-image: url('dado.png');
   background-size: cover;
   background-position: center;
 }
 
 .spaziatura {
-    margin-bottom: 2px;
-    background-color: #ffffff;
-}
-
-.spaziatura-big {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     background-color: #ffffff;
 }
 
