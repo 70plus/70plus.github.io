@@ -84,20 +84,16 @@ table td {
 
     .box-left {
         width: 200px;
-        height: 60px;
         margin: 2px;
-        background-color: #ffafcc;
+        color: #0077b6;
         text-align: center;
-        line-height: 60px;
     }
 
     .box-right {
         width: 200px;
-        height: 60px;
         margin: 5px;
-        background-color: #fb8500;
+        color: #ff006e;
         text-align: center;
-        line-height: 60px;
     }
 
 .rolling {
