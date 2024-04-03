@@ -14,7 +14,6 @@ table td {
   background-size: cover;
   background-position: center;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 .spaziatura {
@@ -53,7 +52,6 @@ table td {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
     background-color: #ffffff;
 }
 
@@ -85,21 +83,21 @@ table td {
     }
 
     .box-left {
-        width: 250px;
-        height: 50px;
+        width: 200px;
+        height: 60px;
         margin: 2px;
         background-color: #ffafcc;
         text-align: center;
-        line-height: 50px;
+        line-height: 60px;
     }
 
     .box-right {
-        width: 250px;
-        height: 50px;
+        width: 200px;
+        height: 60px;
         margin: 5px;
         background-color: #fb8500;
         text-align: center;
-        line-height: 50px;
+        line-height: 60px;
     }
 
 .rolling {
