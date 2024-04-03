@@ -11,8 +11,7 @@ table td {
   width: 80px;
   height: 80px;
   background-image: url('dado.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
@@ -88,7 +87,6 @@ table td {
         color: #3a86ff;
         text-align: center;
     }
-
     .box-right {
         width: 175px;
         margin: 2px;
