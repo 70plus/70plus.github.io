@@ -8,8 +8,8 @@ table td {
 }
 
 #dice-icon {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-image: url('dado.png');
   background-size: cover;
   background-position: center;
@@ -82,13 +82,13 @@ table td {
     }
 
     .box-left {
-        width: 175px;
+        width: 90px;
         margin: 2px;
         color: #3a86ff;
         text-align: center;
     }
     .box-right {
-        width: 175px;
+        width: 90px;
         margin: 2px;
         color: #ff006e;
         text-align: center;
