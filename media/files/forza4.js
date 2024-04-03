@@ -88,9 +88,9 @@ function tableGen() {
     	[col[i], col[k]] = [col[k], col[i]];
     }
     for (i = 0; i < size; i++) {
-        ii = row[i];
+//        ii = row[i];
         for (let j = 0; j < size; j++) {
-            tableCont[i + j * size] = (refRow[col[j]] + ii) % size + 1;  
+            tableCont[i + j * size] = (refRow[col[j]] + row[i]) % size + 1;  
         }
     }
 }
