@@ -12,6 +12,7 @@ table td {
   height: 80px;
   background-image: url('dado.png');
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
