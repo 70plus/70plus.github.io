@@ -71,6 +71,10 @@ closeButton.addEventListener("click", () => {
       }, 1000);
     }
   });
+
+  playMsg[0].style.width = Math.floor((wWindow - diceIcon.offsetWidth - 30)/2) + 'px';
+  playMsg[1].style.width = playMsg[0].style.width;
+
 //-----------------------------------------------------------
 // inserimento della tabella di gioco
 const tableStart = document.getElementById("pre-table").getBoundingClientRect();
@@ -116,7 +120,7 @@ function tableGen() {
     for (i = 0; i < size; i++) {
 //        ii = row[i];
         for (let j = 0; j < size; j++) {
-            tableCont[i + j * size] = (refRow[col[j]] + row[i]) % size + 1;  
+            tableCont[i * size + j] = (refRow[col[j]] + row[i]) % size + 1;  
         }
     }
 }
@@ -124,8 +128,8 @@ function tableGen() {
 // funzione colora la cella
    function addCellsListener(i,j) {
        document.getElementById(`${i}-${j}`).addEventListener('click', function() {
-           if (cellOwner[i + j * size] == 0 && document.getElementById(`${i}-${j}`).innerText == randomNumber)  {
-               cellOwner[i + j * size] = player;
+           if (cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerText == randomNumber)  {
+               cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
                diceEnabled = true;
                setCellColor = false;
@@ -141,9 +145,9 @@ vaiButton.addEventListener("click", function() {
    tableGen();
    for (let i = 0; i < size; i++) {
      for (let j = 0; j < size; j++) {
-        document.getElementById(`${i}-${j}`).innerText = tableCont[i + j * size];
+        document.getElementById(`${i}-${j}`).innerText = tableCont[i * size + j];
         document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[0];
-        cellOwner[i + j * size] = 0;
+        cellOwner[i * size + j] = 0;
         addCellsListener(i,j);
      }
    }
@@ -151,7 +155,6 @@ vaiButton.addEventListener("click", function() {
    diceEnabled = true;
    setCellColor = false;
    player = Math.floor(Math.random() * 2) + 1;
-   console.log(player);
    playMsg[player-1].innerText = "Tira il dado";
    playMsg[2 - player].innerText = "Aspetta il tuo turno";
 })
