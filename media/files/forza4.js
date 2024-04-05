@@ -2,6 +2,7 @@ window.onload = function() {
 //-----------------------------------------------------------
 // parametri generali
   const size = 6;
+  const winSeq = 2;
   const hWindow = window.innerHeight;
   const wWindow = window.innerWidth;
 // memorizzazione dello stato
@@ -24,15 +25,17 @@ window.onload = function() {
 // ideintificazione dei giocatori
   const msgColor = new Array('#ffffff', '#3a86ff', '#ff006e');
   const playColor = new Array('#ffffff', '#a2d2ff', '#ffafcc');
-  let player;
+  let player = Math.floor(Math.random() * 2) + 1;
 // altri parametri
   let randomNumber;
 // stato del gioco
   let playRunning = false;
   let diceEnabled = false;
   let setCellColor = false;
+  let gameEnded;
 // messaggi
-  let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", "Aspetta il tuo turno", "Non ci sono celle libere");
+  let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", 
+     "Aspetta il tuo turno", "Non ci sono celle libere", "<b>Hai vinto!</b>", "");
 //-----------------------------------------------------------
 // box di informazioni sul gioco
 infoButton.addEventListener("click", function() {
@@ -75,11 +78,10 @@ closeButton.addEventListener("click", () => {
       }, 1000);
     }
   });
-
+//-----------------------------------------------------------
+// main
   playMsg[0].style.width = Math.floor((wWindow - diceIcon.offsetWidth - 30)/2) + 'px';
   playMsg[1].style.width = playMsg[0].style.width;
-
-//-----------------------------------------------------------
 // inserimento della tabella di gioco
 const tableStart = document.getElementById("pre-table").getBoundingClientRect();
 const table = document.createElement('table');
@@ -89,7 +91,6 @@ const cellDim = Math.min(cellDimH, cellDimW);
 table.style.border = '5px solid #4CAF50';
 table.style.borderCollapse = 'collapse';
 table.style.margin = '0 auto';
-
 for (let i = 0; i < size; i++) {
   const row = document.createElement('tr');
   for (let j = 0; j < size; j++) {
@@ -104,7 +105,6 @@ for (let i = 0; i < size; i++) {
   }
   table.appendChild(row);
 }
-
 document.body.appendChild(table); 
 //-----------------------------------------------------------
 // funzione di generazione della tabella
@@ -135,17 +135,43 @@ function tableGen() {
            if (cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
-               diceEnabled = true;
-               setCellColor = false;
-               playMsg[player - 1].innerHTML = msgContent[2];
-               player = 3 - player;
-               diceIcon.style.border = "2px solid " + msgColor[player];
-               playMsg[player - 1].innerHTML = msgContent[0];
+               // verifica se fine partita
+               gameEnded = false;
+               if (endGame(0, j, 1, 0, size, player) || endGame(i, 0, 0, 1, size, player)) {
+                  gameEnded = true;
+               }
+               if (i - j >= 0) {
+                  if (endGame(i-j, 0, 1, 1, size - i + j + 1, player)) {
+                     gameEnded = true;
+                  } 
+               } else if (endGame(0, j-i, 1, 1, size + i - j, player)) {
+                     gameEnded = true;
+                  }
+               if (i + j >= size - 1) {
+                  if (endGame(size - 1, i + j - 1, -1, 1, 2 * size - i - j - 1, player)) {
+                     gameEnded = true;
+                  } 
+               } else if (endGame(0, i + j, -1, 1, i + j + 1, player)) {
+                     gameEnded = true;
+                  }
+               if (gameEnded) {
+                  playMsg[player - 1].innerHTML = msgContent[4];
+                  playMsg[2 - player].innerHTML = msgContent[5];
+                  playRunning = false;
+                  diceEnabled = false;
+               } else {
+                  diceEnabled = true;
+                  setCellColor = false;
+                  playMsg[player - 1].innerHTML = msgContent[2];
+                  player = 3 - player;
+                  diceIcon.style.border = "2px solid " + msgColor[player];
+                  playMsg[player - 1].innerHTML = msgContent[0];
+               }
            }
        });
     }
 //-----------------------------------------------------------
-// funzione di riempimento della tabella
+// funzione di inizio partita
 vaiButton.addEventListener("click", function() {
    tableGen();
    for (let i = 0; i < size; i++) {
@@ -159,10 +185,36 @@ vaiButton.addEventListener("click", function() {
    playRunning = true;
    diceEnabled = true;
    setCellColor = false;
-   player = Math.floor(Math.random() * 2) + 1;
+   player = 3 - player;
    diceIcon.style.border = "2px solid " + msgColor[player];
    playMsg[player-1].innerHTML = msgContent[0];
    playMsg[2 - player].innerHTML = msgContent[2];
 })
+//-----------------------------------------------------------
+// funzione di verifica del fine partita
+   function endGame(i, j, ix, jx, np, player) {
+      if (np < size) {return false;}
+      seqLen = 0;
+      maxSeq = 0;
+      for (let p = 0; p < np; p++) {
+         if (cellOwner[i * size + j] == player) {
+            if (seqLen == 0) {
+               ip = i;
+               jp = j;
+               seqLen = 1;
+            } else {
+               seqLen += 1;
+            }         
+         } else if (seqLen > maxSeq) {
+               maxSeq = seqLen;
+               iMax = ip;
+               jmax = jp;
+               seqLen = 0;
+         }
+         i += ix;
+         j += jx;
+      }
+      return (maxSeq >= winSeq);
+   }
 //-----------------------------------------------------------
 }
