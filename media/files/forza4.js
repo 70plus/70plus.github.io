@@ -2,7 +2,7 @@ window.onload = function() {
 //-----------------------------------------------------------
 // parametri generali
   const size = 6;
-  const winSeq = 2;
+  const winSeq = 4;
   const hWindow = window.innerHeight;
   const wWindow = window.innerWidth;
 // memorizzazione dello stato
@@ -29,7 +29,6 @@ window.onload = function() {
 // altri parametri
   let randomNumber;
 // stato del gioco
-  let playRunning = false;
   let diceEnabled = false;
   let setCellColor = false;
   let gameEnded;
@@ -132,36 +131,35 @@ function tableGen() {
 // funzione colora la cella
    function addCellsListener(i,j) {
        document.getElementById(`${i}-${j}`).addEventListener('click', function() {
-           if (cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
+           if (setCellColor && cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
+               setCellColor = false;
                // verifica se fine partita
                gameEnded = false;
                if (endGame(0, j, 1, 0, size, player) || endGame(i, 0, 0, 1, size, player)) {
                   gameEnded = true;
                }
-               if (i - j >= 0) {
-                  if (endGame(i-j, 0, 1, 1, size - i + j + 1, player)) {
+               if (i + j < size) {
+                  if (endGame(i+j, 0, -1, 1, i + j + 1, player)) {
                      gameEnded = true;
                   } 
-               } else if (endGame(0, j-i, 1, 1, size + i - j, player)) {
+               } else if (endGame(size - 1, i + j - size + 1, -1, 1, 2 * size -1 - i - j, player)) {
                      gameEnded = true;
                   }
-               if (i + j >= size - 1) {
-                  if (endGame(size - 1, i + j - 1, -1, 1, 2 * size - i - j - 1, player)) {
+               if (i < j) {
+                  if (endGame(0, j-i, 1, 1, size - j + i, player)) {
                      gameEnded = true;
                   } 
-               } else if (endGame(0, i + j, -1, 1, i + j + 1, player)) {
+               } else if (endGame(i - j, 0, 1, 1, size  - i + j, player)) {
                      gameEnded = true;
                   }
                if (gameEnded) {
                   playMsg[player - 1].innerHTML = msgContent[4];
                   playMsg[2 - player].innerHTML = msgContent[5];
-                  playRunning = false;
                   diceEnabled = false;
                } else {
                   diceEnabled = true;
-                  setCellColor = false;
                   playMsg[player - 1].innerHTML = msgContent[2];
                   player = 3 - player;
                   diceIcon.style.border = "2px solid " + msgColor[player];
@@ -182,7 +180,7 @@ vaiButton.addEventListener("click", function() {
         addCellsListener(i,j);
      }
    }
-   playRunning = true;
+   diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
    diceEnabled = true;
    setCellColor = false;
    player = 3 - player;
@@ -193,9 +191,9 @@ vaiButton.addEventListener("click", function() {
 //-----------------------------------------------------------
 // funzione di verifica del fine partita
    function endGame(i, j, ix, jx, np, player) {
-      if (np < size) {return false;}
-      seqLen = 0;
-      maxSeq = 0;
+      if (np < winSeq) {return false;}
+      let seqLen = 0;
+      let maxSeq = 0;
       for (let p = 0; p < np; p++) {
          if (cellOwner[i * size + j] == player) {
             if (seqLen == 0) {
@@ -213,6 +211,16 @@ vaiButton.addEventListener("click", function() {
          }
          i += ix;
          j += jx;
+      }
+      if (seqLen > maxSeq) {
+               maxSeq = seqLen;
+      }
+      if (maxSeq >= winSeq) {
+         for (p = 0; p < maxSeq; p++) {
+            document.getElementById(`${ip}-${jp}`).style.backgroundColor = msgColor[player];
+            ip += ix;
+            jp += jx;
+         }
       }
       return (maxSeq >= winSeq);
    }
