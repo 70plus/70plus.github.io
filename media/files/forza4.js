@@ -21,16 +21,18 @@ window.onload = function() {
   let playMsg = new Array(2);
   playMsg[0] = document.getElementById('box-left');
   playMsg[1] = document.getElementById('box-right');
-// giocatori
-  const playColor = new Array('#ffffff', '#3a86ff', '#ff006e');
+// ideintificazione dei giocatori
+  const msgColor = new Array('#ffffff', '#3a86ff', '#ff006e');
+  const playColor = new Array('#ffffff', '#a2d2ff', '#ffafcc');
   let player;
 // altri parametri
   let randomNumber;
 // stato del gioco
-
   let playRunning = false;
   let diceEnabled = false;
   let setCellColor = false;
+// messaggi
+  let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", "Aspetta il tuo turno", "Non ci sono celle libere");
 //-----------------------------------------------------------
 // box di informazioni sul gioco
 infoButton.addEventListener("click", function() {
@@ -47,7 +49,7 @@ closeButton.addEventListener("click", () => {
     infoBox.close();
 })
 //-----------------------------------------------------------
-// evento "tira il dado"
+// evento tira il dado
   diceIcon.addEventListener('click', () => {
     if (diceEnabled == true) {
       diceEnabled = false;
@@ -56,16 +58,18 @@ closeButton.addEventListener("click", () => {
       setTimeout(() => {
         diceIcon.classList.remove('rolling');
         randomNumber = Math.floor(Math.random() * 6) + 1;
+        diceIcon.style.border = "2px solid white";
         if (avblCells[randomNumber] > 0) {
             avblCells[randomNumber] -= 1;
             setCellColor = true;
-            playMsg[player - 1].innerText = "Colora la cella";
-            playMsg[2 - player].innerText = "Aspetta il tuo turno";
+            playMsg[player - 1].innerHTML = msgContent[1];
+            playMsg[2 - player].innerHTML = msgContent[2];
         } else {
             diceEnabled = true;
-            playMsg[player - 1].innerText = "Non ci sono celle libere";
+            playMsg[player - 1].innerHTML = msgContent[3];
             player = 3 - player;
-            playMsg[player - 1].innerText = "Tira il dado";
+            diceIcon.style.border = "2px solid " + msgColor[player];
+            playMsg[player - 1].innerHTML = msgContent[0];
         }
         diceIcon.style.backgroundImage = `url('media/files/dado-${randomNumber}.png')`;
       }, 1000);
@@ -128,14 +132,15 @@ function tableGen() {
 // funzione colora la cella
    function addCellsListener(i,j) {
        document.getElementById(`${i}-${j}`).addEventListener('click', function() {
-           if (cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerText == randomNumber)  {
+           if (cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
                diceEnabled = true;
                setCellColor = false;
-               playMsg[player - 1].innerText = "Aspetta il tuo turno";
+               playMsg[player - 1].innerHTML = msgContent[2];
                player = 3 - player;
-               playMsg[player - 1].innerText = "Tira il dado";
+               diceIcon.style.border = "2px solid " + msgColor[player];
+               playMsg[player - 1].innerHTML = msgContent[0];
            }
        });
     }
@@ -145,7 +150,7 @@ vaiButton.addEventListener("click", function() {
    tableGen();
    for (let i = 0; i < size; i++) {
      for (let j = 0; j < size; j++) {
-        document.getElementById(`${i}-${j}`).innerText = tableCont[i * size + j];
+        document.getElementById(`${i}-${j}`).innerHTML = tableCont[i * size + j];
         document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[0];
         cellOwner[i * size + j] = 0;
         addCellsListener(i,j);
@@ -155,8 +160,9 @@ vaiButton.addEventListener("click", function() {
    diceEnabled = true;
    setCellColor = false;
    player = Math.floor(Math.random() * 2) + 1;
-   playMsg[player-1].innerText = "Tira il dado";
-   playMsg[2 - player].innerText = "Aspetta il tuo turno";
+   diceIcon.style.border = "2px solid " + msgColor[player];
+   playMsg[player-1].innerHTML = msgContent[0];
+   playMsg[2 - player].innerHTML = msgContent[2];
 })
 //-----------------------------------------------------------
 }

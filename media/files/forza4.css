@@ -13,16 +13,13 @@ table td {
   background-image: url('dado.png');
   background-size: cover;
   background-position: center;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .spaziatura {
     margin-bottom: 6px;
     background-color: #ffffff;
-}
-
-.gioco-container {
-    text-align:center;
-    align-items: center;
 }
 
 .logo-container {
