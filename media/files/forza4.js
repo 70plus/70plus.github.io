@@ -2,6 +2,7 @@ window.onload = function() {
 //-----------------------------------------------------------
 // parametri generali
   const size = 6;
+  let remCells;
   const winSeq = 4;
   const hWindow = window.innerHeight;
   const wWindow = window.innerWidth;
@@ -34,17 +35,10 @@ window.onload = function() {
   let gameEnded;
 // messaggi
   let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", 
-     "Aspetta il tuo turno", "Non ci sono celle libere", "<b>Hai vinto!</b>", "");
+     "Aspetta il tuo turno", "Non ci sono celle libere", "<b>Hai vinto!</b>", "", "<b>La partita è patta!</b>");
 //-----------------------------------------------------------
 // box di informazioni sul gioco
 infoButton.addEventListener("click", function() {
-  infoText.innerHTML = `
-      Regole del gioco:<ul>
-      <li>due giocatori tirano a turno il dado;
-      <li>una volta tirato il dado, cercano sulla tavola di gioco le caselle con il numero indicato dal dado;
-      <li>scelgono la casella che preferiscono, toccandola;
-      <li>la casella assumerà il colore assegnato al giocatore;
-      <li>vince chi per primo riesce a colorare 4 caselle in orizzontale, verticale o diagonale.`;
   infoBox.showModal();
 })
 closeButton.addEventListener("click", () => {
@@ -105,6 +99,15 @@ for (let i = 0; i < size; i++) {
   table.appendChild(row);
 }
 document.body.appendChild(table); 
+// informazioni sull gioco
+  infoText.innerHTML = `
+      Si gioca in due. Regole del gioco:<ul>
+      <li>all'avvio del gioco il primo giocatore è scelto a caso;
+      <li>comincia una nuova partita il penultimo a giocare nella partita appena conclusa;
+      <li>il giocatore di turno tira il dado e sceglie una casella con il valore ottenuto;
+      <li>la casella assumerà il colore assegnato al giocatore;
+      <li>vince chi per primo riesce a colorare 4 caselle in orizzontale, verticale o diagonale;
+      <li>il dado si tira toccandolo e, allo stesso modo, le celle si colorano toccandole.`;
 //-----------------------------------------------------------
 // funzione di generazione della tabella
 function tableGen() {
@@ -134,6 +137,7 @@ function tableGen() {
            if (setCellColor && cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
+               remCells -= 1;
                setCellColor = false;
                // verifica se fine partita
                gameEnded = false;
@@ -158,12 +162,16 @@ function tableGen() {
                   playMsg[player - 1].innerHTML = msgContent[4];
                   playMsg[2 - player].innerHTML = msgContent[5];
                   diceEnabled = false;
-               } else {
+               } else if (remCells > 0) {
                   diceEnabled = true;
                   playMsg[player - 1].innerHTML = msgContent[2];
                   player = 3 - player;
                   diceIcon.style.border = "2px solid " + msgColor[player];
                   playMsg[player - 1].innerHTML = msgContent[0];
+               } else {
+                  playMsg[player - 1].innerHTML = msgContent[6];
+                  playMsg[2 - player].innerHTML = msgContent[6];                  
+                  diceEnabled = false;
                }
            }
        });
@@ -181,6 +189,7 @@ vaiButton.addEventListener("click", function() {
      }
    }
    diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
+   remCells = size * size;
    diceEnabled = true;
    setCellColor = false;
    player = 3 - player;
