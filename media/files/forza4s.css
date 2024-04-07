@@ -101,3 +101,26 @@ table td {
   }
 }
 
+    .line {
+        width: 0%;
+        height: 3px;
+        background-color: green;
+        position: absolute;
+
+        left: 0;
+        transition: width 8s ease;
+    }
+
+    .line.start-animation {
+        width: 100%;
+        animation: reduceLine 8s forwards;
+    }
+
+    @keyframes reduceLine {
+        0% {
+            width: 100%;
+        }
+        100% {
+            width: 0;
+        }
+    }

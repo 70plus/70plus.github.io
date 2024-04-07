@@ -20,6 +20,7 @@ window.onload = function() {
   const infoBox = document.getElementById("info-box");
   const infoText = document.querySelector("#infoTesto");
   const closeButton = document.querySelector("#okB");
+  const line = document.getElementById("line");
   let playMsg = new Array(2);
   playMsg[0] = document.getElementById('box-left');
   playMsg[1] = document.getElementById('box-right');
@@ -34,7 +35,7 @@ window.onload = function() {
   let setCellColor = false;
   let gameEnded;
   let timeoutID;
-  let timeoutLen = 4000;
+  let timeoutLen = 8000;
   let inTime;
 // messaggi
   let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", 
@@ -65,7 +66,9 @@ closeButton.addEventListener("click", () => {
             playMsg[player - 1].innerHTML = msgContent[1];
             playMsg[2 - player].innerHTML = msgContent[2];
             inTime = true;
+            line.classList.add("start-animation");
             timeoutId = setTimeout(() => {
+               line.classList.remove("start-animation");
                inTime = false;
                diceEnabled = true;
                playMsg[player - 1].innerHTML = msgContent[7];
@@ -149,6 +152,7 @@ function tableGen() {
        document.getElementById(`${i}-${j}`).addEventListener('click', function() {
            clearTimeout(timeoutId);
            if (inTime && setCellColor && cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
+               line.classList.remove("start-animation");
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
                remCells -= 1;
