@@ -21,6 +21,7 @@ window.onload = function() {
   const infoText = document.querySelector("#infoTesto");
   const closeButton = document.querySelector("#okB");
   const line = document.getElementById("line");
+  const speedSel = document.getElementById("speed");
   let playMsg = new Array(2);
   playMsg[0] = document.getElementById('box-left');
   playMsg[1] = document.getElementById('box-right');
@@ -31,6 +32,7 @@ window.onload = function() {
 // altri parametri
   let randomNumber;
 // stato del gioco
+  let speed = false;
   let diceEnabled = false;
   let setCellColor = false;
   let gameEnded;
@@ -50,6 +52,16 @@ closeButton.addEventListener("click", () => {
     infoBox.close();
 })
 //-----------------------------------------------------------
+// bottone di selezione della velocità
+speedSel.addEventListener("click", function() {
+    speed = !speed;
+    if (speed) {
+       speedSel.innerHTML = "🚀";
+    } else {
+       speedSel.innerHTML = "🐢";
+    }
+})
+//-----------------------------------------------------------
 // evento tira il dado
   diceIcon.addEventListener('click', () => {
     if (diceEnabled == true) {
@@ -66,16 +78,18 @@ closeButton.addEventListener("click", () => {
             playMsg[player - 1].innerHTML = msgContent[1];
             playMsg[2 - player].innerHTML = msgContent[2];
             inTime = true;
-            line.classList.add("start-animation");
-            timeoutId = setTimeout(() => {
-               line.classList.remove("start-animation");
-               inTime = false;
-               diceEnabled = true;
-               playMsg[player - 1].innerHTML = msgContent[7];
-               player = 3 - player;
-               diceIcon.style.border = "2px solid " + msgColor[player];
-               playMsg[player - 1].innerHTML = msgContent[0];               
-            }, timeoutLen);
+            if (speed) {
+               line.classList.add("start-animation");
+               timeoutId = setTimeout(() => {
+                  line.classList.remove("start-animation");
+                  inTime = false;
+                  diceEnabled = true;
+                  playMsg[player - 1].innerHTML = msgContent[7];
+                  player = 3 - player;
+                  diceIcon.style.border = "2px solid " + msgColor[player];
+                  playMsg[player - 1].innerHTML = msgContent[0];               
+               }, timeoutLen);
+            }
         } else {
             diceEnabled = true;
             playMsg[player - 1].innerHTML = msgContent[3];
@@ -150,7 +164,9 @@ function tableGen() {
 // funzione colora la cella
    function addCellsListener(i,j) {
        document.getElementById(`${i}-${j}`).addEventListener('click', function() {
-           clearTimeout(timeoutId);
+           if (speed) {
+              clearTimeout(timeoutId);
+           }
            if (inTime && setCellColor && cellOwner[i * size + j] == 0 && document.getElementById(`${i}-${j}`).innerHTML == randomNumber)  {
                line.classList.remove("start-animation");
                cellOwner[i * size + j] = player;
