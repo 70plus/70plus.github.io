@@ -83,6 +83,7 @@ speedSel.addEventListener("click", function() {
                timeoutId = setTimeout(() => {
                   line.classList.remove("start-animation");
                   inTime = false;
+                  avblCells[randomNumber] += 1;
                   diceEnabled = true;
                   playMsg[player - 1].innerHTML = msgContent[7];
                   player = 3 - player;
