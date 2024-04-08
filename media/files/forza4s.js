@@ -33,12 +33,15 @@ window.onload = function() {
   let randomNumber;
 // stato del gioco
   let speed = false;
+  let fight = false;
   let diceEnabled = false;
   let setCellColor = false;
   let gameEnded;
   let timeoutID;
-  let timeoutLen = 8000;
+  let timeoutLen = 5000;
+  let rollingTimeout;
   let inTime;
+  let reUse = false;
 // messaggi
   let msgContent = new Array("<b>Tira il dado</b>", "<b>Colora la cella</b>", 
      "Aspetta il tuo turno", "Non ci sono celle libere", "<b>Hai vinto!</b>", "",
@@ -54,11 +57,22 @@ closeButton.addEventListener("click", () => {
 //-----------------------------------------------------------
 // bottone di selezione della velocità
 speedSel.addEventListener("click", function() {
-    speed = !speed;
-    if (speed) {
-       speedSel.innerHTML = "🚀";
-    } else {
-       speedSel.innerHTML = "🐢";
+    switch (true) {
+       case !speed && !fight:
+          speedSel.innerHTML = "🚀";
+          speed = true;
+          fight = false;
+          break;
+       case speed && !fight:
+          speedSel.innerHTML = "🥊";
+          speed = true;
+          fight = true;
+          break;
+       case speed && fight:
+          speedSel.innerHTML = "🐢";
+          speed = false;
+          fight = false;
+          break;
     }
 })
 //-----------------------------------------------------------
@@ -66,29 +80,43 @@ speedSel.addEventListener("click", function() {
   diceIcon.addEventListener('click', () => {
     if (diceEnabled == true) {
       diceEnabled = false;
-      diceIcon.classList.add('rolling');
-      diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
+      rollingTimeout = 20;
+      if (!reUse) {
+         diceIcon.classList.add('rolling');
+         diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
+         rollingTimeout = 1000;
+      }
       setTimeout(() => {
-        diceIcon.classList.remove('rolling');
-        randomNumber = Math.floor(Math.random() * 6) + 1;
+        if (!reUse) {
+           diceIcon.classList.remove('rolling');
+           randomNumber = Math.floor(Math.random() * 6) + 1;
+        }
         diceIcon.style.border = "2px solid white";
         if (avblCells[randomNumber] > 0) {
-            avblCells[randomNumber] -= 1;
             setCellColor = true;
             playMsg[player - 1].innerHTML = msgContent[1];
-            playMsg[2 - player].innerHTML = msgContent[2];
+            if (!reUse) {
+               playMsg[2 - player].innerHTML = msgContent[2];
+            }
             inTime = true;
+            reUse = false;
             if (speed) {
                line.classList.add("start-animation");
                timeoutId = setTimeout(() => {
                   line.classList.remove("start-animation");
                   inTime = false;
-                  avblCells[randomNumber] += 1;
-                  diceEnabled = true;
                   playMsg[player - 1].innerHTML = msgContent[7];
                   player = 3 - player;
-                  diceIcon.style.border = "2px solid " + msgColor[player];
-                  playMsg[player - 1].innerHTML = msgContent[0];               
+                  if (fight) {
+                      playMsg[player - 1].innerHTML = msgContent[1];
+                      reUse = true;
+                      diceEnabled = true;
+                      diceIcon.click();
+                  } else {
+                     diceEnabled = true;
+                     playMsg[player - 1].innerHTML = msgContent[0];
+                     diceIcon.style.border = "2px solid " + msgColor[player];
+                  }             
                }, timeoutLen);
             }
         } else {
@@ -99,7 +127,7 @@ speedSel.addEventListener("click", function() {
             playMsg[player - 1].innerHTML = msgContent[0];
         }
         diceIcon.style.backgroundImage = `url('media/files/dado-${randomNumber}.png')`;
-      }, 1000);
+      }, rollingTimeout);
     }
   });
 //-----------------------------------------------------------
@@ -172,6 +200,7 @@ function tableGen() {
                line.classList.remove("start-animation");
                cellOwner[i * size + j] = player;
                document.getElementById(`${i}-${j}`).style.backgroundColor = playColor[player];
+               avblCells[randomNumber] -= 1;
                remCells -= 1;
                setCellColor = false;
                // verifica se fine partita
@@ -226,6 +255,7 @@ vaiButton.addEventListener("click", function() {
    diceIcon.style.backgroundImage = `url('media/files/dado.png')`;
    remCells = size * size;
    diceEnabled = true;
+   reUse = false;
    setCellColor = false;
    player = 3 - player;
    diceIcon.style.border = "2px solid " + msgColor[player];
