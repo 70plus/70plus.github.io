@@ -26,8 +26,10 @@ window.onload = function () {
     playMsg[0] = document.getElementById("box-left");
     playMsg[1] = document.getElementById("box-right");
     // identificazione dei giocatori
-    const msgColor = new Array("#ffffff", "#3a86ff", "#ff006e");
-    const playColor = new Array("#ffffff", "#a2d2ff", "#ffafcc");
+//    const msgColor = new Array("#ffffff", "#3a86ff", "#ff006e");
+//    const playColor = new Array("#ffffff", "#a2d2ff", "#ffafcc");
+    const msgColor = new Array("#ffffff", "#3a86ff", "#f77f00");
+    const playColor = new Array("#ffffff", "#a2d2ff", "#fcbf49");
     let player = Math.floor(Math.random() * 2) + 1;
     // altri parametri
     let randomNumber;
@@ -173,8 +175,8 @@ window.onload = function () {
     infoText.innerHTML = `
       <b>Forza 4</b> si gioca in due. Ci sono tre modalità di gioco:<ul>
       <li>🐢, modalità <b>normale</b>;
-      <li>🚀, modalità <b>veloce</b>, se non si sceglie la cella da colorare entro 5 secondi, si passa il turno;
-      <li>🥊, modalità <b>combattimento</b>, allo scadere dei 5 secondi, il valore del dado passa all'altro giocatore.
+      <li>🚀, modalità <b>veloce</b>, se non si sceglie la cella da colorare entro 6 secondi, si passa il turno;
+      <li>🥊, modalità <b>combattimento</b>, allo scadere dei 6 secondi, il valore del dado passa all'altro giocatore.
       <br><br>   
       All'avvio di <b>Forza 4</b> il primo giocatore è scelto a caso;
           conclusa una partita, nella successiva comincia il penultimo che ha giocato.<br>
