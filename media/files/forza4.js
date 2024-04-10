@@ -322,7 +322,7 @@ window.onload = function () {
             } else if (seqLen > maxSeq) {
                 maxSeq = seqLen;
                 iMax = ip;
-                jmax = jp;
+                jMax = jp;
                 seqLen = 0;
             }
             i += ix;
@@ -332,10 +332,10 @@ window.onload = function () {
             maxSeq = seqLen;
         }
         if (maxSeq >= winSeq) {
-/ 10apr24 9:00/
-            ip = iMax;
-            jp = jMax;
-/---------------------/
+// 10apr24 9:00
+           ip = iMax;
+           jp = jMax;
+// -----------------------------
             for (p = 0; p < maxSeq; p++) {
                 document.getElementById(`${ip}-${jp}`).style.backgroundColor =
                     msgColor[player];
