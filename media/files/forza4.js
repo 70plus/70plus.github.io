@@ -330,6 +330,10 @@ window.onload = function () {
         }
         if (seqLen > maxSeq) {
             maxSeq = seqLen;
+// 10apr24 12:10
+            iMax = ip;
+            jMax = jp;
+// -----------------------------
         }
         if (maxSeq >= winSeq) {
 // 10apr24 9:00
