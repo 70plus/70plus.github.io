@@ -87,10 +87,14 @@ window.onload = function () {
     //-----------------------------------------------------------
     // evento tira il dado
     playMsg[0].addEventListener("click", () => {
-        diceIcon.click();
+        if (player == 1) {
+            diceIcon.click();
+        }
     });
     playMsg[1].addEventListener("click", () => {
-        diceIcon.click();
+        if (player == 2) {
+            diceIcon.click();
+        }
     });
     diceIcon.addEventListener("click", () => {
         if (diceEnabled == true) {
