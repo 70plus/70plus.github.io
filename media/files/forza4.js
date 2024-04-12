@@ -45,11 +45,9 @@ window.onload = function () {
     let inTime;
     let reUse = false; // true: riutilizza il valore del dado, senza rilanciarlo
     // messaggi
-    const rollDiceLeft = (player) => {return (player == 1) ? "" : "<b>←&nbsp;&nbsp;</b>";}
-    const rollDiceRight = (player) => {return (player == 1) ? "<b>&nbsp;&nbsp;→</b>" : "";}
     let msgContent = new Array(
         "<b>Tira il dado </b>",
-        "<b>↓ Colora la cella ↓</b>",
+        "<b>Colora la cella ↴</b>",
         "Aspetta il tuo turno",
         "Non ci sono celle libere",
         "<b>Hai vinto!</b>",
@@ -88,6 +86,12 @@ window.onload = function () {
     });
     //-----------------------------------------------------------
     // evento tira il dado
+    playMsg[0].addEventListener("click", () => {
+        diceIcon.click();
+    });
+    playMsg[1].addEventListener("click", () => {
+        diceIcon.click();
+    });
     diceIcon.addEventListener("click", () => {
         if (diceEnabled == true) {
             diceEnabled = false;
@@ -125,7 +129,7 @@ window.onload = function () {
                                 diceIcon.click();
                             } else {
                                 diceEnabled = true;
-                                playMsg[player - 1].innerHTML = rollDiceLeft(player) + msgContent[0] + rollDiceRight(player);
+                                playMsg[player - 1].innerHTML = msgContent[0];
                                 diceIcon.style.border =
                                     "2px solid " + msgColor[player];
                             }
@@ -136,7 +140,7 @@ window.onload = function () {
                     playMsg[player - 1].innerHTML = msgContent[3];
                     player = 3 - player;
                     diceIcon.style.border = "2px solid " + msgColor[player];
-                    playMsg[player - 1].innerHTML = rollDiceLeft(player) + msgContent[0] + rollDiceRight(player);
+                    playMsg[player - 1].innerHTML = msgContent[0];
                 }
                 diceIcon.style.backgroundImage = `url('media/files/dado-${randomNumber}.png')`;
             }, rollingTimeout);
@@ -271,7 +275,7 @@ window.onload = function () {
                         playMsg[player - 1].innerHTML = msgContent[2];
                         player = 3 - player;
                         diceIcon.style.border = "2px solid " + msgColor[player];
-                        playMsg[player - 1].innerHTML = rollDiceLeft(player) + msgContent[0] + rollDiceRight(player);
+                        playMsg[player - 1].innerHTML = msgContent[0];
                     } else {
                         playMsg[player - 1].innerHTML = msgContent[6];
                         playMsg[2 - player].innerHTML = msgContent[6];
@@ -301,7 +305,7 @@ window.onload = function () {
         setCellColor = false;
         player = 3 - player;
         diceIcon.style.border = "2px solid " + msgColor[player];
-        playMsg[player - 1].innerHTML = rollDiceLeft(player) + msgContent[0] + rollDiceRight(player);
+        playMsg[player - 1].innerHTML = msgContent[0];
         playMsg[2 - player].innerHTML = msgContent[2];
     });
     //-----------------------------------------------------------
