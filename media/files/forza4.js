@@ -45,9 +45,12 @@ window.onload = function () {
     let inTime;
     let reUse = false; // true: riutilizza il valore del dado, senza rilanciarlo
     // messaggi
+//    let rollDiceLeft = (player == 1) ? "" : "← ";
+//    let rollDiceRight = (player == 1) ? " →" : "";
     let msgContent = new Array(
-        "<b>Tira il dado</b>",
-        "<b>Colora la cella</b>",
+//        "<b>" + rollDiceLeft + "Tira il dado" + rollDiceRight + "</b>",
+        "<b>Tira il dado →</b>",
+        "<b>↓ Colora la cella ↓</b>",
         "Aspetta il tuo turno",
         "Non ci sono celle libere",
         "<b>Hai vinto!</b>",
