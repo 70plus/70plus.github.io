@@ -28,8 +28,8 @@ window.onload = function () {
     // identificazione dei giocatori
 //    const msgColor = new Array("#ffffff", "#3a86ff", "#ff006e");
 //    const playColor = new Array("#ffffff", "#a2d2ff", "#ffafcc");
-    const msgColor = new Array("#ffffff", "#3a86ff", "#f77f00");
-    const playColor = new Array("#ffffff", "#a2d2ff", "#fcbf49");
+    const msgColor = new Array("#F0F0C9", "#1f2041", "#f34213");
+    const playColor = new Array("#F0F0C9", "#006d77", "#F5A70A");
     let player = Math.floor(Math.random() * 2) + 1;
     // altri parametri
     let randomNumber;
@@ -163,7 +163,7 @@ window.onload = function () {
     const cellDimH = Math.trunc((hWindow - tableStart.bottom) / (size + 1));
     const cellDimW = Math.trunc(wWindow / (size + 1));
     const cellDim = Math.min(cellDimH, cellDimW);
-    table.style.border = "5px solid #4CAF50";
+    table.style.border = "5px solid #000000";
     table.style.borderCollapse = "collapse";
     table.style.margin = "0 auto";
     for (let i = 0; i < size; i++) {
@@ -175,13 +175,15 @@ window.onload = function () {
             cell.style.textAlign = "center";
             cell.style.width = cellDim + "px";
             cell.style.height = cellDim + "px";
-            cell.style.border = "2px solid #4CAF50";
+            cell.style.border = "2px solid #000000";
+            cell.style.backgroundColor = "#F0F0C9";
+            cell.style.color = "\#000000";
             row.appendChild(cell);
         }
         table.appendChild(row);
     }
     document.body.appendChild(table);
-    // informazioni sull gioco
+    // informazioni sul gioco
     infoText.innerHTML = `
       <b>Forza 4</b> si gioca in due. Ci sono tre modalità di gioco:<ul>
       <li>🐢, modalità <b>normale</b>;
@@ -222,9 +224,9 @@ window.onload = function () {
         document
             .getElementById(`${i}-${j}`)
             .addEventListener("click", function () {
-                if (speed) {
-                    clearTimeout(timeoutId);
-                }
+//                if (speed) {
+//                    clearTimeout(timeoutId);
+//                }
                 if (
                     inTime &&
                     setCellColor &&
@@ -232,6 +234,9 @@ window.onload = function () {
                     document.getElementById(`${i}-${j}`).innerHTML ==
                         randomNumber
                 ) {
+                    if (speed) {
+                        clearTimeout(timeoutId);
+                    }
                     line.classList.remove("start-animation");
                     cellOwner[i * size + j] = player;
                     document.getElementById(`${i}-${j}`).style.backgroundColor =
@@ -298,6 +303,7 @@ window.onload = function () {
                     tableCont[i * size + j];
                 document.getElementById(`${i}-${j}`).style.backgroundColor =
                     playColor[0];
+                document.getElementById(`${i}-${j}`).style.color = "#000000";
                 cellOwner[i * size + j] = 0;
                 addCellsListener(i, j);
             }
@@ -353,6 +359,7 @@ window.onload = function () {
             for (p = 0; p < maxSeq; p++) {
                 document.getElementById(`${ip}-${jp}`).style.backgroundColor =
                     msgColor[player];
+                document.getElementById(`${ip}-${jp}`).style.color = "#ffffff";
                 ip += ix;
                 jp += jx;
             }

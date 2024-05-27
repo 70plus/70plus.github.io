@@ -26,7 +26,7 @@ table td {
     display: flex;
     align-items: center; /* center items vertically */
     height: 60px; /* set height for container */
-    background-color: #01a7c1;
+    background-color: #1f2041;
 }
 
 .logo-image {
@@ -37,6 +37,7 @@ table td {
 .logo-text {
     flex-basis: calc(100% - 60px);
     text-align: center;
+    color: #F0F0C9;
 }
 
 .area-bottoni {
@@ -47,7 +48,7 @@ table td {
 
 #vai,
 #okB {
-    background-color: #4caf50;
+    background-color: #f34213;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -64,7 +65,7 @@ table td {
 }
 
 #info {
-    background-color: #4caf50;
+    background-color: #f34213;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -74,7 +75,7 @@ table td {
 #vai:hover,
 #okB:hover,
 #info:hover {
-    background-color: #3e8e41;
+    background-color: #F5A70A;
 }
 .container {
     display: flex;
@@ -85,13 +86,13 @@ table td {
 #box-left {
     width: 90px;
     margin: 2px;
-    color: #3a86ff;
+    color: #1f2041;
     text-align: center;
 }
 #box-right {
     width: 90px;
     margin: 2px;
-    color: #ff006e;
+    color: #f34213;
     text-align: center;
 }
 
