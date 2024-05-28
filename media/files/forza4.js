@@ -296,10 +296,6 @@ window.onload = function () {
     //-----------------------------------------------------------
     // funzione di inizio partita
     vaiButton.addEventListener("click", function () {
-        if (speed) {
-            clearTimeout(timeoutId);
-        }
-        line.classList.remove("start-animation");
         tableGen();
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
