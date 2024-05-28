@@ -246,10 +246,10 @@ window.onload = function () {
                     setCellColor = false;
                     // verifica se fine partita
                     gameEnded = false;
-                    if (
-                        endGame(0, j, 1, 0, size, player) ||
-                        endGame(i, 0, 0, 1, size, player)
-                    ) {
+                    if (endGame(0, j, 1, 0, size, player)) {
+                        gameEnded = true;
+                    }
+                    if (endGame(i, 0, 0, 1, size, player)) {
                         gameEnded = true;
                     }
                     if (i + j < size) {
@@ -296,6 +296,10 @@ window.onload = function () {
     //-----------------------------------------------------------
     // funzione di inizio partita
     vaiButton.addEventListener("click", function () {
+        if (speed) {
+            clearTimeout(timeoutId);
+        }
+        line.classList.remove("start-animation");
         tableGen();
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
@@ -326,6 +330,7 @@ window.onload = function () {
         }
         let seqLen = 0;
         let maxSeq = 0;
+        let ip, jp, iMax, jMax;
         for (let p = 0; p < np; p++) {
             if (cellOwner[i * size + j] == player) {
                 if (seqLen == 0) {
