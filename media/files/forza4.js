@@ -41,6 +41,7 @@ window.onload = function () {
     let gameEnded;
     let timeoutID;
     let timeoutLen = 5000; // tempo massimo per scegliere una cella da colorare
+    let timeoutRunning = false;
     let rollingTimeout; // tempo di rotolamento del dado
     let inTime;
     let reUse = false; // true: riutilizza il valore del dado, senza rilanciarlo
@@ -121,7 +122,9 @@ window.onload = function () {
                     reUse = false;
                     if (speed) {
                         line.classList.add("start-animation");
+                        timeoutRunning = true;
                         timeoutId = setTimeout(() => {
+                            timeoutRunning = false;
                             line.classList.remove("start-animation");
                             inTime = false;
                             playMsg[player - 1].innerHTML = msgContent[7];
@@ -236,8 +239,9 @@ window.onload = function () {
                 ) {
                     if (speed) {
                         clearTimeout(timeoutId);
+                        timeoutRunning = false;
+                        line.classList.remove("start-animation");
                     }
-                    line.classList.remove("start-animation");
                     cellOwner[i * size + j] = player;
                     document.getElementById(`${i}-${j}`).style.backgroundColor =
                         playColor[player];
@@ -296,6 +300,11 @@ window.onload = function () {
     //-----------------------------------------------------------
     // funzione di inizio partita
     vaiButton.addEventListener("click", function () {
+        if (speed) {
+            clearTimeout(timeoutId);
+            timeoutRunning = false;
+            line.classList.remove("start-animation");
+        }
         tableGen();
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
