@@ -8,6 +8,8 @@ document.addEventListener('touchmove', handleTouchMove);
 document.addEventListener('touchend', handleTouchEnd);
 
 function handleTouchStart(event) {
+  // Previeni il comportamento predefinito
+  event.preventDefault();
   // Salva le coordinate iniziali del tocco
   touchStartX = event.touches[0].clientX;
   touchStartY = event.touches[0].clientY;
@@ -21,6 +23,8 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
+  // Previeni il comportamento predefinito
+  event.preventDefault();
   // Calcola lo spostamento del tocco
   const touchX = event.touches[0].clientX;
   const touchY = event.touches[0].clientY;
@@ -42,6 +46,8 @@ function handleTouchMove(event) {
 }
 
 function handleTouchEnd(event) {
+  // Previeni il comportamento predefinito
+  event.preventDefault();
   // Genera l'evento mouseup
   const mouseUpEvent = new MouseEvent('mouseup', {
     clientX: event.changedTouches[0].clientX,
