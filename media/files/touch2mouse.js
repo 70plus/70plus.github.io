@@ -11,6 +11,13 @@ function handleTouchStart(event) {
   // Salva le coordinate iniziali del tocco
   touchStartX = event.touches[0].clientX;
   touchStartY = event.touches[0].clientY;
+
+  // Genera l'evento mousedown
+  const mouseEvent = new MouseEvent('mousedown', {
+    clientX: touchStartX,
+    clientY: touchStartY
+  });
+  document.dispatchEvent(mouseEvent);
 }
 
 function handleTouchMove(event) {
@@ -21,13 +28,13 @@ function handleTouchMove(event) {
   const deltaY = touchY - touchStartY;
 
   // Genera gli eventi del mouse corrispondenti
-  const mouseEvent = new MouseEvent('mousemove', {
+  const mouseMoveEvent = new MouseEvent('mousemove', {
     clientX: touchX,
     clientY: touchY,
     movementX: deltaX,
     movementY: deltaY
   });
-  document.dispatchEvent(mouseEvent);
+  document.dispatchEvent(mouseMoveEvent);
 
   // Aggiorna le coordinate iniziali del tocco
   touchStartX = touchX;
@@ -36,10 +43,10 @@ function handleTouchMove(event) {
 
 function handleTouchEnd(event) {
   // Genera l'evento mouseup
-  const mouseEvent = new MouseEvent('mouseup', {
+  const mouseUpEvent = new MouseEvent('mouseup', {
     clientX: event.changedTouches[0].clientX,
     clientY: event.changedTouches[0].clientY
   });
-  document.dispatchEvent(mouseEvent);
+  document.dispatchEvent(mouseUpEvent);
 }
 
