@@ -3,12 +3,12 @@ let touchStartX = 0;
 let touchStartY = 0;
 
 // Aggiungi gli event listener per gli eventi di tocco
-document.addEventListener('touchstart', handleTouchStart);
-document.addEventListener('touchmove', handleTouchMove);
-document.addEventListener('touchend', handleTouchEnd);
+canvas.addEventListener('touchstart', handleTouchStart);
+canvas.addEventListener('touchmove', handleTouchMove);
+canvas.addEventListener('touchend', handleTouchEnd);
 
 function handleTouchStart(event) {
-    if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
+  if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
     event.stopPropagation();
