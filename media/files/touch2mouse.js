@@ -11,6 +11,7 @@ function handleTouchStart(event) {
     if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
+    event.stopPropagation();
     // Salva le coordinate iniziali del tocco
     touchStartX = event.touches[0].clientX;
     touchStartY = event.touches[0].clientY;
@@ -28,6 +29,7 @@ function handleTouchMove(event) {
   if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
+    event.stopPropagation();
     // Calcola lo spostamento del tocco
     const touchX = event.touches[0].clientX;
     const touchY = event.touches[0].clientY;
@@ -53,6 +55,7 @@ function handleTouchEnd(event) {
   if (isWithinCanvas(event.changedTouches[0].clientX, event.changedTouches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
+    event.stopPropagation();
     // Genera l'evento mouseup
     const mouseUpEvent = new MouseEvent('mouseup', {
       clientX: event.changedTouches[0].clientX,
