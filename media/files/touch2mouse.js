@@ -17,7 +17,7 @@ function handleTouchStart(event) {
     clientX: touchStartX,
     clientY: touchStartY
   });
-  document.dispatchEvent(mouseEvent);
+  canvas.dispatchEvent(mouseEvent);
 }
 
 function handleTouchMove(event) {
@@ -34,7 +34,7 @@ function handleTouchMove(event) {
     movementX: deltaX,
     movementY: deltaY
   });
-  document.dispatchEvent(mouseMoveEvent);
+  canvas.dispatchEvent(mouseMoveEvent);
 
   // Aggiorna le coordinate iniziali del tocco
   touchStartX = touchX;
@@ -47,6 +47,6 @@ function handleTouchEnd(event) {
     clientX: event.changedTouches[0].clientX,
     clientY: event.changedTouches[0].clientY
   });
-  document.dispatchEvent(mouseUpEvent);
+  canvas.dispatchEvent(mouseUpEvent);
 }
 
