@@ -8,7 +8,7 @@ document.addEventListener('touchmove', handleTouchMove);
 document.addEventListener('touchend', handleTouchEnd);
 
 function handleTouchStart(event) {
-  if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
+    if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
     // Salva le coordinate iniziali del tocco
@@ -50,7 +50,7 @@ function handleTouchMove(event) {
 }
 
 function handleTouchEnd(event) {
-  if (isWithinCanvas(event.touches[0].clientX, event.touches[0].clientY)) {
+  if (isWithinCanvas(event.changedTouches[0].clientX, event.changedTouches[0].clientY)) {
     // Previeni il comportamento predefinito
     event.preventDefault();
     // Genera l'evento mouseup
