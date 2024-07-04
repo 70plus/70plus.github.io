@@ -1,0 +1,45 @@
+// Variabili per tenere traccia delle coordinate del tocco
+let touchStartX = 0;
+let touchStartY = 0;
+
+// Aggiungi gli event listener per gli eventi di tocco
+document.addEventListener('touchstart', handleTouchStart);
+document.addEventListener('touchmove', handleTouchMove);
+document.addEventListener('touchend', handleTouchEnd);
+
+function handleTouchStart(event) {
+  // Salva le coordinate iniziali del tocco
+  touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+  // Calcola lo spostamento del tocco
+  const touchX = event.touches[0].clientX;
+  const touchY = event.touches[0].clientY;
+  const deltaX = touchX - touchStartX;
+  const deltaY = touchY - touchStartY;
+
+  // Genera gli eventi del mouse corrispondenti
+  const mouseEvent = new MouseEvent('mousemove', {
+    clientX: touchX,
+    clientY: touchY,
+    movementX: deltaX,
+    movementY: deltaY
+  });
+  document.dispatchEvent(mouseEvent);
+
+  // Aggiorna le coordinate iniziali del tocco
+  touchStartX = touchX;
+  touchStartY = touchY;
+}
+
+function handleTouchEnd(event) {
+  // Genera l'evento mouseup
+  const mouseEvent = new MouseEvent('mouseup', {
+    clientX: event.changedTouches[0].clientX,
+    clientY: event.changedTouches[0].clientY
+  });
+  document.dispatchEvent(mouseEvent);
+}
+
