@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
+<!-- Modificato a partire da: Coding By CodingNepal -->
+<html lang="it-IT" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Drawing App JavaScript | CodingNepal</title>
+    <title>Disegna!</title>
     <link rel="stylesheet" href="media/files/disegna-style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="viewport" content="width=device-width, initial-scale=1.0"
+      name="description"
+            content="Disegna con il dito, uno stilo o il mouse! In bimbi di 6-10 anni stimola la creatività." />
     <script src="media/files/disegna-script.js" defer></script>
     <script src="media/files/touch2mouse.js" defer></script>
   </head>
@@ -13,36 +16,36 @@
     <div class="container">
       <section class="tools-board">
         <div class="row">
-          <label class="title">Shapes</label>
+          <label class="title">Forme</label>
           <ul class="options">
             <li class="option tool" id="rectangle">
               <img src="media/files/rectangle.svg" alt="">
-              <span>Rectangle</span>
+              <span>Rettangolo</span>
             </li>
             <li class="option tool" id="circle">
               <img src="media/files/circle.svg" alt="">
-              <span>Circle</span>
+              <span>Cerchio</span>
             </li>
             <li class="option tool" id="triangle">
               <img src="media/files/triangle.svg" alt="">
-              <span>Triangle</span>
+              <span>Triangolo</span>
             </li>
             <li class="option">
               <input type="checkbox" id="fill-color">
-              <label for="fill-color">Fill color</label>
+              <label for="fill-color">Riempi di colore</label>
             </li>
           </ul>
         </div>
         <div class="row">
-          <label class="title">Options</label>
+          <label class="title">Opzioni</label>
           <ul class="options">
             <li class="option active tool" id="brush">
               <img src="media/files/brush.svg" alt="">
-              <span>Brush</span>
+              <span>Pennello</span>
             </li>
             <li class="option tool" id="eraser">
               <img src="media/files/eraser.svg" alt="">
-              <span>Eraser</span>
+              <span>Gomma</span>
             </li>
             <li class="option">
               <input type="range" id="size-slider" min="1" max="30" value="5">
@@ -50,7 +53,7 @@
           </ul>
         </div>
         <div class="row colors">
-          <label class="title">Colors</label>
+          <label class="title">Colori</label>
           <ul class="options">
             <li class="option"></li>
             <li class="option selected"></li>
@@ -62,14 +65,28 @@
           </ul>
         </div>
         <div class="row buttons">
-          <button class="clear-canvas">Clear Canvas</button>
-          <button class="save-img">Save As Image</button>
+          <button class="clear-canvas">Cancella tutto</button>
+          <button class="save-img">Salva l'immagine</button>
         </div>
       </section>
       <section class="drawing-board">
         <canvas></canvas>
       </section>
     </div>
-    
+
+        <!-- Put this at the end of the <body> tag -->
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("WoH0No9arSTq");
+                swetrix.trackViews();
+            });
+        </script>
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>    
   </body>
 </html>
