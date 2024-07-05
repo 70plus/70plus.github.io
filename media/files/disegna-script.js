@@ -29,8 +29,24 @@ window.addEventListener("load", () => {
     setCanvasBackground();
 });
 
+textInput.addEventListener("input", function() {
+    var text = this.value;
+    ctx.font = "30px Calibri, sans-serif";
+    ctx.fillText(text, 10, 50);
+    });
+
+const drawLine = (e) => {
+
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+    ctx.lineTo(prevMouseX, prevMouseY);
+    ctx.stroke();
+}
+
 const drawRect = (e) => {
+
     // if fillColor isn't checked draw a rect with border else draw rect with background
+
     if(!fillColor.checked) {
         // creating circle according to the mouse pointer
         return ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
@@ -77,6 +93,8 @@ const drawing = (e) => {
         ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
         ctx.lineTo(e.offsetX, e.offsetY); // creating line according to the mouse pointer
         ctx.stroke(); // drawing/filling line with color
+    } else if(selectedTool === "line"){
+        drawLine(e);
     } else if(selectedTool === "rectangle"){
         drawRect(e);
     } else if(selectedTool === "circle"){
