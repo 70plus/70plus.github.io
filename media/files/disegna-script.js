@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
 textInput.addEventListener("input", function() {
     var text = this.value;
     ctx.font = "30px Calibri, sans-serif";
-    ctx.fillText(text, 10, 50);
+    ctx.fillText(text, 10, canvas.height-12);
     });
 
 const drawLine = (e) => {
