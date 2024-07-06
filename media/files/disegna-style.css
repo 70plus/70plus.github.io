@@ -67,10 +67,10 @@ section{
 #fill-color:checked ~ label{
   color: #4A98F7;
 }
-.option #size-slider{
+.option #size-slider, #erase-slider{
   width: 100%;
   height: 5px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .colors .options{
   display: flex;

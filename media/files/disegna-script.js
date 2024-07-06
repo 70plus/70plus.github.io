@@ -2,6 +2,7 @@ const canvas = document.querySelector("canvas"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
 sizeSlider = document.querySelector("#size-slider"),
+eraseSlider = document.querySelector("#erase-slider"),
 colorBtns = document.querySelectorAll(".colors .option"),
 colorPicker = document.querySelector("#color-picker"),
 clearCanvas = document.querySelector(".clear-canvas"),
@@ -13,6 +14,7 @@ let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
 selectedTool = "brush",
 brushWidth = 5,
+eraseWidth = 25,
 selectedColor = "#000";
 
 const setCanvasBackground = () => {
@@ -63,7 +65,7 @@ const drawCircle = (e) => {
 }
 
 const drawTriangle = (e) => {
-    ctx.beginPath(); // creating new path to draw circle
+    ctx.beginPath(); // creating new path to draw triangle
     ctx.moveTo(prevMouseX, prevMouseY); // moving triangle to the mouse pointer
     ctx.lineTo(e.offsetX, e.offsetY); // creating first line according to the mouse pointer
     ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY); // creating bottom line of triangle
@@ -76,7 +78,7 @@ const startDraw = (e) => {
     prevMouseX = e.offsetX; // passing current mouseX position as prevMouseX value
     prevMouseY = e.offsetY; // passing current mouseY position as prevMouseY value
     ctx.beginPath(); // creating new path to draw
-    ctx.lineWidth = brushWidth; // passing brushSize as line width
+    ctx.lineWidth = selectedTool === "eraser" ? eraseWidth : brushWidth;
     ctx.strokeStyle = selectedColor; // passing selectedColor as stroke style
     ctx.fillStyle = selectedColor; // passing selectedColor as fill style
     // copying canvas data & passing as snapshot value.. this avoids dragging the image
@@ -114,6 +116,7 @@ toolBtns.forEach(btn => {
 });
 
 sizeSlider.addEventListener("change", () => brushWidth = sizeSlider.value); // passing slider value as brushSize
+eraseSlider.addEventListener("change", () => eraseWidth = eraseSlider.value); // passing slider value as brushSize
 
 colorBtns.forEach(btn => {
     btn.addEventListener("click", () => { // adding click event to all color button
