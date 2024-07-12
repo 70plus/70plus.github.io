@@ -170,7 +170,6 @@ colorPicker.addEventListener("change", () => {
 clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // clearing whole canvas
     setCanvasBackground();
-    drawingHistory.push(canvas.toDataURL());
 });
 
 saveImg.addEventListener("click", () => {
