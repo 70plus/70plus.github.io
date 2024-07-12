@@ -33,11 +33,23 @@ window.addEventListener("load", () => {
     setCanvasBackground();
 });
 
-textInput.addEventListener("input", function() {
-    var text = this.value;
-    ctx.font = "30px Calibri, sans-serif";
-    ctx.fillText(text, 10, canvas.height-12);
-    });
+// Get the input field
+const textInput = document.getElementById('textInput');
+
+// Function to handle keydown events
+textInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        // Get the text from the input field
+        const text = textInput.value;
+        // Clear the input field
+        textInput.value = '';
+        // Draw the text on the canvas
+        ctx.font = "30px Calibri, sans-serif";
+        ctx.fillStyle = selectedColor;
+        ctx.fillText(text, 10, canvas.height - 12);
+        drawingHistory.push(canvas.toDataURL());
+    }
+});
 
 const drawLine = (e) => {
 
