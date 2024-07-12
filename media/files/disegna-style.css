@@ -69,7 +69,7 @@ section{
 .option #size-slider, #erase-slider{
   width: 100%;
   height: 2px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .colors .options{
   display: flex;
@@ -139,7 +139,7 @@ section{
   color: #6C757D;
   border: 1px solid #6C757D;
   transition: all 0.3s ease;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .clear-canvas:hover{
   color: #fff;
