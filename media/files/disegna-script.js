@@ -8,6 +8,9 @@ colorPicker = document.querySelector("#color-picker"),
 clearCanvas = document.querySelector(".clear-canvas"),
 saveImg = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
+let drawingHistory = [];
+drawingHistory.push(canvas.toDataURL());
+
 
 // global variables with default value
 let prevMouseX, prevMouseY, snapshot,
@@ -50,7 +53,7 @@ const drawRect = (e) => {
     // if fillColor isn't checked draw a rect with border else draw rect with background
 
     if(!fillColor.checked) {
-        // creating circle according to the mouse pointer
+        // creating rectangle according to the mouse pointer
         return ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
     }
     ctx.fillRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
@@ -73,6 +76,25 @@ const drawTriangle = (e) => {
     fillColor.checked ? ctx.fill() : ctx.stroke(); // if fillColor is checked fill triangle else draw border
 }
 
+const undo = () => {
+    if (drawingHistory.length <= 1) {
+        // Can't undo if there's only one or fewer entries in the history
+        return;
+    }
+    // Remove the latest entry from the history array
+    drawingHistory.pop();
+    // Load the previous canvas state from the history array
+    const prevCanvasState = new Image();
+    prevCanvasState.src = drawingHistory[drawingHistory.length - 1];
+    prevCanvasState.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(prevCanvasState, 0, 0);
+    };
+};
+
+const undoButton = document.getElementById('undoButton');
+undoButton.addEventListener('click', undo);
+
 const startDraw = (e) => {
     isDrawing = true;
     prevMouseX = e.offsetX; // passing current mouseX position as prevMouseX value
@@ -88,7 +110,7 @@ const startDraw = (e) => {
 const drawing = (e) => {
     if(!isDrawing) return; // if isDrawing is false return from here
     ctx.putImageData(snapshot, 0, 0); // adding copied canvas data on to this canvas
-
+    
     if(selectedTool === "brush" || selectedTool === "eraser") {
         // if selected tool is eraser then set strokeStyle to white 
         // to paint white color on to the existing canvas content else set the stroke color to selected color
@@ -137,6 +159,7 @@ colorPicker.addEventListener("change", () => {
 clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // clearing whole canvas
     setCanvasBackground();
+    drawingHistory.push(canvas.toDataURL());
 });
 
 saveImg.addEventListener("click", () => {
@@ -148,4 +171,7 @@ saveImg.addEventListener("click", () => {
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener('mouseup', () => {
+    isDrawing = false;
+    drawingHistory.push(canvas.toDataURL());
+});
