@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-07-14T22:13:22+02:00</updated>
+    <updated>2024-07-14T22:27:01+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -31,6 +31,7 @@
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/38/WhatsApp-Image-2024-06-29-at-15.56.51.jpeg" class="type:primaryImage" alt="Un disegno di Luna" /></p>
                 <p>Se si ha una nipotina quasi-settenne, gran produttrice di disegni, e si vuole assecondarne la creatività al contempo risparmiando carta, allora serve un’app o un sito web per disegnare con lo stilo (o un dito).<br>Ma se non si trova nulla che sia senza pubblicità, sicuro e gratuito, non rimane che ricorrere al fai da te.</p>
+<p><em>Per chi avesse fretta, <a href="https://70plus.it/disegna.html" target="_blank" rel="noopener noreferrer">il risultato è qui</a>.</em></p>
 <h3 id="lo-spunto">Lo spunto</h3>
 <p>Una ricerca sul web mi ha fatto scoprire l’articolo <a href="https://www.codingnepalweb.com/build-drawing-app-html-canvas-javascript/" target="_blank" rel="nofollow noopener noreferrer">Build A Drawing App in HTML CSS &amp; JavaScript</a>, un codice bello e pronto per confezionare semplici disegni con un browser su pc. È disponibile anche una <a href="https://codingnepalweb.com/demos/drawing-app-javascript/" target="_blank" rel="sponsored noopener noreferrer">pagina demo</a> del codice:</p>
 <figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/38/Schermata-del-2024-07-14-21-38-58.png" alt="Sito demo del codice per il disegno" width="1366" height="768" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/38/responsive/Schermata-del-2024-07-14-21-38-58-xs.png 300w ,https://70plus.it/media/posts/38/responsive/Schermata-del-2024-07-14-21-38-58-sm.png 480w ,https://70plus.it/media/posts/38/responsive/Schermata-del-2024-07-14-21-38-58-md.png 768w"></figure>
