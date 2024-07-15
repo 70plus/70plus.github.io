@@ -26,9 +26,8 @@ window.onload = function () {
     playMsg[0] = document.getElementById("box-left");
     playMsg[1] = document.getElementById("box-right");
     // identificazione dei giocatori
-//    const msgColor = new Array("#ffffff", "#3a86ff", "#ff006e");
-//    const playColor = new Array("#ffffff", "#a2d2ff", "#ffafcc");
-    const msgColor = new Array("#F0F0C9", "#1f2041", "#f34213");
+//    const msgColor = new Array("#F0F0C9", "#1f2041", "#f34213");
+    const msgColor = new Array("#F0F0C9", "#10475C", "#f34213");
     const playColor = new Array("#F0F0C9", "#006d77", "#F5A70A");
     let player = Math.floor(Math.random() * 2) + 1;
     // altri parametri
