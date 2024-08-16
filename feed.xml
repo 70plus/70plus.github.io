@@ -14,8 +14,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/per-piccoli-artisti-2.html"/>
-        <id>https://70plus.it/per-piccoli-artisti-2.html</id>
+        <link href="https://70plus.it/blog/per-piccoli-artisti-2/"/>
+        <id>https://70plus.it/blog/per-piccoli-artisti-2/</id>
         <media:content url="https://70plus.it/media/posts/38/WhatsApp-Image-2024-06-29-at-15.56.51.jpeg" medium="image" />
             <category term="Luna"/>
             <category term="Cose informatiche"/>
@@ -60,8 +60,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/la-settimana-lunare.html"/>
-        <id>https://70plus.it/la-settimana-lunare.html</id>
+        <link href="https://70plus.it/blog/la-settimana-lunare/"/>
+        <id>https://70plus.it/blog/la-settimana-lunare/</id>
         <media:content url="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" medium="image" />
             <category term="Produttività"/>
             <category term="Cose informatiche"/>
@@ -76,7 +76,7 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" class="type:primaryImage" alt="" /></p>
-                <p>A fine dicembre 2023 ho installato l'ultima versione di <strong>Zorin OS</strong>, la 7, sul mio <strong>Asus E210</strong> (pc di fascia bassa con Celeron N4020, 4 GB di memoria). Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/zorin-os-17-prove-di-carico.html" target="_blank" rel="noopener noreferrer"></a></p>
+                <p>A fine dicembre 2023 ho installato l'ultima versione di <strong>Zorin OS</strong>, la 7, sul mio <strong>Asus E210</strong> (pc di fascia bassa con Celeron N4020, 4 GB di memoria). Con gli aggiornamenti di questi primi tre mesi, la versione è stata rinominata in 7.1.<br>Sono decisamente soddisfatto delle prestazioni, l'utilizzo del pc rimane fluido anche in condizioni di carico abbastanza sostenuto.<br>Con l'aiuto di un paio di script Bash, riportati in <a href="https://70plus.it/blog/zorin-os-17-prove-di-carico/" target="_blank" rel="noopener noreferrer">Quanta memoria utilizza il mio Linux</a>, nei giorni scorsi ho raccolto qualche dato puntuale sull'utilizzo della memoria e delle aree di swap in una condizione di <strong>carico reale</strong> che, per il mio utilizzo, posso ritenere sostenuto.<a href="https://70plus.it/blog/zorin-os-17-prove-di-carico/" target="_blank" rel="noopener noreferrer"></a></p>
 <p>La descrizione di cosa produco e come è qui di seguito. L'analisi dei numeri seguirà nel post successivo.</p>
 <h3>Cosa produco</h3>
 <p>Preparo settimanalmente un mini-giornalino per la mia nipotina Luna di 6 anni e la sua cuginetta Cecilia di 7: due fogli A4, stampati fronte-retro, piegati in due e fascicolati in modo da avere 8 facciate.<br>L'impaginazione della <strong>Settimana Lunare</strong> al momento è di due tipi. Il primo:</p>
@@ -138,8 +138,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/infiniti-anelli-dal-nastro-di-moebius.html"/>
-        <id>https://70plus.it/infiniti-anelli-dal-nastro-di-moebius.html</id>
+        <link href="https://70plus.it/blog/infiniti-anelli-dal-nastro-di-moebius/"/>
+        <id>https://70plus.it/blog/infiniti-anelli-dal-nastro-di-moebius/</id>
         <media:content url="https://70plus.it/media/posts/34/mobius_01a.jpeg" medium="image" />
             <category term="Numeri"/>
             <category term="Carta"/>
@@ -199,8 +199,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/la-matrice-di-eisenhower.html"/>
-        <id>https://70plus.it/la-matrice-di-eisenhower.html</id>
+        <link href="https://70plus.it/blog/la-matrice-di-eisenhower/"/>
+        <id>https://70plus.it/blog/la-matrice-di-eisenhower/</id>
         <media:content url="https://70plus.it/media/posts/33/Matrice-di-Eisenhower1.png" medium="image" />
             <category term="Produttività"/>
             <category term="Pensieri"/>
@@ -239,8 +239,8 @@
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/zorin-os-17-prove-di-carico.html"/>
-        <id>https://70plus.it/zorin-os-17-prove-di-carico.html</id>
+        <link href="https://70plus.it/blog/zorin-os-17-prove-di-carico/"/>
+        <id>https://70plus.it/blog/zorin-os-17-prove-di-carico/</id>
         <media:content url="https://70plus.it/media/posts/31/zorinos17.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
@@ -381,8 +381,8 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/proviamo-zorin-os-17.html"/>
-        <id>https://70plus.it/proviamo-zorin-os-17.html</id>
+        <link href="https://70plus.it/blog/proviamo-zorin-os-17/"/>
+        <id>https://70plus.it/blog/proviamo-zorin-os-17/</id>
         <media:content url="https://70plus.it/media/posts/30/zorinos17.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
@@ -416,8 +416,8 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/javascript.html"/>
-        <id>https://70plus.it/javascript.html</id>
+        <link href="https://70plus.it/blog/javascript/"/>
+        <id>https://70plus.it/blog/javascript/</id>
             <category term="Cose informatiche"/>
 
         <updated>2023-10-14T19:58:40+02:00</updated>
@@ -449,8 +449,8 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/hamburger-di-melanzane.html"/>
-        <id>https://70plus.it/hamburger-di-melanzane.html</id>
+        <link href="https://70plus.it/blog/hamburger-di-melanzane/"/>
+        <id>https://70plus.it/blog/hamburger-di-melanzane/</id>
         <media:content url="https://70plus.it/media/posts/26/eggplant-2924511_1280.png" medium="image" />
             <category term="cucina"/>
 
@@ -560,8 +560,8 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/arriva-publii-042.html"/>
-        <id>https://70plus.it/arriva-publii-042.html</id>
+        <link href="https://70plus.it/blog/arriva-publii-042/"/>
+        <id>https://70plus.it/blog/arriva-publii-042/</id>
             <category term="Cose informatiche"/>
 
         <updated>2023-03-31T06:57:54+02:00</updated>
@@ -597,8 +597,8 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
         <author>
             <name>Pasquale</name>
         </author>
-        <link href="https://70plus.it/lalgoritmo-di-majority-voting-di-boyer-moore.html"/>
-        <id>https://70plus.it/lalgoritmo-di-majority-voting-di-boyer-moore.html</id>
+        <link href="https://70plus.it/blog/lalgoritmo-di-majority-voting-di-boyer-moore/"/>
+        <id>https://70plus.it/blog/lalgoritmo-di-majority-voting-di-boyer-moore/</id>
         <media:content url="https://70plus.it/media/posts/24/democrats-3594094_1920.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
