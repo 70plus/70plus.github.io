@@ -9,7 +9,7 @@ let riduz = `90%`;
 let test, idxTest, nomeTest, nDomande, idxDomanda, flag;
 let testRunning = false;
 let optionElement;
-let nRispEsatte, strRisp;
+let nRispEsatte, nRispIncomplete, strRisp, strIncomplete;
 let wt,wa;
 const keyVai = [`Metti alla prova le tue competenze informatiche!<br><br>Scegli dal menu un test da eseguire<br>`,
       `<b>Tocca "Vai" per cominciare</b><br><br>`,
@@ -86,26 +86,40 @@ okButton.addEventListener("click", () => {
   for (let i = 0; i < values.length; i++) {
     storicoDiv.insertAdjacentHTML("beforeend", sp2 + test[idxDomanda][idListaRisp][values[i]] + `<br>`);
   }
-  const isEqual = values.length === rispEsatte.length && values.every((value, index) => value === rispEsatte[index]);
-  if (isEqual) {
-    storicoDiv.insertAdjacentHTML("beforeend", `La tua risposta è esatta!<br>`);
-    nRispEsatte++;
-  } else {
-    storicoDiv.insertAdjacentHTML("beforeend", `La risposta esatta è:<br>`);
-    for (let i = 0; i < rispEsatte.length; i++) {
-      storicoDiv.insertAdjacentHTML("beforeend", sp2 + test[idxDomanda][idListaRisp][rispEsatte[i]] + `<br>`);
-    }   
-  }
+  // valutazione della risposta: se uguale, se incompleta, se errata
+  const isWrong = values.some(value => !rispEsatte.includes(value));
+    if (values.length === rispEsatte.length && !isWrong) {
+      storicoDiv.insertAdjacentHTML("beforeend", `La tua risposta è esatta!<br>`);
+      nRispEsatte++;
+    } else {
+      if (!isWrong) {
+        storicoDiv.insertAdjacentHTML("beforeend", `La tua risposta è incompleta! `);
+        nRispIncomplete++;
+      }
+      storicoDiv.insertAdjacentHTML("beforeend", `La risposta esatta è:<br>`);
+      for (let i = 0; i < rispEsatte.length; i++) {
+        storicoDiv.insertAdjacentHTML("beforeend", sp2 + test[idxDomanda][idListaRisp][rispEsatte[i]] + `<br>`);
+      }
+    }
   storicoDiv.insertAdjacentHTML("beforeend", `<br>` + test[idxDomanda][idSpiega] + `<br><br>`);
   if (++idxDomanda < test.length){
     storicoDiv.insertAdjacentHTML("beforeend", keyVai[2]);
   } else {
     testRunning = false;
-    strRisp = ` domande su `;
-    if (nRispEsatte == 1) {strRisp = ` domanda su `;}
-    storicoDiv.insertAdjacentHTML("beforeend", `Hai risposto esattamente a ` + nRispEsatte + strRisp + (test.length - idDomande) + `<br>`);
-    if (!localStorage.getItem(test[idTest]) || localStorage.getItem(test[idTest]) < nRispEsatte) {
-      localStorage.setItem(test[idTest], nRispEsatte);
+    strRisp = ` risposte esatte `;
+    strIncomplete = `e ` + nRispIncomplete + ` incomplete `;
+    if (nRispEsatte == 1) {strRisp = ` risposta esatta `;}
+    if (nRispIncomplete == 1) {strIncomplete = `e 1 incompleta `}
+    if (nRispIncomplete == 0) {strIncomplete = ``}
+    
+    storicoDiv.insertAdjacentHTML("beforeend", nRispEsatte + strRisp + strIncomplete + ` su ` + (test.length - idDomande) + `<br>`);
+      if (!localStorage.getItem(test[idTest]) || localStorage.getItem(test[idTest]).split(",").map(Number)[0] < nRispEsatte) {
+         localStorage.setItem(test[idTest], [nRispEsatte, nRispIncomplete]);
+      } else {
+      if (localStorage.getItem(test[idTest]).split(",").map(Number)[0] == nRispEsatte && 
+          localStorage.getItem(test[idTest]).split(",").map(Number)[1] < nRispIncomplete) {
+             localStorage.setItem(test[idTest], [nRispEsatte, nRispIncomplete]);
+             }
     }
     storicoDiv.insertAdjacentHTML("beforeend", keyVai[3]);
   }
@@ -166,6 +180,7 @@ scegliTest.addEventListener("change", function() {
       idxDomanda = idDomande;
       testRunning = true;
       nRispEsatte = 0;
+      nRispIncomplete = 0;
       storicoDiv.insertAdjacentHTML("beforeend", keyVai[1]);
     } else {
       storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);}
@@ -182,10 +197,15 @@ scegliAzione.addEventListener("change", function() {
       if (!localStorage.getItem(listaTest[i][idTest])) {
         storicoDiv.insertAdjacentHTML("beforeend", sp2 + `non hai ancora eseguito il test` + `<br>`);
       } else {
-        nRispEsatte = localStorage.getItem(listaTest[i][idTest]);
-        strRisp = ` risposte esatte su `;
-        if (nRispEsatte == 1) {strRisp = ` risposta esatta su `;}
-        storicoDiv.insertAdjacentHTML("beforeend", sp2 + nRispEsatte + strRisp + (listaTest[i].length - idDomande) + `<br>`);
+        nRispEsatte = localStorage.getItem(listaTest[i][idTest]).split(",")[0];
+        nRispIncomplete = localStorage.getItem(listaTest[i][idTest]).split(",")[1];
+        strRisp = nRispEsatte + ` risposte esatte `;
+        if (nRispEsatte == 1) {strRisp = `1 risposta esatta `};
+        strIncomplete = `e ` + nRispIncomplete + ` incomplete su `;
+        if (nRispIncomplete == 1) {strIncomplete = `e 1 incompleta su `};
+        if (nRispIncomplete == 0) {strIncomplete = `su `}
+
+        storicoDiv.insertAdjacentHTML("beforeend", sp2 + strRisp + strIncomplete + (listaTest[i].length - idDomande) + `<br>`);
       }
     }
   storicoDiv.insertAdjacentHTML("beforeend", `<br>` + keyVai[0]);
