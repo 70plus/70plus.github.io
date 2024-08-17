@@ -35,7 +35,7 @@ function updateCounter() {
         clearInterval(timer);
         const elapsedTime = Math.floor((Date.now() - startTime) / 100) / 10; // Calculate elapsed time in seconds
         spot.style.background = 'radial-gradient(circle, #ff6b6b, #ffe66d)';
-        spot.innerHTML = `Tempo:<br>${elapsedTime} sec.<br>Vai!`;
+        spot.innerHTML = `Tempo:<br>${elapsedTime} sec.<br><br>Vai!`;
         spot.onclick = function() {
             restartGame();
         };
