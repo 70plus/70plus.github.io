@@ -197,8 +197,8 @@ scegliAzione.addEventListener("change", function() {
       if (!localStorage.getItem(listaTest[i][idTest])) {
         storicoDiv.insertAdjacentHTML("beforeend", sp2 + `non hai ancora eseguito il test` + `<br>`);
       } else {
-        nRispEsatte = localStorage.getItem(listaTest[i][idTest]).split(",")[0];
-        nRispIncomplete = localStorage.getItem(listaTest[i][idTest]).split(",")[1];
+        nRispEsatte = localStorage.getItem(listaTest[i][idTest]).split(",").map(Number)[0];
+        nRispIncomplete = localStorage.getItem(listaTest[i][idTest]).split(",").map(Number)[1];
         strRisp = nRispEsatte + ` risposte esatte `;
         if (nRispEsatte == 1) {strRisp = `1 risposta esatta `};
         strIncomplete = `e ` + nRispIncomplete + ` incomplete su `;
