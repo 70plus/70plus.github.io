@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-10-18T21:52:52+02:00</updated>
+    <updated>2024-10-18T21:58:45+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -96,7 +96,7 @@
 <h4 id="la-manutenzione">La manutenzione</h4>
 <p>Ogni tanto ci sarà da aggiornare il sw installato. Per il ramo Ubuntu la procedura è semplice: compare un avviso e, quando si vuole, si dà l’ok a procedere.<br>Con Lubuntu temo che non ci sia questo automatismo, quindi occorre di tanto in tanto lanciare l’utility che controlla gli aggiornamenti.</p>
 <h4 id="l’installazione-dei-programmi">L’installazione dei programmi</h4>
-<p>In genere un os Linux ha già a bordo un browser (tipicamente <strong>Firefox</strong>), i programmi per ufficio di <strong>LibreOffice</strong>, un editor di testi, qualche programma multimediale.<br>In genere è anche disponibile un <strong>Software Center</strong>, da cui scaricare applicazioni.<br>Lunbuntu, nella sua semplicità, non ce l’ha. Occorre quindi ricorrere all’installazione da terminale. Non è semplicissimo, ma non è necessario essere iper-esperti, basta leggere e seguire con attenzione le istruzioni.</p>
+<p>In genere un os Linux ha già a bordo un browser (tipicamente <strong>Firefox</strong>), i programmi per ufficio di <strong>LibreOffice</strong>, un editor di testi, qualche programma multimediale.<br>In genere è anche disponibile un <strong>Software Center</strong>, da cui scaricare applicazioni.<br>Lunbuntu, nella sua semplicità, non ha un software center. Per aggiungere altre applicazioni occorre quindi ricorrere all’installazione da terminale. Non è semplicissimo, ma non è necessario essere iper-esperti, basta leggere e seguire con attenzione le istruzioni.</p>
 <h4 id="l’utilizzo">L’utilizzo</h4>
 <p>Una volta installato e capito come gira il tutto, devo dire che ci vuole poco a prendere la mano. E strada facendo un po’ esperti di Informatica ci si è diventati, volenti o nolenti.</p>
 <h4 id="i-rischi">I rischi</h4>
