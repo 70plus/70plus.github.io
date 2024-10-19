@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-10-18T22:15:01+02:00</updated>
+    <updated>2024-10-19T13:50:51+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -16,16 +16,19 @@
         </author>
         <link href="https://70plus.it/blog/addio-windows-10-nuove-opportunita-per-linux/"/>
         <id>https://70plus.it/blog/addio-windows-10-nuove-opportunita-per-linux/</id>
+        <media:content url="https://70plus.it/media/posts/43/screen.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
         <updated>2024-10-18T22:09:49+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://70plus.it/media/posts/43/screen.jpg" alt="" />
                     Come si muove il mercato dei sistemi operativi desktop? Nell’ultimo aggiornamento delle statistiche di StatCounter, l’utilizzo percentuale dei vari sistemi operativi, tra settembre 2023 e settembre 2024, ha visto queste variazioni: A una lettura superficiale si direbbe che in un&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://70plus.it/media/posts/43/screen.jpg" class="type:primaryImage" alt="" /></p>
                 <p>Come si muove il mercato dei <strong>sistemi operativi desktop</strong>?<br>Nell’ultimo aggiornamento delle statistiche di <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide" target="_blank" rel="nofollow noopener noreferrer">StatCounter</a>, l’utilizzo percentuale dei vari sistemi operativi, tra settembre 2023 e settembre 2024, ha visto queste variazioni:</p>
 <table>
 <thead>
