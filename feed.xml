@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-10-19T13:50:51+02:00</updated>
+    <updated>2024-10-19T13:55:28+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -16,19 +16,16 @@
         </author>
         <link href="https://70plus.it/blog/addio-windows-10-nuove-opportunita-per-linux/"/>
         <id>https://70plus.it/blog/addio-windows-10-nuove-opportunita-per-linux/</id>
-        <media:content url="https://70plus.it/media/posts/43/screen.jpg" medium="image" />
             <category term="Cose informatiche"/>
 
         <updated>2024-10-18T22:09:49+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://70plus.it/media/posts/43/screen.jpg" alt="" />
                     Come si muove il mercato dei sistemi operativi desktop? Nell’ultimo aggiornamento delle statistiche di StatCounter, l’utilizzo percentuale dei vari sistemi operativi, tra settembre 2023 e settembre 2024, ha visto queste variazioni: A una lettura superficiale si direbbe che in un&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://70plus.it/media/posts/43/screen.jpg" class="type:primaryImage" alt="" /></p>
                 <p>Come si muove il mercato dei <strong>sistemi operativi desktop</strong>?<br>Nell’ultimo aggiornamento delle statistiche di <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide" target="_blank" rel="nofollow noopener noreferrer">StatCounter</a>, l’utilizzo percentuale dei vari sistemi operativi, tra settembre 2023 e settembre 2024, ha visto queste variazioni:</p>
 <table>
 <thead>
@@ -108,6 +105,7 @@
 <h3 id="un-caso-esemplare">Un caso esemplare</h3>
 <p>La settimana scorsa mi è toccato aggiornare alcuni pc per l’Università della Terza Età di Lecco. Ho tenuto da parte il più vecchiotto, un <strong>Lenovo Ideapad 100S-14IBR</strong>, ormai in chiarissimo affanno sia per prestazioni che per dimensione disco (non arriva a 30 GB). Aggiornamento dopo aggiornamento, nonostante ci siano installati solo Chrome e LibreOffice, rimane solo una manciata di GigaBytes disponibili.<br>Il processore è un Celeron N3060 @ 1.6 GHz, la memoria è di 4 GB DDR3.<br>L’esiguità del disco e le ridotte prestazioni della cpu mi hanno portato a scegliere <a href="https://lubuntu.me" target="_blank" rel="nofollow noopener noreferrer">Lubuntu 24.04</a>.<br>Avevo già provato nel passato questa derivata di Ubuntu progettata per macchine con risorse limitate, e non ne ero rimasto particolarmente colpito. Devo dire che nel frattempo è migliorata decisamente.</p>
 <p>L’installazione è stata veloce, il pc ora è reattivo e regge bene diverse applicazioni in contemporanea. Adesso devo solo convincere gli allievi che è anche facile da usare.</p>
+<figure class="post__image"><img loading="lazy"  src="https://70plus.it/media/posts/43/screen-2.jpg" alt="Desktop del Lubuntu 24.04, con una finestra di terminale" width="1366" height="768" sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://70plus.it/media/posts/43/responsive/screen-2-xs.jpg 300w ,https://70plus.it/media/posts/43/responsive/screen-2-sm.jpg 480w ,https://70plus.it/media/posts/43/responsive/screen-2-md.jpg 768w"></figure>
 <h3 id="ma-se-volessi-comprare-un-pc-linux-già-bello-e-pronto">Ma se volessi comprare un pc Linux già bello e pronto?</h3>
 <p>Ottobre 2024, vorrei comprare un nuovo pc. Faccio un salto al MediaWorld e trovo: banchetto chic della Apple, serie di laptop Windows da 300 € a quanto vuoi spendere. Un’isoletta è riservata ai Chromebooks. E basta.<br>Certo, c’è l’online. Posso cercare, ad esempio “laptop linux preinstallato” su Amazon. Ma nemmeno con una chiave di ricerca così precisa ottengo risultati chiari e inequivocabili. Devo dribblare infatti Chromebook vari (sì, i Chromebook sono basati su Linux, ma sono molto diversi all’utilizzo), e un dilagare di Windows 11.</p>
 <h3 id="che-previsioni-fare">Che previsioni fare</h3>
