@@ -90,7 +90,17 @@ input[type=number], button {
 <p id="resultN"></p>
 <hr>
 <div><b>Nota:</b> l'imposta sostitutiva andrebbe calcolata al netto dei contributi INPS <b>dell'anno precedente</b>.<br>
-Per semplicità, qui viene detratto il contributo INPS relativo al fatturato mensile indicato.</div>
+Per semplicità, qui viene detratto il contributo INPS relativo al fatturato mensile indicato:<br>
+<ul>
+    <li>imponibile = importo_fattura &times; coefficiente_redditività </li>
+    <li>ritenuta_inps = imponibile &times; coefficiente_inps</li>
+    <li>versamento_iva = (imponibile - ritenuta_inps) &times; tassazione_iva</li>
+    <li>netto = importo_fattura - ritenuta_inps - versamento_iva</li>
+</ul>
+
+
+
+</div>
 <!-- Put this at the end of the <body> tag -->
 <script src="https://swetrix.org/swetrix.js" defer></script>
 <script>
