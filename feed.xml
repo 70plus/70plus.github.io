@@ -3,7 +3,7 @@
     <title>70plus - and still a lot to do</title>
     <link href="https://70plus.it/feed.xml" rel="self" />
     <link href="https://70plus.it" />
-    <updated>2024-10-19T13:55:28+02:00</updated>
+    <updated>2025-07-08T22:10:31+02:00</updated>
     <author>
         <name>Pasquale</name>
     </author>
@@ -201,6 +201,8 @@
 <h4 id="il-procedimento">Il procedimento</h4>
 <p>Lavo e sgocciolo i ceci, poi li metto in un frullatore a bicchiere, insieme allo spicchio d’aglio spezzettato, il succo di limone, l’olio EVO e l’acqua naturale da frigo.<br>Primo giro di frullatore, poi inserisco la tahina e completo con un altro giro, finché la crema diventa … cremosa.<br>Infine trasferisco l’Hummus in un piccolo contenitore di vetro, pronto per essere consumato.</p>
 <p>Troppo semplice per non provare, no?</p>
+<hr>
+<p>Questa ricetta fa parte della serie <a href="https://70plus.it/blog/la-cucina-vista-da-me/">La cucina vista da me</a>.</p>
             ]]>
         </content>
     </entry>
@@ -745,7 +747,7 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
 <p>Buoni, comodi per una cena gustosa, accompagnati da un po' di verdura. Bisogna trovare il tempo per prepararli.</p>
 <p>L'immagine è di <a href="https://pixabay.com/users/creozavr-2567670/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511"></a><a href="https://pixabay.com/users/creozavr-2567670/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511" target="_blank" rel="nofollow noopener noreferrer">Dmitry Abramov</a> da <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511" target="_blank" rel="nofollow noopener noreferrer">Pixabay</a><a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2924511"></a> </p>
 <hr>
-<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.github.io/la-cucina-vista-da-me.html">La cucina vista da me</a>.</p>
+<p class="align-center">Questa ricetta fa parte della serie <a href="https://70plus.it/blog/la-cucina-vista-da-me/">La cucina vista da me</a>.</p>
 </div>
             ]]>
         </content>
