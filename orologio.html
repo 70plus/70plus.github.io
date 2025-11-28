@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <title>Orologio - 70plus</title>
+        <meta
+            name="description"
+            content="Impariamo a leggere l'orologio analogico.
+        Prime esperienze con l'orologio a lancette." />
+        <link rel="stylesheet" type="text/css" href="media/files/orologio.css" />
+        <link rel="icon" type="image/jpg" href="media/files/logo.jpg" />
+    </head>
+
+    <body>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a
+                    href="https://70plus.github.io/"
+                    style="text-decoration: none">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Image"
+                        width="60"
+                        height="60"
+                /></a>
+            </div>
+            <div class="logo-text">
+                <h3 id="titolo" ; align="center">Impariamo a leggere l'orologio</h3>
+            </div>
+        </div>
+        <div class="spaziatura"></div>
+<!-- MAIN -->
+    <main>
+        <div class="clock-container">
+            <canvas id="clock" width="300" height="300"></canvas>
+        </div>
+        <div class="buttons">
+            <button id="speakBtn">Te lo dico io!</button>
+            <button id="changeBtn">Cambia</button>
+        </div>
+    </main>
+
+    <script src="media/files/orologio.js"></script>
+
+        <!-- Put this at the end of the <body> tag -->
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("WoH0No9arSTq");
+                swetrix.trackViews();
+            });
+        </script>
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+    </body>
+</html>
+
