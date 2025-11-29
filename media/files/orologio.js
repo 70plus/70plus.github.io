@@ -144,6 +144,19 @@ class RandomClock {
             this.ctx.fillText(i.toString(), x2 + 20 * Math.cos(angle), y2 + 20 * Math.sin(angle));
         }
         
+        // Lancetta minuti
+        const minuteAngle = (Math.PI / 30) * minutes - Math.PI / 2;
+	this.ctx.strokeStyle = '#008000';  // Verde
+	this.ctx.lineWidth = 8;
+        this.ctx.lineCap = 'round';
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.centerX, this.centerY);
+        this.ctx.lineTo(
+            this.centerX + (this.radius - 60) * Math.cos(minuteAngle),
+            this.centerY + (this.radius - 60) * Math.sin(minuteAngle)
+        );
+        this.ctx.stroke();
+
         // Lancetta ore
         const hourAngle = (Math.PI / 6) * hours + (Math.PI / 360) * minutes - Math.PI / 2;
         this.ctx.strokeStyle = '#d32f2f';
@@ -152,23 +165,11 @@ class RandomClock {
         this.ctx.beginPath();
         this.ctx.moveTo(this.centerX, this.centerY);
         this.ctx.lineTo(
-            this.centerX + (this.radius - 75) * Math.cos(hourAngle),
-            this.centerY + (this.radius - 75) * Math.sin(hourAngle)
+            this.centerX + (this.radius - 80) * Math.cos(hourAngle),
+            this.centerY + (this.radius - 80) * Math.sin(hourAngle)
         );
         this.ctx.stroke();
-        
-        // Lancetta minuti
-        const minuteAngle = (Math.PI / 30) * minutes - Math.PI / 2;
-//        this.ctx.strokeStyle = '#1976d2';
-	this.ctx.strokeStyle = '#008000';  // Verde        this.ctx.lineWidth = 5;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.centerX, this.centerY);
-        this.ctx.lineTo(
-            this.centerX + (this.radius - 60) * Math.cos(minuteAngle),
-            this.centerY + (this.radius - 60) * Math.sin(minuteAngle)
-        );
-        this.ctx.stroke();
-        
+                
         // Centro
         this.ctx.fillStyle = '#333';
         this.ctx.beginPath();
