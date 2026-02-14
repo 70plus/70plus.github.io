@@ -27,7 +27,6 @@ body {
     text-align: center;
     color: #F0F0C9;
 }
-
 #operazione-container {
     font-size: 30px;
     margin: 20px;
@@ -56,7 +55,10 @@ button {
 ========================= */
 .grid {
     margin: 20px auto;
-    width: 420px;
+    width: 420px;       /* larghezza fissa per PC */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .row {
@@ -65,21 +67,16 @@ button {
     margin: 4px 0;
 }
 
-.separator {
-    width: 100%;
-    height: 16px;
-    border-bottom: 2px dashed #aaa;
-    margin: 8px 0;
-}
-
 .circle {
-    width: 42px;
-    aspect-ratio: 1 / 1; /* cerchio perfetto */
+    width: 42px;          /* diametro fisso su PC */
+    height: 42px;
+    aspect-ratio: 1 / 1;  /* cerchio perfetto */
     border-radius: 50%;
     border: 2px solid #999;
     margin: 3px;
     background-color: white;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .filled {
@@ -93,6 +90,15 @@ button {
 
 .selected {
     outline: 4px solid orange; /* pedina selezionata */
+}
+
+/* =========================
+   SEPARATORE TRA ADDENDI
+========================= */
+.separator {
+    width: 100%;
+    height: 16px;          /* spazio verticale */
+    margin: 8px 0;
 }
 
 /* =========================
@@ -167,13 +173,18 @@ button {
     }
 
     .grid {
-        width: 100%;
+        width: 95%;       /* adatta la griglia allo schermo */
+        max-width: none;  /* niente limite su mobile */
     }
 
     .circle {
-        width: 48px;
-        aspect-ratio: 1 / 1;
-        margin: 5px;
+        width: 32px;      /* diametro più piccolo su smartphone */
+        height: 32px;
+        margin: 2px;
+    }
+
+    .gap {
+        margin-right: 8px; /* gap ridotto su mobile */
     }
 
     input {
