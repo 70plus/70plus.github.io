@@ -36,6 +36,14 @@ body {
     gap: 10px;
 }
 
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+}
+
 input {
     font-size: 20px;
     width: 100px;

@@ -37,31 +37,32 @@ function disegna() {
     grid.className = "grid";
 
     // Primo addendo
-    creaBlocchi(numero1, grid);
+    creaBlocchi(numero1, grid, "primo");
 
-    // Separatore visivo tra addendi
+    // Separatore visivo
     const sep = document.createElement("div");
     sep.className = "separator";
     grid.appendChild(sep);
 
     // Secondo addendo
-    creaBlocchi(numero2, grid);
+    creaBlocchi(numero2, grid, "secondo");
 
     cont.appendChild(grid);
+
+    // aggiorna subito il conteggio
+    aggiornaConteggio();
 }
 
-function creaBlocchi(quantita, grid) {
+function creaBlocchi(quantita, grid, classeAddendo) {
     const righe = Math.ceil(quantita / 10);
 
     for (let r = 0; r < righe; r++) {
         const row = document.createElement("div");
-        row.className = "row";
+        row.className = `row ${classeAddendo}`; // marca la riga come "primo" o "secondo"
 
         for (let i = 0; i < 10; i++) {
             const circle = document.createElement("div");
             circle.className = "circle";
-
-            // Gap visivo tra 5+5
             if (i === 4) circle.classList.add("gap");
 
             const indice = r * 10 + i;
@@ -92,7 +93,17 @@ document.addEventListener("click", function(e) {
         selected.classList.remove("selected");
         selected = null;
     }
+
+    // aggiorniamo il conteggio ad ogni click
+    aggiornaConteggio();
 });
+
+function aggiornaConteggio() {
+    const C1 = document.querySelectorAll(".row.primo .circle.filled").length;
+    const C2 = document.querySelectorAll(".row.secondo .circle.filled").length;
+
+    document.getElementById("conteggio").textContent = `${C1} + ${C2} =`;
+}
 
 /* =========================
    VERIFICA RISPOSTA
@@ -126,4 +137,6 @@ window.onclick = function(event) {
    AVVIO INIZIALE
 ========================= */
 genera();
+aggiornaConteggio();
+
 
