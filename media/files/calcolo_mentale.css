@@ -1,7 +1,12 @@
+/* =========================
+   STILE GENERALE
+========================= */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
 }
 
 /* HEADER */
@@ -32,24 +37,76 @@ body {
     gap: 10px;
 }
 
-.info-btn {
-    background: none;
-    border: none;
+input {
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+}
+
+button {
+    font-size: 18px;
+    padding: 6px 12px;
+    margin: 8px;
     cursor: pointer;
-    padding: 0;
-    transition: transform 0.2s ease;
 }
 
-.info-btn:hover {
-    transform: scale(1.15) rotate(5deg);
+/* =========================
+   GRIGLIA E CERCHI
+========================= */
+.grid {
+    margin: 20px auto;
+    width: 420px;
 }
 
-.info-btn:active {
-    transform: scale(0.95);
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
 }
 
-/* Modal */
+.separator {
+    width: 100%;
+    height: 16px;
+    border-bottom: 2px dashed #aaa;
+    margin: 8px 0;
+}
 
+.circle {
+    width: 42px;
+    aspect-ratio: 1 / 1; /* cerchio perfetto */
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin: 3px;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+.filled {
+    background-color: #2b7cff;
+    cursor: pointer;
+}
+
+.gap {
+    margin-right: 12px; /* gap tra 5+5 */
+}
+
+.selected {
+    outline: 4px solid orange; /* pedina selezionata */
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+#feedback {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* =========================
+   MODAL INFO
+========================= */
 .modal {
     display: none;
     position: fixed;
@@ -75,62 +132,29 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-/*  ---- fine modifica modal */
 
-.grid {
-    margin: 20px auto;
-    width: 420px; /* larghezza fissa per contenere 10 cerchi */
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    margin: 4px 0;
-}
-
-.circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid #999;
-    margin: 3px;
-    background-color: white;
-}
-
-.separator {
-    height: 20px;
-}
-
-.gap {
-    margin-right: 12px;
-}
-
-.filled {
-    background-color: #2b7cff;
-    cursor: grab;
-}
-
-input {
-    font-size: 20px;
-    width: 100px;
-    text-align: center;
-}
-
-button {
-    font-size: 18px;
-    padding: 6px 12px;
-    margin: 8px;
+/* =========================
+   BOTTONE INFO “i” SVG
+========================= */
+.info-btn {
+    background: none;
+    border: none;
     cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
 }
 
-#feedback {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
+.info-btn:hover {
+    transform: scale(1.15) rotate(5deg);
 }
 
-/* ===== MOBILE & TABLET ===== */
+.info-btn:active {
+    transform: scale(0.95);
+}
 
+/* =========================
+   MOBILE & TABLET
+========================= */
 @media (max-width: 768px) {
 
     body {
@@ -147,8 +171,8 @@ button {
     }
 
     .circle {
-        width: 42px;
-        height: 42px;
+        width: 48px;
+        aspect-ratio: 1 / 1;
         margin: 5px;
     }
 
