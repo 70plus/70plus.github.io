@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+/* HEADER */
+.logo-container {
+    display: flex;
+    align-items: center; /* center items vertically */
+    height: 60px; /* set height for container */
+    background-color: #10475C;
+}
+
+.logo-image {
+    width: 60px; /* set width for logo */
+    height: 60px; /* set height for logo */
+}
+
+.logo-text {
+    flex-basis: calc(100% - 60px);
+    text-align: center;
+    color: #F0F0C9;
+}
+
+#operazione-container {
+    font-size: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.info-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.info-btn:active {
+    transform: scale(0.95);
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+/*  ---- fine modifica modal */
+
+.grid {
+    margin: 20px auto;
+    width: 420px; /* larghezza fissa per contenere 10 cerchi */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin: 3px;
+    background-color: white;
+}
+
+.separator {
+    height: 20px;
+}
+
+.gap {
+    margin-right: 12px;
+}
+
+.filled {
+    background-color: #2b7cff;
+    cursor: grab;
+}
+
+input {
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 6px 12px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+#feedback {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}

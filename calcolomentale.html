@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+	<title>Calcolo Mentale</title>
+	<link rel="stylesheet" type="text/css" href="media/files/calcolo_mentale.css" />
+        <link rel="icon" type="image/jpg" href="media/files/logo.jpg" />
+</head>
+
+<body>
+
+        <div class="logo-container">
+            <div class="logo-image">
+                <a
+                    href="https://70plus.github.io/"
+                    style="text-decoration: none">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Image"
+                        width="60"
+                        height="60"
+                /></a>
+            </div>
+            <div class="logo-text">
+                <h3 id="titolo" ; align="center">Calcolo a mente!</h3>
+            </div>
+        </div>
+        <div class="spaziatura"></div>
+<!-- MAIN -->
+
+<div id="operazione-container">
+    <span id="operazione"></span>
+
+    <button id="infoBtn" class="info-btn" aria-label="Informazioni">
+        <svg viewBox="0 0 60 60" width="36" height="36">
+            <circle cx="30" cy="30" r="26" fill="#4da6ff" stroke="#1f5edc" stroke-width="4"/>
+            <text x="30" y="38" text-anchor="middle"
+                  font-size="28"
+                  font-family="Arial"
+                  font-weight="bold"
+                  fill="white"
+                  font-style="italic">i</text>
+        </svg>
+    </button>
+</div>
+
+<div id="infoLayer" class="modal">
+    <div class="modal-content">
+        <span id="closeBtn" class="close">&times;</span>
+        <h2>Come si gioca?</h2>
+        <p>
+            Scrivi il risultato della somma.<br><br>
+            Puoi spostare i gettoni blu per formare una decina completa (10).<br><br>
+            Quando completi una riga da 10, sarà più facile trovare la risposta!
+        </p>
+    </div>
+</div>
+
+<div id="contenitore"></div>
+
+<div>
+    <input type="number" id="risposta">
+    <button onclick="verifica()">Invia</button>
+</div>
+
+<div id="feedback"></div>
+
+<button onclick="genera()">Ricomincia</button>
+
+    <script src="media/files/calcolo_mentale.js"></script>
+
+        <!-- Put this at the end of the <body> tag -->
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("WoH0No9arSTq");
+                swetrix.trackViews();
+            });
+        </script>
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+
+</body>
+</html>
+

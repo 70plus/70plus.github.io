@@ -20,7 +20,7 @@
             <category term="cucina"/>
 
         <updated>2025-07-10T07:43:04+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/46/pasta_e_patate.jpg" alt="Pasta e patata, un&#x27;immagine divertente" />
                     Pasta e patate è un piatto classico della cucina napoletana, buonissimo e ricco di ingredienti, come pancetta e provola. La presenza della patata lo rende però una bomba glicemica. Per questo motivo, quando ne ho nostalgia, mi accontento di una versione&hellip;
@@ -98,7 +98,7 @@
             <category term="cucina"/>
 
         <updated>2025-07-10T07:05:21+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/44/fagiolini.jpg" alt="Linguine e fagiolini, un primo sorprendente" />
                     Con l'estate arrivano in tavola i fagiolini, generalmente consumati come contorno. È però possibile utilizzarli anche in un primo piatto, come suggerisce Fatto in casa da Benedetta. Ho replicato diverse volte e con buoni risultati questa ricetta, che quindi va di diritto&hellip;
@@ -185,7 +185,7 @@
             <category term="Cose informatiche"/>
 
         <updated>2024-10-18T22:09:49+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     Come si muove il mercato dei sistemi operativi desktop? Nell’ultimo aggiornamento delle statistiche di StatCounter, l’utilizzo percentuale dei vari sistemi operativi, tra settembre 2023 e settembre 2024, ha visto queste variazioni: A una lettura superficiale si direbbe che in un&hellip;
                 ]]>
@@ -297,7 +297,7 @@
             <category term="cucina"/>
 
         <updated>2024-10-16T16:23:43+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     L’Hummus è una crema a base di ceci e tahina, la cui origine risale al XIII secolo ed è contesa tra Turchia, Libano, Palestina, Siria e Israele. Me lo aveva sponsorizzato Valentina (è buono e va bene per il diabete,&hellip;
                 ]]>
@@ -384,7 +384,7 @@
             <category term="Cose informatiche"/>
 
         <updated>2024-07-14T22:13:22+02:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/38/WhatsApp-Image-2024-06-29-at-15.56.51.jpeg" alt="Un disegno di Luna" />
                     Se si ha una nipotina quasi-settenne, gran produttrice di disegni, e si vuole assecondarne la creatività al contempo risparmiando carta, allora serve un’app o un sito web per disegnare con lo stilo (o un dito). Ma se non si trova&hellip;
@@ -430,7 +430,7 @@
             <category term="Cose informatiche"/>
 
         <updated>2024-03-24T08:37:25+01:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/36/Schermata-del-2024-03-24-09-01-11.png" alt="" />
                     A fine dicembre 2023 ho installato l'ultima versione di Zorin OS, la 7, sul mio Asus E210 (pc di fascia bassa con Celeron N4020, 4 GB di memoria). Con gli aggiornamenti di questi primi tre mesi, la versione è stata&hellip;
@@ -508,7 +508,7 @@
             <category term="Carta"/>
 
         <updated>2024-03-18T09:07:09+01:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/34/mobius_01a.jpeg" alt="Nastro di Möbius" />
                     Qualche foglio di carta A4, un righello, una matita, un paio di forbici e una mezz'ora di tempo regalano un interessante momento con il Nastro di Möbius. La procedura per costruirne uno vale anche come definizione: La "cosa" che avete&hellip;
@@ -569,7 +569,7 @@
             <category term="Pensieri"/>
 
         <updated>2024-02-24T07:54:20+01:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/33/Matrice-di-Eisenhower1.png" alt="Matrice di Eisenhower" />
                     Il 34° presidente degli Stati Uniti, Dwight D. Eisenhower, comandante dell'Operazione Overlord che portò allo sbarco in Normandia, citò in un discorso una frase attribuita al rettore di una università: Ho due tipi di problemi: quelli urgenti e quelli importanti.
@@ -608,7 +608,7 @@
             <category term="Cose informatiche"/>
 
         <updated>2023-12-30T08:31:58+01:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/31/zorinos17.jpg" alt="Zorin OS 17 screenshot visita guidata" />
                     Ho di recente installato Zorin OS 17, la distribuzione Linux dei fratelli Zorin. Questa versione, rilasciata lo scorso 20 dicembre, ha un desktop Gnome, mentre arriverà solo nei prossimi mesi quella con XFCE, più leggera e quindi più adatta al&hellip;
@@ -750,7 +750,7 @@ printf "%s\t%s\t%s\t%s\n" "$(date +"%T")" "$pages" "$poolsize" "$compress" | tee
             <category term="Cose informatiche"/>
 
         <updated>2023-12-21T22:09:55+01:00</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://70plus.it/media/posts/30/zorinos17.jpg" alt="" />
                     Sto provando Zorin OS 17, distribuzione Linux fresca di giornata, disponibile da ieri sera, 20 dicembre. Premessa: il pc che utilizzo, un Asus E210 con processore Celeron N4020, 4 GB di memoria, 64 GB di disco, è piuttosto scarso. Acquistato&hellip;
