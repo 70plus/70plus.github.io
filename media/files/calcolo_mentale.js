@@ -133,4 +133,32 @@ function verifica() {
     }
 }
 
+// ===== SUPPORTO TOUCH =====
+
+document.addEventListener("touchstart", function(e) {
+    if (e.target.classList.contains("filled")) {
+        dragged = e.target;
+    }
+});
+
+document.addEventListener("touchend", function(e) {
+
+    if (!dragged) return;
+
+    const touch = e.changedTouches[0];
+    const elem = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    if (elem && elem.classList.contains("circle") && !elem.classList.contains("filled")) {
+
+        elem.classList.add("filled");
+        elem.draggable = true;
+        elem.addEventListener("dragstart", drag);
+
+        dragged.classList.remove("filled");
+        dragged.draggable = false;
+    }
+
+    dragged = null;
+});
+
 genera();

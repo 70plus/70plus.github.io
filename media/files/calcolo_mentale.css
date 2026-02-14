@@ -128,3 +128,43 @@ button {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* ===== MOBILE & TABLET ===== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #operazione-container {
+        font-size: 24px;
+        flex-wrap: wrap;
+    }
+
+    .grid {
+        width: 100%;
+    }
+
+    .circle {
+        width: 42px;
+        height: 42px;
+        margin: 5px;
+    }
+
+    input {
+        font-size: 22px;
+        width: 120px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
