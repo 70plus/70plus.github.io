@@ -1,0 +1,158 @@
+/* =========================
+   STILE GENERALE
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.logo-container {
+    display: flex;
+    align-items: center; /* center items vertically */
+    height: 60px; /* set height for container */
+    background-color: #10475C;
+}
+
+.logo-image {
+    width: 60px; /* set width for logo */
+    height: 60px; /* set height for logo */
+}
+
+.logo-text {
+    flex-basis: calc(100% - 60px);
+    text-align: center;
+    color: #F0F0C9;
+}
+
+select {
+    font-size: 18px;
+    padding: 6px;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* =========================
+   DOMINO DOMANDE
+========================= */
+
+.colonna {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;   /* spazio verticale tra le tessere */
+}
+
+.domanda {
+    display: flex;
+    width: 160px; /* restringi */
+    height: 32px; /* restringi */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.domanda-sx {
+    flex: 1;
+    background-color: #2b7cff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px; /* restringi */
+    border-radius: 10px 0 0 10px;
+}
+
+.risultato {
+    flex: 1;
+    background-color: white;
+    border-left: 2px solid #ccc;
+    border: 2px solid #2b7cff;   /* bordo blu */
+    border-left: none;           /* evita doppio bordo centrale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px; /* restringi */
+    border-radius: 0 10px 10px 0;
+}
+
+/* =========================
+   TESSERE VALORI
+========================= */
+
+.valore {
+    width: 80px; /* restringi */
+    height: 32px; /* restringi */
+    background-color: #2b7cff;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;  /* restringi */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    touch-action: none;
+}
+
+.valore:active {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.valore.correct {
+    background-color: #4CAF50 !important;  /* verde */
+    color: white;
+}
+
+.valore.wrong {
+    background-color: #f44336 !important;  /* rosso */
+    color: white;
+}
+
+.area-bottoni {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #666; /* #2b7cff; */
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.secondario {
+    background-color: #777;
+}
+
+#risultatoFinale {
+    margin-top: 18px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
