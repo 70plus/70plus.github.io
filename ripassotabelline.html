@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Ripasso tabelline</title>
+	<meta charset="UTF-8"
+              name="viewport" content="width=device-width, initial-scale=1.0"
+	      name="description" content="Ripassa le tabelline!"
+              name="color-scheme" content="light only" />
+	<link rel="stylesheet" type="text/css" href="media/files/ripasso_tabelline.css" />
+        <link rel="icon" type="image/jpg" href="media/files/logo.jpg" />
+</head>
+
+<body>
+
+        <div class="logo-container">
+            <div class="logo-image">
+                <a
+                    href="https://70plus.github.io/"
+                    style="text-decoration: none">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Image"
+                        width="60"
+                        height="60"
+                /></a>
+            </div>
+            <div class="logo-text">
+                <h3 id="titolo" ; align="center">Calcolo a mente!</h3>
+            </div>
+        </div>
+        <div class="spaziatura"></div>
+
+<select id="tabellinaSelect"></select>
+
+<div class="container">
+    <div class="colonna" id="colonnaDomande"></div>
+    <div class="colonna" id="colonnaValori"></div>
+</div>
+
+<div class="area-bottoni">
+    <button onclick="verifica()">Verifica</button>
+    <button onclick="ricomincia()" class="secondario">Ricomincia</button>
+</div>
+<div id="risultatoFinale"></div>
+
+    <script src="media/files/ripasso_tabelline.js"></script>
+
+        <!-- Put this at the end of the <body> tag -->
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                swetrix.init("WoH0No9arSTq");
+                swetrix.trackViews();
+            });
+        </script>
+        <noscript>
+            <img
+                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+                alt=""
+                referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+
+</body>
+</html>
+
