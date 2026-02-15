@@ -171,6 +171,19 @@ function ricomincia() {
 }
 
 /* =========================
+   MODAL INFORMAZIONI
+========================= */
+const infoBtn = document.getElementById("infoBtn");
+const infoLayer = document.getElementById("infoLayer");
+const closeBtn = document.getElementById("closeBtn");
+
+infoBtn.onclick = function() { infoLayer.style.display = "block"; };
+closeBtn.onclick = function() { infoLayer.style.display = "none"; };
+window.onclick = function(event) {
+    if (event.target === infoLayer) infoLayer.style.display = "none";
+};
+
+/* =========================
    AVVIO
 ========================= */
 initSelect();

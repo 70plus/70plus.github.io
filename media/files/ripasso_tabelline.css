@@ -31,7 +31,8 @@ body {
 select {
     font-size: 18px;
     padding: 6px;
-    margin: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .container {
@@ -40,6 +41,54 @@ select {
     gap: 35px;
     flex-wrap: wrap;
     margin-top: 10px;
+}
+
+/* =========================
+   MODAL INFO
+========================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =========================
+   BOTTONE INFO “i” SVG
+========================= */
+.info-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.info-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.info-btn:active {
+    transform: scale(0.95);
 }
 
 /* =========================
