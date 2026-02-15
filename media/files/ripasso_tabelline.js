@@ -80,6 +80,8 @@ function shuffle(array) {
 /* =========================
    DRAG & DROP UNIVERSALE
 ========================= */
+// let dragged = null;
+
 document.addEventListener("pointerdown", function(e) {
     if (e.target.classList.contains("valore")) {
         dragged = e.target;
@@ -88,9 +90,18 @@ document.addEventListener("pointerdown", function(e) {
 });
 
 document.addEventListener("pointerup", function(e) {
+
     if (!dragged) return;
 
-    const target = e.target.closest(".risultato");
+    // coordinate del punto di rilascio
+    const x = e.clientX;
+    const y = e.clientY;
+
+    const elementUnderFinger = document.elementFromPoint(x, y);
+
+    const target = elementUnderFinger
+        ? elementUnderFinger.closest(".risultato")
+        : null;
 
     if (target && target.children.length === 0) {
         target.appendChild(dragged);
@@ -131,14 +142,14 @@ function verifica() {
 const risultatoDiv = document.getElementById("risultatoFinale");
 
 if (corretti === 10) {
-    risultatoDiv.textContent = "🎉 Perfetto! 10 su 10! Sei un campione!";
+    risultatoDiv.textContent = "🎉 WoW, perfetto! 10 su 10!";
     risultatoDiv.style.color = "green";
 }
-else if (corretti >= 7) {
+else if (corretti >= 8) {
     risultatoDiv.textContent = `👏 Molto bene! ${corretti}/10 risultati corretti`;
     risultatoDiv.style.color = "#2b7cff";
 }
-else if (corretti >= 4) {
+else if (corretti >= 5) {
     risultatoDiv.textContent = `🙂 Buon lavoro! ${corretti}/10 corretti. Continua così!`;
     risultatoDiv.style.color = "orange";
 }
