@@ -4,7 +4,6 @@
 ================================================== */
 
 let numero1, numero2, risultato;
-let selected = null;
 
 /* =========================
    GENERAZIONE NUMERI
@@ -76,25 +75,39 @@ function creaBlocchi(quantita, grid, classeAddendo) {
 }
 
 /* =========================
-   SPOSTAMENTO PEDINE CLICK / TOUCH
+   DRAG AND DROP UNIVERSALE
+   (Pointer Events: PC + Mobile)
 ========================= */
-document.addEventListener("click", function(e) {
+
+let dragged = null;
+
+document.addEventListener("pointerdown", function(e) {
     if (e.target.classList.contains("filled")) {
-        if (selected) selected.classList.remove("selected");
-        selected = e.target;
-        selected.classList.add("selected");
-    } else if (
-        e.target.classList.contains("circle") &&
-        !e.target.classList.contains("filled") &&
-        selected
+        dragged = e.target;
+        dragged.setPointerCapture(e.pointerId);
+        dragged.style.opacity = "0.5";
+    }
+});
+
+document.addEventListener("pointerup", function(e) {
+    if (!dragged) return;
+
+    dragged.style.opacity = "1";
+
+    const dropTarget = document.elementFromPoint(e.clientX, e.clientY);
+
+    if (
+        dropTarget &&
+        dropTarget.classList.contains("circle") &&
+        !dropTarget.classList.contains("filled")
     ) {
-        e.target.classList.add("filled");
-        selected.classList.remove("filled");
-        selected.classList.remove("selected");
-        selected = null;
+        dropTarget.classList.add("filled");
+        dragged.classList.remove("filled");
     }
 
-    // aggiorniamo il conteggio ad ogni click
+    dragged.releasePointerCapture(e.pointerId);
+    dragged = null;
+
     aggiornaConteggio();
 });
 
