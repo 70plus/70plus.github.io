@@ -54,8 +54,8 @@ select {
 
 .domanda {
     display: flex;
-    width: 120px; /* restringi */
-    height: 28px; /* restringi */
+    width: 160px; /* restringi */
+    height: 32px; /* restringi */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
@@ -69,7 +69,7 @@ select {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 13px; /* restringi */
+    font-size: 14px; /* restringi */
     border-radius: 10px 0 0 10px;
 }
 
@@ -82,7 +82,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px; /* restringi */
+    min-width: 80px; /* restringi */
     border-radius: 0 10px 10px 0;
 }
 
@@ -91,8 +91,8 @@ select {
 ========================= */
 
 .valore {
-    width: 60px; /* restringi */
-    height: 28px; /* restringi */
+    width: 80px; /* restringi */
+    height: 32px; /* restringi */
     background-color: #2b7cff;
     color: white;
     font-weight: bold;
@@ -156,24 +156,3 @@ button:hover {
     font-size: 20px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .domanda {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .valore {
-        width: 140px;
-    }
-}
