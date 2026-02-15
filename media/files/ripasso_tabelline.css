@@ -84,6 +84,7 @@ select {
     justify-content: center;
     min-width: 80px;
     border-radius: 0 10px 10px 0;
+    touch-action: none;
 }
 
 /* =========================
