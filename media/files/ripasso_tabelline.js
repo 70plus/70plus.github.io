@@ -7,13 +7,19 @@ let dragged = null;
 function initSelect() {
     const select = document.getElementById("tabellinaSelect");
 
-    for (let i = 1; i <= 10; i++) {
-        const option = document.createElement("option");
-        option.value = i;
-        option.textContent = "Tabellina del " + i;
-        if (i === 2) option.selected = true;
-        select.appendChild(option);
-    }
+const tabellinaCasuale = Math.floor(Math.random() * 10) + 1;
+
+for (let i = 1; i <= 10; i++) {
+    const option = document.createElement("option");
+    option.value = i;
+    option.textContent = "Tabellina del " + i;
+
+    if (i === tabellinaCasuale) option.selected = true;
+
+    select.appendChild(option);
+}
+
+    numeroTabellina = tabellinaCasuale;
 
     select.addEventListener("change", function() {
         numeroTabellina = parseInt(this.value);
