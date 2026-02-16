@@ -205,3 +205,11 @@ button:hover {
     font-size: 20px;
 }
 
+.valore.dragging {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;   /* fondamentale */
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+

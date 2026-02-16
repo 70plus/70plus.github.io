@@ -80,36 +80,55 @@ function shuffle(array) {
 /* =========================
    DRAG & DROP UNIVERSALE
 ========================= */
-// let dragged = null;
+/* let dragged = null; */
+let offsetX = 0;
+let offsetY = 0;
 
 document.addEventListener("pointerdown", function(e) {
-    if (e.target.classList.contains("valore")) {
-        dragged = e.target;
-        dragged.style.opacity = "0.5";
-    }
+
+    if (!e.target.classList.contains("valore")) return;
+
+    dragged = e.target;
+
+    const rect = dragged.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    dragged.classList.add("dragging");
+
+    moveAt(e.clientX, e.clientY);
+});
+
+document.addEventListener("pointermove", function(e) {
+    if (!dragged) return;
+    moveAt(e.clientX, e.clientY);
 });
 
 document.addEventListener("pointerup", function(e) {
 
     if (!dragged) return;
 
-    // coordinate del punto di rilascio
-    const x = e.clientX;
-    const y = e.clientY;
-
-    const elementUnderFinger = document.elementFromPoint(x, y);
-
-    const target = elementUnderFinger
-        ? elementUnderFinger.closest(".risultato")
-        : null;
+    const elementUnder = document.elementFromPoint(e.clientX, e.clientY);
+    const target = elementUnder ? elementUnder.closest(".risultato") : null;
 
     if (target && target.children.length === 0) {
         target.appendChild(dragged);
+        resetPosition(dragged);
     }
 
-    dragged.style.opacity = "1";
+    dragged.classList.remove("dragging");
     dragged = null;
 });
+
+function moveAt(x, y) {
+    dragged.style.left = x - offsetX + "px";
+    dragged.style.top = y - offsetY + "px";
+}
+
+function resetPosition(element) {
+    element.style.left = "";
+    element.style.top = "";
+}
 
 /* =========================
    VERIFICA
