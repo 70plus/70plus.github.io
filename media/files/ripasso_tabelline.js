@@ -184,6 +184,13 @@ else {
 }
 }
 
+function sfida () {
+    numeroTabellina = Math.floor(Math.random() * 10) + 1;
+     const select = document.getElementById("tabellinaSelect");
+     select.value = numeroTabellina;
+     ricomincia();
+}
+
 function ricomincia() {
 
     // rigenera la stessa tabellina
