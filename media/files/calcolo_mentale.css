@@ -207,4 +207,11 @@ button {
         margin: 20% auto;
     }
 }
+.circle.dragging {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;   /* fondamentale */
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 

@@ -78,38 +78,61 @@ function creaBlocchi(quantita, grid, classeAddendo) {
    DRAG AND DROP UNIVERSALE
    (Pointer Events: PC + Mobile)
 ========================= */
-
 let dragged = null;
+let offsetX = 0;
+let offsetY = 0;
 
 document.addEventListener("pointerdown", function(e) {
-    if (e.target.classList.contains("filled")) {
-        dragged = e.target;
-        dragged.setPointerCapture(e.pointerId);
-        dragged.style.opacity = "0.5";
-    }
+
+    if (!e.target.classList.contains("filled")) return;
+
+    dragged = e.target;
+
+    const rect = dragged.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    dragged.classList.add("dragging");
+
+    moveAt(e.clientX, e.clientY);
+});
+
+document.addEventListener("pointermove", function(e) {
+    if (!dragged) return;
+    moveAt(e.clientX, e.clientY);
 });
 
 document.addEventListener("pointerup", function(e) {
+
     if (!dragged) return;
 
-    dragged.style.opacity = "1";
-
-    const dropTarget = document.elementFromPoint(e.clientX, e.clientY);
+    const elementUnder = document.elementFromPoint(e.clientX, e.clientY);
 
     if (
-        dropTarget &&
-        dropTarget.classList.contains("circle") &&
-        !dropTarget.classList.contains("filled")
+        elementUnder &&
+        elementUnder.classList.contains("circle") &&
+        !elementUnder.classList.contains("filled")
     ) {
-        dropTarget.classList.add("filled");
+        elementUnder.classList.add("filled");
         dragged.classList.remove("filled");
     }
 
-    dragged.releasePointerCapture(e.pointerId);
+    dragged.classList.remove("dragging");
+    resetPosition(dragged);
     dragged = null;
 
     aggiornaConteggio();
 });
+
+function moveAt(x, y) {
+    dragged.style.left = x - offsetX + "px";
+    dragged.style.top = y - offsetY + "px";
+}
+
+function resetPosition(element) {
+    element.style.left = "";
+    element.style.top = "";
+}
 
 function aggiornaConteggio() {
     const C1 = document.querySelectorAll(".row.primo .circle.filled").length;
