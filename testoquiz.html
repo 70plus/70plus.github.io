@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Testo Nascosto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+label[for="menuTesti"] {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+select {
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 250px;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+#titolo {
+    background: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#menuTesti:hover {
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+}
+
+#menuTesti:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+#menuTesti option {
+    padding: 10px;
+    background: white;
+    color: #333;
+}
+
+        .testo {
+            font-size: 18px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .parola-nascosta {
+            display: inline-block;
+            width: 120px;
+            height: 28px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin: 0 2px;
+            position: relative;
+            background: #f0f0f0;
+            vertical-align: middle;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 16px;
+/*            font-size: 12px;  /*← AGGIUNGI QUESTA */
+/*            line-height: 1.2; /* ← AGGIUNGI QUESTA */
+
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            background: #fff;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc !important;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .corretto {
+            background-color: #28a745 !important;
+            color: white;
+            border-color: #28a745;
+        }
+        .sbagliato {
+            background-color: #dc3545 !important;
+            color: white;
+            border-color: #dc3545;
+        }
+        .corretto span {
+            font-weight: bold;
+        }
+        .sbagliato span {
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+        .corretto::after {
+            content: ' ✓';
+        }
+        .sbagliato::after {
+            content: ' ✗';
+        }
+        #risultatiFinali {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e8;
+            border-radius: 8px;
+            border-left: 5px solid #28a745;
+            min-height: 20px;
+        }
+        #risultatiFinali ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="menuTesti">Seleziona il test: </label>
+    <select id="menuTesti"></select>
+    <p id="titolo"></p>
+    <div id="contenitore-testo"></div>
+    <button onclick="verifica()">Verifica Risposte</button>
+    <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
+    <button id="fineBtn" onclick="fineTest()">Fine</button>
+    <div id="risultatiFinali"></div>
+
+    <script src="media/files/contenuto_test_0.js"></script>
+
+<script>
+const menu = document.getElementById("menuTesti");
+const titolo = document.getElementById("titolo");
+const risultati = document.getElementById('risultatiFinali');
+const nuovoTesto = document.getElementById('nuovotesto');
+const contenitore = document.getElementById('contenitore-testo');
+const fineBtn = document.getElementById('fineBtn');
+const verificaBtn = document.querySelector('button[onclick="verifica()"]');
+
+// Popola il menu
+// Raggruppa per categoria
+const gruppi = {};
+
+listaTest.forEach((item, index) => {
+  const categoria = item[0];
+
+  if (!gruppi[categoria]) {
+    gruppi[categoria] = [];
+  }
+
+  gruppi[categoria].push({
+    titolo: item[1].replace(/<[^>]*>/g, ""),
+    indiceReale: index
+  });
+});
+
+// Crea optgroup
+for (const categoria in gruppi) {
+
+  const optgroup = document.createElement("optgroup");
+  optgroup.label = categoria;
+
+  gruppi[categoria].forEach(voce => {
+    const option = document.createElement("option");
+    option.value = voce.indiceReale;  // indice reale nella lista
+    option.textContent = voce.titolo;
+    optgroup.appendChild(option);
+  });
+
+  menu.appendChild(optgroup);
+}
+let testSelezionato = listaTest[0];
+menuTesti.value = 0;
+
+
+let idTest = 0;
+let frasi = [];
+let statisticheFrasi = [];
+let testAttivo = true;
+ricomincia();
+
+// ------> Eventi
+
+// Evento selezione
+menuTesti.addEventListener("change", function() {
+  const indice = this.value;
+  if (indice === "") return;
+
+  testSelezionato = listaTest[indice];
+  console.log("Hai scelto:", testSelezionato);
+  ricomincia();
+});
+
+function ricomincia() {
+    const verificaBtn = document.querySelector('button[onclick="verifica()"]');
+    verificaBtn.disabled = false;
+    verificaBtn.textContent = 'Verifica Risposte';
+    document.getElementById('contenitore-testo').innerHTML = '';
+    testAttivo = true;
+    fineBtn.textContent = 'Fine';
+    fineBtn.onclick = fineTest;
+    nuovoTesto.disabled = false;
+    risultati.innerHTML = '';
+    risultati.style.display = 'none';
+    numCorrette = 0;
+    numErrori = 0;
+
+    // Reset completo statistiche
+    statisticheFrasi = [];
+    frasi = testSelezionato[3];
+    document.getElementById("titolo").innerHTML = testSelezionato[1];
+    // Inizializza statistiche
+    frasi.forEach((_, index) => {
+        statisticheFrasi[index] = {errori: 0, peso: 1};
+    });
+    generaTesto();
+}
+function verifica() {
+    verificaBtn.disabled = true;
+    const nascoste = document.querySelectorAll('.parola-nascosta');
+    let tuttiCorretti = true;
+    let indiceFrase = parseInt(nascoste[0].dataset.indice);
+    
+    nascoste.forEach(function(el) {
+        const input = el.querySelector('input');
+        const risposta = el.dataset.risposta.toLowerCase();
+        const digitato = input.value.toLowerCase().trim();
+        
+        el.classList.remove('corretto', 'sbagliato');
+        input.style.display = 'none';
+        
+        const spanRisposta = document.createElement('span');
+        spanRisposta.textContent = el.dataset.risposta;
+        el.appendChild(spanRisposta);
+        
+        if (digitato === risposta) {
+            el.classList.add('corretto');
+        } else {
+            el.classList.add('sbagliato');
+            tuttiCorretti = false;
+        }
+    });
+    
+    // ALGORITMO RIPETIZIONE SPAZIATA
+    const stats = statisticheFrasi[indiceFrase];
+    if (!tuttiCorretti) {
+        // Errore: aumenta peso gradualmente (1,2,3,4...)
+        stats.errori++;
+        stats.peso = Math.min(8, stats.errori + 1);
+        numErrori += 1;
+//       alert(`Errore! Peso frase: ${stats.peso}`);
+    } else {
+        // Corretto: diminuisci peso (decadimento)
+        if (stats.peso > 1) {
+            stats.peso = Math.max(1, stats.peso - 0.5);
+        }
+        numCorrette += 1;
+//        alert(`Perfetto! Peso ridotto a: ${stats.peso.toFixed(1)}`);
+    }
+}
+
+// Funzione Fine/Inizio
+function fineTest() {
+    if (testAttivo) {
+        // FINE TEST
+        testAttivo = false;
+        fineBtn.textContent = 'Inizio';
+        verificaBtn.disabled = true;
+        nuovoTesto.disabled = true;
+        fineBtn.onclick = fineTest;
+        risultati.style.display = 'block';
+        
+        // Conta frasi con peso > 1
+        const frasiDifficili = [];
+        for (let index in statisticheFrasi) {
+            if (statisticheFrasi[index].peso > 1) {
+                frasiDifficili.push({
+                    indice: index,
+                    testo: frasi[index],
+                    peso: statisticheFrasi[index].peso.toFixed(1)
+                });
+            }
+        }
+        let messaggio = `Risposte corrette: ${numCorrette} risposte errate: ${numErrori}<br>`;
+        
+        if (frasiDifficili.length > 0) {
+            messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
+            frasiDifficili.forEach(f => {
+                messaggio += `<li>${formatBold(f.testo)} (peso ${f.peso})</li>`;
+            });
+            messaggio += '</ul>';
+        } else {
+            if (numCorrette > 0) {
+                messaggio += 'Brava! Tutte le frasi sono corrette!';
+            }
+        }
+        risultati.innerHTML = messaggio;
+        
+    } else {
+        ricomincia();
+    }
+}
+
+// ------> Funzioni
+
+function formatBold(text) {
+  let open = true;
+
+  return text.replace(/§/g, () => {
+    if (open) {
+      open = false;
+      return "<b>";
+    } else {
+      open = true;
+      return "</b>";
+    }
+  });
+}
+
+function generaTesto() {  
+    verificaBtn.disabled = false;  
+    // Selezione ponderata per peso (errori = più probabilità)
+    const totalPeso = Object.values(statisticheFrasi).reduce((sum, stat) => sum + stat.peso, 0);
+    let rand = Math.random() * totalPeso;
+    let indiceSelezionato;
+    
+    for (let index in statisticheFrasi) {
+        rand -= statisticheFrasi[index].peso;
+        if (rand <= 0) {
+            indiceSelezionato = parseInt(index);
+            break;
+        }
+    }
+    const fraseCasuale = frasi[indiceSelezionato];
+    let html = '<div class="testo">';
+    
+    const parti = fraseCasuale.split('§');
+    for (let i = 0; i < parti.length; i++) {
+        if (i % 2 === 1) {
+            html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" maxlength="15"></span>`;
+        } else {
+            html += parti[i];
+        }
+    }
+    html += '</div>';
+    contenitore.innerHTML = html;
+}
+</script>
+</body>
+</html>
+
