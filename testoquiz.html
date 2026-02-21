@@ -370,7 +370,7 @@ function generaTesto() {
     const parti = fraseCasuale.split('§');
     for (let i = 0; i < parti.length; i++) {
         if (i % 2 === 1) {
-            html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" maxlength="15"></span>`;
+            html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" autocapitalize="off" maxlength="15"></span>`;
         } else {
             html += parti[i];
         }
