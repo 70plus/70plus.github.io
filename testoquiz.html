@@ -82,9 +82,6 @@ optgroup {
             background: transparent;
             text-align: center;
             font-size: 16px;
-/*            font-size: 12px;  /*← AGGIUNGI QUESTA */
-/*            line-height: 1.2; /* ← AGGIUNGI QUESTA */
-
             font-family: Arial, sans-serif;
             padding: 0;
             box-sizing: border-box;
@@ -115,11 +112,13 @@ optgroup {
         .corretto {
             background-color: #28a745 !important;
             color: white;
+            text-align: center;
             border-color: #28a745;
         }
         .sbagliato {
             background-color: #dc3545 !important;
             color: white;
+            text-align: center;
             border-color: #dc3545;
         }
         .corretto span {
@@ -127,13 +126,13 @@ optgroup {
         }
         .sbagliato span {
             font-weight: bold;
-            text-decoration: line-through;
+/*            text-decoration: line-through; */
         }
         .corretto::after {
-            content: ' ✓';
+            content: '  ✓';
         }
         .sbagliato::after {
-            content: ' ✗';
+            content: '  ✗';
         }
         #risultatiFinali {
             margin-top: 20px;
