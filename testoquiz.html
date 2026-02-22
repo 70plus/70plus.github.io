@@ -327,7 +327,7 @@ function fineTest() {
                 });
             }
         }
-        let messaggio = `Risposte corrette: ${numCorrette} risposte errate: ${numErrori} visualizzate: ${numViste}<br>`;
+        let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}, visualizzate: ${numViste}<br>`;
         
         if (frasiDifficili.length > 0) {
             messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
@@ -367,15 +367,19 @@ function formatBold(text) {
   });
 }
 
-function generaTesto() {  
+function generaTesto() {
+
     verificaBtn.disabled = false;
     verificaBtn.textContent = 'Verifica Risposte';
     tipoRisposta = 'verifica';
-    // Selezione ponderata per peso (errori = più probabilità)
-    const totalPeso = Object.values(statisticheFrasi).reduce((sum, stat) => sum + stat.peso, 0);
+
+    // --- Selezione frase ponderata ---
+    const totalPeso = Object.values(statisticheFrasi)
+        .reduce((sum, stat) => sum + stat.peso, 0);
+
     let rand = Math.random() * totalPeso;
     let indiceSelezionato;
-    
+
     for (let index in statisticheFrasi) {
         rand -= statisticheFrasi[index].peso;
         if (rand <= 0) {
@@ -383,36 +387,72 @@ function generaTesto() {
             break;
         }
     }
+
     fraseCasuale = frasi[indiceSelezionato];
-    let html = '<div class="testo">';
-    // gestione mono/bi
-        const parti = fraseCasuale.split('§');
-        for (let i = 0; i < parti.length; i++) {
+    const parti = fraseCasuale.split('§');
+
+    // --- Pulizia contenitore ---
+    contenitore.replaceChildren();
+
+    const div = document.createElement("div");
+    div.className = "testo";
+
+    // --- Determina modalità reale ---
+    const usaMono = (
+        modo === 'mono' ||
+        (modo === 'bi' && Math.random() > 0.5)
+    );
+
+    if (usaMono) {
+
+        // ===== VERSIONE MONO =====
+        parti.forEach((parte, i) => {
+
             if (i % 2 === 1) {
-                html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" autocapitalize="off" maxlength="24"></span>`;
+
+                const span = document.createElement("span");
+                span.className = "parola-nascosta";
+                span.dataset.risposta = parte;
+                span.dataset.indice = indiceSelezionato;
+
+                const input = document.createElement("input");
+                input.type = "text";
+                input.maxLength = 24;
+                input.autocapitalize = "off";
+
+                span.appendChild(input);
+                div.appendChild(span);
+
             } else {
-                html += parti[i];
+                div.appendChild(document.createTextNode(parte));
             }
-        }
-    switch (modo) {
-        case 'mono':
-            break;
-        case 'bi':
-            if (Math.random() > 0.5) {
-            break;        
-            } else { 
-//            alert('test bi!');
-            verificaBtn.textContent = 'Mostra testo';
-            tipoRisposta = 'mostra';
-            html = '<b>' + parti[1].toUpperCase() + '</b>' + '<br><br>Di cosa si tratta?';
-            break;
-            }
-        default:
-            alert('modo non previsto! in'+ fraseCasuale);
-            break;
+        });
+
+    } else {
+
+        // ===== VERSIONE BI (domanda) =====
+        verificaBtn.textContent = 'Mostra testo';
+        tipoRisposta = 'mostra';
+
+        const bold = document.createElement("b");
+        bold.textContent = parti[1].toUpperCase();
+        div.appendChild(bold);
+
+        div.appendChild(document.createElement("br"));
+        div.appendChild(document.createElement("br"));
+
+        div.appendChild(
+            document.createTextNode("Di cosa si tratta?")
+        );
     }
-    html += '</div>';
-    contenitore.innerHTML = html;
+
+    contenitore.appendChild(div);
+
+    // Stabilizza focus (utile su Chromium/Wayland)
+    requestAnimationFrame(() => {
+        const primoInput = contenitore.querySelector("input");
+        if (primoInput) primoInput.focus();
+    });
 }
 </script>
 </body>
