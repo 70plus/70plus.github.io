@@ -66,7 +66,7 @@ optgroup {
         }
         .parola-nascosta {
             display: inline-block;
-            width: 120px;
+            width: 200px;
             height: 28px;
             border: 2px solid #ccc;
             border-radius: 5px;
@@ -202,6 +202,7 @@ for (const categoria in gruppi) {
   menu.appendChild(optgroup);
 }
 let testSelezionato = listaTest[0];
+let modo = testSelezionato[2];
 menuTesti.value = 0;
 
 
@@ -209,6 +210,8 @@ let idTest = 0;
 let frasi = [];
 let statisticheFrasi = [];
 let testAttivo = true;
+let tipoRisposta = 'verifica';
+let fraseCasuale = ''
 ricomincia();
 
 // ------> Eventi
@@ -219,12 +222,11 @@ menuTesti.addEventListener("change", function() {
   if (indice === "") return;
 
   testSelezionato = listaTest[indice];
-  console.log("Hai scelto:", testSelezionato);
+  modo = testSelezionato[2];
   ricomincia();
 });
 
 function ricomincia() {
-    const verificaBtn = document.querySelector('button[onclick="verifica()"]');
     verificaBtn.disabled = false;
     verificaBtn.textContent = 'Verifica Risposte';
     document.getElementById('contenitore-testo').innerHTML = '';
@@ -236,6 +238,7 @@ function ricomincia() {
     risultati.style.display = 'none';
     numCorrette = 0;
     numErrori = 0;
+    numViste = 0;
 
     // Reset completo statistiche
     statisticheFrasi = [];
@@ -249,46 +252,57 @@ function ricomincia() {
 }
 function verifica() {
     verificaBtn.disabled = true;
-    const nascoste = document.querySelectorAll('.parola-nascosta');
-    let tuttiCorretti = true;
-    let indiceFrase = parseInt(nascoste[0].dataset.indice);
+    switch (tipoRisposta) {
+        case 'verifica':
+        const nascoste = document.querySelectorAll('.parola-nascosta');
+        let tuttiCorretti = true;
+        let indiceFrase = parseInt(nascoste[0].dataset.indice);
     
-    nascoste.forEach(function(el) {
-        const input = el.querySelector('input');
-        const risposta = el.dataset.risposta.toLowerCase();
-        const digitato = input.value.toLowerCase().trim();
+        nascoste.forEach(function(el) {
+            const input = el.querySelector('input');
+            const risposta = el.dataset.risposta.toLowerCase();
+            const digitato = input.value.toLowerCase().trim();
         
-        el.classList.remove('corretto', 'sbagliato');
-        input.style.display = 'none';
+            el.classList.remove('corretto', 'sbagliato');
+            input.style.display = 'none';
         
-        const spanRisposta = document.createElement('span');
-        spanRisposta.textContent = el.dataset.risposta;
-        el.appendChild(spanRisposta);
+            const spanRisposta = document.createElement('span');
+            spanRisposta.textContent = el.dataset.risposta;
+            el.appendChild(spanRisposta);
         
-        if (digitato === risposta) {
-            el.classList.add('corretto');
+            if (digitato === risposta) {
+                el.classList.add('corretto');
+            } else {
+                el.classList.add('sbagliato');
+                tuttiCorretti = false;
+            }
+        });
+    
+        // ALGORITMO RIPETIZIONE SPAZIATA
+        const stats = statisticheFrasi[indiceFrase];
+        if (!tuttiCorretti) {
+            // Errore: aumenta peso gradualmente (1,2,3,4...)
+            stats.errori++;
+            stats.peso = Math.min(8, stats.errori + 1);
+            numErrori += 1;
         } else {
-            el.classList.add('sbagliato');
-            tuttiCorretti = false;
+            // Corretto: diminuisci peso (decadimento)
+            if (stats.peso > 1) {
+                stats.peso = Math.max(1, stats.peso - 0.5);
+            }
+            numCorrette += 1;
         }
-    });
-    
-    // ALGORITMO RIPETIZIONE SPAZIATA
-    const stats = statisticheFrasi[indiceFrase];
-    if (!tuttiCorretti) {
-        // Errore: aumenta peso gradualmente (1,2,3,4...)
-        stats.errori++;
-        stats.peso = Math.min(8, stats.errori + 1);
-        numErrori += 1;
-//       alert(`Errore! Peso frase: ${stats.peso}`);
-    } else {
-        // Corretto: diminuisci peso (decadimento)
-        if (stats.peso > 1) {
-            stats.peso = Math.max(1, stats.peso - 0.5);
+        break;
+        case 'mostra':
+            html = '<div class="testo">';
+            html += fraseCasuale;
+            html += '</div>';
+            contenitore.innerHTML = formatBold(html);
+            numViste += 1;
+            break;
+        default:
+            alert('errore su mostra/verifica');
         }
-        numCorrette += 1;
-//        alert(`Perfetto! Peso ridotto a: ${stats.peso.toFixed(1)}`);
-    }
 }
 
 // Funzione Fine/Inizio
@@ -313,7 +327,7 @@ function fineTest() {
                 });
             }
         }
-        let messaggio = `Risposte corrette: ${numCorrette} risposte errate: ${numErrori}<br>`;
+        let messaggio = `Risposte corrette: ${numCorrette} risposte errate: ${numErrori} visualizzate: ${numViste}<br>`;
         
         if (frasiDifficili.length > 0) {
             messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
@@ -323,7 +337,11 @@ function fineTest() {
             messaggio += '</ul>';
         } else {
             if (numCorrette > 0) {
-                messaggio += 'Brava! Tutte le frasi sono corrette!';
+                if (numErrori == 0) {
+                    messaggio += 'Brava! Tutte le frasi sono corrette!';
+                } else {
+                    messaggio += 'Qualche errore, ma hai recuperato benissimo!';
+                }
             }
         }
         risultati.innerHTML = messaggio;
@@ -350,7 +368,9 @@ function formatBold(text) {
 }
 
 function generaTesto() {  
-    verificaBtn.disabled = false;  
+    verificaBtn.disabled = false;
+    verificaBtn.textContent = 'Verifica Risposte';
+    tipoRisposta = 'verifica';
     // Selezione ponderata per peso (errori = più probabilità)
     const totalPeso = Object.values(statisticheFrasi).reduce((sum, stat) => sum + stat.peso, 0);
     let rand = Math.random() * totalPeso;
@@ -363,16 +383,33 @@ function generaTesto() {
             break;
         }
     }
-    const fraseCasuale = frasi[indiceSelezionato];
+    fraseCasuale = frasi[indiceSelezionato];
     let html = '<div class="testo">';
-    
-    const parti = fraseCasuale.split('§');
-    for (let i = 0; i < parti.length; i++) {
-        if (i % 2 === 1) {
-            html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" autocapitalize="off" maxlength="15"></span>`;
-        } else {
-            html += parti[i];
+    // gestione mono/bi
+        const parti = fraseCasuale.split('§');
+        for (let i = 0; i < parti.length; i++) {
+            if (i % 2 === 1) {
+                html += `<span class="parola-nascosta" data-risposta="${parti[i]}" data-indice="${indiceSelezionato}"><input type="text" autocapitalize="off" maxlength="24"></span>`;
+            } else {
+                html += parti[i];
+            }
         }
+    switch (modo) {
+        case 'mono':
+            break;
+        case 'bi':
+            if (Math.random() > 0.5) {
+            break;        
+            } else { 
+//            alert('test bi!');
+            verificaBtn.textContent = 'Mostra testo';
+            tipoRisposta = 'mostra';
+            html = '<b>' + parti[1].toUpperCase() + '</b>' + '<br><br>Di cosa si tratta?';
+            break;
+            }
+        default:
+            alert('modo non previsto! in'+ fraseCasuale);
+            break;
     }
     html += '</div>';
     contenitore.innerHTML = html;
