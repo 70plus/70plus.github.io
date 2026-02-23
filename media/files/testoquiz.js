@@ -15,19 +15,26 @@ Il topo §ha§ fatto ritorno §a§ casa.
 Matematica
 Tabelline!
 mono
-3 x 8 fa §24§.
-6 x 4 fa §24§.
-5 x 4 fa §20§
-4 x 9 fa §36§
-3 x 2 fa §6§
-8 x 2 fa §16§
-4 x 5 fa §20§
-6 x 6 fa §36§
-7 x 3 fa §21§
-3 x 9 fa §27§
-2 x 6 fa §12§
-2 x 8 fa §16§
-6 x 8 fa §48§
+5 × 6 fa §30§.
+3 × 3 fa §9§.
+4 × 2 fa §8§.
+3 × 4 fa §12§.
+7 × 3 fa §21§.
+5 × 6 fa §30§.
+3 × 7 fa §21§.
+3 × 7 fa §21§.
+6 × 2 fa §12§.
+3 × 2 fa §6§.
+7 × 7 fa §49§.
+4 × 9 fa §36§.
+4 × 8 fa §32§.
+7 × 4 fa §28§.
+7 × 8 fa §56§.
+6 × 2 fa §12§.
+2 × 4 fa §8§.
+7 × 2 fa §14§.
+6 × 8 fa §48§.
+5 × 4 fa §20§.
 ---   
 Italiano
 Inserisci <b><em>e</em></b>, oppure <b><em>è</em><b>

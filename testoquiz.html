@@ -394,19 +394,21 @@ function generaTesto() {
   tipoRisposta = 'verifica';
 
   // --- Selezione frase ponderata ---
-  const totalPeso = Object.values(statisticheFrasi)
-    .reduce((sum, stat) => sum + stat.peso, 0);
+let totalPeso = 0;
+for (const key in statisticheFrasi) {
+    totalPeso += statisticheFrasi[key].peso;
+}
 
-  let rand = Math.random() * totalPeso;
-  let indiceSelezionato;
+let rand = Math.random() * totalPeso;
+let indiceSelezionato = null;
 
-  for (let index in statisticheFrasi) {
-    rand -= statisticheFrasi[index].peso;
+for (const key in statisticheFrasi) {
+    rand -= statisticheFrasi[key].peso;
     if (rand <= 0) {
-      indiceSelezionato = parseInt(index);
-      break;
+        indiceSelezionato = Number(key);
+        break;
     }
-  }
+}
 
   fraseCasuale = frasi[indiceSelezionato];
   const parti = fraseCasuale.split('§');
