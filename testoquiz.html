@@ -161,6 +161,7 @@ const nuovoTesto = document.getElementById('nuovotesto');
 const contenitore = document.getElementById('contenitore-testo');
 const fineBtn = document.getElementById('fineBtn');
 const verificaBtn = document.querySelector('button[onclick="verifica()"]');
+let ultimoIndice;
 
 const listaTest = parseTesto(DATI_TEST);
 // console.log(listaTest);
@@ -235,6 +236,7 @@ function ricomincia() {
   numCorrette = 0;
   numErrori = 0;
   numViste = 0;
+  ultimoIndice = null;
 
   // Reset completo statistiche
   statisticheFrasi = [];
@@ -393,22 +395,35 @@ function generaTesto() {
   verificaBtn.textContent = 'Verifica Risposte';
   tipoRisposta = 'verifica';
 
-  // --- Selezione frase ponderata ---
+// --- Selezione frase ponderata senza ripetizione consecutiva ---
+
 let totalPeso = 0;
+
+// Calcolo totale escludendo ultimoIndice
 for (const key in statisticheFrasi) {
-    totalPeso += statisticheFrasi[key].peso;
+    if (Number(key) !== ultimoIndice) {
+        totalPeso += statisticheFrasi[key].peso;
+    }
 }
 
 let rand = Math.random() * totalPeso;
 let indiceSelezionato = null;
 
 for (const key in statisticheFrasi) {
+    const indice = Number(key);
+
+    if (indice === ultimoIndice) continue;
+
     rand -= statisticheFrasi[key].peso;
+
     if (rand <= 0) {
-        indiceSelezionato = Number(key);
+        indiceSelezionato = indice;
         break;
     }
 }
+
+// Salvo per il prossimo giro
+ultimoIndice = indiceSelezionato;
 
   fraseCasuale = frasi[indiceSelezionato];
   const parti = fraseCasuale.split('§');
