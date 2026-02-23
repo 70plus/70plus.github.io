@@ -285,12 +285,12 @@ function verifica() {
       if (!tuttiCorretti) {
         // Errore: aumenta peso gradualmente (1,2,3,4...)
         stats.errori++;
-        stats.peso = Math.min(8, stats.errori + 1);
+        stats.peso = Math.min(8, stats.errori + 2);
         numErrori += 1;
       } else {
         // Corretto: diminuisci peso (decadimento)
         if (stats.peso > 1) {
-          stats.peso = Math.max(1, stats.peso - 0.5);
+          stats.peso = Math.max(1, stats.peso - 1);
         }
         numCorrette += 1;
       }
@@ -325,7 +325,7 @@ function fineTest() {
         frasiDifficili.push({
           indice: index,
           testo: frasi[index],
-          peso: statisticheFrasi[index].peso.toFixed(1) - 1
+          peso: (statisticheFrasi[index].peso.toFixed(1) - 1)/2
         });
       }
     }

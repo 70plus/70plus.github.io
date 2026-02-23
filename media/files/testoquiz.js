@@ -14,7 +14,7 @@ Il gatto §ha§ mangiato tutto.
 Marco va §a§ scuola a piedi.
 La mamma §ha§ una borsa nera.
 Ho regalato un disegno §a§ mia nonna.
-Sofia §/ha§ mal di pancia.
+Sofia §ha§ mal di pancia.
 Luca §ha§ visto un bel film.
 Vado §a§ giocare nel parco.
 Il cane §ha§ paura del temporale.
