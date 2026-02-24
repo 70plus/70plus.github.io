@@ -283,9 +283,9 @@ function verifica() {
       // ALGORITMO RIPETIZIONE SPAZIATA
       const stats = statisticheFrasi[indiceFrase];
       if (!tuttiCorretti) {
-        // Errore: aumenta peso gradualmente (1,2,3,4...)
+        // Errore: aumenta peso gradualmente
         stats.errori++;
-        stats.peso = Math.min(8, stats.errori + 2);
+        stats.peso = Math.min(10, 1 + stats.errori * 2);
         numErrori += 1;
       } else {
         // Corretto: diminuisci peso (decadimento)
