@@ -200,6 +200,7 @@ for (const categoria in gruppi) {
 }
 let testSelezionato = listaTest[0];
 let modo = testSelezionato[2];
+let tipoKbd = testSelezionato[3];
 menuTesti.value = 0;
 
 
@@ -220,6 +221,7 @@ menuTesti.addEventListener("change", function() {
 
   testSelezionato = listaTest[indice];
   modo = testSelezionato[2];
+  tipoKbd = testSelezionato[3];
   ricomincia();
 });
 
@@ -452,16 +454,24 @@ ultimoIndice = indiceSelezionato;
         span.dataset.risposta = parte;
         span.dataset.indice = indiceSelezionato;
 
-        const input = document.createElement("input");
-        input.type = "text";
-        input.maxLength = 24;
-        input.autocapitalize = "off";
+	const input = document.createElement("input");
+	input.maxLength = 24;
 
+	if (tipoKbd === "num") {
+  	input.type = "text";              // meglio text che number
+  	input.inputMode = "numeric";      // forza tastiera numerica su mobile
+  	input.pattern = "[0-9]*";         // aiuta iOS
+  	input.autocapitalize = "off";
+	} else { // "alfa"
+  	input.type = "text";
+  	input.inputMode = "text";         // tastiera alfabetica
+  	input.autocapitalize = "off";     // niente maiuscole automatiche
+  	input.spellcheck = false;         // evita correzioni automatiche
+}
         span.appendChild(input);
         div.appendChild(span);
-
       } else {
-        div.appendChild(document.createTextNode(parte));
+        div.insertAdjacentHTML("beforeend", parte);
       }
     });
 
