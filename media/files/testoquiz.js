@@ -1,7 +1,7 @@
 const DATI_TEST = `
 ---
 Italiano
-Parole difficili!
+Scrivi il nome degli oggetti!
 mono
 alfa
 <span style="font-size: 400%;">&#x1f528;</span> §martello§
@@ -114,8 +114,10 @@ Gli esseri viventi
 bi
 alfa
 Il §ciclo vitale§ è la caratteristica principale che definisce un essere vivente, e comprende: nascita, crescita, riproduzione e morte.
+Del ciclo vitale fanno parte: nascita, §crescita§, riproduzione e morte
 La §respirazione§ è lo scambio di gas degli esseri viventi con l'ambiente esterno.
 Le §funzioni vitali§ degli esseri viventi sono: respirazione, nutrizione, movimento, riproduzione e reazione agli stimoli.
+La §respirazione§ fa parte delle funzioni vitali, insieme a nutrizione, movimento, riproduzione e reazione agli stimoli.
 La §reazione agli stimoli§ consente agli esseri viventi di sopravvivere, accorgendosi di eventuali pericoli.
 
 ---    
@@ -133,5 +135,50 @@ num
 7 + 14 fa §21§.
 13 + 9 fa §22§.
 2 + 19 fa §21§.
+---
+Storia
+Le ere geologiche
+bi
+alfa
+Gli storici hanno suddiviso la storia della Terra in 5 periodi, chiamati §ere§: era arcaica, era primaria, era secondaria, era terziaria e era quaternaria.
 
+L'§era arcaica§ è il periodo che va da 5 miliardi di anni fa fino a 600 milioni di anni fa.
+
+Nell'era arcaica la Terra si raffreddò e si formò la §crosta terrestre§.<br>Dai gas sprigionati dai vulcani si formò una prima atmosfera.<br>Si formarono delle nuvole, da cui caddero piogge che durarono milioni di anni e fecero formare i mari.
+
+Nell'era arcaica nacquero le prime forme di vita, organismi formati da una sola cellula (§unicellulari§), organismi consumatori, che non producevano cibo per altri esseri viventi.
+
+Circa 1 miliardo di anni fa, alcuni di questi organismi semplici si unirono formando organismi più complessi, §pluricellulari§ (formati da più cellule). Verso la fine di questa era nei mari cominciarono a svilupparsi esseri vivenți differenti fra loro.
+
+Verso la fine dell'era arcaica, si svilupparono i primi §invertebrati§, piccoli animali senza lo scheletro, come le meduse e le spugne e i vermi. Nacquero anche alghe pluricellulari vegetali che produssero ossigeno, tanto ossigeno nell'acqua.
+
+L'§era primaria§ è il periodo che va da 600 a 230 milioni di anni fa.
+
+Nell'era Primaria nacquero i §trilobiti§, piccoli animali con numerose paia di zampe e rivestiti di una corazza.
+
+I §pesci§, dotati di un primo scheletro interno al corpo, nacquero nell'acqua, durante l'era Primaria.<br>Alcuni erano lunghi fino a 10 metri.
+
+Le prime foreste cominciarono a popolare la Terra nell'era Primaria.<br>L'§ossigeno§ sviluppato dalle foreste permise lo sviluppo della vita fuori dalle acque.
+
+Nell'era Primaria alcuni pesci si trasformarono in §anfibi§, animali come rane e rospi, che vivevano fuori dall'acqua.<br>Dagli anfibi si svilupparono poi i rettili, simili a lucertole e serpenti.
+
+L'era Secondaria, o §era Mesozoica§ è il periodo che va da 230 a 65 milioni di anni fa.
+
+Nell'era Mesozoica si svilupparono tante piante e animali come §ragni, insetti e millepiedi§.
+
+Nell'era Mesozoica nacquero anche i primi §dinosauri§, nome che significa "terribile lucertola".<br>Alcuni erano <b>erbivori</b>, altri <b>carnivori</b>.<br>Si estinsero circa 65 milioni anni fa.
+
+L'era Terziaria, o §era Cenozoica§, è il periodo che va da 65 milioni a 2 milioni di anni fa.
+
+Nell'era Terziaria i grandi dinosauri non c'erano più, e si svilupparono velocemente i §mammiferi§, animali provvisti di mammelle, che allattavano i propri cuccioli.
+
+Nell'era Terziaria si svilupparono mammiferi come il <b>rinoceronote lanoso</b>, i primi <b>elefanti</b>, i <b>cavalli<b>, gli <b>ippopotami</b> e i <b>mammut</b>.
+
+Nell'era Terziaria si svilupparono, oltre ai mammiferi, anche animali marini come §balene§ e delfini.
+
+I §Primati§ si svilupparono nell'era Terziaria. Erano mammiferi simili alle scimmie di oggi, che vivevano sugli alberi.<br>Erano gli unici ad avere il <b>pollice opponibile</b>.
+
+Nell'era Terziaria, alcuni <b>primati</b> smisero di vivere sugli alberi e cominciarono ad assumere la posizione eretta, simile agli uomini. Per questo sono chiamati §ominidi§.
+
+---
 `;

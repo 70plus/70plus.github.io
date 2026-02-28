@@ -331,7 +331,11 @@ function fineTest() {
         });
       }
     }
-    let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}, visualizzate: ${numViste}<br>`;
+    let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}`;
+    if (modo == 'bi') {
+       messaggio += `, visualizzate: ${numViste}`;
+    }
+    messaggio += `<br>`
 
     if (frasiDifficili.length > 0) {
       messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
@@ -342,7 +346,7 @@ function fineTest() {
     } else {
       if (numCorrette > 0) {
         if (numErrori == 0) {
-          messaggio += 'Brava! Tutte le frasi sono corrette!';
+          messaggio += 'Tutte le frasi sono corrette!';
         } else {
           messaggio += 'Qualche errore, ma hai recuperato benissimo!';
         }
