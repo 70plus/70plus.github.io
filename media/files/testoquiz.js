@@ -172,7 +172,7 @@ L'era Terziaria, o §era Cenozoica§, è il periodo che va da 65 milioni a 2 mil
 
 Nell'era Terziaria i grandi dinosauri non c'erano più, e si svilupparono velocemente i §mammiferi§, animali provvisti di mammelle, che allattavano i propri cuccioli.
 
-Nell'era Terziaria si svilupparono mammiferi come il <b>rinoceronote lanoso</b>, i primi <b>elefanti</b>, i <b>cavalli<b>, gli <b>ippopotami</b> e i <b>mammut</b>.
+Nell'era Terziaria si svilupparono mammiferi come il <b>rinoceronote lanoso</b>, i primi <b>elefanti</b>, i <b>cavalli<b>, gli <b>ippopotami</b> e i §mammut§.
 
 Nell'era Terziaria si svilupparono, oltre ai mammiferi, anche animali marini come §balene§ e delfini.
 
