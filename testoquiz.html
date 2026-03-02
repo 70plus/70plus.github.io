@@ -39,7 +39,6 @@ body {
     background-color: #ffffff;
 }
 
-
 label[for="menuTesti"] {
     font-weight:bold;
     color:#333;
@@ -56,12 +55,7 @@ select {
 optgroup {
     font-weight:bold;
 }
-#titolo {
-    background:white;
-    font-size:24px;
-    font-family:Arial, sans-serif;
-    color:#333;
-}
+
 #menuTesti:hover {
     border-color:#0056b3;
     box-shadow:0 4px 8px rgba(0,123,255,0.3);
@@ -183,14 +177,13 @@ button:disabled {
                 /></a>
             </div>
             <div class="logo-text">
-                <h3 id="titolo_header" ; align="center">Ripasso che spasso!</h3>
+                <h3 id="titolo" ; align="center"></h3>
             </div>
         </div>
         <div class="spaziatura"></div>
 
     <label for="menuTesti">Seleziona il test: </label>
     <select id="menuTesti"></select>
-    <p id="titolo"></p>
     <div id="contenitore-testo"></div>
     <button onclick="verifica()">Verifica Risposte</button>
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
