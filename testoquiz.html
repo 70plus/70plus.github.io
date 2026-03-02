@@ -2,7 +2,9 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+          name="color-scheme" content="light only"
+          name="description" content="Esercitiamo italiano, matematica, storia e scienze!" />
     <title>Ripassi lunari</title>
     <style>
 body {
@@ -11,8 +13,33 @@ body {
     margin:0 auto;
     padding:20px;
     line-height:1.6;
-    background-color:#f9f9f9;
+/*    background-color:#f9f9f9;
 }
+
+/* HEADER */
+.logo-container {
+    display: flex;
+    align-items: center; /* center items vertically */
+    height: 60px; /* set height for container */
+    background-color: #10475C;
+}
+
+.logo-image {
+    width: 60px; /* set width for logo */
+    height: 60px; /* set height for logo */
+}
+
+.logo-text {
+    flex-basis: calc(100% - 60px);
+    text-align: center;
+    color: #F0F0C9;
+}
+.spaziatura {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+
 label[for="menuTesti"] {
     font-weight:bold;
     color:#333;
@@ -142,6 +169,25 @@ button:disabled {
     </style>
 </head>
 <body>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a
+                    href="https://70plus.it/"
+                    style="text-decoration: none">
+                    <img
+                        id="logoI"
+                        src="media/files/logo.jpg"
+                        alt="Image"
+                        width="60"
+                        height="60"
+                /></a>
+            </div>
+            <div class="logo-text">
+                <h3 id="titolo_header" ; align="center">Ripasso che spasso!</h3>
+            </div>
+        </div>
+        <div class="spaziatura"></div>
+
     <label for="menuTesti">Seleziona il test: </label>
     <select id="menuTesti"></select>
     <p id="titolo"></p>
