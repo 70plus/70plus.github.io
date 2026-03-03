@@ -31,6 +31,8 @@ alfa
 <span style="font-size: 400%;">&#x2606;</span> §stella§
 <span style="font-size: 400%;">&#x2764;</span> §cuore§
 <span style="font-size: 400%;">&#x2702;</span> §forbici§
+<span style="font-size: 400%;">&#x1F52C;</span> §microscopio§
+
 ---
 Italiano
 Inserisci <b><em>a</em></b>, oppure <b><em>ha</em><b>
