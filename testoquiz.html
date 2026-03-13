@@ -13,7 +13,7 @@ body {
     margin:0 auto;
     padding:20px;
     line-height:1.6;
-/*    background-color:#f9f9f9;
+    /* background-color:#f9f9f9; */
 }
 
 /* HEADER */
@@ -180,7 +180,7 @@ button:disabled {
                 /></a>
             </div>
             <div class="logo-text">
-                <h3 id="titolo">Ripassi Lunari</h3>
+                <h3 id="titolo"></h3>
             </div>
         </div>
         <div class="spaziatura"></div>
@@ -197,7 +197,7 @@ button:disabled {
     <script src="./media/files/testoquiz.js"></script>
 
 <script>
-const VERSIONE = "Versione 2.1c del 13 marzo 2026";
+const VERSIONE = "Versione 2.1a del 13 marzo 2026";
 const pVer = document.getElementById("verInfo");
 pVer.innerHTML = VERSIONE;
 window.addEventListener("error", (e) => {
@@ -293,7 +293,7 @@ function ricomincia() {
   // Reset completo statistiche
   statisticheFrasi = [];
   frasi = testSelezionato[4];
-//  document.getElementById("titolo").innerHTML = testSelezionato[1];
+  document.getElementById("titolo").innerHTML = testSelezionato[1];
   // Inizializza statistiche
   frasi.forEach((_, index) => {
     statisticheFrasi[index] = {
