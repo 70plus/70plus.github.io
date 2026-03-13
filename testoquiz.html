@@ -189,11 +189,18 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <br><br><br><p><em>Versione 2.1b del 13 marzo 2026</em></p>
+    <br><br><br><p><em id="verInfo"></em></p>
     
     <script src="./media/files/testoquiz.js"></script>
 
 <script>
+const VERSIONE = "Versione 2.1a del 13 marzo 2026";
+const pVer = document.getElementById("verInfo");
+pVer.innerHTML = VERSIONE;
+window.addEventListener("error", (e) => {
+  pVer.innerHTML = `${e.message}<br>${VERSIONE}`;
+});
+
 const menu = document.getElementById("menuTesti");
 const titolo = document.getElementById("titolo");
 const risultati = document.getElementById('risultatiFinali');
