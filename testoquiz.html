@@ -189,7 +189,7 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <br><br><br><p><em>Versione 2.1a del 13 marzo 2026</em></p>
+    <br><br><br><p><em>Versione 2.1b del 13 marzo 2026</em></p>
     
     <script src="./media/files/testoquiz.js"></script>
 
@@ -501,20 +501,21 @@ ultimoIndice = indiceSelezionato;
 
 	const input = document.createElement("input");
 	input.maxLength = 24;
-	input.autocapitalize = "off";
-	input.autocomplete = "off";
-	input.autocorrect = "off";
-	input.spellcheck = false;
+
+	input.setAttribute("autocomplete", "new-password"); // trucco più efficace di "off"
+	input.setAttribute("autocorrect", "off");
+	input.setAttribute("autocapitalize", "off");
+	input.setAttribute("spellcheck", "false");
 	input.setAttribute("data-form-type", "other");
+	input.setAttribute("data-lpignore", "true");
 
 	if (tipoKbd === "num") {
 	  input.type = "tel";
-	  input.inputMode = "numeric";
-	  input.pattern = "[0-9]*";
+	  input.setAttribute("inputmode", "numeric");
+	  input.setAttribute("pattern", "[0-9]*");
 	} else {
 	  input.type = "text";
-	  input.inputMode = "text";
-	  input.setAttribute("enterkeyhint", "done");
+	  input.setAttribute("inputmode", "text");
 	}
         span.appendChild(input);
         div.appendChild(span);
