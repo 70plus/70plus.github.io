@@ -189,7 +189,7 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <p><em>Versione 2.1a del 13 marzo 2026</em></p>
+    <br><br><br><p><em>Versione 2.1b del 13 marzo 2026</em></p>
     
     <script src="./media/files/testoquiz.js"></script>
 
@@ -506,8 +506,12 @@ ultimoIndice = indiceSelezionato;
 	input.autocomplete = "off";
 	input.autocorrect = "off";
 	input.spellcheck = false;
-	input.name = "f_" + Math.random().toString(36).substring(2, 10);
+
 	input.setAttribute("autocomplete", "new-password");
+	input.name = "f_" + Math.random().toString(36).slice(2);
+
+	input.readOnly = true;
+	setTimeout(() => input.readOnly = false, 100);
 
 	if (tipoKbd === "num") {
 	  input.type = "text";
@@ -517,7 +521,6 @@ ultimoIndice = indiceSelezionato;
 	  input.type = "text";
 	  input.inputMode = "text";
 	}
-
         span.appendChild(input);
         div.appendChild(span);
       } else {
