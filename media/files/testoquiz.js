@@ -1,37 +1,58 @@
+/* 
+  Struttura dei test:
+     separatore ([---])
+     argomento (es.: Italiano)
+     titolo del test (es.: Scrivi il nome delgi oggetti!)
+     modalità di esecuzione ([mono | bi])
+     	mono: la domanda ha dei campi in cui digitare la risposta
+     	bi: con probabilità 50-50 la domanda viene proposta:
+     	    come nel caso mono, con chiave da riempire, oppure
+     	    viene mostrato la chiave, che va esposta a voce
+     tipo di input ([alfa | num])
+     lista di domande
+*/
 const DATI_TEST = `
 ---
 Italiano
 Scrivi il nome degli oggetti!
 mono
 alfa
+<span style="font-size: 400%;">&#x1F6A9;</span> §bandiera§
+<span style="font-size: 400%;">&#x231B;</span> §clessidra§
+<span style="font-size: 400%;">&#x1F525;</span> §fuoco§
+<span style="font-size: 400%;">&#x1F4BB;</span> §computer§
+<span style="font-size: 400%;">&#x1F5A8;</span> §stampante§
+<span style="font-size: 400%;">&#x1F42D;</span> §topo§
+<span style="font-size: 400%;">&#x1F437;</span> §maiale§
+<span style="font-size: 400%;">&#x1F42F;</span> §tigre§
+<span style="font-size: 400%;">&#x1F412;</span> §scimmia§
+<span style="font-size: 400%;">&#x1F994;</span> §riccio§
+<span style="font-size: 400%;">&#x1F989;</span> §gufo§
+<span style="font-size: 400%;">&#x1F99C;</span> §pappagallo§
+<span style="font-size: 400%;">&#x1F427;</span> §pinguino§
 <span style="font-size: 400%;">&#x1f528;</span> §martello§
 <span style="font-size: 400%;">&#x1f407;</span> §coniglio§
-<span style="font-size: 400%;">&#x1f3af;</span> §bersaglio§
 <span style="font-size: 400%;">&#x1f392;</span> §zaino§
 <span style="font-size: 400%;">&#x1f550;</span> §orologio§
 <span style="font-size: 400%;">&#x1f4a7;</span> §goccia§
 <span style="font-size: 400%;">&#x1f941;</span> §tamburo§
-<span style="font-size: 400%;">&#x1f577;</span> §ragno§
 <span style="font-size: 400%;">&#x1f578;</span> §ragnatela§
 <span style="font-size: 400%;">&#x2602;</span> §ombrello§
-<span style="font-size: 400%;">&#x1f485;</span> §unghie§
-<span style="font-size: 400%;">&#x1f484;</span> §rossetto§
+<span style="font-size: 400%;">&#x1F42C;</span> §delfino§
 <span style="font-size: 400%;">&#x1f40d;</span> §serpente§
 <span style="font-size: 400%;">&#x1f9a2;</span> §cigno§
 <span style="font-size: 400%;">&#x1f48d;</span> §anello§
 <span style="font-size: 400%;">&#x1f992;</span> §giraffa§
-<span style="font-size: 400%;">&#x1f444;</span> §labbra§
 <span style="font-size: 400%;">&#x1f3f0;</span> §castello§
-<span style="font-size: 400%;">&#x1fa9e;</span> §specchio§
-<span style="font-size: 400%;">&#x1f5e1;</span> §pugnale§
 <span style="font-size: 400%;">&#x1f9fd;</span> §spugna§
 <span style="font-size: 400%;">&#x1f37e;</span> §bottiglia§
 <span style="font-size: 400%;">&#x1f341;</span> §foglia§
 <span style="font-size: 400%;">&#x1f9c4;</span> §aglio§
 <span style="font-size: 400%;">&#x2606;</span> §stella§
-<span style="font-size: 400%;">&#x2764;</span> §cuore§
+<span style="font-size: 400%;">&#x2764;&#xFE0F;</span> §cuore§
 <span style="font-size: 400%;">&#x2702;</span> §forbici§
 <span style="font-size: 400%;">&#x1F52C;</span> §microscopio§
+<span style="font-size: 400%;">&#x2328;</span> §tastiera§
 
 ---
 Italiano
