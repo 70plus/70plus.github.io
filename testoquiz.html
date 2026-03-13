@@ -177,7 +177,7 @@ button:disabled {
                 /></a>
             </div>
             <div class="logo-text">
-                <h3 id="titolo" ; align="center"></h3>
+                <h3 id="titolo" align="center"></h3>
             </div>
         </div>
         <div class="spaziatura"></div>
@@ -217,7 +217,7 @@ listaTest.forEach((item, index) => {
   }
 
   gruppi[categoria].push({
-    titolo: item[1].replace(/<[^>]*>/g, ""),
+    titoloTest: item[1].replace(/<[^>]*>/g, ""),
     indiceReale: index
   });
 });
@@ -231,7 +231,7 @@ for (const categoria in gruppi) {
   gruppi[categoria].forEach(voce => {
     const option = document.createElement("option");
     option.value = voce.indiceReale; // indice reale nella lista
-    option.textContent = voce.titolo;
+    option.textContent = voce.titoloTest;
     optgroup.appendChild(option);
   });
 
@@ -385,7 +385,7 @@ function fineTest() {
     } else {
       if (numCorrette > 0) {
         if (numErrori == 0) {
-          messaggio += 'Tutte le frasi sono corrette!';
+          messaggio += 'Tutte le risposte sono corrette!';
         } else {
           messaggio += 'Qualche errore, ma hai recuperato benissimo!';
         }
@@ -426,12 +426,12 @@ function parseTesto(contenuto) {
         .filter(r => r.length > 0);
 
       const categoria = righe[0];
-      const titolo = righe[1];
+      titoloTest = righe[1];
       const modo = righe[2];
       const tipoKbd = righe[3]
       const test = righe.slice(4);
 
-      return [categoria, titolo, modo, tipoKbd, test];
+      return [categoria, titoloTest, modo, tipoKbd, test];
     });
 }
 
@@ -501,17 +501,21 @@ ultimoIndice = indiceSelezionato;
 	const input = document.createElement("input");
 	input.maxLength = 24;
 	input.autocapitalize = "off";
+	input.autocomplete = "off";
+	input.spellcheck = false;
+	input.name = "prevent-autofill";
+	input.setAttribute("autocomplete", "- - -");
+
+
 	if (tipoKbd === "num") {
 	  input.type = "tel";
 	  input.inputMode = "numeric";
 	  input.pattern = "[0-9]*";
-	  input.autocomplete = "off";
 	} else {
 	  input.type = "text";
 	  input.inputMode = "text";
-	  input.autocapitalize = "off";
-	  input.spellcheck = false;
 	}
+
         span.appendChild(input);
         div.appendChild(span);
       } else {
@@ -563,4 +567,3 @@ ultimoIndice = indiceSelezionato;
         </noscript> 
 </body>
 </html>
-
