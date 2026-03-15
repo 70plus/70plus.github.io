@@ -14,6 +14,50 @@
 const DATI_TEST = `
 ---
 Italiano
+Sistema le sillabe!
+mono
+alfa
+sa &#x2014 ca &#x279E §casa§<br>
+bro &#x2014 li &#x279E §libro§<br>
+la &#x2014 scuo &#x279E §scuola§<br>
+to &#x2014 gat &#x279E §gatto§<br>
+ne &#x2014 ca &#x279E §cane§<br>
+sce &#x2014 pe &#x279E §pesce§<br>
+re &#x2014 fio &#x279E §fiore§<br>
+da &#x2014 stra &#x279E §strada§<br>
+lo &#x2014 cie &#x279E §cielo§<br>
+no &#x2014 ma &#x279E §mano§<br>
+qua &#x2014 ac &#x279E §acqua§<br>
+ne &#x2014 pa &#x279E §pane§<br>
+ce &#x2014 lu &#x279E §luce§<br>
+chio &#x2014 spec &#x279E §specchio§<br>
+be &#x2014 al &#x2014 ro &#x279E §albero§<br>
+lo &#x2014 ta &#x2014 vo &#x279E §tavolo§<br>
+ne &#x2014 fi &#x2014 stra &#x279E §finestra§<br>
+no &#x2014 bam &#x2014 bi &#x279E §bambino§<br>
+rdi &#x2014 gia &#x2014 no &#x279E §giardino§<br>
+ta &#x2014 ma &#x2014 ti &#x279E §matita§<br>
+far &#x2014 la &#x2014 fal &#x279E §farfalla§<br>
+ta &#x2014 mon &#x2014 gna &#x279E §montagna§<br>
+brel &#x2014 om &#x2014 lo &#x279E §ombrello§<br>
+na &#x2014 ba &#x2014 na &#x279E §banana§<br>
+che &#x2014 ro &#x2014 zuc &#x279E §zucchero§<br>
+mi &#x2014 for &#x2014 ca &#x279E §formica§<br>
+li &#x2014 gal &#x2014 na &#x279E §gallina§<br>
+lo &#x2014 me &#x2014 ne &#x279E §melone§<br>
+lo &#x2014 pal &#x2014 ne &#x279E §pallone§<br>
+sci &#x2014 cu &#x2014 no &#x279E §cuscino§<br>
+o &#x2014 le &#x2014 ne &#x279E §leone§<br>
+chie &#x2014 bic &#x2014 re &#x279E §bicchiere§<br>
+raf &#x2014 gi &#x2014 fa &#x279E §giraffa§<br>
+ro &#x2014 o &#x2014 gio &#x2014 lo &#x279E §orologio§<br>
+vo &#x2014 ta &#x2014 no &#x2014 li &#x279E §tavolino§<br>
+le &#x2014 e &#x2014 te &#x2014 fan &#x279E §elefante§<br>
+to &#x2014 au &#x2014 bi &#x2014 mo &#x2014 le &#x279E §automobile§<br>
+le &#x2014 te &#x2014 pio &#x2014 sco &#x279E §telescopio§<br>
+co &#x2014 coc &#x2014 lo &#x2014 dril &#x279E §coccodrillo§<br>
+---
+Italiano
 Scrivi il nome degli oggetti!
 mono
 alfa
