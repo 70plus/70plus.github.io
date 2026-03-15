@@ -17,45 +17,45 @@ Italiano
 Sistema le sillabe!
 mono
 alfa
-sa &#x2014 ca &#x279E §casa§<br>
-bro &#x2014 li &#x279E §libro§<br>
-la &#x2014 scuo &#x279E §scuola§<br>
-to &#x2014 gat &#x279E §gatto§<br>
-ne &#x2014 ca &#x279E §cane§<br>
-sce &#x2014 pe &#x279E §pesce§<br>
-re &#x2014 fio &#x279E §fiore§<br>
-da &#x2014 stra &#x279E §strada§<br>
-lo &#x2014 cie &#x279E §cielo§<br>
-no &#x2014 ma &#x279E §mano§<br>
-qua &#x2014 ac &#x279E §acqua§<br>
-ne &#x2014 pa &#x279E §pane§<br>
-ce &#x2014 lu &#x279E §luce§<br>
-chio &#x2014 spec &#x279E §specchio§<br>
-be &#x2014 al &#x2014 ro &#x279E §albero§<br>
-lo &#x2014 ta &#x2014 vo &#x279E §tavolo§<br>
-ne &#x2014 fi &#x2014 stra &#x279E §finestra§<br>
-no &#x2014 bam &#x2014 bi &#x279E §bambino§<br>
-rdi &#x2014 gia &#x2014 no &#x279E §giardino§<br>
-ta &#x2014 ma &#x2014 ti &#x279E §matita§<br>
-far &#x2014 la &#x2014 fal &#x279E §farfalla§<br>
-ta &#x2014 mon &#x2014 gna &#x279E §montagna§<br>
-brel &#x2014 om &#x2014 lo &#x279E §ombrello§<br>
-na &#x2014 ba &#x2014 na &#x279E §banana§<br>
-che &#x2014 ro &#x2014 zuc &#x279E §zucchero§<br>
-mi &#x2014 for &#x2014 ca &#x279E §formica§<br>
-li &#x2014 gal &#x2014 na &#x279E §gallina§<br>
-lo &#x2014 me &#x2014 ne &#x279E §melone§<br>
-lo &#x2014 pal &#x2014 ne &#x279E §pallone§<br>
-sci &#x2014 cu &#x2014 no &#x279E §cuscino§<br>
-o &#x2014 le &#x2014 ne &#x279E §leone§<br>
-chie &#x2014 bic &#x2014 re &#x279E §bicchiere§<br>
-raf &#x2014 gi &#x2014 fa &#x279E §giraffa§<br>
-o &#x2014 ro &#x2014 gio &#x2014 lo &#x279E §orologio§<br>
-ta &#x2014 vo &#x2014 no &#x2014 li &#x279E §tavolino§<br>
-e &#x2014 le &#x2014 te &#x2014 fan &#x279E §elefante§<br>
-to &#x2014 au &#x2014 mo &#x2014 bi &#x2014 le &#x279E §automobile§<br>
-te &#x2014 le &#x2014 pio &#x2014 sco &#x279E §telescopio§<br>
-coc &#x2014 co &#x2014 lo &#x2014 dril &#x279E §coccodrillo§<br>
+sa &#x00B7 ca &#x279E §casa§
+bro &#x00B7 li &#x279E §libro§
+la &#x00B7 scuo &#x279E §scuola§
+to &#x00B7 gat &#x279E §gatto§
+ne &#x00B7 ca &#x279E §cane§
+sce &#x00B7 pe &#x279E §pesce§
+re &#x00B7 fio &#x279E §fiore§
+da &#x00B7 stra &#x279E §strada§
+bra &#x00B7 ze &#x279E §zebra§
+no &#x00B7 ma &#x279E §mano§
+qua &#x00B7 ac &#x279E §acqua§
+ne &#x00B7 pa &#x279E §pane§
+ce &#x00B7 lu &#x279E §luce§
+chio &#x00B7 spec &#x279E §specchio§
+be &#x00B7 al &#x00B7 ro &#x279E §albero§
+ta &#x00B7 lo &#x00B7 vo &#x279E §tavolo§
+ne &#x00B7 fi &#x00B7 stra &#x279E §finestra§
+no &#x00B7 bam &#x00B7 bi &#x279E §bambino§
+rdi &#x00B7 gia &#x00B7 no &#x279E §giardino§
+ta &#x00B7 ma &#x00B7 ti &#x279E §matita§
+far &#x00B7 la &#x00B7 fal &#x279E §farfalla§
+ta &#x00B7 mon &#x00B7 gna &#x279E §montagna§
+brel &#x00B7 om &#x00B7 lo &#x279E §ombrello§
+na &#x00B7 ba &#x00B7 na &#x279E §banana§
+che &#x00B7 ro &#x00B7 zuc &#x279E §zucchero§
+bo &#x00B7 la &#x00B7 bam &#x279E §bambola§
+mi &#x00B7 for &#x00B7 ca &#x279E §formica§
+na &#x00B7 gal &#x00B7 li &#x279E §gallina§
+ni &#x00B7 no &#x00B7 pa &#x279E §panino§
+lo &#x00B7 pal &#x00B7 ne &#x279E §pallone§
+sci &#x00B7 cu &#x00B7 no &#x279E §cuscino§
+o &#x00B7 le &#x00B7 ne &#x279E §leone§
+chie &#x00B7 bic &#x00B7 re &#x279E §bicchiere§
+raf &#x00B7 gi &#x00B7 fa &#x279E §giraffa§
+o &#x00B7 ro &#x00B7 gio &#x00B7 lo &#x279E §orologio§
+ta &#x00B7 vo &#x00B7 no &#x00B7 li &#x279E §tavolino§
+e &#x00B7 le &#x00B7 te &#x00B7 fan &#x279E §elefante§
+to &#x00B7 au &#x00B7 mo &#x00B7 bi &#x00B7 le &#x279E §automobile§
+coc &#x00B7 co &#x00B7 lo &#x00B7 dril &#x279E §coccodrillo§
 ---
 Italiano
 Scrivi il nome degli oggetti!
