@@ -277,7 +277,7 @@ menuTesti.addEventListener("change", function() {
 
 function ricomincia() {
   verificaBtn.disabled = false;
-  verificaBtn.textContent = 'Verifica Risposte';
+//  verificaBtn.textContent = 'Verifica Risposte';
   document.getElementById('contenitore-testo').innerHTML = '';
   testAttivo = true;
   fineBtn.textContent = 'Fine';
@@ -323,15 +323,15 @@ function verifica() {
         const spanRisposta = document.createElement('span');
         spanRisposta.textContent = el.dataset.risposta;
         el.appendChild(spanRisposta);
-
-        if (digitato === risposta) {
+// 16mar26: inserimento modalità "show"
+        if (digitato === risposta || modo === "show") {
           el.classList.add('corretto');
         } else {
           el.classList.add('sbagliato');
           tuttiCorretti = false;
         }
       });
-
+//
       // ALGORITMO RIPETIZIONE SPAZIATA
       const stats = statisticheFrasi[indiceFrase];
       if (!tuttiCorretti) {
@@ -381,12 +381,15 @@ function fineTest() {
         });
       }
     }
+// 16mar26: inserimento modalità "show"
     let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}`;
-    if (modo == 'bi') {
+    if (modo === 'bi') {
        messaggio += `, visualizzate: ${numViste}`;
     }
+    if (modo === 'show') {
+       messaggio = `Parole proposte: ${numCorrette}!`;
+    }
     messaggio += `<br>`
-
     if (frasiDifficili.length > 0) {
       messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
       frasiDifficili.forEach(f => {
@@ -394,12 +397,8 @@ function fineTest() {
       });
       messaggio += '</ul>';
     } else {
-      if (numCorrette > 0) {
-        if (numErrori == 0) {
-          messaggio += 'Tutte le risposte sono corrette!';
-        } else {
-          messaggio += 'Qualche errore, ma hai recuperato benissimo!';
-        }
+      if (numCorrette > 0 && modo != 'show') {
+        messaggio += 'Tutte le risposte sono corrette!';
       }
     }
     risultati.innerHTML = messaggio;
@@ -449,7 +448,8 @@ function parseTesto(contenuto) {
 function generaTesto() {
 
   verificaBtn.disabled = false;
-  verificaBtn.textContent = 'Verifica Risposte';
+// 16mar26: inserimento modalità "show"
+  verificaBtn.textContent = (modo === 'show') ? 'Scopri' : 'Verifica Risposte';
   tipoRisposta = 'verifica';
 
 // --- Selezione frase ponderata senza ripetizione consecutiva ---
@@ -493,7 +493,7 @@ ultimoIndice = indiceSelezionato;
 
   // --- Determina modalità reale ---
   const usaMono = (
-    modo === 'mono' ||
+    modo === 'mono' || modo === 'show' ||
     (modo === 'bi' && Math.random() > 0.5)
   );
 
@@ -518,8 +518,18 @@ ultimoIndice = indiceSelezionato;
 	input.setAttribute("spellcheck", "false");
 	input.setAttribute("data-form-type", "other");
 	input.setAttribute("data-lpignore", "true");
-
-	if (tipoKbd === "num") {
+	
+// 16mar26: inserimento modalità "show"
+	if (modo === "show") {
+	  input.type = "password";
+	  input.setAttribute("inputmode", "none");
+	  input.readOnly = true;
+	  input.style.caretColor = "transparent";
+	  input.placeholder = "scopri";
+	  input.style.fontStyle = "italic";
+	  input.addEventListener("keydown", e => e.preventDefault());
+	  input.addEventListener("paste", e => e.preventDefault());
+	} else if (tipoKbd === "num") {
 	  input.type = "tel";
 	  input.setAttribute("inputmode", "numeric");
 	  input.setAttribute("pattern", "[0-9]*");
@@ -527,6 +537,7 @@ ultimoIndice = indiceSelezionato;
 	  input.type = "text";
 	  input.setAttribute("inputmode", "text");
 	}
+//
         span.appendChild(input);
         div.appendChild(span);
       } else {
@@ -562,14 +573,14 @@ ultimoIndice = indiceSelezionato;
 }
 </script>
 
-        <!-- Put this at the end of the <body> tag -->
+        <!-- Put this at the end of the <body> tag 
         <script src="https://swetrix.org/swetrix.js" defer></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 swetrix.init("WoH0No9arSTq");
                 swetrix.trackViews();
             });
-        </script>
+        </script> -->
         <noscript>
             <img
                 src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
