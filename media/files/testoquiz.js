@@ -3,11 +3,12 @@
      separatore ([---])
      argomento (es.: Italiano)
      titolo del test (es.: Scrivi il nome degli oggetti!)
-     modalità di esecuzione ([mono | bi])
+     modalità di esecuzione ([mono | bi | show])
      	mono: la domanda ha dei campi in cui digitare la risposta
      	bi: con probabilità 50-50 la domanda viene proposta:
      	    come nel caso mono, con chiave da riempire, oppure
      	    viene mostrato la chiave, che va esposta a voce
+     	show: nessuna verifica della risposta
      tipo di input ([alfa | num])
      lista di domande
 */
