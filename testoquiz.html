@@ -137,6 +137,15 @@ button:disabled {
     text-align:center;
     border-color:#dc3545;
 }
+.neutro {
+    background-color: #28a745 !important;
+    color: white;
+    text-align: center;
+    border-color: #28a745;
+}
+.neutro span {
+    font-weight: bold;
+}
 .corretto span {
     font-weight:bold;
 }
@@ -197,7 +206,7 @@ button:disabled {
     <script src="./media/files/testoquiz.js"></script>
 
 <script>
-const VERSIONE = "Versione 3.0 del 16 marzo 2026";
+const VERSIONE = "Versione 3.1 del 17 marzo 2026";
 const pVer = document.getElementById("verInfo");
 pVer.innerHTML = VERSIONE;
 window.addEventListener("error", (e) => {
@@ -213,54 +222,93 @@ const fineBtn = document.getElementById('fineBtn');
 const verificaBtn = document.querySelector('button[onclick="verifica()"]');
 let ultimoIndice;
 
-const listaTest = parseTesto(DATI_TEST);
-// console.log(listaTest);
+const params = new URLSearchParams(location.search);
 
-// Popola il menu
-// Raggruppa per categoria
-const gruppi = {};
-
-listaTest.forEach((item, index) => {
-  const categoria = item[0];
-
-  if (!gruppi[categoria]) {
-    gruppi[categoria] = [];
-  }
-
-  gruppi[categoria].push({
-    titoloTest: item[1].replace(/<[^>]*>/g, ""),
-    indiceReale: index
-  });
-});
-
-// Crea optgroup
-for (const categoria in gruppi) {
-
-  const optgroup = document.createElement("optgroup");
-  optgroup.label = categoria;
-
-  gruppi[categoria].forEach(voce => {
-    const option = document.createElement("option");
-    option.value = voce.indiceReale; // indice reale nella lista
-    option.textContent = voce.titoloTest;
-    optgroup.appendChild(option);
-  });
-
-  menu.appendChild(optgroup);
-}
-let testSelezionato = listaTest[0];
-let modo = testSelezionato[2];
-tipoKbd = testSelezionato[3];
-menuTesti.value = 0;
-
+let listaTest;
+let modo;
+let testSelezionato;
+let tipoKbd;
 
 let idTest = 0;
 let frasi = [];
 let statisticheFrasi = [];
 let testAttivo = true;
 let tipoRisposta = 'verifica';
-let fraseCasuale = ''
-ricomincia();
+let fraseCasuale = '';
+let numCorrette = 0;
+let numErrori = 0;
+let numViste = 0;
+
+function avviaApp(dati) {
+  listaTest = parseTesto(dati);
+  // Popola il menu
+  // Raggruppa per categoria
+  const gruppi = {};
+  listaTest.forEach((item, index) => {
+    const categoria = item[0];
+    if (!gruppi[categoria]) {
+      gruppi[categoria] = [];
+    }
+    gruppi[categoria].push({
+      titoloTest: item[1].replace(/<[^>]*>/g, ""),
+      indiceReale: index
+    });
+  });
+  // Crea optgroup
+  for (const categoria in gruppi) {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = categoria;
+    gruppi[categoria].forEach(voce => {
+      const option = document.createElement("option");
+      option.value = voce.indiceReale;
+      option.textContent = voce.titoloTest;
+      optgroup.appendChild(option);
+    });
+    menu.appendChild(optgroup);
+  }
+  testSelezionato = listaTest[0];
+  modo = testSelezionato[2];
+  tipoKbd = testSelezionato[3];
+  menuTesti.value = 0;
+  ricomincia();
+}
+
+if (params.get('source') === 'local') {
+  const modal = document.createElement('div');
+  modal.innerHTML = `
+    <div id="modal-local" style="
+      position:fixed; inset:0; background:rgba(0,0,0,0.5);
+      display:flex; align-items:center; justify-content:center; z-index:9999;">
+      <div style="
+        background:white; padding:2rem; border-radius:8px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.3); text-align:center; max-width:400px;">
+        <h5>Carica file locale</h5>
+        <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
+        <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
+        <br>
+        <button id="btn-carica">Carica</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  document.getElementById('btn-carica').addEventListener('click', () => {
+    const file = document.getElementById('file-locale').files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      let testo = e.target.result;
+      const match = testo.match(/DATI_TEST\s*=\s*`([\s\S]*?)`/);
+      if (match) testo = match[1];
+      document.getElementById('modal-local').parentElement.remove();
+      avviaApp(testo);
+    };
+    reader.readAsText(file);
+  });
+
+} else {
+  avviaApp(DATI_TEST);
+}
 
 // ------> Eventi
 
@@ -324,12 +372,14 @@ function verifica() {
         spanRisposta.textContent = el.dataset.risposta;
         el.appendChild(spanRisposta);
 // 16mar26: inserimento modalità "show"
-        if (digitato === risposta || modo === "show") {
-          el.classList.add('corretto');
-        } else {
-          el.classList.add('sbagliato');
-          tuttiCorretti = false;
-        }
+	if (modo === "show") {
+	  el.classList.add('neutro');
+	} else if (digitato === risposta) {
+	  el.classList.add('corretto');
+	} else {
+	  el.classList.add('sbagliato');
+	  tuttiCorretti = false;
+	}
       });
 //
       // ALGORITMO RIPETIZIONE SPAZIATA
