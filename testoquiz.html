@@ -172,6 +172,23 @@ button:disabled {
     margin:10px 0;
     padding-left:20px;
 }
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+#modal-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+}
     </style>
 </head>
 <body>
@@ -202,11 +219,23 @@ button:disabled {
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
     <br><br><br><p><em id="verInfo"></em></p>
-    
+
+    <div id="modal-local" style="display:none">
+      <div id="modal-overlay">
+        <div id="modal-box">
+          <h5>Carica file locale</h5>
+          <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
+          <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
+          <br>
+          <button id="btn-carica">Carica</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./media/files/testoquiz.js"></script>
 
 <script>
-const VERSIONE = "Versione 3.1 del 17 marzo 2026";
+const VERSIONE = "Versione 3.2 del 18 marzo 2026";
 const pVer = document.getElementById("verInfo");
 pVer.innerHTML = VERSIONE;
 window.addEventListener("error", (e) => {
@@ -274,23 +303,7 @@ function avviaApp(dati) {
 }
 
 if (params.get('source') === 'local') {
-  const modal = document.createElement('div');
-  modal.innerHTML = `
-    <div id="modal-local" style="
-      position:fixed; inset:0; background:rgba(0,0,0,0.5);
-      display:flex; align-items:center; justify-content:center; z-index:9999;">
-      <div style="
-        background:white; padding:2rem; border-radius:8px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.3); text-align:center; max-width:400px;">
-        <h5>Carica file locale</h5>
-        <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
-        <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
-        <br>
-        <button id="btn-carica">Carica</button>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
+  document.getElementById('modal-local').style.display = 'block';
 
   document.getElementById('btn-carica').addEventListener('click', () => {
     const file = document.getElementById('file-locale').files[0];
@@ -300,7 +313,7 @@ if (params.get('source') === 'local') {
       let testo = e.target.result;
       const match = testo.match(/DATI_TEST\s*=\s*`([\s\S]*?)`/);
       if (match) testo = match[1];
-      document.getElementById('modal-local').parentElement.remove();
+      document.getElementById('modal-local').style.display = 'none';
       avviaApp(testo);
     };
     reader.readAsText(file);
