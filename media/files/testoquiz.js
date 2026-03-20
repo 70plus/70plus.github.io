@@ -98,7 +98,6 @@ alfa
 <span style="font-size: 400%;">&#x2702;</span> §forbici§
 <span style="font-size: 400%;">&#x1F52C;</span> §microscopio§
 <span style="font-size: 400%;">&#x2328;</span> §tastiera§
-
 ---
 Italiano
 Inserisci <b><em>a</em></b>, oppure <b><em>ha</em><b>
@@ -138,7 +137,71 @@ Il sole §è§ caldo §e§ luminoso.
 Il gatto §è§ sul tetto.
 Il cane §e§ il gatto giocano.
 La penna §è§ rossa §e§ blu.
-
+---
+Inglese
+Presente del verbo <em>to be</em>
+mono
+alfa
+I §am§ a child.
+§Is§ she your sister? — Yes, she is.
+We §are§ at school.
+The flowers §are§ yellow.
+He §isn't§ tall, he is short.
+§Are§ you tired? — No, I §am not§.
+The sky §is§ blue.
+My cat §is§ small and it §is§ white.
+They aren't bad, they §are§ good!
+She §is§ my mum.
+The cat §is§ black.
+We §are§ at home.
+He isn't sad, he §is§ happy.
+Are you hungry? — Yes, I §am§.
+The dog §is§ big.
+They §are§ my friends.
+My teacher §is§ nice.
+They §are§ at school today.
+My name §is§ Luna and I §am§ from Italy.
+§Are§ you a student? Yes! §I am§.
+She §is§ happy.
+§Is§ it cold outside? — Yes, it §is§.
+§Is§ it monday? — No, it §is§ tuesday.
+I §am§ a teacher.
+Are they from Spain? — No, they §aren't§.
+The cats §are§ in the garden, but the dog is not there.
+Is this your bag? — Yes, it §is§ mine.
+---
+Logica
+Domande di logica
+mono
+alfa
+Anna è più alta di Lorenzo, Marco è più basso di Lorenzo. Chi è il più basso? §Marco§
+Tutti i cani abbaiano. Rex non abbaia. Possiamo dire che Rex è un cane? §No§
+In una corsa, Sara arriva dopo Giulia ma prima di Elena. Chi arriva ultima? §Elena§
+Tutti i libri sullo scaffale sono blu. Questo libro è rosso. È sullo scaffale? §No§
+Paolo ha più figurine di Lorenzo, e Lorenzo ne ha più di Andrea. Chi ne ha di meno? §Andrea§
+Se ieri era martedì, che giorno sarà domani? §giovedì§
+Tre scatole contengono: una solo mele, una solo pere, una mele e pere. Tutte le etichette sono sbagliate. Se prendi un frutto da una sola scatola, puoi capire tutto: da quale scatola conviene prendere? §mele e pere§
+Ci sono 4 uccelli su un ramo. 2 volano via. Quanti uccelli restano sul ramo? §2§
+Se ogni bambino ha 2 biscotti e ci sono 5 bambini, quanti biscotti servono in totale? §10§
+Lorenzo pensa a un numero. Se lo raddoppia ottiene 10. Che numero aveva pensato? §5§
+Giulia ha più caramelle di Marco, ma meno di Sara. Chi ha più caramelle? §Sara§
+Tutti i gatti miagolano. Fuffi miagola. Fuffi è sicuramente un gatto? §No§
+In una gara, Paolo arriva prima di Anna, ma dopo Lorenzo. Chi arriva primo? §Lorenzo§
+Tutti i fiori hanno i petali. La rosa è un fiore. La rosa ha i petali? §Si§
+Marta è più veloce di Chiara, e Chiara è più veloce di Elisa. Chi è la più lenta? §Elisa§
+Se oggi è lunedì, che giorno sarà dopodomani? §Mercoledì§
+Tutti gli uccelli hanno le ali. Il pinguino è un uccello. Il pinguino ha le ali? §Si§
+Tre amici (Leo, Nina e Tom) mangiano una mela ciascuno. Quante mele servono in totale? §3§
+Se una matita costa 2 euro, quanto costano 3 matite? §6§
+Lorenzo ha 5 figurine, ne regala 2 a Marco. Quante figurine restano a Lorenzo? §3§
+Ci sono 5 uccelli su un ramo. Spari a uno: quanti restano sul ramo? §0§
+Se oggi è mercoledì, che giorno sarà tra 7 giorni? §mercoledì§
+Un papà ha 4 figlie, e ogni figlia ha un fratello. Quanti figli ha il papà in totale? §5§
+Se hai 5 matite e ne prendi 2, quante matite hai? §2§
+Un libro pesa più di una penna, e una penna pesa più di un foglio. Cosa pesa di meno? §foglio§
+Se oggi è mercoledì, che giorno era ieri? §martedì§
+Tutti i pesci vivono nell’acqua. Il delfino è un pesce? §no§
+Nella partita, la squadra rossa ha segnato più gol della squadra blu, e la squadra blu ne ha segnati più della squadra verde. Qual è il colore della squadra che ha segnato meno gol? §verde§
 --- 
 Matematica
 Tabelline!

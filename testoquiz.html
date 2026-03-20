@@ -138,7 +138,7 @@ button:disabled {
     border-color:#dc3545;
 }
 .neutro {
-    background-color: #28a745 !important;
+    background-color: #fd7e14 !important;
     color: white;
     text-align: center;
     border-color: #28a745;
@@ -205,9 +205,9 @@ button:disabled {
                         height="60"
                 /></a>
             </div>
-            <div class="logo-text">
-                <h3 id="titolo"></h3>
-            </div>
+	    <div class="logo-text">
+    		<h3 id="titolo" style="cursor: pointer;"></h3>
+	   </div>
         </div>
         <div class="spaziatura"></div>
 
@@ -218,7 +218,7 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <br><br><br><p><em id="verInfo"></em></p>
+    <br><br><p><em id="verInfo"></em></p>
 
     <div id="modal-local" style="display:none">
       <div id="modal-overlay">
@@ -235,15 +235,16 @@ button:disabled {
     <script src="./media/files/testoquiz.js"></script>
 
 <script>
-const VERSIONE = "Versione 3.2 del 18 marzo 2026";
+const VERSIONE = "Versione 3.3 del 20 marzo 2026";
+const linkLocale = `Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>.<br>`;
 const pVer = document.getElementById("verInfo");
-pVer.innerHTML = VERSIONE;
+pVer.innerHTML = linkLocale + VERSIONE;
 window.addEventListener("error", (e) => {
-  pVer.innerHTML = `${e.message}<br>${VERSIONE}`;
+  pVer.innerHTML = `${e.message}<br>${linkLocale}${VERSIONE}`;
 });
 
 const menu = document.getElementById("menuTesti");
-const titolo = document.getElementById("titolo");
+// const titolo = document.getElementById("titolo");
 const risultati = document.getElementById('risultatiFinali');
 const nuovoTesto = document.getElementById('nuovotesto');
 const contenitore = document.getElementById('contenitore-testo');
@@ -324,6 +325,11 @@ if (params.get('source') === 'local') {
 }
 
 // ------> Eventi
+
+// reload della pagina
+document.getElementById('titolo').addEventListener('click', () => {
+    window.location.href = window.location.origin + window.location.pathname;
+});
 
 // Evento selezione
 menuTesti.addEventListener("change", function() {
