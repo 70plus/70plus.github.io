@@ -218,7 +218,8 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <br><br><p><em id="verInfo"></em></p>
+    <br><br><p>Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>.</p>
+    <p><em id="verInfo"></em></p>
 
     <div id="modal-local" style="display:none">
       <div id="modal-overlay">
@@ -236,11 +237,10 @@ button:disabled {
 
 <script>
 const VERSIONE = "Versione 3.3 del 20 marzo 2026";
-const linkLocale = `Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>.<br>`;
 const pVer = document.getElementById("verInfo");
-pVer.innerHTML = linkLocale + VERSIONE;
+pVer.innerHTML = VERSIONE;
 window.addEventListener("error", (e) => {
-  pVer.innerHTML = `${e.message}<br>${linkLocale}${VERSIONE}`;
+  pVer.innerHTML = `${e.message}<br>${VERSIONE}`;
 });
 
 const menu = document.getElementById("menuTesti");
