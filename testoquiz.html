@@ -7,209 +7,214 @@
           name="description" content="Esercitiamo italiano, matematica, storia e scienze!" />
     <title>Ripassi lunari</title>
     <style>
-body {
-    font-family:Arial, sans-serif;
-    max-width:800px;
-    margin:0 auto;
-    padding:20px;
-    line-height:1.6;
-    /* background-color:#f9f9f9; */
-}
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            /* background-color: #f9f9f9; */
+        }
 
-/* HEADER */
-.logo-container {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    background-color: #10475C;
-}
-.logo-image {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;   /* evita che l'immagine si comprima */
-}
-.logo-text {
-    flex: 1;
-    text-align: center;
-    color: #F0F0C9;
-}
-.logo-text h3 {
-    margin: 0;
-    padding: 0;
-}
-.spaziatura {
-    margin-bottom: 20px;
-    background-color: #ffffff;
-}
+        /* HEADER */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            background-color: #10475C;
+        }
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0; /* evita che l'immagine si comprima */
+        }
+        .logo-text {
+            flex: 1;
+            text-align: center;
+            color: #F0F0C9;
+        }
+        .logo-text h3 {
+            margin: 0;
+            padding: 0;
+        }
+        .spaziatura {
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
 
-label[for="menuTesti"] {
-    font-weight:bold;
-    color:#333;
-    margin-right:10px;
-    font-size:20px;
-}
-select {
-    padding:6px 10px;
-    font-size:16px;
-    border-radius:6px;
-    border:1px solid #ccc;
-    min-width:250px;
-}
-optgroup {
-    font-weight:bold;
-}
+        label[for="menuTesti"] {
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        select {
+            padding: 6px 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            min-width: 250px;
+        }
+        optgroup {
+            font-weight: bold;
+        }
 
-#menuTesti:hover {
-    border-color:#0056b3;
-    box-shadow:0 4px 8px rgba(0,123,255,0.3);
-}
-#menuTesti:focus {
-    outline:none;
-    border-color:#0056b3;
-    box-shadow:0 0 0 3px rgba(0,123,255,0.2);
-}
-#menuTesti option {
-    padding:10px;
-    background:white;
-    color:#333;
-}
-.testo {
-    font-size:18px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    margin-bottom:20px;
-}
-.parola-nascosta {
-    display:inline-block;
-    width:200px;
-    height:28px;
-    border:2px solid #ccc;
-    border-radius:5px;
-    margin:0 2px;
-    position:relative;
-    background:#f0f0f0;
-    vertical-align:middle;
-}
-input {
-    width:100%;
-    height:100%;
-    border:none;
-    background:transparent;
-    text-align:center;
-    font-size:16px;
-    font-family:Arial, sans-serif;
-    padding:0;
-    box-sizing:border-box;
-}
-input:focus {
-    outline:none;
-    background:#fff;
-}
-button {
-    background:#007bff;
-    color:white;
-    border:none;
-    padding:12px 24px;
-    font-size:16px;
-    border-radius:5px;
-    cursor:pointer;
-    margin-top:20px;
-}
-button:hover {
-    background:#0056b3;
-}
-button:disabled {
-    background:#ccc !important;
-    cursor:not-allowed;
-    opacity:0.6;
-}
-.corretto {
-    background-color:#28a745 !important;
-    color:white;
-    text-align:center;
-    border-color:#28a745;
-}
-.sbagliato {
-    background-color:#dc3545 !important;
-    color:white;
-    text-align:center;
-    border-color:#dc3545;
-}
-.neutro {
-    background-color: #fd7e14 !important;
-    color: white;
-    text-align: center;
-    border-color: #fd7e14;
-}
-.neutro span {
-    font-weight: bold;
-}
-.corretto span {
-    font-weight:bold;
-}
-.sbagliato span {
-    font-weight:bold;
-    /* text-decoration:line-through;
-    */
-}
-.corretto::after {
-    content:' ✓';
-}
-.sbagliato::after {
-    content:' ✗';
-}
-#risultatiFinali {
-    margin-top:20px;
-    padding:15px;
-    background:#e8f5e8;
-    border-radius:8px;
-    border-left:5px solid #28a745;
-    min-height:20px;
-}
-#risultatiFinali ul {
-    margin:10px 0;
-    padding-left:20px;
-}
-#modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-#modal-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    text-align: center;
-    max-width: 400px;
-}
+        #menuTesti:hover {
+            border-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+        #menuTesti:focus {
+            outline: none;
+            border-color: #0056b3;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+        #menuTesti option {
+            padding: 10px;
+            background: white;
+            color: #333;
+        }
+
+        .testo {
+            font-size: 18px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .parola-nascosta {
+            display: inline-block;
+            width: 200px;
+            height: 28px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin: 0 2px;
+            position: relative;
+            background: #f0f0f0;
+            vertical-align: middle;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            background: #fff;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc !important;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .corretto {
+            background-color: #28a745 !important;
+            color: white;
+            text-align: center;
+            border-color: #28a745;
+        }
+        .sbagliato {
+            background-color: #dc3545 !important;
+            color: white;
+            text-align: center;
+            border-color: #dc3545;
+        }
+        .neutro {
+            background-color: #fd7e14 !important;
+            color: white;
+            text-align: center;
+            border-color: #fd7e14;
+        }
+        .neutro span {
+            font-weight: bold;
+        }
+        .corretto span {
+            font-weight: bold;
+        }
+        .sbagliato span {
+            font-weight: bold;
+            /* text-decoration: line-through; */
+        }
+        .corretto::after {
+            content: ' ✓';
+        }
+        .sbagliato::after {
+            content: ' ✗';
+        }
+
+        #risultatiFinali {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e8;
+            border-radius: 8px;
+            border-left: 5px solid #28a745;
+            min-height: 20px;
+        }
+        #risultatiFinali ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        #modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        #modal-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+        }
     </style>
 </head>
 <body>
-        <div class="logo-container">
-            <div class="logo-image">
-                <a
-                    href="https://70plus.github.io/"
-                    style="text-decoration: none">
-                    <img
-                        id="logoI"
-                        src="media/files/logo.jpg"
-                        alt="Image"
-                        width="60"
-                        height="60"
-                /></a>
-            </div>
-	    <div class="logo-text">
-    		<h3 id="titolo" style="cursor: pointer;"></h3>
-	   </div>
+
+    <div class="logo-container">
+        <div class="logo-image">
+            <a href="https://70plus.github.io/" style="text-decoration: none">
+                <img
+                    id="logoI"
+                    src="media/files/logo.jpg"
+                    alt="Image"
+                    width="60"
+                    height="60"
+                />
+            </a>
         </div>
-        <div class="spaziatura"></div>
+        <div class="logo-text">
+            <h3 id="titolo" style="cursor: pointer;"></h3>
+        </div>
+    </div>
+
+    <div class="spaziatura"></div>
 
     <label for="menuTesti">Seleziona il test: </label>
     <select id="menuTesti"></select>
@@ -218,443 +223,473 @@ button:disabled {
     <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
     <div id="risultatiFinali"></div>
-    <br><br><p>Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>.</p>
+    <br><br>
+    <p>Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>.</p>
     <p><em id="verInfo"></em></p>
 
     <div id="modal-local" style="display:none">
-      <div id="modal-overlay">
-        <div id="modal-box">
-          <h5>Carica file locale</h5>
-          <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
-          <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
-          <br>
-          <button id="btn-carica">Carica</button>
+        <div id="modal-overlay">
+            <div id="modal-box">
+                <h5>Carica file locale</h5>
+                <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
+                <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
+                <br>
+                <button id="btn-carica">Carica</button>
+            </div>
         </div>
-      </div>
     </div>
 
     <script src="./media/files/testoquiz.js"></script>
 
-<script>
-const VERSIONE = "Versione 3.3 del 20 marzo 2026";
-const pVer = document.getElementById("verInfo");
-pVer.innerHTML = VERSIONE;
-window.addEventListener("error", (e) => {
-  pVer.innerHTML = `${e.message}<br>${VERSIONE}`;
-});
+    <script>
 
-const menu = document.getElementById("menuTesti");
-// const titolo = document.getElementById("titolo");
-const risultati = document.getElementById('risultatiFinali');
-const nuovoTesto = document.getElementById('nuovotesto');
-const contenitore = document.getElementById('contenitore-testo');
-const fineBtn = document.getElementById('fineBtn');
-const verificaBtn = document.querySelector('button[onclick="verifica()"]');
-let ultimoIndice;
+        /* ============================================================
+           VARIABILI
+        ============================================================ */
 
-const params = new URLSearchParams(location.search);
+        const VERSIONE = "Versione 4.0 del 21 marzo 2026";
 
-let listaTest;
-let modo;
-let testSelezionato;
-let tipoKbd;
+        const pVer        = document.getElementById("verInfo");
+        const menu        = document.getElementById("menuTesti");
+        const risultati   = document.getElementById('risultatiFinali');
+        const nuovoTesto  = document.getElementById('nuovotesto');
+        const contenitore = document.getElementById('contenitore-testo');
+        const fineBtn     = document.getElementById('fineBtn');
+        const verificaBtn = document.querySelector('button[onclick="verifica()"]');
 
-let idTest = 0;
-let frasi = [];
-let statisticheFrasi = [];
-let testAttivo = true;
-let tipoRisposta = 'verifica';
-let fraseCasuale = '';
-let numCorrette = 0;
-let numErrori = 0;
-let numViste = 0;
+        const params = new URLSearchParams(location.search);
 
-function avviaApp(dati) {
-  listaTest = parseTesto(dati);
-  // Popola il menu
-  // Raggruppa per categoria
-  const gruppi = {};
-  listaTest.forEach((item, index) => {
-    const categoria = item[0];
-    if (!gruppi[categoria]) {
-      gruppi[categoria] = [];
-    }
-    gruppi[categoria].push({
-      titoloTest: item[1].replace(/<[^>]*>/g, ""),
-      indiceReale: index
-    });
-  });
-  // Crea optgroup
-  for (const categoria in gruppi) {
-    const optgroup = document.createElement("optgroup");
-    optgroup.label = categoria;
-    gruppi[categoria].forEach(voce => {
-      const option = document.createElement("option");
-      option.value = voce.indiceReale;
-      option.textContent = voce.titoloTest;
-      optgroup.appendChild(option);
-    });
-    menu.appendChild(optgroup);
-  }
-  testSelezionato = listaTest[0];
-  modo = testSelezionato[2];
-  tipoKbd = testSelezionato[3];
-  menuTesti.value = 0;
-  ricomincia();
-}
+        let listaTest;
+        let modo;
+        let testSelezionato;
+        let tipoKbd;
 
-if (params.get('source') === 'local') {
-  document.getElementById('modal-local').style.display = 'block';
+        let idTest           = 0;
+        let frasi            = [];
+        let statisticheFrasi = [];
+        let testAttivo       = true;
+        let tipoRisposta     = 'verifica';
+        let fraseCasuale     = '';
+        let numCorrette      = 0;
+        let numErrori        = 0;
+        let numViste         = 0;
+        let ultimoIndice;
 
-  document.getElementById('btn-carica').addEventListener('click', () => {
-    const file = document.getElementById('file-locale').files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      let testo = e.target.result;
-      const match = testo.match(/DATI_TEST\s*=\s*`([\s\S]*?)`/);
-      if (match) testo = match[1];
-      document.getElementById('modal-local').style.display = 'none';
-      avviaApp(testo);
-    };
-    reader.readAsText(file);
-  });
+        pVer.innerHTML = VERSIONE;
 
-} else {
-  avviaApp(DATI_TEST);
-}
 
-// ------> Eventi
+        /* ============================================================
+           EVENT LISTENER
+        ============================================================ */
 
-// reload della pagina
-document.getElementById('titolo').addEventListener('click', () => {
-    window.location.href = window.location.origin + window.location.pathname;
-});
-
-// Evento selezione
-menuTesti.addEventListener("change", function() {
-  const indice = this.value;
-  if (indice === "") return;
-
-  testSelezionato = listaTest[indice];
-  modo = testSelezionato[2];
-  tipoKbd = testSelezionato[3];
-  ricomincia();
-});
-
-function ricomincia() {
-  verificaBtn.disabled = false;
-//  verificaBtn.textContent = 'Verifica Risposte';
-  document.getElementById('contenitore-testo').innerHTML = '';
-  testAttivo = true;
-  fineBtn.textContent = 'Fine';
-  fineBtn.onclick = fineTest;
-  nuovoTesto.disabled = false;
-  risultati.innerHTML = '';
-  risultati.style.display = 'none';
-  numCorrette = 0;
-  numErrori = 0;
-  numViste = 0;
-  ultimoIndice = null;
-
-  // Reset completo statistiche
-  statisticheFrasi = [];
-  frasi = testSelezionato[4];
-  document.getElementById("titolo").innerHTML = testSelezionato[1];
-  // Inizializza statistiche
-  frasi.forEach((_, index) => {
-    statisticheFrasi[index] = {
-      errori: 0,
-      peso: 1
-    };
-  });
-  generaTesto();
-}
-
-function verifica() {
-  verificaBtn.disabled = true;
-  switch (tipoRisposta) {
-    case 'verifica':
-      const nascoste = document.querySelectorAll('.parola-nascosta');
-      let tuttiCorretti = true;
-      let indiceFrase = parseInt(nascoste[0].dataset.indice);
-
-      nascoste.forEach(function(el) {
-        const input = el.querySelector('input');
-        const risposta = el.dataset.risposta.toLowerCase();
-        const digitato = input.value.toLowerCase().trim();
-
-        el.classList.remove('corretto', 'sbagliato');
-        input.style.display = 'none';
-
-        const spanRisposta = document.createElement('span');
-        spanRisposta.textContent = el.dataset.risposta;
-        el.appendChild(spanRisposta);
-// 16mar26: inserimento modalità "show"
-	if (modo === "show") {
-	  el.classList.add('neutro');
-	} else if (digitato === risposta) {
-	  el.classList.add('corretto');
-	} else {
-	  el.classList.add('sbagliato');
-	  tuttiCorretti = false;
-	}
-      });
-//
-      // ALGORITMO RIPETIZIONE SPAZIATA
-      const stats = statisticheFrasi[indiceFrase];
-      if (!tuttiCorretti) {
-        // Errore: aumenta peso gradualmente
-        stats.errori++;
-        stats.peso = Math.min(10, 1 + stats.errori * 2);
-        numErrori += 1;
-      } else {
-        // Corretto: diminuisci peso (decadimento)
-        if (stats.peso > 1) {
-          stats.peso = Math.max(1, stats.peso - 1);
-        }
-        numCorrette += 1;
-      }
-      break;
-    case 'mostra':
-      html = '<div class="testo">';
-      html += fraseCasuale;
-      html += '</div>';
-      contenitore.innerHTML = formatBold(html);
-      numViste += 1;
-      break;
-    default:
-      alert('errore su mostra/verifica');
-  }
-}
-
-// Funzione Fine/Inizio
-function fineTest() {
-  if (testAttivo) {
-    // FINE TEST
-    testAttivo = false;
-    fineBtn.textContent = 'Inizio';
-    verificaBtn.disabled = true;
-    nuovoTesto.disabled = true;
-    fineBtn.onclick = fineTest;
-    risultati.style.display = 'block';
-
-    // Conta frasi con peso > 1
-    const frasiDifficili = [];
-    for (let index in statisticheFrasi) {
-      if (statisticheFrasi[index].peso > 1) {
-        frasiDifficili.push({
-          indice: index,
-          testo: frasi[index],
-          peso: (statisticheFrasi[index].peso.toFixed(1) - 1)/2
+        // Mostra errori runtime nella barra versione
+        window.addEventListener("error", (e) => {
+            pVer.innerHTML = `${e.message}<br>${VERSIONE}`;
         });
-      }
-    }
-// 16mar26: inserimento modalità "show"
-    let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}`;
-    if (modo === 'bi') {
-       messaggio += `, visualizzate: ${numViste}`;
-    }
-    if (modo === 'show') {
-       messaggio = `Parole proposte: ${numCorrette}!`;
-    }
-    messaggio += `<br>`
-    if (frasiDifficili.length > 0) {
-      messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
-      frasiDifficili.forEach(f => {
-        messaggio += `<li>${formatBold(f.testo)} (peso ${f.peso})</li>`;
-      });
-      messaggio += '</ul>';
-    } else {
-      if (numCorrette > 0 && modo != 'show') {
-        messaggio += 'Tutte le risposte sono corrette!';
-      }
-    }
-    risultati.innerHTML = messaggio;
 
-  } else {
-    ricomincia();
-  }
-}
+        // Reload della pagina al click sul titolo
+        document.getElementById('titolo').addEventListener('click', () => {
+            window.location.href = window.location.origin + window.location.pathname;
+        });
 
-// ------> Funzioni
+        // Cambio selezione nel menu test
+        menuTesti.addEventListener("change", function () {
+            const indice = this.value;
+            if (indice === "") return;
 
-function formatBold(text) {
-  let open = true;
+            testSelezionato = listaTest[indice];
+            modo    = testSelezionato[2];
+            tipoKbd = testSelezionato[3];
+            ricomincia();
+        });
 
-  return text.replace(/§/g, () => {
-    if (open) {
-      open = false;
-      return "<b>";
-    } else {
-      open = true;
-      return "</b>";
-    }
-  });
-}
 
-function parseTesto(contenuto) {
-  return contenuto
-    .split('---') // separa i blocchi
-    .map(b => b.trim()) // rimuove spazi iniziali/finali
-    .filter(b => b.length > 0) // elimina blocchi vuoti
-    .map(blocco => {
-      const righe = blocco
-        .split(/\r?\n/)
-        .map(r => r.trim())
-        .filter(r => r.length > 0);
+        /* ============================================================
+           FUNZIONI
+        ============================================================ */
 
-      const categoria = righe[0];
-      titoloTest = righe[1];
-      const modo = righe[2];
-      const tipoKbd = righe[3]
-      const test = righe.slice(4);
+        function avviaApp(dati) {
+            listaTest = parseTesto(dati);
 
-      return [categoria, titoloTest, modo, tipoKbd, test];
-    });
-}
-
-function generaTesto() {
-
-  verificaBtn.disabled = false;
-// 16mar26: inserimento modalità "show"
-  verificaBtn.textContent = (modo === 'show') ? 'Scopri' : 'Verifica Risposte';
-  tipoRisposta = 'verifica';
-
-// --- Selezione frase ponderata senza ripetizione consecutiva ---
-
-let totalPeso = 0;
-
-// Calcolo totale escludendo ultimoIndice
-for (const key in statisticheFrasi) {
-    if (Number(key) !== ultimoIndice) {
-        totalPeso += statisticheFrasi[key].peso;
-    }
-}
-
-let rand = Math.random() * totalPeso;
-let indiceSelezionato = null;
-
-for (const key in statisticheFrasi) {
-    const indice = Number(key);
-
-    if (indice === ultimoIndice) continue;
-
-    rand -= statisticheFrasi[key].peso;
-
-    if (rand <= 0) {
-        indiceSelezionato = indice;
-        break;
-    }
-}
-
-// Salvo per il prossimo giro
-ultimoIndice = indiceSelezionato;
-
-  fraseCasuale = frasi[indiceSelezionato];
-  const parti = fraseCasuale.split('§');
-
-  // --- Pulizia contenitore ---
-  contenitore.replaceChildren();
-
-  const div = document.createElement("div");
-  div.className = "testo";
-
-  // --- Determina modalità reale ---
-  const usaMono = (
-    modo === 'mono' || modo === 'show' ||
-    (modo === 'bi' && Math.random() > 0.5)
-  );
-
-  if (usaMono) {
-
-    // ===== VERSIONE MONO =====
-    parti.forEach((parte, i) => {
-
-      if (i % 2 === 1) {
-
-        const span = document.createElement("span");
-        span.className = "parola-nascosta";
-        span.dataset.risposta = parte;
-        span.dataset.indice = indiceSelezionato;
-
-	const input = document.createElement("input");
-	input.maxLength = 24;
-
-	input.setAttribute("autocomplete", "new-password"); // trucco più efficace di "off"
-	input.setAttribute("autocorrect", "off");
-	input.setAttribute("autocapitalize", "off");
-	input.setAttribute("spellcheck", "false");
-	input.setAttribute("data-form-type", "other");
-	input.setAttribute("data-lpignore", "true");
-	
-// 16mar26: inserimento modalità "show"
-	if (modo === "show") {
-	  input.type = "password";
-	  input.setAttribute("inputmode", "none");
-	  input.readOnly = true;
-	  input.style.caretColor = "transparent";
-	  input.placeholder = "scopri";
-	  input.style.fontStyle = "italic";
-	  input.addEventListener("keydown", e => e.preventDefault());
-	  input.addEventListener("paste", e => e.preventDefault());
-	} else if (tipoKbd === "num") {
-	  input.type = "tel";
-	  input.setAttribute("inputmode", "numeric");
-	  input.setAttribute("pattern", "[0-9]*");
-	} else {
-	  input.type = "text";
-	  input.setAttribute("inputmode", "text");
-	}
-//
-        span.appendChild(input);
-        div.appendChild(span);
-      } else {
-        div.insertAdjacentHTML("beforeend", parte);
-      }
-    });
-
-  } else {
-
-    // ===== VERSIONE BI (domanda) =====
-    verificaBtn.textContent = 'Mostra testo';
-    tipoRisposta = 'mostra';
-
-    const bold = document.createElement("b");
-    bold.textContent = parti[1].toUpperCase();
-    div.appendChild(bold);
-
-    div.appendChild(document.createElement("br"));
-    div.appendChild(document.createElement("br"));
-
-    div.appendChild(
-      document.createTextNode("Di cosa si tratta?")
-    );
-  }
-
-  contenitore.appendChild(div);
-
-  // Stabilizza focus (utile su Chromium/Wayland)
-  requestAnimationFrame(() => {
-    const primoInput = contenitore.querySelector("input");
-    if (primoInput) primoInput.focus();
-  });
-}
-</script>
-
-        <!-- Put this at the end of the <body> tag 
-        <script src="https://swetrix.org/swetrix.js" defer></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                swetrix.init("WoH0No9arSTq");
-                swetrix.trackViews();
+            // Raggruppa i test per categoria
+            const gruppi = {};
+            listaTest.forEach((item, index) => {
+                const categoria = item[0];
+                if (!gruppi[categoria]) {
+                    gruppi[categoria] = [];
+                }
+                gruppi[categoria].push({
+                    titoloTest:  item[1].replace(/<[^>]*>/g, ""),
+                    indiceReale: index
+                });
             });
-        </script> -->
-        <noscript>
-            <img
-                src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
-                alt=""
-                referrerpolicy="no-referrer-when-downgrade" />
-        </noscript> 
+
+            // Popola il menu con optgroup per categoria
+            for (const categoria in gruppi) {
+                const optgroup = document.createElement("optgroup");
+                optgroup.label = categoria;
+                gruppi[categoria].forEach(voce => {
+                    const option = document.createElement("option");
+                    option.value       = voce.indiceReale;
+                    option.textContent = voce.titoloTest;
+                    optgroup.appendChild(option);
+                });
+                menu.appendChild(optgroup);
+            }
+
+            testSelezionato  = listaTest[0];
+            modo    = testSelezionato[2];
+            tipoKbd = testSelezionato[3];
+            menuTesti.value = 0;
+            ricomincia();
+        }
+
+        function ricomincia() {
+            verificaBtn.disabled = false;
+            document.getElementById('contenitore-testo').innerHTML = '';
+            testAttivo = true;
+            fineBtn.textContent = 'Fine';
+            fineBtn.onclick     = fineTest;
+            nuovoTesto.disabled = false;
+            risultati.innerHTML    = '';
+            risultati.style.display = 'none';
+            numCorrette  = 0;
+            numErrori    = 0;
+            numViste     = 0;
+            ultimoIndice = null;
+
+            // Reset completo statistiche
+            statisticheFrasi = [];
+            frasi = testSelezionato[4];
+            document.getElementById("titolo").innerHTML = testSelezionato[1];
+
+            // Inizializza statistiche per ogni frase
+            frasi.forEach((_, index) => {
+                statisticheFrasi[index] = {
+                    errori: 0,
+                    peso:   1,
+                    usato:  false
+                };
+            });
+
+            generaTesto();
+        }
+
+        function verifica() {
+            verificaBtn.disabled = true;
+
+            switch (tipoRisposta) {
+                case 'verifica': {
+                    const nascoste    = document.querySelectorAll('.parola-nascosta');
+                    let tuttiCorretti = true;
+                    let indiceFrase   = parseInt(nascoste[0].dataset.indice);
+
+                    nascoste.forEach(function (el) {
+                        const input    = el.querySelector('input');
+                        const risposta = el.dataset.risposta.toLowerCase();
+                        const digitato = input.value.toLowerCase().trim();
+
+                        el.classList.remove('corretto', 'sbagliato');
+                        input.style.display = 'none';
+
+                        const spanRisposta = document.createElement('span');
+                        spanRisposta.textContent = el.dataset.risposta;
+                        el.appendChild(spanRisposta);
+
+                        // 16mar26: inserimento modalità "show"
+                        if (modo === "show") {
+                            el.classList.add('neutro');
+                        } else if (digitato === risposta) {
+                            el.classList.add('corretto');
+                        } else {
+                            el.classList.add('sbagliato');
+                            tuttiCorretti = false;
+                        }
+                    });
+
+                    // ALGORITMO RIPETIZIONE SPAZIATA
+                    const stats = statisticheFrasi[indiceFrase];
+                    stats.usato = true;
+                    if (!tuttiCorretti) {
+                        // Errore: aumenta peso gradualmente
+                        stats.errori++;
+                        stats.peso = Math.min(10, 1 + stats.errori * 2);
+                        numErrori += 1;
+                    } else {
+                        // Corretto: diminuisci peso (decadimento)
+                        if (stats.peso > 1) {
+                            stats.peso = Math.max(1, stats.peso - 1);
+                        }
+                        numCorrette += 1;
+                    }
+                    break;
+                }
+                case 'mostra': {
+                    let html  = '<div class="testo">';
+                    html     += fraseCasuale;
+                    html     += '</div>';
+                    contenitore.innerHTML = formatBold(html);
+                    numViste += 1;
+                    break;
+                }
+                default:
+                    alert('errore su mostra/verifica');
+            }
+        }
+
+        // Funzione Fine / Inizio
+        function fineTest() {
+            if (testAttivo) {
+                // FINE TEST
+                testAttivo = false;
+                fineBtn.textContent      = 'Inizio';
+                verificaBtn.disabled     = true;
+                nuovoTesto.disabled      = true;
+                fineBtn.onclick          = fineTest;
+                risultati.style.display  = 'block';
+
+                // Conta frasi difficili (peso > 1) e frasi usate
+                const frasiDifficili = [];
+                let frasiUsate       = 0;
+                const totaleFrasi    = statisticheFrasi.length;
+
+                for (let index in statisticheFrasi) {
+                    if (statisticheFrasi[index].usato) frasiUsate++;
+                    if (statisticheFrasi[index].peso > 1) {
+                        frasiDifficili.push({
+                            indice: index,
+                            testo:  frasi[index],
+                            peso:   (statisticheFrasi[index].peso.toFixed(1) - 1) / 2
+                        });
+                    }
+                }
+
+                // 16mar26: inserimento modalità "show"
+                let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}`;
+                if (modo === 'bi') {
+                    messaggio += `, visualizzate: ${numViste}`;
+                }
+                if (modo === 'show') {
+                    messaggio = `Parole proposte: ${numCorrette}.`;
+                }
+                messaggio += `<br>`;
+
+                if (frasiDifficili.length > 0) {
+                    messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
+                    frasiDifficili.forEach(f => {
+                        messaggio += `<li>${formatBold(f.testo)} (peso ${f.peso})</li>`;
+                    });
+                    messaggio += '</ul>';
+                } else {
+                    if (numCorrette > 0 && modo != 'show') {
+                        messaggio += 'Tutte le risposte sono corrette!';
+                    }
+                }
+                messaggio += `<br>Utilizzati ${frasiUsate} test su ${totaleFrasi} disponibili.`;
+                risultati.innerHTML = messaggio;
+
+            } else {
+                ricomincia();
+            }
+        }
+
+        function generaTesto() {
+            verificaBtn.disabled   = false;
+            // 16mar26: inserimento modalità "show"
+            verificaBtn.textContent = (modo === 'show') ? 'Scopri' : 'Verifica Risposte';
+            tipoRisposta = 'verifica';
+
+            // --- Selezione frase ponderata senza ripetizione consecutiva ---
+            let totalPeso = 0;
+
+            // Calcola il totale escludendo l'ultimo indice usato
+            for (const key in statisticheFrasi) {
+                if (Number(key) !== ultimoIndice) {
+                    totalPeso += statisticheFrasi[key].peso;
+                }
+            }
+
+            let rand             = Math.random() * totalPeso;
+            let indiceSelezionato = null;
+
+            for (const key in statisticheFrasi) {
+                const indice = Number(key);
+                if (indice === ultimoIndice) continue;
+
+                rand -= statisticheFrasi[key].peso;
+                if (rand <= 0) {
+                    indiceSelezionato = indice;
+                    break;
+                }
+            }
+
+            // Salva per il prossimo giro
+            ultimoIndice = indiceSelezionato;
+
+            fraseCasuale   = frasi[indiceSelezionato];
+            const parti    = fraseCasuale.split('§');
+
+            // Pulizia contenitore
+            contenitore.replaceChildren();
+
+            const div = document.createElement("div");
+            div.className = "testo";
+
+            // Determina modalità reale
+            const usaMono = (
+                modo === 'mono' || modo === 'show' ||
+                (modo === 'bi' && Math.random() > 0.5)
+            );
+
+            if (usaMono) {
+
+                // ===== VERSIONE MONO =====
+                parti.forEach((parte, i) => {
+                    if (i % 2 === 1) {
+                        const span = document.createElement("span");
+                        span.className        = "parola-nascosta";
+                        span.dataset.risposta = parte;
+                        span.dataset.indice   = indiceSelezionato;
+
+                        const input = document.createElement("input");
+                        input.maxLength = 24;
+                        input.setAttribute("autocomplete",   "new-password"); // trucco più efficace di "off"
+                        input.setAttribute("autocorrect",    "off");
+                        input.setAttribute("autocapitalize", "off");
+                        input.setAttribute("spellcheck",     "false");
+                        input.setAttribute("data-form-type", "other");
+                        input.setAttribute("data-lpignore",  "true");
+
+                        // 16mar26: inserimento modalità "show"
+                        if (modo === "show") {
+                            input.type      = "password";
+                            input.setAttribute("inputmode", "none");
+                            input.readOnly  = true;
+                            input.style.caretColor = "transparent";
+                            input.placeholder      = "scopri";
+                            input.style.fontStyle  = "italic";
+                            input.addEventListener("keydown", e => e.preventDefault());
+                            input.addEventListener("paste",   e => e.preventDefault());
+                        } else if (tipoKbd === "num") {
+                            input.type = "tel";
+                            input.setAttribute("inputmode", "numeric");
+                            input.setAttribute("pattern",   "[0-9]*");
+                        } else {
+                            input.type = "text";
+                            input.setAttribute("inputmode", "text");
+                        }
+
+                        span.appendChild(input);
+                        div.appendChild(span);
+                    } else {
+                        div.insertAdjacentHTML("beforeend", parte);
+                    }
+                });
+
+            } else {
+
+                // ===== VERSIONE BI (domanda) =====
+                verificaBtn.textContent = 'Mostra testo';
+                tipoRisposta = 'mostra';
+
+                const bold = document.createElement("b");
+                bold.textContent = parti[1].toUpperCase();
+                div.appendChild(bold);
+
+                div.appendChild(document.createElement("br"));
+                div.appendChild(document.createElement("br"));
+                div.appendChild(document.createTextNode("Di cosa si tratta?"));
+            }
+
+            contenitore.appendChild(div);
+
+            // Stabilizza focus (utile su Chromium/Wayland)
+            requestAnimationFrame(() => {
+                const primoInput = contenitore.querySelector("input");
+                if (primoInput) primoInput.focus();
+            });
+        }
+
+        function formatBold(text) {
+            let open = true;
+            return text.replace(/§/g, () => {
+                if (open) {
+                    open = false;
+                    return "<b>";
+                } else {
+                    open = true;
+                    return "</b>";
+                }
+            });
+        }
+
+        function parseTesto(contenuto) {
+            return contenuto
+                .split('---')           // separa i blocchi
+                .map(b => b.trim())     // rimuove spazi iniziali/finali
+                .filter(b => b.length > 0) // elimina blocchi vuoti
+                .map(blocco => {
+                    const righe = blocco
+                        .split(/\r?\n/)
+                        .map(r => r.trim())
+                        .filter(r => r.length > 0);
+
+                    const categoria = righe[0];
+                    titoloTest      = righe[1];
+                    const modo      = righe[2];
+                    const tipoKbd   = righe[3];
+                    const test      = righe.slice(4);
+
+                    return [categoria, titoloTest, modo, tipoKbd, test];
+                });
+        }
+
+
+        /* ============================================================
+           AVVIO APPLICAZIONE
+        ============================================================ */
+
+        if (params.get('source') === 'local') {
+            // Modalità locale: mostra il modale per caricare un file
+            document.getElementById('modal-local').style.display = 'block';
+
+            document.getElementById('btn-carica').addEventListener('click', () => {
+                const file = document.getElementById('file-locale').files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    let testo       = e.target.result;
+                    const match     = testo.match(/DATI_TEST\s*=\s*`([\s\S]*?)`/);
+                    if (match) testo = match[1];
+                    document.getElementById('modal-local').style.display = 'none';
+                    avviaApp(testo);
+                };
+                reader.readAsText(file);
+            });
+
+        } else {
+            // Modalità normale: usa i dati già caricati da testoquiz.js
+            avviaApp(DATI_TEST);
+        }
+
+    </script>
+
+    <!-- Put this at the end of the <body> tag  -->
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            swetrix.init("WoH0No9arSTq");
+            swetrix.trackViews();
+        });
+    </script>
+    <noscript>
+        <img
+            src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+            alt=""
+            referrerpolicy="no-referrer-when-downgrade"
+        />
+    </noscript>
+
 </body>
 </html>
