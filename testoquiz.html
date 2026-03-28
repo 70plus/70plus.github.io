@@ -386,18 +386,16 @@
 
                     nascoste.forEach(function (el) {
                         const input    = el.querySelector('input');
-/*                        const risposta = el.dataset.risposta.toLowerCase(); */
-
                         el.classList.remove('corretto', 'sbagliato');
                         input.style.display = 'none';
 
 			const valori = el.dataset.risposta.split('||').map(v => v.trim());
-			const digitato = input.value.toLowerCase().trim();
-			const match = valori.find(v => v.toLowerCase() === digitato);
+			const valoriNorm = valori.map(v => v.replace(/\s+/g, ''));
+			const digitato = input.value.toLowerCase().trim().replace(/\s+/g, '');
+			const match = valoriNorm.find(v => v.toLowerCase() === digitato);
 
 			const spanRisposta = document.createElement('span');
-			spanRisposta.textContent = valori[0];
-
+			spanRisposta.textContent = valori[0]; // sempre il primo valore originale
 			if (modo === "show") {
 			    el.classList.add('neutro');
 			} else if (match) {
