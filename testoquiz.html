@@ -247,8 +247,8 @@
            VARIABILI
         ============================================================ */
 
-        const VERSIONE = "Versione 5.0 del 28 marzo 2026";
-
+        const VERSIONE = "Versione 5.1 del 28 marzo 2026";
+	const nomePagina = "Ripassi Lunari"
         const pVer        = document.getElementById("verInfo");
         const menu        = document.getElementById("menuTesti");
         const risultati   = document.getElementById('risultatiFinali');
@@ -361,8 +361,7 @@
             // Reset completo statistiche
             statisticheFrasi = [];
             frasi = testSelezionato[4];
-            document.getElementById("titolo").innerHTML = testSelezionato[1];
-
+            document.getElementById("titolo").innerHTML = `${nomePagina}: ${testSelezionato[1]}`;
             // Inizializza statistiche per ogni frase
             frasi.forEach((_, index) => {
                 statisticheFrasi[index] = {

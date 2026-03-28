@@ -11,6 +11,11 @@
      	show: nessuna verifica della risposta
      tipo di input ([alfa | num])
      lista di domande
+Nei test a risposta, una lista racchiusa tra due caratteri §, con "||" come separatore,
+definisce le risposte accettate. Es.:
+     Il cielo oggi §è§ azzurro §e§ sereno.
+     La gallina è un quadrupede. §Falso || F || no || n§
+La risposta non è case sensitive e gli spazi contenuti non vengono considerati.
 */
 const DATI_TEST = `
 ---
