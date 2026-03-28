@@ -172,31 +172,31 @@ Is this your bag? — Yes, it §is§ mine.
 ---
 Logica
 Vero o falso?
-show
+mono
 alfa
-Partirò il prossimo 30 febbraio. §Falso§
-La gallina è un quadrupede. §Falso§
-Il ragno ha 8 zampe. §Vero§
-Il Sole gira attorno alla Terra. §Falso§
-Un anno ha sempre 365 giorni. §Falso§
-Tutti i numeri pari sono divisibili per 2. §Vero§
-Un triangolo può avere quattro lati. §Falso§
-Tutti i mammiferi volano. §Falso§
-Un chilometro è più lungo di un metro. §Vero§
-Se oggi è lunedì, domani sarà sempre martedì. §Vero§
-Un gallo fa un uovo ogni mattina. §Falso§
-Se piove, l’acqua cade sempre verso l’alto. §Falso§
-Se una candela è spenta, fa luce. §Falso§
-Se corri sotto la pioggia, non ti bagni. §Falso§
-Un gatto può abbaiare come un cane. §Falso§
-Un orologio fermo può dire l’ora giusta. §Vero§
-La capitale della Francia è Parigi. §Vero§
-Il pianeta Terra è l’unico pianeta del sistema solare con vita conosciuta. §Vero§
-Il numero 7 è un numero dispari. §Vero§
-Il gatto è un animale erbivoro. §Falso§
-La Luna è una stella. §Falso§
-Il quadrato è un poligono con 5 lati. §Falso§
-Ci sono mammiferi che volano. §Vero§
+Partirò il prossimo 30 febbraio. §Falso ~ F ~ no ~ n§
+La gallina è un quadrupede. §Falso ~ F ~ no ~ n§
+Il ragno ha 8 zampe. §Vero ~ V ~ si ~ s§
+Il Sole gira attorno alla Terra. §Falso ~ F ~ no ~ n§
+Un anno ha sempre 365 giorni. §Falso ~ F ~ no ~ n§
+Tutti i numeri pari sono divisibili per 2. §Vero ~ V ~ si ~ s§
+Un triangolo può avere quattro lati. §Falso ~ F ~ no ~ n§
+Tutti i mammiferi volano. §Falso ~ F ~ no ~ n§
+Un chilometro è più lungo di un metro. §Vero ~ V ~ si ~ s§
+Se oggi è lunedì, domani sarà sempre martedì. §Vero ~ V ~ si ~ s§
+Un gallo fa un uovo ogni mattina. §Falso ~ F ~ no ~ n§
+Se piove, l’acqua cade sempre verso l’alto. §Falso ~ F ~ no ~ n§
+Se una candela è spenta, fa luce. §Falso ~ F ~ no ~ n§
+Se corri sotto la pioggia, non ti bagni. §Falso ~ F ~ no ~ n§
+Un gatto può abbaiare come un cane. §Falso ~ F ~ no ~ n§
+Un orologio fermo può dire l’ora giusta. §Vero ~ V ~ si ~ s§
+La capitale della Francia è Parigi. §Vero ~ V ~ si ~ s§
+Il pianeta Terra è l’unico pianeta del sistema solare con vita conosciuta. §Vero ~ V ~ si ~ s§
+Il numero 7 è un numero dispari. §Vero ~ V ~ si ~ s§
+Il gatto è un animale erbivoro. §Falso ~ F ~ no ~ n§
+La Luna è una stella. §Falso ~ F ~ no ~ n§
+Il quadrato è un poligono con 5 lati. §Falso ~ F ~ no ~ n§
+Ci sono mammiferi che volano. §Vero ~ V ~ si ~ s§
 ---
 Logica
 Domande di logica

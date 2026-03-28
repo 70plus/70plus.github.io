@@ -247,7 +247,7 @@
            VARIABILI
         ============================================================ */
 
-        const VERSIONE = "Versione 4.0 del 21 marzo 2026";
+        const VERSIONE = "Versione 5.0 del 28 marzo 2026";
 
         const pVer        = document.getElementById("verInfo");
         const menu        = document.getElementById("menuTesti");
@@ -387,24 +387,27 @@
                     nascoste.forEach(function (el) {
                         const input    = el.querySelector('input');
                         const risposta = el.dataset.risposta.toLowerCase();
-                        const digitato = input.value.toLowerCase().trim();
 
                         el.classList.remove('corretto', 'sbagliato');
                         input.style.display = 'none';
 
-                        const spanRisposta = document.createElement('span');
-                        spanRisposta.textContent = el.dataset.risposta;
-                        el.appendChild(spanRisposta);
+			const valori = el.dataset.risposta.split('~').map(v => v.trim());
+			const digitato = input.value.toLowerCase().trim();
+			const match = valori.find(v => v.toLowerCase() === digitato);
 
-                        // 16mar26: inserimento modalità "show"
-                        if (modo === "show") {
-                            el.classList.add('neutro');
-                        } else if (digitato === risposta) {
-                            el.classList.add('corretto');
-                        } else {
-                            el.classList.add('sbagliato');
-                            tuttiCorretti = false;
-                        }
+			const spanRisposta = document.createElement('span');
+			spanRisposta.textContent = valori[0];
+
+			if (modo === "show") {
+			    el.classList.add('neutro');
+			} else if (match) {
+			    el.classList.add('corretto');
+			} else {
+			    el.classList.add('sbagliato');
+			    tuttiCorretti = false;
+			}
+
+			el.appendChild(spanRisposta);
                     });
 
                     // ALGORITMO RIPETIZIONE SPAZIATA
