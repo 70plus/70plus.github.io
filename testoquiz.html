@@ -391,7 +391,7 @@
                         el.classList.remove('corretto', 'sbagliato');
                         input.style.display = 'none';
 
-			const valori = el.dataset.risposta.split('~').map(v => v.trim());
+			const valori = el.dataset.risposta.split('#').map(v => v.trim());
 			const digitato = input.value.toLowerCase().trim();
 			const match = valori.find(v => v.toLowerCase() === digitato);
 
