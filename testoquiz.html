@@ -234,7 +234,8 @@
                 <p style="color:#666; font-size:.9rem;">Seleziona il file <code>.js</code> o <code>.txt</code> con i dati del test</p>
                 <input type="file" id="file-locale" accept=".js,.txt" style="margin:1rem 0;">
                 <br>
-                <button id="btn-carica">Carica</button>
+                <button id="btn-carica">Carica file</button>
+                <button id="btn-annulla">Usa test predefiniti</button>
             </div>
         </div>
     </div>
@@ -247,7 +248,7 @@
            VARIABILI
         ============================================================ */
 
-        const VERSIONE = "Versione 5.1 del 28 marzo 2026";
+        const VERSIONE = "Versione 5.2 del 28 marzo 2026";
 	const nomePagina = "Ripassi Lunari"
         const pVer        = document.getElementById("verInfo");
         const menu        = document.getElementById("menuTesti");
@@ -659,7 +660,10 @@
         if (params.get('source') === 'local') {
             // Modalità locale: mostra il modale per caricare un file
             document.getElementById('modal-local').style.display = 'block';
-
+            
+            document.getElementById("btn-annulla").addEventListener("click", () => {
+                window.location.href = "testoquiz.html";
+            });
             document.getElementById('btn-carica').addEventListener('click', () => {
                 const file = document.getElementById('file-locale').files[0];
                 if (!file) return;
