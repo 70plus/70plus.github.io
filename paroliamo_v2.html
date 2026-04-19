@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paroliamo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #f5f3ee; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 2rem 1rem; }
+    #app { width: 100%; max-width: 480px; }
+    h1 { font-size: 32px; font-weight: 600; text-align: center; color: #1a1a1a; margin-bottom: 4px; letter-spacing: 3px; }
+    .subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 1.5rem; }
+    .timer-bar-wrap { height: 4px; background: #ddd; border-radius: 2px; margin-bottom: 1.25rem; overflow: hidden; }
+    #tbar { height: 100%; width: 0%; background: #e24b4a; border-radius: 2px; transition: none; }
+    #tlabel { text-align: center; font-size: 14px; color: #666; margin-bottom: 1rem; min-height: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+    .die {
+      aspect-ratio: 1;
+      background: #e8d5b0;
+      border: 1.5px solid #378ADD;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; font-weight: 500;
+      color: #4a2e0e;
+      overflow: hidden;
+      user-select: none;
+    }
+    .die.rolling { animation: shake 0.15s infinite alternate; background: #d4bc90; }
+    .die.landed { animation: pop 0.3s ease; background: #e8d5b0; }
+    .controls { display: flex; justify-content: center; }
+    #btn {
+      padding: 10px 36px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      border: none;
+      background: #378ADD;
+      color: #fff;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    #btn:hover { background: #185FA5; }
+    #btn:active { transform: scale(0.97); }
+    #btn.running { background: #e24b4a; }
+    #btn.running:hover { background: #A32D2D; }
+    @keyframes shake {
+      from { transform: rotate(-8deg) scale(0.95); }
+      to   { transform: rotate(8deg)  scale(1.05); }
+    }
+    @keyframes pop {
+      0%   { transform: scale(1.25); }
+      60%  { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>PAROLIAMO</h1>
+  <p class="subtitle">trova quante più parole riesci in 2 minuti</p>
+
+  <div class="timer-bar-wrap"><div id="tbar"></div></div>
+  <div id="tlabel">2:00</div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="controls">
+    <button id="btn">Start</button>
+  </div>
+</div>
+
+<script>
+const TOTAL = 120;
+
+const DICE = [
+  ['L','S','R','C','A','E'],
+  ['C','D','P','M','A','E'],
+  ['M','B','Qu','O','A','O'],
+  ['L','R','O','E','I','U'],
+  ['V','N','T','G','E','I'],
+  ['F','C','R','A','O','I'],
+  ['S','D','T','N','O','E'],
+  ['V','N','Z','D','A','E'],
+  ['L','G','N','O','E','U'],
+  ['R','S','M','I','O','A'],
+  ['L','R','B','T','A','I'],
+  ['S','N','H','R','I','E'],
+  ['T','A','E','I','O','A'],
+  ['H','S','F','E','E','I'],
+  ['S','P','T','L','U','E'],
+  ['N','T','E','C','O','U'],
+];
+
+const btn    = document.getElementById('btn');
+const tbar   = document.getElementById('tbar');
+const tlabel = document.getElementById('tlabel');
+const grid   = document.getElementById('grid');
+
+let cells = [], interval = null, secs = TOTAL, running = false;
+let wakeLock = null;
+
+async function requestWakeLock() {
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+  } catch (e) {}
+}
+
+function releaseWakeLock() {
+  if (wakeLock) { wakeLock.release(); wakeLock = null; }
+}
+
+function shuffle(a) {
+  a = [...a];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function fmt(s) {
+  return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+}
+
+function buildGrid() {
+  grid.innerHTML = ''; cells = [];
+  for (let i = 0; i < 16; i++) {
+    const d = document.createElement('div');
+    d.className = 'die';
+    d.textContent = '—';
+    grid.appendChild(d);
+    cells.push(d);
+  }
+}
+
+function roll() {
+  const order = shuffle([...Array(16).keys()]);
+  const faces = order.map(di => DICE[di][Math.floor(Math.random() * 6)]);
+  const letters = 'ABCDEFGHILMNOPRSTUZ';
+
+  cells.forEach(c => {
+    c.className = 'die rolling';
+    c.style.fontSize = '26px';
+    c.textContent = '·';
+  });
+
+  const sc = setInterval(() => {
+    cells.forEach(c => { c.textContent = letters[Math.floor(Math.random() * letters.length)]; });
+  }, 80);
+
+  setTimeout(() => {
+    clearInterval(sc);
+    cells.forEach((c, i) => {
+      setTimeout(() => {
+        c.className = 'die landed';
+        c.style.fontSize = faces[i].length > 1 ? 'clamp(14px, 3.5vw, 24px)' : 'clamp(20px, 5vw, 36px)';
+        c.textContent = faces[i];
+      }, i * 50);
+    });
+    startTimer();
+  }, 1000);
+}
+
+function startTimer() {
+  secs = TOTAL;
+  tlabel.textContent = fmt(secs);
+  tbar.style.transition = 'none';
+  tbar.style.width = '0%';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    tbar.style.transition = 'width ' + TOTAL + 's linear';
+    tbar.style.width = '100%';
+  }));
+  clearInterval(interval);
+  interval = setInterval(() => {
+    secs--;
+    tlabel.textContent = fmt(secs);
+    if (secs <= 0) stop(true);
+  }, 1000);
+}
+
+function stop(expired) {
+  clearInterval(interval);
+  running = false;
+  btn.textContent = 'Start';
+  btn.classList.remove('running');
+  const pct = Math.round(((TOTAL - secs) / TOTAL) * 100);
+  tbar.style.transition = 'none';
+  tbar.style.width = pct + '%';
+  tlabel.textContent = expired ? 'Tempo scaduto!' : fmt(secs);
+  cells.forEach(c => { c.className = 'die'; c.style.fontSize = ''; });
+  releaseWakeLock();
+}
+
+btn.addEventListener('click', () => {
+  if (!running) {
+    running = true;
+    btn.textContent = 'Stop';
+    btn.classList.add('running');
+    tlabel.textContent = fmt(TOTAL);
+    tbar.style.transition = 'none';
+    tbar.style.width = '0%';
+    requestWakeLock();
+    roll();
+  } else {
+    stop(false);
+  }
+});
+
+buildGrid();
+</script>
+</body>
+</html>
