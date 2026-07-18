@@ -68,6 +68,14 @@
     gap: 14px;
   }
 
+  .col-left, .col-right{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 14px;
+    width: 100%;
+  }
+
   /* ---------- Header ---------- */
   .title-row{
     display:flex;
@@ -187,8 +195,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    width: min(88vw, 380px);
-    height: min(88vw, 380px);
+    width: min(88vw, 380px, 52vh);
+    height: min(88vw, 380px, 52vh);
     gap: 3px;
     background: var(--grid-line-thick);
     border-radius: var(--radius-md);
@@ -241,7 +249,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    width: min(88vw, 380px);
+    width: min(88vw, 380px, 52vh);
   }
   .picker button{
     aspect-ratio: 1 / 1;
@@ -315,40 +323,108 @@
     .title-row .emoji{ font-size: 26px; }
     .btn{ font-size: 13px; padding: 11px 14px; min-width: 100px;}
   }
+
+  /* ---------- Landscape (smartphone e iPad orizzontali) ---------- */
+  @media (orientation: landscape) and (max-height: 700px){
+    body{
+      align-items: center;
+      padding: 12px;
+    }
+    .app{
+      max-width: 900px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+    }
+    .col-left, .col-right{
+      width: auto;
+      flex: 0 0 auto;
+      gap: 10px;
+    }
+    .col-right{
+      max-width: 220px;
+    }
+    .title-row{ gap: 6px; }
+    .title-row .emoji{ font-size: 22px; }
+    h1{ font-size: 18px; }
+    .message{ font-size: 13px; min-height: 22px; padding: 3px 10px; }
+    .board-wrap{ padding: 8px; }
+    .board{
+      width: min(56vh, 46vw, 340px);
+      height: min(56vh, 46vw, 340px);
+    }
+    .cell{ font-size: clamp(18px, 7vh, 34px); }
+    .symbol-label{ font-size: 11px; }
+    .symbol-toggle button{ padding: 7px 14px; font-size: 13px; }
+    .picker{
+      width: min(56vh, 46vw, 220px);
+      gap: 6px;
+    }
+    .picker button{ box-shadow: 0 3px 0 #E0A82E; }
+    .picker button.erase{ box-shadow: 0 3px 0 #C3BEE8; }
+    .controls{
+      flex-direction: column;
+      gap: 6px;
+    }
+    .btn{
+      padding: 9px 14px;
+      font-size: 12px;
+      min-width: 0;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.15);
+    }
+    footer{ font-size: 10px; margin-top: 0; }
+  }
+
+  /* Landscape molto basso (es. iPhone in orizzontale) */
+  @media (orientation: landscape) and (max-height: 420px){
+    .col-right{ max-width: 190px; }
+    .board{ width: min(78vh, 40vw, 260px); height: min(78vh, 40vw, 260px); }
+    .cell{ font-size: clamp(14px, 6vh, 26px); }
+    .picker{ width: min(78vh, 40vw, 190px); }
+    .picker button{ font-size: clamp(12px, 4.5vh, 18px); }
+    h1{ font-size: 15px; }
+    .title-row .emoji{ font-size: 18px; }
+    footer{ display: none; }
+  }
 </style>
 </head>
 <body>
 
 <div class="app">
-  <div class="title-row">
-    <span class="emoji">🧩</span>
-    <h1>Sudoku per Bimbi</h1>
-    <span class="emoji" style="animation-delay:1.2s;">⭐</span>
-  </div>
+  <div class="col-left">
+    <div class="title-row">
+      <span class="emoji">🧩</span>
+      <h1>Sudoku per Bimbi</h1>
+      <span class="emoji" style="animation-delay:1.2s;">⭐</span>
+    </div>
 
-  <div class="symbol-picker-block">
-    <div class="symbol-label">🔤 Scegli i simboli</div>
-    <div class="symbol-toggle" role="group" aria-label="Scegli i simboli">
-      <button id="btn-numbers" class="active" type="button">1 2 3 4</button>
-      <button id="btn-letters" type="button">A B C D</button>
+    <div id="message" class="message info">Trova il posto giusto per ogni simbolo! 🌈</div>
+
+    <div class="board-wrap">
+      <div id="board" class="board" role="grid" aria-label="Griglia sudoku 4 per 4"></div>
     </div>
   </div>
 
-  <div id="message" class="message info">Trova il posto giusto per ogni simbolo! 🌈</div>
+  <div class="col-right">
+    <div class="symbol-picker-block">
+      <div class="symbol-label">🔤 Scegli i simboli</div>
+      <div class="symbol-toggle" role="group" aria-label="Scegli i simboli">
+        <button id="btn-numbers" class="active" type="button">1 2 3 4</button>
+        <button id="btn-letters" type="button">A B C D</button>
+      </div>
+    </div>
 
-  <div class="board-wrap">
-    <div id="board" class="board" role="grid" aria-label="Griglia sudoku 4 per 4"></div>
+    <div id="picker" class="picker" aria-label="Simboli da inserire"></div>
+
+    <div class="controls">
+      <button class="btn new" id="btn-new" type="button">🆕 Nuova Partita</button>
+      <button class="btn restart" id="btn-restart" type="button">🔄 Ricomincia</button>
+      <button class="btn check" id="btn-check" type="button">✅ Controlla</button>
+    </div>
+
+    <footer>Tocca una casella, poi scegli un simbolo qui sotto ✨</footer>
   </div>
-
-  <div id="picker" class="picker" aria-label="Simboli da inserire"></div>
-
-  <div class="controls">
-    <button class="btn new" id="btn-new" type="button">🆕 Nuova Partita</button>
-    <button class="btn restart" id="btn-restart" type="button">🔄 Ricomincia</button>
-    <button class="btn check" id="btn-check" type="button">✅ Controlla</button>
-  </div>
-
-  <footer>Tocca una casella, poi scegli un simbolo qui sotto ✨</footer>
 </div>
 
 <script>
