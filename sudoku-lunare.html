@@ -122,6 +122,8 @@
   }
   .symbol-toggle{
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background: var(--panel);
     border-radius: 999px;
     padding: clamp(3px, 0.7vh, 5px);
@@ -131,13 +133,14 @@
   .symbol-toggle button{
     border: none;
     background: transparent;
-    padding: clamp(6px, 1.3vh, 9px) clamp(14px, 3vh, 20px);
+    padding: clamp(6px, 1.3vh, 9px) clamp(10px, 2.2vh, 14px);
     border-radius: 999px;
     font-family: inherit;
     font-weight: 700;
-    font-size: clamp(12px, 2vh, 15px);
+    font-size: clamp(11px, 1.8vh, 14px);
     color: var(--purple-dark);
     cursor: pointer;
+    white-space: nowrap;
     transition: background .18s ease, color .18s ease, transform .12s ease;
   }
   .symbol-toggle button.active{
@@ -373,7 +376,7 @@
     }
     .cell{ font-size: clamp(18px, 7vh, 34px); }
     .symbol-label{ font-size: 11px; }
-    .symbol-toggle button{ padding: 7px 14px; font-size: 13px; }
+    .symbol-toggle button{ padding: 6px 10px; font-size: 12px; }
     .picker{
       width: min(56vh, 46vw, 220px);
       gap: 6px;
@@ -428,23 +431,25 @@
       <div class="symbol-label">🔤 Scegli i simboli</div>
       <div class="symbol-toggle-row">
         <div class="symbol-toggle" role="group" aria-label="Scegli i simboli">
-          <button id="btn-numbers" class="active" type="button">1 2 3 4</button>
-          <button id="btn-letters" type="button">A B C D</button>
+          <button id="btn-numbers" data-set="numbers" class="active" type="button">1 2 3 4</button>
+          <button id="btn-letters" data-set="letters" type="button">A B C D</button>
+          <button id="btn-colors" data-set="colors" type="button">🔴🔵🟡🟢</button>
         </div>
         <button id="btn-erase" class="erase-btn" type="button" aria-label="Cancella simbolo">⌫</button>
       </div>
+      <footer>Tocca una casella, poi scegli un simbolo qui sotto ✨</footer>
     </div>
 
     <div id="picker" class="picker" aria-label="Simboli da inserire"></div>
-    <footer>
-       Tocca una casella, poi scegli un simbolo qui sopra ✨
-    </footer>
+
     <div class="controls">
       <button class="btn new" id="btn-new" type="button">🆕 Nuova Partita</button>
       <button class="btn restart" id="btn-restart" type="button">🔄 Ricomincia</button>
       <button class="btn check" id="btn-check" type="button">✅ Controlla</button>
     </div>
+
     <br><a href="https://70plus.github.io/">Home</a>
+
   </div>
 </div>
 
@@ -455,7 +460,8 @@
   // ---------- Symbol sets ----------
   var SYMBOL_SETS = {
     numbers: ['1','2','3','4'],
-    letters: ['A','B','C','D']
+    letters: ['A','B','C','D'],
+    colors: ['🔴','🔵','🟡','🟢']
   };
   var currentSet = 'numbers';
 
@@ -739,15 +745,17 @@
   function setSymbolSet(setName){
     if(currentSet === setName) return;
     currentSet = setName;
-    document.getElementById('btn-numbers').classList.toggle('active', setName === 'numbers');
-    document.getElementById('btn-letters').classList.toggle('active', setName === 'letters');
+    document.querySelectorAll('.symbol-toggle button').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-set') === setName);
+    });
     renderBoard();
   }
 
   // ---------- Wire up ----------
 
-  document.getElementById('btn-numbers').addEventListener('click', function(){ setSymbolSet('numbers'); });
-  document.getElementById('btn-letters').addEventListener('click', function(){ setSymbolSet('letters'); });
+  document.querySelectorAll('.symbol-toggle button').forEach(function(btn){
+    btn.addEventListener('click', function(){ setSymbolSet(btn.getAttribute('data-set')); });
+  });
   document.getElementById('btn-new').addEventListener('click', newGame);
   document.getElementById('btn-restart').addEventListener('click', restartGame);
   document.getElementById('btn-check').addEventListener('click', checkGame);
@@ -758,7 +766,7 @@
   newGame();
 
 })();
-  </script>
+</script>
     <!-- Put this at the end of the <body> tag  -->
     <script src="https://swetrix.org/swetrix.js" defer></script>
     <script>
