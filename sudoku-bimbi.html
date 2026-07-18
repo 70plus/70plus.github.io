@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Sudoku per Bimbi 4×4</title>
+<style>
+  :root{
+    --bg-1: #FFF4D6;
+    --bg-2: #C9F2E8;
+    --panel: #FFFFFF;
+    --ink: #2E2A4D;
+    --purple: #7C6CF0;
+    --purple-dark: #5E4FD6;
+    --coral: #FF8C6B;
+    --coral-dark: #F06B47;
+    --teal: #2FBFA0;
+    --teal-dark: #1E9B82;
+    --yellow: #FFC94A;
+    --grid-line-thin: #D8D3F5;
+    --grid-line-thick: #7C6CF0;
+    --cell-fixed-bg: #EDEAFF;
+    --cell-user-bg: #FFFFFF;
+    --cell-error-bg: #FFE0DA;
+    --radius-lg: 28px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 10px 24px rgba(94, 79, 214, 0.18);
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overscroll-behavior: none;
+  }
+
+  body{
+    font-family: "Baloo 2", "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+    background:
+      radial-gradient(circle at 12% 10%, var(--bg-2) 0%, transparent 45%),
+      radial-gradient(circle at 90% 85%, var(--bg-2) 0%, transparent 40%),
+      var(--bg-1);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    touch-action: manipulation;
+    user-select: none;
+    overflow-y: auto;
+  }
+
+  @font-face {
+    font-family: "Baloo 2";
+    src: local("Baloo 2");
+  }
+
+  .app{
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* ---------- Header ---------- */
+  .title-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+  }
+  .title-row .emoji{
+    font-size: 34px;
+    display:inline-block;
+    animation: bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%,100%{ transform: translateY(0) rotate(-4deg); }
+    50%{ transform: translateY(-6px) rotate(6deg); }
+  }
+  h1{
+    margin:0;
+    font-size: 28px;
+    text-align:center;
+    letter-spacing: 0.5px;
+    color: var(--purple-dark);
+    text-shadow: 2px 2px 0 rgba(255,255,255,0.7);
+  }
+
+  /* ---------- Symbol toggle ---------- */
+  .symbol-picker-block{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 6px;
+  }
+  .symbol-label{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--purple-dark);
+    opacity: 0.75;
+    letter-spacing: 0.3px;
+  }
+  .symbol-toggle{
+    display:flex;
+    background: var(--panel);
+    border-radius: 999px;
+    padding: 5px;
+    box-shadow: var(--shadow);
+    gap: 4px;
+  }
+  .symbol-toggle button{
+    border: none;
+    background: transparent;
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--purple-dark);
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease, transform .12s ease;
+  }
+  .symbol-toggle button.active{
+    background: var(--purple);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(124,108,240,0.45);
+  }
+  .symbol-toggle button:not(.active):hover{
+    background: var(--bg-2);
+  }
+  .symbol-toggle button:active{ transform: scale(0.94); }
+
+  /* ---------- Message banner ---------- */
+  .message{
+    min-height: 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    transition: all .2s ease;
+    text-align:center;
+  }
+  .message.success{
+    background: var(--teal);
+    color:#fff;
+    animation: pop .3s ease;
+  }
+  .message.error{
+    background: var(--coral);
+    color: #fff;
+    animation: shake .35s ease;
+  }
+  .message.info{
+    color: var(--purple-dark);
+    opacity: 0.85;
+  }
+  @keyframes pop{
+    0%{ transform: scale(0.7); opacity:0; }
+    60%{ transform: scale(1.08); }
+    100%{ transform: scale(1); opacity:1; }
+  }
+  @keyframes shake{
+    0%,100%{ transform: translateX(0); }
+    25%{ transform: translateX(-6px); }
+    75%{ transform: translateX(6px); }
+  }
+
+  /* ---------- Board ---------- */
+  .board-wrap{
+    background: var(--panel);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    box-shadow: var(--shadow);
+  }
+
+  .board{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: min(88vw, 380px);
+    height: min(88vw, 380px);
+    gap: 3px;
+    background: var(--grid-line-thick);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    padding: 3px;
+  }
+
+  .cell{
+    background: var(--cell-user-bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: clamp(24px, 8vw, 40px);
+    font-weight: 800;
+    color: var(--purple-dark);
+    cursor: pointer;
+    position: relative;
+    border-radius: 6px;
+    transition: background .15s ease, transform .1s ease;
+    touch-action: manipulation;
+  }
+  .cell.fixed{
+    background: var(--cell-fixed-bg);
+    color: var(--ink);
+    cursor: default;
+  }
+  .cell.selected{
+    background: #E4E0FF;
+    box-shadow: inset 0 0 0 3px var(--purple);
+  }
+  .cell.fixed.selected{
+    box-shadow: inset 0 0 0 3px var(--purple);
+  }
+  .cell.error{
+    background: var(--cell-error-bg) !important;
+    color: var(--coral-dark) !important;
+    animation: shake .35s ease;
+  }
+  .cell.correct-flash{
+    animation: pop .3s ease;
+  }
+  .cell:active{ transform: scale(0.96); }
+
+  /* thicker separators between 2x2 boxes */
+  .cell[data-col="1"]{ border-right: 3px solid var(--grid-line-thick); }
+  .cell[data-row="1"]{ border-bottom: 3px solid var(--grid-line-thick); }
+
+  /* ---------- Symbol picker ---------- */
+  .picker{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: min(88vw, 380px);
+  }
+  .picker button{
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: clamp(18px, 6vw, 26px);
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #E0A82E;
+    transition: transform .08s ease, box-shadow .08s ease;
+  }
+  .picker button:active{
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #E0A82E;
+  }
+  .picker button.erase{
+    background: #E3E0F5;
+    box-shadow: 0 4px 0 #C3BEE8;
+    font-size: clamp(14px, 4.5vw, 18px);
+  }
+  .picker button.erase:active{
+    box-shadow: 0 1px 0 #C3BEE8;
+  }
+
+  /* ---------- Controls ---------- */
+  .controls{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content:center;
+    width: 100%;
+  }
+  .btn{
+    border: none;
+    border-radius: 999px;
+    padding: 13px 22px;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    gap: 8px;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.15);
+    transition: transform .08s ease, box-shadow .08s ease;
+    flex: 1 1 auto;
+    justify-content:center;
+    min-width: 130px;
+  }
+  .btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  }
+  .btn.new{ background: var(--purple); box-shadow: 0 5px 0 var(--purple-dark); }
+  .btn.restart{ background: var(--coral); box-shadow: 0 5px 0 var(--coral-dark); }
+  .btn.check{ background: var(--teal); box-shadow: 0 5px 0 var(--teal-dark); }
+
+  footer{
+    font-size: 12px;
+    color: var(--purple-dark);
+    opacity: 0.6;
+    text-align:center;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 380px){
+    h1{ font-size: 22px; }
+    .title-row .emoji{ font-size: 26px; }
+    .btn{ font-size: 13px; padding: 11px 14px; min-width: 100px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="title-row">
+    <span class="emoji">🧩</span>
+    <h1>Sudoku per Bimbi</h1>
+    <span class="emoji" style="animation-delay:1.2s;">⭐</span>
+  </div>
+
+  <div class="symbol-picker-block">
+    <div class="symbol-label">🔤 Scegli i simboli</div>
+    <div class="symbol-toggle" role="group" aria-label="Scegli i simboli">
+      <button id="btn-numbers" class="active" type="button">1 2 3 4</button>
+      <button id="btn-letters" type="button">A B C D</button>
+    </div>
+  </div>
+
+  <div id="message" class="message info">Trova il posto giusto per ogni simbolo! 🌈</div>
+
+  <div class="board-wrap">
+    <div id="board" class="board" role="grid" aria-label="Griglia sudoku 4 per 4"></div>
+  </div>
+
+  <div id="picker" class="picker" aria-label="Simboli da inserire"></div>
+
+  <div class="controls">
+    <button class="btn new" id="btn-new" type="button">🆕 Nuova Partita</button>
+    <button class="btn restart" id="btn-restart" type="button">🔄 Ricomincia</button>
+    <button class="btn check" id="btn-check" type="button">✅ Controlla</button>
+  </div>
+
+  <footer>Tocca una casella, poi scegli un simbolo qui sotto ✨</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Symbol sets ----------
+  var SYMBOL_SETS = {
+    numbers: ['1','2','3','4'],
+    letters: ['A','B','C','D']
+  };
+  var currentSet = 'numbers';
+
+  // ---------- Game state ----------
+  var solution = [];      // 4x4 array of 0-3 (indices into symbol set)
+  var puzzle = [];        // 4x4 array of 0-3 or null (blank), the starting puzzle
+  var userGrid = [];      // 4x4 array of 0-3 or null, current user entries (mirrors puzzle for fixed cells)
+  var fixedMask = [];     // 4x4 boolean, true if cell was pre-filled (not editable)
+  var selectedCell = null; // {r,c} or null
+
+  var boardEl = document.getElementById('board');
+  var pickerEl = document.getElementById('picker');
+  var messageEl = document.getElementById('message');
+
+  // ---------- Sudoku generation (4x4, "difficile" = solo 4 celle date) ----------
+
+  // Genera una soluzione completa valida 4x4 tramite backtracking con shuffle
+  function generateFullSolution(){
+    var grid = [[null,null,null,null],[null,null,null,null],[null,null,null,null],[null,null,null,null]];
+
+    function isValid(r,c,val){
+      for(var i=0;i<4;i++){
+        if(grid[r][i] === val) return false;
+        if(grid[i][c] === val) return false;
+      }
+      var br = r - (r % 2), bc = c - (c % 2);
+      for(var i2=br;i2<br+2;i2++){
+        for(var j2=bc;j2<bc+2;j2++){
+          if(grid[i2][j2] === val) return false;
+        }
+      }
+      return true;
+    }
+
+    function shuffledVals(){
+      var arr = [0,1,2,3];
+      for(var i=arr.length-1;i>0;i--){
+        var j = Math.floor(Math.random()*(i+1));
+        var tmp = arr[i]; arr[i]=arr[j]; arr[j]=tmp;
+      }
+      return arr;
+    }
+
+    function fill(pos){
+      if(pos === 16) return true;
+      var r = Math.floor(pos/4), c = pos % 4;
+      var vals = shuffledVals();
+      for(var k=0;k<vals.length;k++){
+        var v = vals[k];
+        if(isValid(r,c,v)){
+          grid[r][c] = v;
+          if(fill(pos+1)) return true;
+          grid[r][c] = null;
+        }
+      }
+      return false;
+    }
+
+    fill(0);
+    return grid;
+  }
+
+  // Verifica se una griglia parziale ha soluzione unica (usato per costruire un puzzle "alto" livello con poche celle date)
+  function countSolutions(grid, limit){
+    var count = 0;
+    var g = grid.map(function(row){ return row.slice(); });
+
+    function isValid(r,c,val){
+      for(var i=0;i<4;i++){
+        if(g[r][i] === val) return false;
+        if(g[i][c] === val) return false;
+      }
+      var br = r - (r % 2), bc = c - (c % 2);
+      for(var i2=br;i2<br+2;i2++){
+        for(var j2=bc;j2<bc+2;j2++){
+          if(g[i2][j2] === val) return false;
+        }
+      }
+      return true;
+    }
+
+    function solve(pos){
+      if(count >= limit) return;
+      if(pos === 16){ count++; return; }
+      var r = Math.floor(pos/4), c = pos % 4;
+      if(g[r][c] !== null){
+        solve(pos+1);
+        return;
+      }
+      for(var v=0; v<4; v++){
+        if(isValid(r,c,v)){
+          g[r][c] = v;
+          solve(pos+1);
+          g[r][c] = null;
+          if(count >= limit) return;
+        }
+      }
+    }
+
+    solve(0);
+    return count;
+  }
+
+  // Livello "alto": partiamo da una soluzione piena e togliamo il più possibile,
+  // mantenendo la soluzione unica. Per 4x4 il minimo teorico per unicità è 4 celle date.
+  function generatePuzzle(){
+    var full = generateFullSolution();
+    var puz = full.map(function(row){ return row.slice(); });
+
+    var cells = [];
+    for(var r=0;r<4;r++) for(var c=0;c<4;c++) cells.push([r,c]);
+    // shuffle order of removal
+    for(var i=cells.length-1;i>0;i--){
+      var j = Math.floor(Math.random()*(i+1));
+      var tmp = cells[i]; cells[i]=cells[j]; cells[j]=tmp;
+    }
+
+    var minGiven = 4; // difficoltà alta: puzzle molto scarno
+    var given = 16;
+
+    for(var k=0;k<cells.length;k++){
+      if(given <= minGiven) break;
+      var r = cells[k][0], c = cells[k][1];
+      if(puz[r][c] === null) continue;
+      var backup = puz[r][c];
+      puz[r][c] = null;
+      var solCount = countSolutions(puz, 2);
+      if(solCount === 1){
+        given--;
+      } else {
+        puz[r][c] = backup; // ripristina se non è più unica
+      }
+    }
+
+    return { solution: full, puzzle: puz };
+  }
+
+  // ---------- Rendering ----------
+
+  function symbolFor(idx){
+    if(idx === null || idx === undefined) return '';
+    return SYMBOL_SETS[currentSet][idx];
+  }
+
+  function buildBoardDOM(){
+    boardEl.innerHTML = '';
+    for(var r=0;r<4;r++){
+      for(var c=0;c<4;c++){
+        var cell = document.createElement('div');
+        cell.className = 'cell';
+        cell.setAttribute('data-r', r);
+        cell.setAttribute('data-c', c);
+        cell.setAttribute('data-row', r % 2);
+        cell.setAttribute('data-col', c % 2);
+        cell.setAttribute('role','gridcell');
+        cell.addEventListener('click', onCellClick);
+        boardEl.appendChild(cell);
+      }
+    }
+  }
+
+  function buildPickerDOM(){
+    pickerEl.innerHTML = '';
+    for(var i=0;i<4;i++){
+      (function(idx){
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = SYMBOL_SETS[currentSet][idx];
+        b.addEventListener('click', function(){ placeSymbol(idx); });
+        pickerEl.appendChild(b);
+      })(i);
+    }
+    var erase = document.createElement('button');
+    erase.type = 'button';
+    erase.className = 'erase';
+    erase.textContent = '⌫';
+    erase.addEventListener('click', function(){ placeSymbol(null); });
+    pickerEl.appendChild(erase);
+  }
+
+  function renderBoard(){
+    var nodes = boardEl.querySelectorAll('.cell');
+    nodes.forEach(function(node){
+      var r = parseInt(node.getAttribute('data-r'),10);
+      var c = parseInt(node.getAttribute('data-c'),10);
+      var val = userGrid[r][c];
+      node.textContent = symbolFor(val);
+      node.classList.remove('error','correct-flash');
+      node.classList.toggle('fixed', fixedMask[r][c]);
+      node.classList.toggle('selected', !!selectedCell && selectedCell.r===r && selectedCell.c===c);
+    });
+    updatePickerLabels();
+  }
+
+  function updatePickerLabels(){
+    var btns = pickerEl.querySelectorAll('button:not(.erase)');
+    btns.forEach(function(b, i){
+      b.textContent = SYMBOL_SETS[currentSet][i];
+    });
+  }
+
+  function setMessage(text, type){
+    messageEl.textContent = text;
+    messageEl.className = 'message ' + (type || 'info');
+  }
+
+  // ---------- Interaction ----------
+
+  function onCellClick(e){
+    var node = e.currentTarget;
+    var r = parseInt(node.getAttribute('data-r'),10);
+    var c = parseInt(node.getAttribute('data-c'),10);
+    if(fixedMask[r][c]) return;
+    selectedCell = { r: r, c: c };
+    renderBoard();
+  }
+
+  function placeSymbol(idx){
+    if(!selectedCell) {
+      setMessage('Tocca prima una casella vuota! 👆', 'info');
+      return;
+    }
+    var r = selectedCell.r, c = selectedCell.c;
+    if(fixedMask[r][c]) return;
+    userGrid[r][c] = idx;
+    setMessage('Trova il posto giusto per ogni simbolo! 🌈', 'info');
+    renderBoard();
+  }
+
+  // ---------- Game actions ----------
+
+  function newGame(){
+    var gen = generatePuzzle();
+    solution = gen.solution;
+    puzzle = gen.puzzle;
+    fixedMask = puzzle.map(function(row){ return row.map(function(v){ return v !== null; }); });
+    userGrid = puzzle.map(function(row){ return row.slice(); });
+    selectedCell = null;
+    setMessage('Nuovo puzzle pronto! Buon divertimento 🎉', 'info');
+    renderBoard();
+  }
+
+  function restartGame(){
+    userGrid = puzzle.map(function(row){ return row.slice(); });
+    selectedCell = null;
+    setMessage('Ricominciamo da capo! 🔄', 'info');
+    renderBoard();
+  }
+
+  function checkGame(){
+    var nodes = boardEl.querySelectorAll('.cell');
+    var allFilled = true;
+    var allCorrect = true;
+
+    nodes.forEach(function(node){
+      var r = parseInt(node.getAttribute('data-r'),10);
+      var c = parseInt(node.getAttribute('data-c'),10);
+      var val = userGrid[r][c];
+      node.classList.remove('error','correct-flash');
+      if(val === null || val === undefined){
+        allFilled = false;
+        return;
+      }
+      if(val !== solution[r][c]){
+        allCorrect = false;
+        if(!fixedMask[r][c]){
+          node.classList.add('error');
+        }
+      }
+    });
+
+    if(!allFilled){
+      setMessage('Mancano ancora delle caselle da riempire! 🧐', 'info');
+      return;
+    }
+
+    if(allCorrect){
+      setMessage('Perfetto! Hai risolto il sudoku! 🎉🏆', 'success');
+      nodes.forEach(function(node){ node.classList.add('correct-flash'); });
+    } else {
+      setMessage('Qualcosa non va, riprova! 💪', 'error');
+    }
+  }
+
+  // ---------- Symbol set switching ----------
+
+  function setSymbolSet(setName){
+    if(currentSet === setName) return;
+    currentSet = setName;
+    document.getElementById('btn-numbers').classList.toggle('active', setName === 'numbers');
+    document.getElementById('btn-letters').classList.toggle('active', setName === 'letters');
+    renderBoard();
+  }
+
+  // ---------- Wire up ----------
+
+  document.getElementById('btn-numbers').addEventListener('click', function(){ setSymbolSet('numbers'); });
+  document.getElementById('btn-letters').addEventListener('click', function(){ setSymbolSet('letters'); });
+  document.getElementById('btn-new').addEventListener('click', newGame);
+  document.getElementById('btn-restart').addEventListener('click', restartGame);
+  document.getElementById('btn-check').addEventListener('click', checkGame);
+
+  buildBoardDOM();
+  buildPickerDOM();
+  newGame();
+
+})();
+</script>
+</body>
+</html>
