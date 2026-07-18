@@ -436,17 +436,15 @@
     </div>
 
     <div id="picker" class="picker" aria-label="Simboli da inserire"></div>
-
+    <footer>
+       Tocca una casella, poi scegli un simbolo qui sopra ✨
+    </footer>
     <div class="controls">
       <button class="btn new" id="btn-new" type="button">🆕 Nuova Partita</button>
       <button class="btn restart" id="btn-restart" type="button">🔄 Ricomincia</button>
       <button class="btn check" id="btn-check" type="button">✅ Controlla</button>
     </div>
-
-    <footer>
-      Tocca una casella, poi scegli un simbolo qui sotto ✨
-      <br><br><a href="https://70plus.github.io/">Home</a>
-    </footer>
+    <br><a href="https://70plus.github.io/">Home</a>
   </div>
 </div>
 
@@ -760,6 +758,21 @@
   newGame();
 
 })();
-</script>
+  </script>
+    <!-- Put this at the end of the <body> tag  -->
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            swetrix.init("WoH0No9arSTq");
+            swetrix.trackViews();
+        });
+   </script>
+   <noscript>
+        <img
+            src="https://api.swetrix.com/log/noscript?pid=WoH0No9arSTq"
+            alt=""
+            referrerpolicy="no-referrer-when-downgrade"
+        />
+   </noscript>
 </body>
 </html>
