@@ -1,36 +1,97 @@
 const DATI_TEST = `
-Geografia
-Gli ambienti della Terra: climi freddi e temperati
+---
+Scienze
+Gli ambienti dei climi freddi
 mono
 alfa
-Quali sono le uniche piante che crescono nei territori coperti di ghiacci perenni?<br><br>a) Faggi e betulle<br>b) Muschi e licheni<br>c) Cespugli con bacche<br>Risposta: §b||B§
-Come sono le temperature nei territori coperti di nevi e ghiacci perenni?<br><br>a) Sempre miti<br>b) Molto alte d'estate<br>c) Quasi sempre sotto lo zero<br>Risposta: §c||C§
-Di che cosa si nutrono i pesci più grandi, come merluzzi e aringhe?<br><br>a) Del krill<br>b) Delle foche<br>c) Dei licheni<br>Risposta: §a||A§
-Come si chiama la massa di ghiaccio, alta fino a tre metri, che si forma quando l'acqua marina vicino alla costa congela?<br><br>a) Iceberg<br>b) Banchisa<br>c) Ghiacciaio<br>Risposta: §b||B§
-Da dove si è staccato un iceberg?<br><br>a) Dalla banchisa<br>b) Dal mare aperto<br>c) Da un ghiacciaio sulla terraferma<br>Risposta: §c||C§
-In quale emisfero si trova l'Antartide?<br><br>a) Australe<br>b) Boreale<br>c) Occidentale<br>Risposta: §a||A§
-Per quanto tempo il terreno della tundra si disgela durante l'estate?<br><br>a) Per molti mesi<br>b) Per poche settimane<br>c) Per un solo giorno<br>Risposta: §b||B§
-Perché nella tundra non crescono alberi?<br><br>a) Perché il terreno è ghiacciato in profondità<br>b) Perché non ci sono muschi<br>c) Perché piove troppo<br>Risposta: §a||A§
-Quale arbusto si incontra qualche volta nella tundra?<br><br>a) Il ginepro<br>b) L'oleandro<br>c) Il mirtillo<br>Risposta: §c||C§
-Quali insetti trovano nella tundra un ambiente ideale durante l'estate?<br><br>a) Zanzare e moscerini<br>b) Api e vespe<br>c) Cavallette e farfalle<br>Risposta: §a||A§
-Quale animale riesce a sfidare l'inverno nella tundra grazie a una spessa pelliccia?<br><br>a) Il cervo<br>b) Il capriolo<br>c) La volpe artica<br>Risposta: §c||C§
-Quali animali lasciano il mare e affollano le coste della tundra per riprodursi?<br><br>a) Le balene<br>b) Le foche e i trichechi<br>c) I merluzzi e le aringhe<br>Risposta: §b||B§
-Con quale nome russo è conosciuta la foresta di conifere?<br><br>a) Taiga<br>b) Steppa<br>c) Tundra<br>Risposta: §a||A§
-In quale Paese si estende la foresta più vasta del mondo?<br><br>a) In Africa<br>b) In Italia<br>c) In Russia<br>Risposta: §c||C§
-Come sono le estati nella taiga?<br><br>a) Lunghe e calde<br>b) Brevi e fresche<br>c) Lunghe e rigide<br>Risposta: §b||B§
-Quanto possono essere alti gli alberi della taiga?<br><br>a) Fino a 20 metri<br>b) Fino a 60 metri<br>c) Fino a 100 metri<br>Risposta: §b||B§
-Che cosa cresce nella taiga dove riescono a penetrare i raggi del Sole?<br><br>a) Cespugli con bacche e piccoli frutti<br>b) Muschi e licheni<br>c) Alberi di faggio<br>Risposta: §a||A§
-Quale di questi animali della taiga è un erbivoro?<br><br>a) Il lupo<br>b) La lince<br>c) L'alce<br>Risposta: §c||C§
-Qual è l'altro nome della foresta temperata?<br><br>a) Foresta di conifere<br>b) Foresta di latifoglie<br>c) Macchia mediterranea<br>Risposta: §b||B§
-Che cosa fanno le foglie di faggi, betulle e querce in autunno?<br><br>a) Cadono<br>b) Diventano aromatiche<br>c) Restano sempre verdi<br>Risposta: §a||A§
-Che cosa nutre il terreno e permette lo sviluppo del sottobosco?<br><br>a) Il ghiaccio<br>b) La neve<br>c) Il fogliame<br>Risposta: §c||C§
-Quale di questi predatori è in aumento nella foresta temperata?<br><br>a) Il lupo<br>b) Il cervo<br>c) Il capriolo<br>Risposta: §a||A§
-Quale animale della foresta è un roditore molto comune?<br><br>a) Il cervo<br>b) Lo scoiattolo<br>c) L'orso<br>Risposta: §b||B§
-Dove si trova la prateria?<br><br>a) Lungo le coste del mare<br>b) Vicino ai poli<br>c) Nelle zone più interne dei continenti<br>Risposta: §c||C§
-Quanto può diventare alta l'erba della prateria dopo le piogge?<br><br>a) Fino a mezzo metro<br>b) Fino a due metri<br>c) Fino a dieci metri<br>Risposta: §b||B§
-Come si chiama l'ambiente che prende il posto della prateria nelle zone ancora più aride?<br><br>a) Taiga<br>b) Tundra<br>c) Steppa<br>Risposta: §c||C§
-Perché le graminacee resistono bene alla mancanza di acqua?<br><br>a) Hanno radici molto lunghe e ramificate<br>b) Hanno foglie perenni<br>c) Hanno spesse pellicce<br>Risposta: §a||A§
-Quale di queste è una pianta aromatica della macchia mediterranea?<br><br>a) Il ginepro<br>b) L'oleandro<br>c) Il rosmarino<br>Risposta: §c||C§
-Quale ambiente ha sostituito i pini marittimi e i cedri dopo secoli di disboscamenti?<br><br>a) La macchia mediterranea<br>b) La taiga<br>c) La steppa<br>Risposta: §a||A§
-Perché le foglie della macchia mediterranea sono perenni?<br><br>a) Perché c'è molta neve<br>b) Perché non devono difendersi dal freddo<br>c) Perché vivono nella taiga<br>Risposta: §b||B§
+Le terre coperte di nevi e ghiacci perenni si trovano oltre il Circolo Polare Artico e in:<br>a) Africa<br>b) Antartide<br>c) Australia<br>Risposta: §b||B||Antartide§
+Nei territori dei ghiacci le temperature restano quasi sempre:<br>a) sotto lo zero<br>b) molto alte<br>c) sopra i dieci gradi<br>Risposta: §a||A||sotto lo zero§
+Nei territori dei ghiacci crescono solo:<br>a) alberi e arbusti<br>b) muschi e licheni<br>c) fiori e cespugli<br>Risposta: §b||B||muschi e licheni§
+Il krill è formato da piccolissimi pesci e:<br>a) uccelli<br>b) balene<br>c) crostacei<br>Risposta: §c||C||crostacei§
+I merluzzi e le aringhe sono pesci grandi che mangiano:<br>a) il krill<br>b) i muschi<br>c) gli orsi polari<br>Risposta: §a||A||il krill||krill§
+Il ghiaccio formato dall'acqua marina vicino alla costa si chiama:<br>a) iceberg<br>b) banchisa<br>c) tundra<br>Risposta: §b||B||banchisa||la banchisa§
+La banchisa è formata da masse di ghiaccio alte fino a:<br>a) tre metri<br>b) venti metri<br>c) sessanta metri<br>Risposta: §a||A||tre metri||3 metri§
+Gli iceberg sono enormi masse galleggianti di ghiaccio formato da:<br>a) acqua marina<br>b) acqua dolce<br>c) neve salata<br>Risposta: §b||B||acqua dolce§
+Gli iceberg si sono staccati dai:<br>a) ghiacciai<br>b) boschi<br>c) laghi<br>Risposta: §a||A||ghiacciai||dai ghiacciai§
+La tundra comincia dove finiscono:<br>a) i boschi<br>b) i ghiacci<br>c) i mari<br>Risposta: §b||B||i ghiacci||ghiacci§
+Nella tundra il terreno si disgela per poche settimane durante:<br>a) l'inverno<br>b) la primavera<br>c) l'estate<br>Risposta: §c||C||l'estate||estate||lestate§
+Nella tundra non crescono alberi perché il terreno è ghiacciato:<br>a) in profondità<br>b) in superficie<br>c) solo di notte<br>Risposta: §a||A||in profondità||in profondita||profondità§
+Gli alberi non crescono nella tundra perché non si sviluppano:<br>a) foglie larghe<br>b) radici profonde<br>c) fiori colorati<br>Risposta: §b||B||radici profonde§
+Un arbusto che si trova nella tundra è:<br>a) il mirtillo<br>b) il castagno<br>c) l'abete<br>Risposta: §a||A||il mirtillo||mirtillo§
+D'inverno nella tundra resistono i carnivori con spesse:<br>a) piume<br>b) squame<br>c) pellicce<br>Risposta: §c||C||pellicce||le pellicce§
+Un animale della tundra che resiste all'inverno è:<br>a) la volpe artica<br>b) la renna<br>c) il bue muschiato<br>Risposta: §a||A||la volpe artica||volpe artica§
+Nella breve estate della tundra arrivano molti:<br>a) pesci d'acqua dolce<br>b) uccelli migratori<br>c) serpenti<br>Risposta: §b||B||uccelli migratori§
+La foresta di conifere è conosciuta con il nome russo di:<br>a) tundra<br>b) banchisa<br>c) taiga<br>Risposta: §c||C||taiga||la taiga§
+Nella taiga gli inverni sono lunghi e rigidi e le estati sono:<br>a) brevi e fresche<br>b) lunghe e calde<br>c) asciutte e afose<br>Risposta: §a||A||brevi e fresche§
+Tra i predatori della taiga c'è l'imponente:<br>a) tigre siberiana<br>b) alce<br>c) castoro<br>Risposta: §a||A||tigre siberiana||la tigre siberiana§
+---
+Geografia
+Gli ambienti dei climi temperati
+mono
+alfa
+La foresta temperata è chiamata anche foresta di §latifoglie||latifoglia§.
+Gli alberi della foresta temperata perdono le foglie in §autunno§ e per questo si definiscono a foglie §caduche||caduca§.
+Il cervo e il capriolo vivono nella foresta temperata. §Vero||V||si||s§
+Le §querce||le querce§, a differenza di faggi e betulle, preferiscono temperature più miti.
+Il §fogliame||il fogliame§ nutre il terreno e permette lo sviluppo di un ricco §sottobosco||il sottobosco§ formato da erbe, arbusti e §funghi||i funghi§.
+La prateria è un ambiente caratteristico delle zone più §interne§ dei continenti.
+Nella prateria non arriva l'umidità del §mare||il mare§, perciò non crescono molti §alberi||gli alberi§.
+La lepre è un roditore che vive nella prateria. §Vero||V||si||s§
+Con l'arrivo delle piogge la prateria si ricopre d'erba alta fino a §due metri||2 metri||2 m||2m§.
+La foresta temperata è abitata da grandi §erbivori§, come il cervo, e da animali più piccoli come i roditori e gli §uccelli§.
+Nelle zone ancora più aride la prateria lascia il posto alla §steppa||la steppa§.
+Gli alberi della foresta temperata sono sempreverdi. §Falso||F||no||n§
+Intorno al Mar Mediterraneo, nelle zone §costiere§, un tempo erano diffusi molti alberi §sempreverdi||sempreverde§.
+Le §graminacee§ resistono alla mancanza d'acqua grazie alle loro radici molto §lunghe e ramificate||lunghe||ramificate§.
+Il pino marittimo e il §cedro§ erano alberi molto diffusi un tempo lungo le coste.
+Volpe, lince, lupo e orso sono §predatori||i predatori§ in aumento nella foresta temperata.
+Il lupo è un roditore che vive nella prateria. §Falso||F||no||n§
+Dopo secoli di §diboscamenti||diboscamento||il diboscamento§, questi alberi sono rimasti in poche aree e in molte zone sono stati sostituiti dalla macchia mediterranea.
+Alberi e arbusti crescono solo nelle zone §innevate§ d'inverno, e perciò più §umide§.
+Prima dello sviluppo dell'§agricoltura§ la foresta temperata occupava buona parte dei continenti, ma oggi è §ridotta||ridotto||limitata||limitato§ a estensioni più §piccole||più piccole§.
+La macchia mediterranea è formata da §arbusti§ come il ginepro e il mirto, alternati a §piante aromatiche||le piante aromatiche§ come il rosmarino e la lavanda.
+In estate la prateria è abbastanza arida. §Vero||V||si||s§
+Cavallette, coleotteri e farfalle sono §insetti||gli insetti§ che vivono nascosti tra l'erba.
+Nella macchia le foglie sono §perenni||perenne§ perché le piante non devono difendersi dal §freddo||il freddo§.
+Lo scoiattolo vive sugli alberi, dove costruisce la sua §tana||la tana§.
+Le piante della macchia mediterranea perdono le foglie in inverno. §Falso||F||no||n§
+Lucertole, serpenti e tartarughe sono §rettili||i rettili§ che trovano riparo nella macchia.
+La macchia mediterranea cresce lungo le coste dell'Oceano Atlantico. §Falso||F||no||n§
+Il cinghiale è attivo soprattutto nelle ore §crepuscolari||crepuscolare§ e notturne e vive anche in zone §boscose||boscosa§ alternate a prati o pascoli.
+Le lucertole e le tartarughe trovano riparo nella macchia mediterranea. §Vero||V||si||s§
+---
+Geografia
+Gli ambienti dei climi caldi
+mono
+alfa
+I deserti sono le aree più §aride||arida§ della Terra.
+Il §Sahara§ è il deserto più vasto del Pianeta e si trova nel nord dell’§Africa||africano||continente africano§.
+I deserti caldi si trovano in corrispondenza dei due Tropici. §Vero||V||si||s§
+La sabbia spostata dal vento forma degli accumuli chiamati §dune||duna§.
+I deserti §freddi||freddo§ si trovano nelle zone interne dei continenti, dove non arriva l’umidità del §mare§.
+Solo dove affiora l’acqua del sottosuolo nascono le §oasi||le oasi§.
+Il fennec vive nell’America settentrionale. §Falso||F||no||n§
+Il fennec è la volpe del §deserto§ e ha orecchie lunghe che servono a disperdere il §calore§.
+Nei deserti, per la mancanza di §piogge||pioggia||le piogge§, cresce pochissima §vegetazione||la vegetazione§.
+Nel deserto vivono molti rettili e anche mammiferi, come la gazzella e il coyote. §Vero||V||si||s§
+La savana è un ambiente di §pianura§ che si estende principalmente fra i due Tropici e l’§Equatore§.
+La stagione §secca§ della savana è molto arida.
+Nella savana si alternano tre stagioni con una diversa piovosità. §Falso||F||no||n§
+Nella stagione §umida||delle piogge||stagione umida||stagione delle piogge§ la savana diventa una grande distesa d’§erba||l’erba§.
+Nella savana compaiono alberi isolati, come le acacie e i grandi §baobab§.
+Antilopi, zebre e giraffe vivono in §branchi||branco§ e si spostano a seconda delle §stagioni||stagione§ alla ricerca di cibo e acqua.
+Gli avvoltoi si nutrono di ciò che resta degli animali cacciati dai leoni. §Vero||V||si||s§
+I §predatori||predatore§, come leoni e ghepardi, seguono gli erbivori nei loro spostamenti per catturarli.
+Nella savana §australiana§ vivono varie specie di §canguri||canguro§.
+Il leone oggi sopravvive soprattutto nelle savane asiatiche. §Falso||F||no||n§
+La foresta equatoriale è chiamata anche foresta §pluviale§ perché è l’ambiente più §piovoso||più piovoso§.
+Il Rio delle §Amazzoni||amazzoni§ scorre in America §meridionale||del sud||sud§.
+Il §Congo||fiume Congo§ è un fiume lungo e ricco di acque che scorre nella foresta equatoriale.
+Il serpente e l’iguana sono uccelli della foresta equatoriale. §Falso||F||no||n§
+Il clima equatoriale ha abbondanti §precipitazioni||piogge||precipitazione§ e temperature §alte||elevate§ tutto l’anno.
+La vegetazione della foresta equatoriale è molto fitta e §sempreverde||sempreverdi§.
+Nella foresta equatoriale gli §alberi altissimi||alberi||alberi alti§ catturano i raggi del §Sole||sole§.
+Nella foresta equatoriale vivono milioni di insetti, come diverse specie di farfalle. §Vero||V||si||s§
+Nella foresta equatoriale gli arbusti riescono a crescere nelle zone d’§ombra§.
+Nella foresta equatoriale vivono mammiferi come diversi tipi di §scimmie||scimmia§, giaguari e leopardi.
 `;
