@@ -1,3 +1,21 @@
+/* 
+  Struttura dei test:
+     separatore ([---])
+     argomento (es.: Italiano)
+     titolo del test (es.: Scrivi il nome degli oggetti!)
+     modalità di esecuzione ([mono | bi])
+     	mono: la domanda ha dei campi in cui digitare la risposta
+     	bi: con probabilità 50-50 la domanda viene proposta:
+     	    come nel caso mono, con chiave da riempire, oppure
+     	    viene mostrato la chiave, che va esposta a voce
+     tipo di input ([alfa | num])
+     lista di domande
+Nei test a risposta, una lista racchiusa tra due caratteri §, con "||" come separatore,
+definisce le risposte accettate. Es.:
+     Il cielo oggi §è§ azzurro §e§ sereno.
+     La gallina è un quadrupede. §Falso || F || no || n§
+La risposta non è case sensitive e gli spazi contenuti non vengono considerati.
+*/
 const DATI_TEST = `
 ---
 Geografia
@@ -129,4 +147,74 @@ I Sumeri trasportavano le merci con le barche, su canali e fiumi. §Vero||V||si|
 I mercanti viaggiavano con i carri lungo le §piste carovaniere||piste||le piste carovaniere§.
 I mercanti erano difesi dai banditi grazie ai §soldati||i soldati§ che scortavano i carri.
 I Sumeri erano soprattutto cacciatori e pescatori. §Falso||F||no||n§
+---
+Italiano
+Inserisci <b><em>a</em></b>, oppure <b><em>ha</em><b>
+mono
+alfa
+Vado §a§ casa.
+Mi aiuti §a§ sollevare questa scatola?
+La mamma §ha§ acceso il tv.
+La nonna §ha§ i capelli ricci.
+Mando un saluto §a§ tutti.
+Il nonno §ha§ rotto.
+Il topo §ha§ fatto ritorno §a§ casa.
+Il gatto §ha§ mangiato tutto.
+Marco va §a§ scuola a piedi.
+La mamma §ha§ una borsa nera.
+Ho regalato un disegno §a§ mia nonna.
+Sofia §ha§ mal di pancia.
+Luca §ha§ visto un bel film.
+Vado §a§ giocare nel parco.
+Il cane §ha§ paura del temporale.
+Scrivi §a§ matita, per favore.
+Sara §ha§ guardato un film §a§ casa.
+---   
+Italiano
+Inserisci <b><em>e</em></b>, oppure <b><em>è</em><b>
+mono
+alfa
+Il cane §è§ marrone §e§ mangia un osso.
+La mamma §è§ andata al supermercato §e§ ha comprato la frutta.
+Il libro §è§ sul tavolo §e§ parla di pirati.
+La prugna §è§ un frutto dolce §e§ cresce sull'albero.
+Il cielo oggi §è§ azzurro §e§ sereno.
+La mia amica §è§ molto simpatica.
+Ho comprato quaderni §e§ matite.
+Il sole §è§ caldo §e§ luminoso.
+Il gatto §è§ sul tetto.
+Il cane §e§ il gatto giocano.
+La penna §è§ rossa §e§ blu.
+---
+Inglese
+Presente del verbo <em>to be</em>
+mono
+alfa
+I §am§ a child.
+§Is§ she your sister? — Yes, she is.
+We §are§ at school.
+The flowers §are§ yellow.
+He §isn't§ tall, he is short.
+§Are§ you tired? — No, I §am not§.
+The sky §is§ blue.
+My cat §is§ small and it §is§ white.
+They aren't bad, they §are§ good!
+She §is§ my mum.
+The cat §is§ black.
+We §are§ at home.
+He isn't sad, he §is§ happy.
+Are you hungry? — Yes, I §am§.
+The dog §is§ big.
+They §are§ my friends.
+My teacher §is§ nice.
+They §are§ at school today.
+My name §is§ Luna and I §am§ from Italy.
+§Are§ you a student? Yes! §I am§.
+She §is§ happy.
+§Is§ it cold outside? — Yes, it §is§.
+§Is§ it monday? — No, it §is§ tuesday.
+I §am§ a teacher.
+Are they from Spain? — No, they §aren't§.
+The cats §are§ in the garden, but the dog is not there.
+Is this your bag? — Yes, it §is§ mine.
 `;

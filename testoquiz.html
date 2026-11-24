@@ -74,7 +74,7 @@
             color: #333;
         }
 
-        .testo {
+        .domanda {
             font-size: 18px;
             background: white;
             padding: 20px;
@@ -139,15 +139,6 @@
             color: white;
             text-align: center;
             border-color: #dc3545;
-        }
-        .neutro {
-            background-color: #fd7e14 !important;
-            color: white;
-            text-align: center;
-            border-color: #fd7e14;
-        }
-        .neutro span {
-            font-weight: bold;
         }
         .corretto span {
             font-weight: bold;
@@ -218,10 +209,11 @@
 
     <label for="menuTesti">Seleziona il test: </label>
     <select id="menuTesti"></select>
-    <div id="contenitore-testo"></div>
+    <div id="contenitore-domanda"></div>
     <button onclick="verifica()">Verifica Risposte</button>
-    <button id="nuovotesto" onclick="generaTesto()">Nuovo Testo</button>
+    <button id="nuovadomanda" onclick="generaDomanda()">Nuova Domanda</button>
     <button id="fineBtn" onclick="fineTest()">Fine</button>
+    <button id="ripassaBtn" onclick="ripassa()">Ripassa</button>
     <div id="risultatiFinali"></div>
     <br><br>
     <p>Per caricare test locali clicca <a href="testoquiz.html?source=local">qui</a>,
@@ -249,14 +241,15 @@
            VARIABILI
         ============================================================ */
 
-        const VERSIONE = "Versione 5.2 del 29 marzo 2026";
+        const VERSIONE = "Versione 6.0 del 24 novembre 2026";
 	const nomePagina = "Ripassi Lunari"
         const pVer        = document.getElementById("verInfo");
         const menu        = document.getElementById("menuTesti");
         const risultati   = document.getElementById('risultatiFinali');
-        const nuovoTesto  = document.getElementById('nuovotesto');
-        const contenitore = document.getElementById('contenitore-testo');
+        const nuovaDomanda  = document.getElementById('nuovadomanda');
+        const contenitore = document.getElementById('contenitore-domanda');
         const fineBtn     = document.getElementById('fineBtn');
+        const ripassaBtn  = document.getElementById('ripassaBtn');
         const verificaBtn = document.querySelector('button[onclick="verifica()"]');
 
         const params = new URLSearchParams(location.search);
@@ -276,6 +269,8 @@
         let numErrori        = 0;
         let numViste         = 0;
         let ultimoIndice;
+        let ripasso          = false;   // true quando è attiva la modalità "Ripassa"
+        let indiceRipasso    = 0;       // indice della domanda mostrata in modalità "Ripassa"
 
         pVer.innerHTML = VERSIONE;
 
@@ -302,7 +297,11 @@
             testSelezionato = listaTest[indice];
             modo    = testSelezionato[2];
             tipoKbd = testSelezionato[3];
-            ricomincia();
+            if (ripasso) {
+                ripassa();
+            } else {
+                ricomincia();
+            }
         });
 
 
@@ -348,11 +347,15 @@
 
         function ricomincia() {
             verificaBtn.disabled = false;
-            document.getElementById('contenitore-testo').innerHTML = '';
+            document.getElementById('contenitore-domanda').innerHTML = '';
             testAttivo = true;
             fineBtn.textContent = 'Fine';
             fineBtn.onclick     = fineTest;
-            nuovoTesto.disabled = false;
+            nuovaDomanda.disabled = false;
+            nuovaDomanda.textContent = 'Nuova Domanda';
+            nuovaDomanda.onclick     = generaDomanda;
+            ripassaBtn.disabled      = false;
+            ripasso                  = false;
             risultati.innerHTML    = '';
             risultati.style.display = 'none';
             numCorrette  = 0;
@@ -373,7 +376,7 @@
                 };
             });
 
-            generaTesto();
+            generaDomanda();
         }
 
         function verifica() {
@@ -397,9 +400,7 @@
 
 			const spanRisposta = document.createElement('span');
 			spanRisposta.textContent = valori[0]; // sempre il primo valore originale
-			if (modo === "show") {
-			    el.classList.add('neutro');
-			} else if (match) {
+			if (match) {
 			    el.classList.add('corretto');
 			} else {
 			    el.classList.add('sbagliato');
@@ -427,7 +428,7 @@
                     break;
                 }
                 case 'mostra': {
-                    let html  = '<div class="testo">';
+                    let html  = '<div class="domanda">';
                     html     += fraseCasuale;
                     html     += '</div>';
                     contenitore.innerHTML = formatBold(html);
@@ -439,6 +440,52 @@
             }
         }
 
+        // Modalità "Ripassa": le domande del test selezionato in sequenza, senza verifica né statistiche
+        function ripassa() {
+            frasi = testSelezionato[4];
+            if (frasi.length === 0) return;
+
+            // Abort del test in corso: i dati raccolti vengono cancellati
+            numCorrette      = 0;
+            numErrori        = 0;
+            numViste         = 0;
+            ultimoIndice     = null;
+            statisticheFrasi = [];
+
+            ripasso       = true;
+            testAttivo    = false;
+            indiceRipasso = 0;
+
+            verificaBtn.disabled     = true;
+            nuovaDomanda.textContent = 'Avanti';
+            nuovaDomanda.disabled    = false;
+            nuovaDomanda.onclick     = avanti;
+            fineBtn.textContent      = 'Fine';
+            fineBtn.onclick          = fineRipasso;
+            ripassaBtn.disabled      = true;
+            risultati.innerHTML      = '';
+            risultati.style.display  = 'none';
+            document.getElementById("titolo").innerHTML = `${nomePagina}: ${testSelezionato[1]}`;
+
+            mostraRipasso();
+        }
+
+        function mostraRipasso() {
+            contenitore.innerHTML = '<div class="domanda">'
+                + formatBold(primoValore(frasi[indiceRipasso]))
+                + '</div>';
+        }
+
+        function avanti() {
+            indiceRipasso = (indiceRipasso + 1) % frasi.length;
+            mostraRipasso();
+        }
+
+        // Uscita da "Ripassa": nessuna statistica, si torna a un test nuovo
+        function fineRipasso() {
+            ricomincia();
+        }
+
         // Funzione Fine / Inizio
         function fineTest() {
             if (testAttivo) {
@@ -446,7 +493,7 @@
                 testAttivo = false;
                 fineBtn.textContent      = 'Inizio';
                 verificaBtn.disabled     = true;
-                nuovoTesto.disabled      = true;
+                nuovaDomanda.disabled      = true;
                 fineBtn.onclick          = fineTest;
                 risultati.style.display  = 'block';
 
@@ -460,30 +507,26 @@
                     if (statisticheFrasi[index].peso > 1) {
                         frasiDifficili.push({
                             indice: index,
-                            testo:  frasi[index],
+                            domanda:  frasi[index],
                             peso:   (statisticheFrasi[index].peso.toFixed(1) - 1) / 2
                         });
                     }
                 }
 
-                // 16mar26: inserimento modalità "show"
                 let messaggio = `Risposte corrette: ${numCorrette}, risposte errate: ${numErrori}`;
                 if (modo === 'bi') {
                     messaggio += `, visualizzate: ${numViste}`;
-                }
-                if (modo === 'show') {
-                    messaggio = `Test proposti: ${numCorrette}.`;
                 }
                 messaggio += `<br>`;
 
                 if (frasiDifficili.length > 0) {
                     messaggio += 'Hai difficoltà con queste frasi:<br><ul>';
                     frasiDifficili.forEach(f => {
-                        messaggio += `<li>${formatBold(primoValore(f.testo))} (peso ${f.peso})</li>`;
+                        messaggio += `<li>${formatBold(primoValore(f.domanda))} (peso ${f.peso})</li>`;
                     });
                     messaggio += '</ul>';
                 } else {
-                    if (numCorrette > 0 && modo != 'show') {
+                    if (numCorrette > 0) {
                         messaggio += 'Tutte le risposte sono corrette!';
                     }
                 }
@@ -495,17 +538,16 @@
             }
         }
 
-        function primoValore(testo) {
-            return testo.replace(/§([^§]*)§/g, (_, gruppo) => {
+        function primoValore(domanda) {
+            return domanda.replace(/§([^§]*)§/g, (_, gruppo) => {
             	const primo = gruppo.split('||')[0].trim();
             	return `§${primo}§`;
     	    });
 	}
 
-        function generaTesto() {
+        function generaDomanda() {
             verificaBtn.disabled   = false;
-            // 16mar26: inserimento modalità "show"
-            verificaBtn.textContent = (modo === 'show') ? 'Scopri' : 'Verifica Risposte';
+            verificaBtn.textContent = 'Verifica Risposte';
             tipoRisposta = 'verifica';
 
             // --- Selezione frase ponderata senza ripetizione consecutiva ---
@@ -542,11 +584,11 @@
             contenitore.replaceChildren();
 
             const div = document.createElement("div");
-            div.className = "testo";
+            div.className = "domanda";
 
             // Determina modalità reale
             const usaMono = (
-                modo === 'mono' || modo === 'show' ||
+                modo === 'mono' ||
                 (modo === 'bi' && Math.random() > 0.5)
             );
 
@@ -569,17 +611,7 @@
                         input.setAttribute("data-form-type", "other");
                         input.setAttribute("data-lpignore",  "true");
 
-                        // 16mar26: inserimento modalità "show"
-                        if (modo === "show") {
-                            input.type      = "password";
-                            input.setAttribute("inputmode", "none");
-                            input.readOnly  = true;
-                            input.style.caretColor = "transparent";
-                            input.placeholder      = "scopri";
-                            input.style.fontStyle  = "italic";
-                            input.addEventListener("keydown", e => e.preventDefault());
-                            input.addEventListener("paste",   e => e.preventDefault());
-                        } else if (tipoKbd === "num") {
+                        if (tipoKbd === "num") {
                             input.type = "tel";
                             input.setAttribute("inputmode", "numeric");
                             input.setAttribute("pattern",   "[0-9]*");
