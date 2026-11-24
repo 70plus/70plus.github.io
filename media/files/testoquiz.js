@@ -94,4 +94,39 @@ Nella foresta equatoriale gli §alberi altissimi||alberi||alberi alti§ catturan
 Nella foresta equatoriale vivono milioni di insetti, come diverse specie di farfalle. §Vero||V||si||s§
 Nella foresta equatoriale gli arbusti riescono a crescere nelle zone d’§ombra§.
 Nella foresta equatoriale vivono mammiferi come diversi tipi di §scimmie||scimmia§, giaguari e leopardi.
+---
+Storia
+I sumeri
+mono
+alfa
+Tra il §4000||4000 a.C.§ e il §3500||3500 a.C.§ a.C. i Sumeri occuparono la zona a sud della Mesopotamia.
+Prima di stabilirsi in quella zona, i Sumeri erano un popolo §nomade||nomadi||di nomadi§.
+Il nome Sumer significa &laquo;terra §coltivata||coltivato§&raquo;.
+I due grandi fiumi della Mesopotamia sono il §Tigri||il Tigri§ e l'Eufrate.
+Le acque dei fiumi e la fertilit&agrave; del terreno permisero un'agricoltura fiorente. §Vero||V||si||s§
+Dopo le piene, i fiumi lasciavano sul terreno il §limo||il limo§, che permetteva raccolti §abbondanti||abbondante||ricchi§.
+Quando le acque uscivano dagli argini naturali, allagavano il terreno e formavano §paludi||le paludi||palude§.
+I Sumeri difesero le coltivazioni dalle piene con argini di legno lungo le sponde dei fiumi. §Falso||F||no||n§
+I Sumeri iniziarono quindi a §bonificare||bonificare il terreno§ il terreno.
+Le §chiuse||chiusa||le chiuse§ servivano per irrigare i campi.
+I Sumeri costruirono canali per regolare lo scorrere delle acque. §Vero||V||si||s§
+I Sumeri raccolsero l'acqua in §vasche||le vasche||vasca§ per usarla nei periodi di §siccit&agrave;||siccita||la siccit&agrave;||la siccita§.
+I Sumeri coltivavano §cereali||i cereali||cereale§, ortaggi, legumi e alberi da frutta.
+Tra gli alberi da frutta, i Sumeri coltivavano soprattutto mele, pere e ciliegie. §Falso||F||no||n§
+Dal lino e dalla canapa i Sumeri ricavavano i §filati||filato§ per fare §corde||corda§ e tessuti.
+L'§allevamento||allevamenti§ era molto praticato: le capre e i buoi fornivano latte, carne e §lana||la lana§.
+I Sumeri erano abili §artigiani||artigiano||gli artigiani§.
+Lavoravano l'§argilla||argilla§, di cui era ricco il territorio, per fare ceramiche e §mattoni||i mattoni||mattone§.
+I Sumeri realizzavano magnifici gioielli con pietre preziose. §Vero||V||si||s§
+Con la pelle i Sumeri realizzavano abiti e §bisacce||bisaccia||le bisacce§.
+La Mesopotamia era povera di §legno||il legno§ e metalli.
+I Sumeri realizzavano carri, aratri e attrezzi da lavoro, soprattutto asce e §scalpelli||scalpello||gli scalpelli§.
+Intorno al 2000 a.C. molte citt&agrave; sumere furono conquistate dagli Egizi. §Falso||F||no||n§
+Quando i prodotti superavano il bisogno immediato delle persone, erano in §eccesso||in eccesso§.
+I prodotti in pi&ugrave; venivano conservati nei §granai||i granai||granaio§ oppure §scambiati||scambiato§ con altri prodotti.
+Il commercio veniva praticato attraverso il §baratto||il baratto§, cio&egrave; lo scambio di un prodotto con un altro senza usare §monete||le monete||moneta§.
+I Sumeri trasportavano le merci con le barche, su canali e fiumi. §Vero||V||si||s§
+I mercanti viaggiavano con i carri lungo le §piste carovaniere||piste||le piste carovaniere§.
+I mercanti erano difesi dai banditi grazie ai §soldati||i soldati§ che scortavano i carri.
+I Sumeri erano soprattutto cacciatori e pescatori. §Falso||F||no||n§
 `;
