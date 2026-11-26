@@ -19,29 +19,39 @@ La risposta non è case sensitive e gli spazi contenuti non vengono considerati.
 const DATI_TEST = `
 ---
 Geografia
-Gli ambienti dei climi freddi
+gli ambienti dei climi freddi
 mono
 alfa
-Le terre coperte di nevi e ghiacci perenni si trovano oltre il Circolo Polare Artico e in:<br>a) Africa<br>b) Antartide<br>c) Australia<br>Risposta: §b||B||Antartide§
-Nei territori dei ghiacci le temperature restano quasi sempre:<br>a) sotto lo zero<br>b) molto alte<br>c) sopra i dieci gradi<br>Risposta: §a||A||sotto lo zero§
-Nei territori dei ghiacci crescono solo:<br>a) alberi e arbusti<br>b) muschi e licheni<br>c) fiori e cespugli<br>Risposta: §b||B||muschi e licheni§
-Il krill è formato da piccolissimi pesci e:<br>a) uccelli<br>b) balene<br>c) crostacei<br>Risposta: §c||C||crostacei§
-I merluzzi e le aringhe sono pesci grandi che mangiano:<br>a) il krill<br>b) i muschi<br>c) gli orsi polari<br>Risposta: §a||A||il krill||krill§
-Il ghiaccio formato dall'acqua marina vicino alla costa si chiama:<br>a) iceberg<br>b) banchisa<br>c) tundra<br>Risposta: §b||B||banchisa||la banchisa§
-La banchisa è formata da masse di ghiaccio alte fino a:<br>a) tre metri<br>b) venti metri<br>c) sessanta metri<br>Risposta: §a||A||tre metri||3 metri§
-Gli iceberg sono enormi masse galleggianti di ghiaccio formato da:<br>a) acqua marina<br>b) acqua dolce<br>c) neve salata<br>Risposta: §b||B||acqua dolce§
-Gli iceberg si sono staccati dai:<br>a) ghiacciai<br>b) boschi<br>c) laghi<br>Risposta: §a||A||ghiacciai||dai ghiacciai§
-La tundra comincia dove finiscono:<br>a) i boschi<br>b) i ghiacci<br>c) i mari<br>Risposta: §b||B||i ghiacci||ghiacci§
-Nella tundra il terreno si disgela per poche settimane durante:<br>a) l'inverno<br>b) la primavera<br>c) l'estate<br>Risposta: §c||C||l'estate||estate||lestate§
-Nella tundra non crescono alberi perché il terreno è ghiacciato:<br>a) in profondità<br>b) in superficie<br>c) solo di notte<br>Risposta: §a||A||in profondità||in profondita||profondità§
-Gli alberi non crescono nella tundra perché non si sviluppano:<br>a) foglie larghe<br>b) radici profonde<br>c) fiori colorati<br>Risposta: §b||B||radici profonde§
-Un arbusto che si trova nella tundra è:<br>a) il mirtillo<br>b) il castagno<br>c) l'abete<br>Risposta: §a||A||il mirtillo||mirtillo§
-D'inverno nella tundra resistono i carnivori con spesse:<br>a) piume<br>b) squame<br>c) pellicce<br>Risposta: §c||C||pellicce||le pellicce§
-Un animale della tundra che resiste all'inverno è:<br>a) la volpe artica<br>b) la renna<br>c) il bue muschiato<br>Risposta: §a||A||la volpe artica||volpe artica§
-Nella breve estate della tundra arrivano molti:<br>a) pesci d'acqua dolce<br>b) uccelli migratori<br>c) serpenti<br>Risposta: §b||B||uccelli migratori§
-La foresta di conifere è conosciuta con il nome russo di:<br>a) tundra<br>b) banchisa<br>c) taiga<br>Risposta: §c||C||taiga||la taiga§
-Nella taiga gli inverni sono lunghi e rigidi e le estati sono:<br>a) brevi e fresche<br>b) lunghe e calde<br>c) asciutte e afose<br>Risposta: §a||A||brevi e fresche§
-Tra i predatori della taiga c'è l'imponente:<br>a) tigre siberiana<br>b) alce<br>c) castoro<br>Risposta: §a||A||tigre siberiana||la tigre siberiana§
+Nei territori ricoperti di nevi e ghiacci §perenni||perenne§ le temperature sono molto basse.
+I merluzzi e le aringhe sono pesci grandi che mangiano il krill. §Vero||V||si||s§
+I ghiacci si estendono oltre il Circolo Polare Artico, nell'emisfero §boreale§, e in Antartide, nell'emisfero §australe§.
+Le temperature dei territori ricoperti di ghiacci perenni restano quasi sempre sopra lo zero. §Falso||F||no||n§
+I cormorani e i gabbiani sono §uccelli marini||uccello marino||uccelli§ che mangiano pesci grandi.
+Tra i cetacei dei mari freddi ci sono molte specie di §balene||balena§.
+L'acqua del mare vicino alla costa congela e forma la §banchisa§, una massa di ghiaccio alta fino a §tre metri||3 metri||3 m§.
+Gli iceberg sono enormi masse galleggianti di ghiaccio formato da acqua §dolce§, staccate dai §ghiacciai||ghiacciaio§.
+Sui ghiacci perenni crescono solo muschi e licheni. §Vero||V||si||s§
+Dove finiscono i ghiacci comincia la §tundra§, che si trova nelle regioni §settentrionali||settentrionale||del nord§ di America, Europa e Asia.
+Nella tundra il terreno si disgela solo per poche §settimane||settimana§ durante l'estate.
+Anche dopo il disgelo estivo, il terreno della tundra resta §ghiacciato in profondit&agrave;||ghiacciato in profondita||ghiacciato§.
+Nella tundra non crescono §alberi||albero§ perch&eacute; non si sviluppano §radici profonde||radici§.
+Tra i pochi arbusti della tundra c'&egrave; il §mirtillo§.
+D'inverno i piccoli roditori della tundra stanno al riparo §sottoterra||sotto terra§.
+Le renne arrivano nella tundra durante l'inverno. §Falso||F||no||n§
+Gli uccelli migratori della tundra si nutrono di moscerini e §zanzare||zanzara§, che trovano negli §acquitrini||acquitrino§ che si formano al disgelo.
+Tra i grandi erbivori della tundra, oltre alle renne, c'&egrave; il §bue muschiato||buoi muschiati§.
+I grandi erbivori migrano verso §nord§ alla ricerca di §pascoli||pascolo§.
+Le foche e i §trichechi||tricheco§ lasciano il mare e affollano le coste per la §riproduzione§.
+La foresta di conifere &egrave; conosciuta soprattutto con il nome di §taiga§.
+Il paese in cui si estende la pi&ugrave; vasta foresta del mondo &egrave; la §Russia§.
+Nella taiga gli inverni sono §lunghi e rigidi||lunghi||rigidi§ e le estati sono §brevi e fresche||brevi||fresche§.
+Durante l'estate nella taiga arrivano stormi di uccelli migratori. §Vero||V||si||s§
+Gli alberi della taiga possono raggiungere i §60 metri||sessanta metri||60 m§ di altezza.
+Dove riescono a penetrare i raggi del Sole, nella taiga crescono i §cespugli||cespuglio§ con §bacche||bacca§ e piccoli frutti.
+Il castoro e l'alce sono predatori della taiga. §Falso||F||no||n§
+La lepre e lo scoiattolo sono erbivori della taiga. §Vero||V||si||s§
+Nella taiga, durante l'estate, proliferano moltissimi §insetti||insetto§, come formiche, coleotteri e mosche.
+Gli iceberg si formano quando l'acqua del mare vicino alla costa congela. §Falso||F||no||n§
 ---
 Geografia
 Gli ambienti dei climi temperati
